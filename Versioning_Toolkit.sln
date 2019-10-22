@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versioning_Engine", "Versioning_Engine\Versioning_Engine.csproj", "{3A1179AA-695B-40DF-8055-ABA7ACB51D4C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHoMUpgrader30", "BHoMUpgrader30\BHoMUpgrader30.csproj", "{10D377C5-E17D-4135-A9AA-EB106833A94E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHoMUpgrader", "BHoMUpgrader\BHoMUpgrader.csproj", "{47629A75-8509-491A-82E5-517A2D8B945E}"
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3A1179AA-695B-40DF-8055-ABA7ACB51D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A1179AA-695B-40DF-8055-ABA7ACB51D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A1179AA-695B-40DF-8055-ABA7ACB51D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A1179AA-695B-40DF-8055-ABA7ACB51D4C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{10D377C5-E17D-4135-A9AA-EB106833A94E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{10D377C5-E17D-4135-A9AA-EB106833A94E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10D377C5-E17D-4135-A9AA-EB106833A94E}.Release|Any CPU.ActiveCfg = Release|Any CPU
