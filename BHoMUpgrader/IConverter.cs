@@ -8,8 +8,23 @@ namespace BH.Upgrader.Base
 {
     public interface IConverter
     {
+        /***************************************************/
+        /**** Public Properties                         ****/
+        /***************************************************/
+
+        Dictionary<string, string> ToNewType { get; set; }
+
+        Dictionary<string, string> ToOldType { get; set; }
+
+
+        /***************************************************/
+        /**** Public Methods                            ****/
+        /***************************************************/
+
         object IToNew(object item);
 
         object IToOld(object item);
+
+        /***************************************************/
     }
 }

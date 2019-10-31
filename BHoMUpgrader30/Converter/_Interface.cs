@@ -31,6 +31,23 @@ namespace BH.Upgrader.v30
                 return ToOld(item as dynamic);
         }
 
+
+        /***************************************************/
+        /**** Private Methods                           ****/
+        /***************************************************/
+
+        public object ToNew(object item)
+        {
+            return null;
+        }
+
+        /***************************************************/
+
+        public object ToOld(object item)
+        {
+            return null;
+        }
+
         /***************************************************/
     }
 }
