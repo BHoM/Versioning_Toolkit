@@ -40,5 +40,22 @@ namespace BH.Upgrader.v30
         }
 
         /***************************************************/
+
+        public IObject ToNew(Dictionary<string, object> version, oM.Versioning.NewVersion typedObject)
+        {
+            if (version == null)
+                return null;
+
+            double A = (double)version["A"];
+            double B = (double)version["B"];
+
+            return new oM.Versioning.NewVersion
+            {
+                AplusB = A + B,
+                AminusB = A - B
+            };
+        }
+
+        /***************************************************/
     }
 }

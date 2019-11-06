@@ -31,6 +31,16 @@ namespace BH.Upgrader.v30
                 return ToOld(item as dynamic);
         }
 
+        /***************************************************/
+
+        public object IToNew(Dictionary<string, object> item, object typedObject)
+        {
+            if (item == null)
+                return null;
+            else
+                return ToNew(item, typedObject as dynamic);
+        }
+
 
         /***************************************************/
         /**** Private Methods                           ****/
@@ -44,6 +54,13 @@ namespace BH.Upgrader.v30
         /***************************************************/
 
         public object ToOld(object item)
+        {
+            return null;
+        }
+
+        /***************************************************/
+
+        public object ToNew(Dictionary<string, object> item, object typedObject)
         {
             return null;
         }
