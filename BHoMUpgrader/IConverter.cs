@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,8 @@ namespace BH.Upgrader.Base
         object IToNew(object item);
 
         object IToOld(object item);
+
+        object IToNew(Dictionary<string, object> item, object typedObject);
 
         /***************************************************/
     }

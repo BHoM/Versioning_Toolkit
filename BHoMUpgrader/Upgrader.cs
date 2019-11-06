@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using BH.oM.Base;
+using MongoDB.Bson;
 using MongoDB.Bson.IO;
 using MongoDB.Bson.Serialization;
 using System;
@@ -21,31 +22,36 @@ namespace BH.Upgrader.Base
         public void ProcessingLoop(string pipeName, IConverter converter)
         {
             // Make sure all assemblies are loaded
-            System.Reflection.AssemblyName[] assemblies = System.Reflection.Assembly.GetEntryAssembly().GetReferencedAssemblies();
-            foreach (System.Reflection.AssemblyName assembly in assemblies)
+            AssemblyName[] assemblies = Assembly.GetEntryAssembly().GetReferencedAssemblies();
+            foreach (AssemblyName assembly in assemblies)
             {
-                System.Reflection.Assembly.Load(assembly);
+                Assembly.Load(assembly);
                 Console.WriteLine("Assembly Loaded: " + assembly.Name);
             }
             Console.WriteLine("");
 
             // Gather all the conversion methods from the converter
             MethodInfo[] converterMethods = converter.GetType().GetMethods();
-            foreach (MethodInfo method in converterMethods.Where(x => x.Name == "ToNew"))
+            foreach (MethodInfo method in converterMethods)
             {
-                ParameterInfo parameter = method.GetParameters().FirstOrDefault();
-                if (parameter != null)
+                ParameterInfo[] parameters = method.GetParameters();
+                if (parameters.Length == 1)
                 {
                     switch (method.Name)
                     {
                         case "ToNew":
-                            m_ToNewConverters.Add(parameter.ParameterType.FullName);
+                            m_ToNewFromDeprecatedConverters.Add(parameters[0].ParameterType.FullName);
                             break;
                         case "ToOld":
-                            m_ToOldConverters.Add(parameter.ParameterType.FullName);
+                            m_ToOldDeprecatedConverters.Add(parameters[0].ParameterType.FullName);
                             break;
                     }
-                }       
+                }
+                else if (parameters.Length == 2)
+                {
+                    if (parameters[0].ParameterType == typeof(Dictionary<string, object>) && method.Name == "ToNew")
+                        m_ToNewFromCustomConverters.Add(parameters[1].ParameterType.FullName, parameters[1].ParameterType);
+                }  
             }
 
             // Deactivate the upgrade check in teh serialiser
@@ -100,7 +106,7 @@ namespace BH.Upgrader.Base
                     Console.WriteLine("type upgraded from " + oldType + " to " + newType);
                     return document;
                 }  
-                else if (m_ToNewConverters.Contains(oldType))
+                else if (m_ToNewFromDeprecatedConverters.Contains(oldType))
                 {
                     object item = BH.Engine.Serialiser.Convert.FromBson(document);
                     if (item == null)
@@ -109,6 +115,26 @@ namespace BH.Upgrader.Base
                     Console.WriteLine("object recovered: " + item.GetType().FullName);
 
                     object b = converter.IToNew(item as dynamic);
+                    if (b == null)
+                        return null;
+
+                    Console.WriteLine("object updated: " + b.GetType().FullName);
+                    BsonDocument newDoc = BH.Engine.Serialiser.Convert.ToBson(b);
+
+                    // Copy over BHoM properties
+                    string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
+                    foreach (string p in properties)
+                    {
+                        if (newDoc.Contains(p) && document.Contains(p))
+                            newDoc[p] = document[p];
+                    }
+
+                    return newDoc;
+                }
+                else if (m_ToNewFromCustomConverters.ContainsKey(oldType))
+                {
+                    object instance = Activator.CreateInstance(m_ToNewFromCustomConverters[oldType]);
+                    object b = converter.IToNew(document.ToDictionary(), instance);
                     if (b == null)
                         return null;
 
@@ -222,8 +248,9 @@ namespace BH.Upgrader.Base
         /**** Private Fields                            ****/
         /***************************************************/
 
-        private HashSet<string> m_ToNewConverters = new HashSet<string>();
-        private HashSet<string> m_ToOldConverters = new HashSet<string>();
+        private HashSet<string> m_ToNewFromDeprecatedConverters = new HashSet<string>();
+        private HashSet<string> m_ToOldDeprecatedConverters = new HashSet<string>();
+        private Dictionary<string, Type> m_ToNewFromCustomConverters = new Dictionary<string, Type>();
 
         /***************************************************/
     }
