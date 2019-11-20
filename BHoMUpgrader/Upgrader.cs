@@ -1,4 +1,5 @@
-﻿using BH.oM.Base;
+﻿using BH.Engine.Reflection;
+using BH.oM.Base;
 using MongoDB.Bson;
 using MongoDB.Bson.IO;
 using MongoDB.Bson.Serialization;
@@ -98,63 +99,80 @@ namespace BH.Upgrader.Base
 
             if (document.Contains("_t"))
             {
-                string oldType = document["_t"].AsString;
-                string newType = ToNewType(oldType, converter);
-                document["_t"] = newType;
-                if (newType != oldType)
-                {
-                    Console.WriteLine("type upgraded from " + oldType + " to " + newType);
-                    return document;
-                }  
-                else if (m_ToNewFromDeprecatedConverters.Contains(oldType))
-                {
-                    object item = BH.Engine.Serialiser.Convert.FromBson(document);
-                    if (item == null)
-                        return null;
-
-                    Console.WriteLine("object recovered: " + item.GetType().FullName);
-
-                    object b = converter.IToNew(item as dynamic);
-                    if (b == null)
-                        return null;
-
-                    Console.WriteLine("object updated: " + b.GetType().FullName);
-                    BsonDocument newDoc = BH.Engine.Serialiser.Convert.ToBson(b);
-
-                    // Copy over BHoM properties
-                    string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
-                    foreach (string p in properties)
-                    {
-                        if (newDoc.Contains(p) && document.Contains(p))
-                            newDoc[p] = document[p];
-                    }
-
-                    return newDoc;
-                }
-                else if (m_ToNewFromCustomConverters.ContainsKey(oldType))
-                {
-                    object instance = Activator.CreateInstance(m_ToNewFromCustomConverters[oldType]);
-                    object b = converter.IToNew(document.ToDictionary(), instance);
-                    if (b == null)
-                        return null;
-
-                    Console.WriteLine("object updated: " + b.GetType().FullName);
-                    BsonDocument newDoc = BH.Engine.Serialiser.Convert.ToBson(b);
-
-                    // Copy over BHoM properties
-                    string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
-                    foreach (string p in properties)
-                    {
-                        if (newDoc.Contains(p) && document.Contains(p))
-                            newDoc[p] = document[p];
-                    }
-
-                    return newDoc;
-                }
+                if (document["_t"] == "System.Reflection.MethodBase")
+                    return UpgradeMethod(document, converter);
                 else
-                {
+                    return UpgradeObject(document, converter);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        /***************************************************/
+
+        private BsonDocument UpgradeMethod(BsonDocument document, IConverter converter)
+        {
+            return ToNewMethod(document, converter);
+        }
+
+        /***************************************************/
+
+        private BsonDocument UpgradeObject(BsonDocument document, IConverter converter)
+        {
+            string oldType = document["_t"].AsString;
+            string newType = ToNewType(oldType, converter);
+            document["_t"] = newType;
+            if (newType != oldType)
+            {
+                Console.WriteLine("type upgraded from " + oldType + " to " + newType);
+                return document;
+            }
+            else if (m_ToNewFromDeprecatedConverters.Contains(oldType))
+            {
+                object item = BH.Engine.Serialiser.Convert.FromBson(document);
+                if (item == null)
                     return null;
+
+                Console.WriteLine("object recovered: " + item.GetType().FullName);
+
+                object b = converter.IToNew(item as dynamic);
+                if (b == null)
+                    return null;
+
+                Console.WriteLine("object updated: " + b.GetType().FullName);
+                BsonDocument newDoc = BH.Engine.Serialiser.Convert.ToBson(b);
+
+                // Copy over BHoM properties
+                string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
+                foreach (string p in properties)
+                {
+                    if (newDoc.Contains(p) && document.Contains(p))
+                        newDoc[p] = document[p];
                 }
+
+                return newDoc;
+            }
+            else if (m_ToNewFromCustomConverters.ContainsKey(oldType))
+            {
+                object instance = Activator.CreateInstance(m_ToNewFromCustomConverters[oldType]);
+                object b = converter.IToNew(document.ToDictionary(), instance);
+                if (b == null)
+                    return null;
+
+                Console.WriteLine("object updated: " + b.GetType().FullName);
+                BsonDocument newDoc = BH.Engine.Serialiser.Convert.ToBson(b);
+
+                // Copy over BHoM properties
+                string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
+                foreach (string p in properties)
+                {
+                    if (newDoc.Contains(p) && document.Contains(p))
+                        newDoc[p] = document[p];
+                }
+
+                return newDoc;
             }
             else
             {
@@ -196,6 +214,79 @@ namespace BH.Upgrader.Base
                 else
                     return type;
             }
+        }
+
+        /***************************************************/
+
+        private BsonDocument ToNewMethod(BsonDocument method, IConverter converter)
+        {
+            return GetMethodFromDic(converter.ToNewMethod, method);
+        }
+
+        /***************************************************/
+
+        private BsonDocument ToOldMethod(BsonDocument method, IConverter converter)
+        {
+            return GetMethodFromDic(converter.ToOldMethod, method);
+        }
+
+        /***************************************************/
+
+        private static BsonDocument GetMethodFromDic(Dictionary<string, MethodBase> dic, BsonDocument method)
+        {
+            BsonValue typeName = method["TypeName"];
+            BsonValue methodName = method["MethodName"];
+            BsonArray parameters = method["Parameters"] as BsonArray;
+            if (typeName == null || methodName == null || parameters == null)
+                return method;
+
+            string name = methodName.ToString();
+            List<string> parameterTypes = parameters.Select(x => GetTypeString(x.AsString)).ToList();
+            string declaringType = GetTypeString(typeName.AsString);
+
+            string parametersString = "";
+            if (parameterTypes.Count > 0)
+                parametersString = parameterTypes.Aggregate((a, b) => a + ", " + b);
+            string key = declaringType + "." + name + "(" + parametersString + ")";
+
+            if (dic.ContainsKey(key))
+                return Engine.Serialiser.Convert.ToBson(dic[key]);
+            else
+                return method;
+        }
+
+        /***************************************************/
+
+        private static string GetTypeString(string json)
+        {
+            // The type stored in json might not exist anywhere anymore so we have to go old school (i.e. no FromJson(json).ToText())
+            string typeString = "";
+
+            BsonDocument doc;
+            if (BsonDocument.TryParse(json, out doc))
+            {
+                BsonValue name = doc["Name"];
+                if (name == null)
+                    return "";
+                typeString = name.ToString();
+                int cut = typeString.IndexOf(',');
+                if (cut > 0)
+                    typeString = typeString.Substring(0, cut);
+            }
+            else
+                return "";
+
+            int genericIndex = typeString.IndexOf('`');
+            if (genericIndex < 0)
+                return typeString;
+            typeString = typeString.Substring(0, genericIndex);
+
+            BsonArray generics = doc["GenericArguments"] as BsonArray;
+            if (generics == null)
+                return typeString;
+
+            string genericString = generics.Select(x => GetTypeString(x.ToString())).Aggregate((a, b) => a + ", " + b);
+            return typeString + "<" + genericString + ">";
         }
 
         /***************************************************/
