@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +17,10 @@ namespace BH.Upgrader.Base
         Dictionary<string, string> ToNewType { get; set; }
 
         Dictionary<string, string> ToOldType { get; set; }
+
+        Dictionary<string, MethodBase> ToNewMethod { get; set; }
+
+        Dictionary<string, MethodBase> ToOldMethod { get; set; }
 
 
         /***************************************************/
