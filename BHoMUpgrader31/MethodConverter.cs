@@ -20,79 +20,32 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.oM.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Upgrader.v30
+namespace BH.Upgrader.v31
 {
-    public partial class Converter : Base.IConverter
+    public partial class Converter
     {
         /***************************************************/
-        /**** Public Methods                            ****/
+        /**** Public Properties                         ****/
         /***************************************************/
 
-        public string PreviousVersion()
+        public Dictionary<string, MethodBase> ToNewMethod { get; set; } = new Dictionary<string, MethodBase>
         {
-            return "";
-        }
+            
+        };
 
         /***************************************************/
 
-        public object IToNew(object item)
+        public Dictionary<string, MethodBase> ToOldMethod { get; set; } = new Dictionary<string, MethodBase>
         {
-            if (item == null)
-                return null;
-            else
-                return ToNew(item as dynamic);
-        }
 
-        /***************************************************/
-
-        public object IToOld(object item)
-        {
-            if (item == null)
-                return null;
-            else
-                return ToOld(item as dynamic);
-        }
-
-        /***************************************************/
-
-        public object IToNew(Dictionary<string, object> item, object typedObject)
-        {
-            if (item == null)
-                return null;
-            else
-                return ToNew(item, typedObject as dynamic);
-        }
-
-
-        /***************************************************/
-        /**** Private Methods                           ****/
-        /***************************************************/
-
-        public object ToNew(object item)
-        {
-            return null;
-        }
-
-        /***************************************************/
-
-        public object ToOld(object item)
-        {
-            return null;
-        }
-
-        /***************************************************/
-
-        public object ToNew(Dictionary<string, object> item, object typedObject)
-        {
-            return null;
-        }
+        };
 
         /***************************************************/
     }

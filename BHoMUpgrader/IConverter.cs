@@ -49,6 +49,8 @@ namespace BH.Upgrader.Base
         /**** Public Methods                            ****/
         /***************************************************/
 
+        string PreviousVersion();
+
         object IToNew(object item);
 
         object IToOld(object item);

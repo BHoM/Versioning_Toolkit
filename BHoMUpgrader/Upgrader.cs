@@ -119,17 +119,24 @@ namespace BH.Upgrader.Base
 
             Console.WriteLine("document received: " + document.ToJson());
 
+            BsonDocument result = null;
+
             if (document.Contains("_t"))
             {
                 if (document["_t"] == "System.Reflection.MethodBase")
-                    return UpgradeMethod(document, converter);
+                    result =  UpgradeMethod(document, converter);
                 else
-                    return UpgradeObject(document, converter);
+                    result =  UpgradeObject(document, converter);
             }
-            else
+
+            if (result == null)
             {
-                return null;
+                string previousVersion = converter.PreviousVersion();
+                if(previousVersion.Length > 0)
+                    result = Engine.Versioning.Convert.ToNewVersion(document, converter.PreviousVersion());
             }
+                
+            return result;
         }
 
         /***************************************************/
