@@ -20,78 +20,30 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.oM.Base;
 using System;
+using System.IO;
+using System.IO.Pipes;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BH.oM.Base;
 
-namespace BH.Upgrader.v30
+namespace BH.Upgrader.v31
 {
-    public partial class Converter : Base.IConverter
+    static class Program
     {
         /***************************************************/
-        /**** Public Methods                            ****/
+        /**** Entry Methods                             ****/
         /***************************************************/
 
-        public string PreviousVersion()
+        static void Main(string[] args)
         {
-            return "";
-        }
+            if (args.Length == 0)
+                return;
 
-        /***************************************************/
-
-        public object IToNew(object item)
-        {
-            if (item == null)
-                return null;
-            else
-                return ToNew(item as dynamic);
-        }
-
-        /***************************************************/
-
-        public object IToOld(object item)
-        {
-            if (item == null)
-                return null;
-            else
-                return ToOld(item as dynamic);
-        }
-
-        /***************************************************/
-
-        public object IToNew(Dictionary<string, object> item, object typedObject)
-        {
-            if (item == null)
-                return null;
-            else
-                return ToNew(item, typedObject as dynamic);
-        }
-
-
-        /***************************************************/
-        /**** Private Methods                           ****/
-        /***************************************************/
-
-        public object ToNew(object item)
-        {
-            return null;
-        }
-
-        /***************************************************/
-
-        public object ToOld(object item)
-        {
-            return null;
-        }
-
-        /***************************************************/
-
-        public object ToNew(Dictionary<string, object> item, object typedObject)
-        {
-            return null;
+            Base.Upgrader upgrader = new Base.Upgrader();
+            upgrader.ProcessingLoop(args[0], new Converter());
         }
 
         /***************************************************/

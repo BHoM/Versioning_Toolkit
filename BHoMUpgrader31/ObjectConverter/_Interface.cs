@@ -27,7 +27,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Upgrader.v30
+namespace BH.Upgrader.v31
 {
     public partial class Converter : Base.IConverter
     {
@@ -37,7 +37,7 @@ namespace BH.Upgrader.v30
 
         public string PreviousVersion()
         {
-            return "";
+            return "3.0";
         }
 
         /***************************************************/
