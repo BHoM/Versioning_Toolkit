@@ -267,7 +267,7 @@ namespace BH.Upgrader.Base
             BsonValue methodName = method["MethodName"];
             BsonArray parameters = method["Parameters"] as BsonArray;
             if (typeName == null || methodName == null || parameters == null)
-                return method;
+                return null;
 
             string name = methodName.ToString();
             List<string> parameterTypes = parameters.Select(x => GetTypeString(x.AsString)).ToList();
@@ -281,7 +281,7 @@ namespace BH.Upgrader.Base
             if (dic.ContainsKey(key))
                 return Engine.Serialiser.Convert.ToBson(dic[key]);
             else
-                return method;
+                return null;
         }
 
         /***************************************************/
