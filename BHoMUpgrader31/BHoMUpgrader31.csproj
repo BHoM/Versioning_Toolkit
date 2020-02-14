@@ -55,9 +55,6 @@
     <Reference Include="Geometry_oM">
       <HintPath>..\..\..\Users\kthorsager\OneDrive - BuroHappold\Documents\GitHub\BHoM\Geometry_oM\obj\Debug\Geometry_oM.dll</HintPath>
     </Reference>
-    <Reference Include="ModelLaundry_Engine">
-      <HintPath>..\..\ModelLaundry_Toolkit\Build\ModelLaundry_Engine.dll</HintPath>
-    </Reference>
     <Reference Include="Structure_Engine">
       <HintPath>..\..\BHoM_Engine\Build\Structure_Engine.dll</HintPath>
     </Reference>
