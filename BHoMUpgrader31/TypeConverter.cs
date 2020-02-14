@@ -36,14 +36,20 @@ namespace BH.Upgrader.v31
 
         public Dictionary<string, string> ToNewType { get; set; } = new Dictionary<string, string>
         {
-            
+            { "BH.oM.Geometry.IElement", "BH.oM.Dimensional.IElement" },
+            { "BH.oM.Geometry.IElement0D", "BH.oM.Dimensional.IElement0D" },
+            { "BH.oM.Geometry.IElement1D", "BH.oM.Dimensional.IElement1D" },
+            { "BH.oM.Geometry.IElement2D", "BH.oM.Dimensional.IElement2D" }
         };
 
         /***************************************************/
 
         public Dictionary<string, string> ToOldType { get; set; } = new Dictionary<string, string>
         {
-            
+            { "BH.oM.Dimensional.IElement", "BH.oM.Geometry.IElement" },
+            { "BH.oM.Dimensional.IElement0D", "BH.oM.Geometry.IElement0D" },
+            { "BH.oM.Dimensional.IElement1D", "BH.oM.Geometry.IElement1D" },
+            { "BH.oM.Dimensional.IElement2D", "BH.oM.Geometry.IElement2D" }
         };
 
         /***************************************************/
