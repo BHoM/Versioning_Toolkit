@@ -36,6 +36,8 @@ namespace BH.Upgrader.v30
 
         public Dictionary<string, string> ToNewType { get; set; } = new Dictionary<string, string>
         {
+            { "BH.oM.Architecture.Elements.Grid", "BH.oM.Geometry.SettingOut.Grid" },
+            { "BH.oM.Architecture.Elements.Level", "BH.oM.Geometry.SettingOut.Level" },
             { "BH.oM.Deprecated", "BH.oM.Versioning" },
             { "BH.oM.OldStuff.OldVersion", "BH.oM.Versioning.NewVersion" },
             { "BH.oM.OldStuff.Parent", "BH.oM.Versioning.parent" }
@@ -45,6 +47,8 @@ namespace BH.Upgrader.v30
 
         public Dictionary<string, string> ToOldType { get; set; } = new Dictionary<string, string>
         {
+            { "BH.oM.Geometry.SettingOut.Grid", "BH.oM.Architecture.Elements.Grid" },
+            { "BH.oM.Geometry.SettingOut.Level", "BH.oM.Architecture.Elements.Level" },
             { "BH.oM.Versioning", "BH.oM.Deprecated" },
             { "BH.oM.Versioning.NewVersion", "BH.oM.OldStuff.OldVersion" },
             { "BH.oM.Versioning.parent", "BH.oM.OldStuff.Parent" }
