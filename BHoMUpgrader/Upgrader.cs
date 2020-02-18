@@ -124,13 +124,18 @@ namespace BH.Upgrader.Base
             if (document.Contains("_t"))
             {
                 if (document["_t"] == "System.Reflection.MethodBase")
-                    result =  UpgradeMethod(document, converter);
+                    result = UpgradeMethod(document, converter);
+                else if (document["_t"] == "System.Type")
+                    result = UpgradeType(document, converter);
                 else
-                    result =  UpgradeObject(document, converter);
+                    result = UpgradeObject(document, converter);
             }
 
             if (result == null)
             {
+                if (document.Contains("_t") && document["_t"] == "DBNull")
+                    return null;
+
                 string previousVersion = converter.PreviousVersion();
                 if(previousVersion.Length > 0)
                     result = Engine.Versioning.Convert.ToNewVersion(document, converter.PreviousVersion());
@@ -143,7 +148,93 @@ namespace BH.Upgrader.Base
 
         private BsonDocument UpgradeMethod(BsonDocument document, IConverter converter)
         {
-            return ToNewMethod(document, converter);
+            BsonValue typeName = document["TypeName"];
+            BsonValue methodName = document["MethodName"];
+            BsonArray parameterArray = document["Parameters"] as BsonArray;
+            if (typeName == null || methodName == null || parameterArray == null)
+                return null;
+
+            // Update the parameter types if needed
+            bool modified = false;
+            List<BsonValue> parameters = new List<BsonValue>();
+            foreach (BsonValue parameter in parameterArray)
+            {
+                string newParam = UpgradeType(parameter.AsString, converter);
+                modified |= newParam != parameter.AsString;
+                parameters.Add(newParam);
+            }
+
+            // Update the declaring type if needed
+            string newDeclaringType = UpgradeType(typeName.AsString, converter);
+            if (newDeclaringType != typeName.AsString)
+            {
+                typeName = newDeclaringType;
+                modified = true;
+            }
+
+            if (modified)
+            {
+                document = new BsonDocument(new Dictionary<string, object>
+                {
+                    { "_t", "System.Reflection.MethodBase" },
+                    { "TypeName", typeName },
+                    { "MethodName", methodName.AsString },
+                    { "Parameters", parameters }
+                });
+            }
+
+            BsonDocument result = GetMethodFromDic(converter.ToNewMethod, document);
+            if (result == null && modified)
+                result = document;
+            return result;
+        }
+
+        /***************************************************/
+
+        private BsonDocument UpgradeType(BsonDocument document, IConverter converter)
+        {
+            if (document == null)
+                return null;
+
+            document["Name"] = GetTypeFromDic(converter.ToNewType, document["Name"].AsString);
+
+            if (document.Contains("GenericArguments"))
+            {
+                BsonArray newGenerics = new BsonArray();
+                BsonArray generics = document["GenericArguments"].AsBsonArray;
+                if (generics != null)
+                {
+                    foreach (BsonDocument generic in generics)
+                    {
+                        BsonDocument newGeneric = UpgradeType(generic, converter);
+                        if (newGeneric != null)
+                            newGenerics.Add(newGeneric);
+                        else
+                            newGenerics.Add(generic);
+                    }
+                }
+                document["GenericArguments"] = newGenerics;
+            }
+            return document;
+        }
+
+        /***************************************************/
+
+        private string UpgradeType(string type, IConverter converter)
+        {
+            BsonDocument doc = null;
+            BsonDocument.TryParse(type, out doc);
+            BsonValue newType = UpgradeType(doc, converter) as BsonValue;
+            if (newType == null)
+                return type;
+            else
+            {
+                string newString = newType.ToString();
+                if (newString.Length == 0)
+                    return type;
+                else
+                    return newString;
+            }
         }
 
         /***************************************************/
@@ -151,7 +242,7 @@ namespace BH.Upgrader.Base
         private BsonDocument UpgradeObject(BsonDocument document, IConverter converter)
         {
             string oldType = document["_t"].AsString;
-            string newType = ToNewType(oldType, converter);
+            string newType = GetTypeFromDic(converter.ToNewType, oldType);
             document["_t"] = newType;
             if (newType != oldType)
             {
@@ -211,20 +302,6 @@ namespace BH.Upgrader.Base
 
         /***************************************************/
 
-        private string ToNewType(string type, IConverter converter)
-        {
-            return GetTypeFromDic(converter.ToNewType, type);
-        }
-
-        /***************************************************/
-
-        private string ToOldType(string type, IConverter converter)
-        {
-            return GetTypeFromDic(converter.ToOldType, type);
-        }
-
-        /***************************************************/
-
         private static string GetTypeFromDic(Dictionary<string, string> dic, string type)
         {
             if (dic.ContainsKey(type))
@@ -243,20 +320,6 @@ namespace BH.Upgrader.Base
                 else
                     return type;
             }
-        }
-
-        /***************************************************/
-
-        private BsonDocument ToNewMethod(BsonDocument method, IConverter converter)
-        {
-            return GetMethodFromDic(converter.ToNewMethod, method);
-        }
-
-        /***************************************************/
-
-        private BsonDocument ToOldMethod(BsonDocument method, IConverter converter)
-        {
-            return GetMethodFromDic(converter.ToOldMethod, method);
         }
 
         /***************************************************/
