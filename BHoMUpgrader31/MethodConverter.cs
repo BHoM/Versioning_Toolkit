@@ -37,7 +37,10 @@ namespace BH.Upgrader.v31
 
         public Dictionary<string, MethodBase> ToNewMethod { get; set; } = new Dictionary<string, MethodBase>
         {
-            
+            {
+                "BH.Engine.Geometry.Compute.ClipPolylines(BH.oM.Geometry.Polyline, BH.oM.Geometry.Polyline)",
+                typeof(BH.Engine.Geometry.Compute).GetMethod("BooleanIntersection", new Type[] { typeof(BH.oM.Geometry.Polyline), typeof(BH.oM.Geometry.Polyline), typeof(double) })
+            },
         };
 
         /***************************************************/
