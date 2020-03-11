@@ -41,7 +41,8 @@ namespace BH.Upgrader.v31
             { "BH.oM.Geometry.IElement0D", "BH.oM.Dimensional.IElement0D" },
             { "BH.oM.Geometry.IElement1D", "BH.oM.Dimensional.IElement1D" },
             { "BH.oM.Geometry.IElement2D", "BH.oM.Dimensional.IElement2D" },
-            { "BH.oM.Base.IBHoMFragment", "BH.oM.Base.IFragment" }
+            { "BH.oM.Base.IBHoMFragment", "BH.oM.Base.IFragment" },
+            { "BH.oM.Adapters.ETABS.EtabsConfig", "BH.oM.Adapters.ETABS.EtabsSettings" }
         };
 
         /***************************************************/
@@ -53,7 +54,8 @@ namespace BH.Upgrader.v31
             { "BH.oM.Dimensional.IElement0D", "BH.oM.Geometry.IElement0D" },
             { "BH.oM.Dimensional.IElement1D", "BH.oM.Geometry.IElement1D" },
             { "BH.oM.Dimensional.IElement2D", "BH.oM.Geometry.IElement2D" },
-            { "BH.oM.Base.IFragment", "BH.oM.Base.IBHoMFragment" }
+            { "BH.oM.Base.IFragment", "BH.oM.Base.IBHoMFragment" },
+            { "BH.oM.Adapters.ETABS.EtabsSettings", "BH.oM.Adapters.ETABS.EtabsConfig" }
         };
 
         /***************************************************/
