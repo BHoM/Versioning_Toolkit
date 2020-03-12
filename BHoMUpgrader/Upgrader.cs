@@ -304,6 +304,9 @@ namespace BH.Upgrader.Base
 
         private static string GetTypeFromDic(Dictionary<string, string> dic, string type)
         {
+            if (type.Contains(","))
+                type = type.Split(',').First();
+
             if (dic.ContainsKey(type))
                 return dic[type];
             else
