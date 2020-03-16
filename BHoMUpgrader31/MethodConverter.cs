@@ -41,6 +41,36 @@ namespace BH.Upgrader.v31
                 "BH.Engine.Geometry.Compute.ClipPolylines(BH.oM.Geometry.Polyline, BH.oM.Geometry.Polyline)",
                 typeof(BH.Engine.Geometry.Compute).GetMethod("BooleanIntersection", new Type[] { typeof(BH.oM.Geometry.Polyline), typeof(BH.oM.Geometry.Polyline), typeof(double) })
             },
+
+
+            {
+            "BH.Engine.Common.Create.INewElement0D(BH.oM.Dimensional.IElement1D, BH.oM.Geometry.Point)",
+            typeof(BH.Engine.Spatial.Create).GetMethod("INewElement0D", new Type[] {typeof(BH.oM.Dimensional.IElement1D), typeof(BH.oM.Geometry.Point)})
+            },
+            {
+            "BH.Engine.Common.Create.INewElement1D(BH.oM.Dimensional.IElement2D, BH.oM.Geometry.ICurve)",
+            typeof(BH.Engine.Spatial.Create).GetMethod("INewElement1D", new Type[] {typeof(BH.oM.Dimensional.IElement2D), typeof(BH.oM.Geometry.ICurve)})
+            },
+            {
+            "BH.Engine.Common.Create.INewInternalElement2D(BH.oM.Dimensional.IElement2D)",
+            typeof(BH.Engine.Spatial.Create).GetMethod("INewInternalElement2D", new Type[] {typeof(BH.oM.Dimensional.IElement2D)})
+            },
+
+
+            {
+            "BH.Engine.Common.Create.INewElement0D(BH.oM.Geometry.IElement1D, BH.oM.Geometry.Point)",
+            typeof(BH.Engine.Spatial.Create).GetMethod("INewElement0D", new Type[] {typeof(BH.oM.Dimensional.IElement1D), typeof(BH.oM.Geometry.Point)})
+            },
+            {
+            "BH.Engine.Common.Create.INewElement1D(BH.oM.Geometry.IElement2D, BH.oM.Geometry.ICurve)",
+            typeof(BH.Engine.Spatial.Create).GetMethod("INewElement1D", new Type[] {typeof(BH.oM.Dimensional.IElement2D), typeof(BH.oM.Geometry.ICurve)})
+            },
+            {
+            "BH.Engine.Common.Create.INewInternalElement2D(BH.oM.Geometry.IElement2D)",
+            typeof(BH.Engine.Spatial.Create).GetMethod("INewInternalElement2D", new Type[] {typeof(BH.oM.Dimensional.IElement2D)})
+            },
+
+
             {
             "BH.Engine.Common.Compute.DistributeOutlines(System.Collections.Generic.List<System.Collections.Generic.List<BH.oM.Dimensional.IElement1D>>, System.Boolean, System.Double)",
             typeof(BH.Engine.Spatial.Compute).GetMethod("DistributeOutlines", new Type[] {typeof(System.Collections.Generic.List<System.Collections.Generic.List<BH.oM.Dimensional.IElement1D>>), typeof(System.Boolean), typeof(System.Double)})
