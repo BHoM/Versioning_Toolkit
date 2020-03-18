@@ -129,7 +129,7 @@ namespace BH.Upgrader.v31
             },
             {
             "BH.Engine.Common.Query.IBounds(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>)",
-            typeof(BH.Engine.Spatial.Query).GetMethod("IBounds", new Type[] {typeof(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>)})
+            typeof(BH.Engine.Spatial.Query).GetMethod("Bounds", new Type[] {typeof(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>)})
             },
             {
             "BH.Engine.Common.Query.Centroid(BH.oM.Dimensional.IElement1D)",
@@ -161,7 +161,7 @@ namespace BH.Upgrader.v31
             },
             {
             "BH.Engine.Common.Query.IElementCurves(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>, System.Boolean)",
-            typeof(BH.Engine.Spatial.Query).GetMethod("IElementCurves", new Type[] {typeof(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>), typeof(System.Boolean)})
+            typeof(BH.Engine.Spatial.Query).GetMethod("ElementCurves", new Type[] {typeof(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>), typeof(System.Boolean)})
             },
             {
             "BH.Engine.Common.Query.ElementVertices(BH.oM.Dimensional.IElement1D)",
@@ -177,7 +177,7 @@ namespace BH.Upgrader.v31
             },
             {
             "BH.Engine.Common.Query.IElementVertices(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>)",
-            typeof(BH.Engine.Spatial.Query).GetMethod("IElementVertices", new Type[] {typeof(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>)})
+            typeof(BH.Engine.Spatial.Query).GetMethod("ElementVertices", new Type[] {typeof(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>)})
             },
             {
             "BH.Engine.Common.Query.IElements0D(BH.oM.Dimensional.IElement1D)",
@@ -197,7 +197,7 @@ namespace BH.Upgrader.v31
             },
             {
             "BH.Engine.Common.Query.IInternalOutlineCurves(BH.oM.Dimensional.IElement2D)",
-            typeof(BH.Engine.Spatial.Query).GetMethod("IInternalOutlineCurves", new Type[] {typeof(BH.oM.Dimensional.IElement2D)})
+            typeof(BH.Engine.Spatial.Query).GetMethod("InternalOutlineCurves", new Type[] {typeof(BH.oM.Dimensional.IElement2D)})
             },
             {
             "BH.Engine.Common.Query.IsSelfIntersecting(BH.oM.Dimensional.IElement1D, System.Double)",
@@ -221,11 +221,11 @@ namespace BH.Upgrader.v31
             },
             {
             "BH.Engine.Common.Query.IOutlineCurve(BH.oM.Dimensional.IElement2D)",
-            typeof(BH.Engine.Spatial.Query).GetMethod("IOutlineCurve", new Type[] {typeof(BH.oM.Dimensional.IElement2D)})
+            typeof(BH.Engine.Spatial.Query).GetMethod("OutlineCurve", new Type[] {typeof(BH.oM.Dimensional.IElement2D)})
             },
             {
             "BH.Engine.Common.Query.IOutlineCurve(System.Collections.Generic.List<BH.oM.Dimensional.IElement1D>)",
-            typeof(BH.Engine.Spatial.Query).GetMethod("IOutlineCurve", new Type[] {typeof(System.Collections.Generic.List<BH.oM.Dimensional.IElement1D>)})
+            typeof(BH.Engine.Spatial.Query).GetMethod("OutlineCurve", new Type[] {typeof(System.Collections.Generic.List<BH.oM.Dimensional.IElement1D>)})
             },
 
 
@@ -287,7 +287,7 @@ namespace BH.Upgrader.v31
             },
             {
             "BH.Engine.Common.Query.IBounds(System.Collections.Generic.IEnumerable<BH.oM.Geometry.IElement>)",
-            typeof(BH.Engine.Spatial.Query).GetMethod("IBounds", new Type[] {typeof(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>)})
+            typeof(BH.Engine.Spatial.Query).GetMethod("Bounds", new Type[] {typeof(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>)})
             },
             {
             "BH.Engine.Common.Query.Centroid(BH.oM.Geometry.IElement1D)",
@@ -319,7 +319,7 @@ namespace BH.Upgrader.v31
             },
             {
             "BH.Engine.Common.Query.IElementCurves(System.Collections.Generic.IEnumerable<BH.oM.Geometry.IElement>, System.Boolean)",
-            typeof(BH.Engine.Spatial.Query).GetMethod("IElementCurves", new Type[] {typeof(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>), typeof(System.Boolean)})
+            typeof(BH.Engine.Spatial.Query).GetMethod("ElementCurves", new Type[] {typeof(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>), typeof(System.Boolean)})
             },
             {
             "BH.Engine.Common.Query.ElementVertices(BH.oM.Geometry.IElement1D)",
@@ -335,7 +335,7 @@ namespace BH.Upgrader.v31
             },
             {
             "BH.Engine.Common.Query.IElementVertices(System.Collections.Generic.IEnumerable<BH.oM.Geometry.IElement>)",
-            typeof(BH.Engine.Spatial.Query).GetMethod("IElementVertices", new Type[] {typeof(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>)})
+            typeof(BH.Engine.Spatial.Query).GetMethod("ElementVertices", new Type[] {typeof(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>)})
             },
             {
             "BH.Engine.Common.Query.IElements0D(BH.oM.Geometry.IElement1D)",
@@ -355,7 +355,7 @@ namespace BH.Upgrader.v31
             },
             {
             "BH.Engine.Common.Query.IInternalOutlineCurves(BH.oM.Geometry.IElement2D)",
-            typeof(BH.Engine.Spatial.Query).GetMethod("IInternalOutlineCurves", new Type[] {typeof(BH.oM.Dimensional.IElement2D)})
+            typeof(BH.Engine.Spatial.Query).GetMethod("InternalOutlineCurves", new Type[] {typeof(BH.oM.Dimensional.IElement2D)})
             },
             {
             "BH.Engine.Common.Query.IsSelfIntersecting(BH.oM.Geometry.IElement1D, System.Double)",
@@ -379,11 +379,11 @@ namespace BH.Upgrader.v31
             },
             {
             "BH.Engine.Common.Query.IOutlineCurve(BH.oM.Geometry.IElement2D)",
-            typeof(BH.Engine.Spatial.Query).GetMethod("IOutlineCurve", new Type[] {typeof(BH.oM.Dimensional.IElement2D)})
+            typeof(BH.Engine.Spatial.Query).GetMethod("OutlineCurve", new Type[] {typeof(BH.oM.Dimensional.IElement2D)})
             },
             {
             "BH.Engine.Common.Query.IOutlineCurve(System.Collections.Generic.List<BH.oM.Geometry.IElement1D>)",
-            typeof(BH.Engine.Spatial.Query).GetMethod("IOutlineCurve", new Type[] {typeof(System.Collections.Generic.List<BH.oM.Dimensional.IElement1D>)})
+            typeof(BH.Engine.Spatial.Query).GetMethod("OutlineCurve", new Type[] {typeof(System.Collections.Generic.List<BH.oM.Dimensional.IElement1D>)})
             }
         };
 
