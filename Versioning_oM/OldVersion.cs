@@ -33,8 +33,8 @@ namespace BH.oM.Versioning
     [Deprecated("3.0", "Replaced by oM.Versioning.NewVersion")]
     public class OldVersion : BHoMObject
     {
-        public double A { get; set; } = 1;
+        public virtual double A { get; set; } = 1;
 
-        public double B { get; set; } = 2;
+        public virtual double B { get; set; } = 2;
     }
 }
