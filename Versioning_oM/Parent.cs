@@ -31,8 +31,8 @@ namespace BH.oM.Versioning
 {
     public class Parent : BHoMObject
     {
-        public NewVersion Child { get; set; } = null;
+        public virtual NewVersion Child { get; set; } = null;
 
-        public double Number { get; set; } = 5;
+        public virtual double Number { get; set; } = 5;
     }
 }

@@ -31,8 +31,8 @@ namespace BH.oM.Versioning
 {
     public class NewVersion : BHoMObject
     {
-        public double AplusB { get; set; } = 1;
+        public virtual double AplusB { get; set; } = 1;
 
-        public double AminusB { get; set; } = 2;
+        public virtual double AminusB { get; set; } = 2;
     }
 }
