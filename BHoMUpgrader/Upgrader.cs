@@ -304,19 +304,20 @@ namespace BH.Upgrader.Base
 
         private static string GetTypeFromDic(Dictionary<string, string> dic, string type)
         {
-            if (type.Contains(","))
-                type = type.Split(',').First();
+            string unVersionedType = type;
+            if (unVersionedType.Contains(","))
+                unVersionedType = type.Split(',').First();
 
-            if (dic.ContainsKey(type))
-                return dic[type];
+            if (dic.ContainsKey(unVersionedType))
+                return dic[unVersionedType];
             else
             {
-                int index = type.LastIndexOf('.');
+                int index = unVersionedType.LastIndexOf('.');
                 if (index > 0)
                 {
-                    string ns = type.Substring(0, index);
+                    string ns = unVersionedType.Substring(0, index);
                     if (dic.ContainsKey(ns))
-                        return dic[ns] + type.Substring(index);
+                        return dic[ns] + unVersionedType.Substring(index);
                     else
                         return type;
                 }
