@@ -160,13 +160,18 @@ namespace BH.Upgrader.Base
             foreach (BsonValue parameter in parameterArray)
             {
                 string newParam = UpgradeType(parameter.AsString, converter);
-                modified |= newParam != parameter.AsString;
-                parameters.Add(newParam);
+                if (newParam != null)
+                {
+                    modified = true;
+                    parameters.Add(newParam);
+                }
+                else
+                    parameters.Add(parameter.AsString);
             }
 
             // Update the declaring type if needed
             string newDeclaringType = UpgradeType(typeName.AsString, converter);
-            if (newDeclaringType != typeName.AsString)
+            if (newDeclaringType != null)
             {
                 typeName = newDeclaringType;
                 modified = true;
@@ -196,8 +201,14 @@ namespace BH.Upgrader.Base
             if (document == null)
                 return null;
 
-            document["Name"] = GetTypeFromDic(converter.ToNewType, document["Name"].AsString);
-
+            bool modified = false;
+            string typeFromDic = GetTypeFromDic(converter.ToNewType, document["Name"].AsString);
+            if (typeFromDic != null)
+            {
+                document["Name"] = typeFromDic;
+                modified = true;
+            }
+                
             if (document.Contains("GenericArguments"))
             {
                 BsonArray newGenerics = new BsonArray();
@@ -206,16 +217,23 @@ namespace BH.Upgrader.Base
                 {
                     foreach (BsonDocument generic in generics)
                     {
-                        BsonDocument newGeneric = UpgradeType(generic, converter);
+                        BsonDocument newGeneric = Upgrade(generic, converter);
                         if (newGeneric != null)
+                        {
+                            modified = true;
                             newGenerics.Add(newGeneric);
+                        }  
                         else
                             newGenerics.Add(generic);
                     }
                 }
                 document["GenericArguments"] = newGenerics;
             }
-            return document;
+
+            if (modified)
+                return document;
+            else
+                return null;
         }
 
         /***************************************************/
@@ -224,14 +242,14 @@ namespace BH.Upgrader.Base
         {
             BsonDocument doc = null;
             BsonDocument.TryParse(type, out doc);
-            BsonValue newType = UpgradeType(doc, converter) as BsonValue;
+            BsonValue newType = Upgrade(doc, converter) as BsonValue;
             if (newType == null)
-                return type;
+                return null;
             else
             {
                 string newString = newType.ToString();
                 if (newString.Length == 0)
-                    return type;
+                    return null;
                 else
                     return newString;
             }
@@ -243,9 +261,10 @@ namespace BH.Upgrader.Base
         {
             string oldType = document["_t"].AsString;
             string newType = GetTypeFromDic(converter.ToNewType, oldType);
-            document["_t"] = newType;
-            if (newType != oldType)
+            
+            if (newType != null)
             {
+                document["_t"] = newType;
                 Console.WriteLine("type upgraded from " + oldType + " to " + newType);
                 return document;
             }
@@ -312,16 +331,16 @@ namespace BH.Upgrader.Base
             else
             {
                 int index = type.LastIndexOf('.');
-                if (index > 0)
+                while (index > 0)
                 {
                     string ns = type.Substring(0, index);
                     if (dic.ContainsKey(ns))
                         return dic[ns] + type.Substring(index);
                     else
-                        return type;
+                        index = ns.LastIndexOf('.');
                 }
-                else
-                    return type;
+
+                return null;
             }
         }
 
