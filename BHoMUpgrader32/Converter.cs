@@ -28,22 +28,22 @@ using System.Threading.Tasks;
 
 namespace BH.Upgrader.v32
 {
-    public partial class Converter
+    public class Converter : Base.Converter
     {
         /***************************************************/
-        /**** Public Properties                         ****/
+        /**** Constructors                              ****/
         /***************************************************/
 
-        public Dictionary<string, string> ToNewType { get; set; } = new Dictionary<string, string>
+        public Converter() : base()
         {
+            PreviousVersion = "3.1";
+        }
 
-        };
 
         /***************************************************/
+        /**** Private Methods                           ****/
+        /***************************************************/
 
-        public Dictionary<string, string> ToOldType { get; set; } = new Dictionary<string, string>
-        {
-        };
 
         /***************************************************/
     }

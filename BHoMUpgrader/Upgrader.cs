@@ -42,7 +42,7 @@ namespace BH.Upgrader.Base
         /**** Public Methods                            ****/
         /***************************************************/
 
-        public void ProcessingLoop(string pipeName, IConverter converter)
+        public void ProcessingLoop(string pipeName, Converter converter)
         {
             // Make sure all assemblies are loaded
             AssemblyName[] assemblies = Assembly.GetEntryAssembly().GetReferencedAssemblies();
@@ -52,30 +52,6 @@ namespace BH.Upgrader.Base
                 Console.WriteLine("Assembly Loaded: " + assembly.Name);
             }
             Console.WriteLine("");
-
-            // Gather all the conversion methods from the converter
-            MethodInfo[] converterMethods = converter.GetType().GetMethods();
-            foreach (MethodInfo method in converterMethods)
-            {
-                ParameterInfo[] parameters = method.GetParameters();
-                if (parameters.Length == 1)
-                {
-                    switch (method.Name)
-                    {
-                        case "ToNew":
-                            m_ToNewFromDeprecatedConverters.Add(parameters[0].ParameterType.FullName);
-                            break;
-                        case "ToOld":
-                            m_ToOldDeprecatedConverters.Add(parameters[0].ParameterType.FullName);
-                            break;
-                    }
-                }
-                else if (parameters.Length == 2)
-                {
-                    if (parameters[0].ParameterType == typeof(Dictionary<string, object>) && method.Name == "ToNew")
-                        m_ToNewFromCustomConverters.Add(parameters[1].ParameterType.FullName, parameters[1].ParameterType);
-                }  
-            }
 
             // Deactivate the upgrade check in teh serialiser
             BH.Engine.Serialiser.Compute.AllowUpgradeFromBson(false);
@@ -112,12 +88,40 @@ namespace BH.Upgrader.Base
         /**** Private Methods                           ****/
         /***************************************************/
 
-        private BsonDocument Upgrade(BsonDocument document, IConverter converter)
+        private BsonDocument Upgrade(BsonDocument document, Converter converter)
         {
             if (document == null)
                 return null;
 
             Console.WriteLine("document received: " + document.ToJson());
+
+            BsonDocument result = UpgradeLocally(document, converter);
+
+            if (result == null)
+            {
+                if (document.Contains("_t") && document["_t"] == "DBNull")
+                    return null;
+
+                string previousVersion = converter.PreviousVersion;
+                if(previousVersion.Length > 0)
+                {
+                    result = Engine.Versioning.Convert.ToNewVersion(document, converter.PreviousVersion);
+                    BsonDocument localResult = UpgradeLocally(result, converter);
+                    if (localResult != null)
+                        result = localResult;
+                }
+                    
+            }
+                
+            return result;
+        }
+
+        /***************************************************/
+
+        private BsonDocument UpgradeLocally(BsonDocument document, Converter converter)
+        {
+            if (document == null)
+                return null;
 
             BsonDocument result = null;
 
@@ -131,22 +135,12 @@ namespace BH.Upgrader.Base
                     result = UpgradeObject(document, converter);
             }
 
-            if (result == null)
-            {
-                if (document.Contains("_t") && document["_t"] == "DBNull")
-                    return null;
-
-                string previousVersion = converter.PreviousVersion();
-                if(previousVersion.Length > 0)
-                    result = Engine.Versioning.Convert.ToNewVersion(document, converter.PreviousVersion());
-            }
-                
             return result;
         }
 
         /***************************************************/
 
-        private BsonDocument UpgradeMethod(BsonDocument document, IConverter converter)
+        private BsonDocument UpgradeMethod(BsonDocument document, Converter converter)
         {
             BsonValue typeName = document["TypeName"];
             BsonValue methodName = document["MethodName"];
@@ -196,7 +190,7 @@ namespace BH.Upgrader.Base
 
         /***************************************************/
 
-        private BsonDocument UpgradeType(BsonDocument document, IConverter converter)
+        private BsonDocument UpgradeType(BsonDocument document, Converter converter)
         {
             if (document == null)
                 return null;
@@ -238,7 +232,7 @@ namespace BH.Upgrader.Base
 
         /***************************************************/
 
-        private string UpgradeType(string type, IConverter converter)
+        private string UpgradeType(string type, Converter converter)
         {
             BsonDocument doc = null;
             BsonDocument.TryParse(type, out doc);
@@ -257,26 +251,34 @@ namespace BH.Upgrader.Base
 
         /***************************************************/
 
-        private BsonDocument UpgradeObject(BsonDocument document, IConverter converter)
+        private BsonDocument UpgradeObject(BsonDocument document, Converter converter)
         {
+            // Upgrade the property names
             string oldType = document["_t"].AsString;
+            Dictionary<string, BsonElement> propertiesToChange = new Dictionary<string, BsonElement>();
+            foreach (BsonElement property in document)
+            {
+                string key = oldType + "." + property.Name;
+                if (converter.ToNewProperty.ContainsKey(key))
+                    propertiesToChange.Add(property.Name, new BsonElement(converter.ToNewProperty[key], property.Value));
+            }
+            foreach (var kvp in propertiesToChange)
+            {
+                document.Add(kvp.Value);
+                document.Remove(kvp.Key);
+            }
+
+            // Upgrade the rest
             string newType = GetTypeFromDic(converter.ToNewType, oldType);
-            
             if (newType != null)
             {
                 document["_t"] = newType;
                 Console.WriteLine("type upgraded from " + oldType + " to " + newType);
                 return document;
             }
-            else if (m_ToNewFromDeprecatedConverters.Contains(oldType))
+            else if (converter.ToNewObject.ContainsKey(oldType))
             {
-                object item = BH.Engine.Serialiser.Convert.FromBson(document);
-                if (item == null)
-                    return null;
-
-                Console.WriteLine("object recovered: " + item.GetType().FullName);
-
-                object b = converter.IToNew(item as dynamic);
+                object b = converter.ToNewObject[oldType](document.ToDictionary());
                 if (b == null)
                     return null;
 
@@ -293,25 +295,9 @@ namespace BH.Upgrader.Base
 
                 return newDoc;
             }
-            else if (m_ToNewFromCustomConverters.ContainsKey(oldType))
+            else if (propertiesToChange.Count > 0)
             {
-                object instance = Activator.CreateInstance(m_ToNewFromCustomConverters[oldType]);
-                object b = converter.IToNew(document.ToDictionary(), instance);
-                if (b == null)
-                    return null;
-
-                Console.WriteLine("object updated: " + b.GetType().FullName);
-                BsonDocument newDoc = BH.Engine.Serialiser.Convert.ToBson(b);
-
-                // Copy over BHoM properties
-                string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
-                foreach (string p in properties)
-                {
-                    if (newDoc.Contains(p) && document.Contains(p))
-                        newDoc[p] = document[p];
-                }
-
-                return newDoc;
+                return document;
             }
             else
             {
@@ -346,7 +332,7 @@ namespace BH.Upgrader.Base
 
         /***************************************************/
 
-        private static BsonDocument GetMethodFromDic(Dictionary<string, MethodBase> dic, BsonDocument method)
+        private static BsonDocument GetMethodFromDic(Dictionary<string, BsonDocument> dic, BsonDocument method)
         {
             BsonValue typeName = method["TypeName"];
             BsonValue methodName = method["MethodName"];
@@ -364,7 +350,7 @@ namespace BH.Upgrader.Base
             string key = declaringType + "." + name + "(" + parametersString + ")";
 
             if (dic.ContainsKey(key))
-                return Engine.Serialiser.Convert.ToBson(dic[key]);
+                return dic[key];
             else
                 return null;
         }
@@ -447,15 +433,6 @@ namespace BH.Upgrader.Base
                 return null;
             }
         }
-
-
-        /***************************************************/
-        /**** Private Fields                            ****/
-        /***************************************************/
-
-        private HashSet<string> m_ToNewFromDeprecatedConverters = new HashSet<string>();
-        private HashSet<string> m_ToOldDeprecatedConverters = new HashSet<string>();
-        private Dictionary<string, Type> m_ToNewFromCustomConverters = new Dictionary<string, Type>();
 
         /***************************************************/
     }

@@ -23,44 +23,51 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BH.Upgrader.v30
 {
-    public partial class Converter
+    public class Converter : Base.Converter
     {
         /***************************************************/
-        /**** Public Properties                         ****/
+        /**** Constructors                              ****/
         /***************************************************/
 
-        public Dictionary<string, MethodBase> ToNewMethod { get; set; } = new Dictionary<string, MethodBase>
+        public Converter() : base()
         {
-            {
-                "BH.UI.Components.DeleteCaller.Delete(BH.Adapter.BHoMAdapter, BH.oM.Data.Requests.FilterRequest, System.Collections.Generic.Dictionary<System.String, System.Object>, System.Boolean)",
-                typeof(BH.UI.Components.RemoveCaller).GetMethod("Remove")
-            },
-            {
-                "BH.UI.Components.MoveCaller.Move(BH.Adapter.BHoMAdapter, BH.Adapter.BHoMAdapter, BH.oM.Data.Requests.IRequest, System.Collections.Generic.Dictionary<System.String, System.Object>, System.Collections.Generic.Dictionary<System.String, System.Object>, System.Boolean)",
-                typeof(BH.UI.Components.MoveCaller).GetMethod("Move")
-            },
-            {
-                "BH.UI.Components.PullCaller.Pull(BH.Adapter.BHoMAdapter, BH.oM.Data.Requests.IRequest, System.Collections.Generic.Dictionary<System.String, System.Object>, System.Boolean)",
-                typeof(BH.UI.Components.PullCaller).GetMethod("Pull")
-            },
-            {
-                "BH.UI.Components.PushCaller.Push(BH.Adapter.BHoMAdapter, System.Collections.Generic.IEnumerable<BH.oM.Base.IObject>, System.String, System.Collections.Generic.Dictionary<System.String, System.Object>, System.Boolean)",
-                typeof(BH.UI.Components.PushCaller).GetMethod("Push")
-            }
-        };
+            PreviousVersion = "";
+
+            ToNewObject.Add("BH.oM.Versioning.OldVersion", UpgradeOldVersion); // For the change of class name
+            ToNewObject.Add("BH.oM.Versioning.NewVersion", UpgradeOldVersion); // For the change of properties
+        }
+
 
         /***************************************************/
+        /**** Private Methods                           ****/
+        /***************************************************/
 
-        public Dictionary<string, MethodBase> ToOldMethod { get; set; } = new Dictionary<string, MethodBase>
+
+        public static Dictionary<string, object> UpgradeOldVersion(Dictionary<string, object> version)
         {
+            if (version == null)
+                return null;
 
-        };
+            double A = 0;
+            if (version.ContainsKey("A")) 
+                A = (double)version["A"];
+
+            double B = 0;
+            if (version.ContainsKey("B"))
+                B = (double)version["B"];
+
+            return new Dictionary<string, object>
+            {
+                { "_t",  "BH.oM.Versioning.NewVersion" },
+                { "AplusB", A + B },
+                { "AminusB", A - B }
+            };
+        }
 
         /***************************************************/
     }
