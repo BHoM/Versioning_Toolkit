@@ -23,32 +23,27 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BH.Upgrader.v31
 {
-    public partial class Converter
+    public class Converter : Base.Converter
     {
         /***************************************************/
-        /**** Public Properties                         ****/
+        /**** Constructors                              ****/
         /***************************************************/
 
-        public Dictionary<string, MethodBase> ToNewMethod { get; set; } = new Dictionary<string, MethodBase>
+        public Converter() : base()
         {
-            {
-                "BH.Engine.Geometry.Compute.ClipPolylines(BH.oM.Geometry.Polyline, BH.oM.Geometry.Polyline)",
-                typeof(BH.Engine.Geometry.Compute).GetMethod("BooleanIntersection", new Type[] { typeof(BH.oM.Geometry.Polyline), typeof(BH.oM.Geometry.Polyline), typeof(double) })
-            },
-        };
+            PreviousVersion = "3.0";
+        }
+
 
         /***************************************************/
+        /**** Private Methods                           ****/
+        /***************************************************/
 
-        public Dictionary<string, MethodBase> ToOldMethod { get; set; } = new Dictionary<string, MethodBase>
-        {
-
-        };
 
         /***************************************************/
     }

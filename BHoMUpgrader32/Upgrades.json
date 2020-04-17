@@ -1,0 +1,26 @@
+﻿{
+  "Type": {
+    "ToNew": { 
+
+    },
+    "ToOld": {
+
+    }
+  },
+  "Method": {
+    "ToNew": {
+    
+    },
+    "ToOld": {
+
+    }
+  },
+  "Property": {
+    "ToNew": {
+
+    },
+    "ToOld": {
+
+    }
+  }
+}
