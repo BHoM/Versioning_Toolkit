@@ -341,13 +341,19 @@ namespace BH.Upgrader.Base
                 return null;
 
             string name = methodName.ToString();
-            List<string> parameterTypes = parameters.Select(x => GetTypeString(x.AsString)).ToList();
+            if (name == ".ctor")
+                name = "";
+            else
+                name = "." + name;
+
             string declaringType = GetTypeString(typeName.AsString);
 
             string parametersString = "";
+            List<string> parameterTypes = parameters.Select(x => GetTypeString(x.AsString)).ToList();
             if (parameterTypes.Count > 0)
                 parametersString = parameterTypes.Aggregate((a, b) => a + ", " + b);
-            string key = declaringType + "." + name + "(" + parametersString + ")";
+
+            string key = declaringType + name + "(" + parametersString + ")";
 
             if (dic.ContainsKey(key))
                 return dic[key];
