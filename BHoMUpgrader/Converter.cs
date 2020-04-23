@@ -94,6 +94,9 @@ namespace BH.Upgrader.Base
             if (upgrades.Contains("Type"))
                 LoadTypeUpgrades(upgrades["Type"] as BsonDocument);
 
+            if (upgrades.Contains("Namespace"))
+                AddNamespaceUpgrades(upgrades["Namespace"] as BsonDocument);
+
             if (upgrades.Contains("Method"))
                 LoadMethodUpgrades(upgrades["Method"] as BsonDocument);
 
@@ -120,6 +123,34 @@ namespace BH.Upgrader.Base
                 BsonDocument toOld = data["ToOld"] as BsonDocument;
                 if (toOld != null)
                     ToOldType = toOld.ToDictionary(x => x.Name, x => x.Value.ToString());
+            }
+        }
+
+        /***************************************************/
+
+        protected void AddNamespaceUpgrades(BsonDocument data)
+        {
+            if (data == null)
+                return;
+
+            if (data.Contains("ToNew"))
+            {
+                BsonDocument toNew = data["ToNew"] as BsonDocument;
+                if (toNew != null)
+                {
+                    foreach (BsonElement element in toNew)
+                        ToNewType.Add(element.Name, element.Value.AsString);
+                }
+            }
+
+            if (data.Contains("ToOld"))
+            {
+                BsonDocument toOld = data["ToOld"] as BsonDocument;
+                if (toOld != null)
+                {
+                    foreach (BsonElement element in toOld)
+                        ToNewType.Add(element.Name, element.Value.AsString);
+                }
             }
         }
 
