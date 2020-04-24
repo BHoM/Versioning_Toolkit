@@ -148,6 +148,11 @@ namespace BH.Upgrader.Base
             if (typeName == null || methodName == null || parameterArray == null)
                 return null;
 
+            // First see if the method can be found in the dictionary using the old parameters
+            BsonDocument result = GetMethodFromDic(converter.ToNewMethod, document);
+            if (result != null)
+                return result;
+
             // Update the parameter types if needed
             bool modified = false;
             List<BsonValue> parameters = new List<BsonValue>();
@@ -182,7 +187,7 @@ namespace BH.Upgrader.Base
                 });
             }
 
-            BsonDocument result = GetMethodFromDic(converter.ToNewMethod, document);
+            result = GetMethodFromDic(converter.ToNewMethod, document);
             if (result == null && modified)
                 result = document;
             return result;
