@@ -2,7 +2,7 @@
 
 # Versioning_Toolkit
 
-Provide ability for serialised items (methods, types, BHoM objects) to automatically upgrade themselves in case their code definition has changed since they were serialised.
+Provide ability for serialised items (methods, types, BHoM objects) to automatically upgrade themselves if their code definition has changed since they were serialised.
 
 
 ### Documentation
