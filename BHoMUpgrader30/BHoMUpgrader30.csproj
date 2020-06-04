@@ -92,8 +92,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y /I /E "$(TargetDir)*.dll" C:\ProgramData\BHoM\Assemblies\bin\BHoMUpgrader30
-xcopy /Y /I /E "$(TargetDir)*.exe" C:\ProgramData\BHoM\Assemblies\bin\BHoMUpgrader30
-xcopy /Y /I /E "$(TargetDir)*.json" C:\ProgramData\BHoM\Assemblies\bin\BHoMUpgrader30</PostBuildEvent>
+    <PostBuildEvent>xcopy /Y /I /E "$(TargetDir)*.dll" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader30
+xcopy /Y /I /E "$(TargetDir)*.exe" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader30
+xcopy /Y /I /E "$(TargetDir)*.json" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader30</PostBuildEvent>
   </PropertyGroup>
 </Project>
