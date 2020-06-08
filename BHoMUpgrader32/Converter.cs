@@ -97,7 +97,7 @@ namespace BH.Upgrader.v32
 
             //Serialisation_Engine is fallbacking to trying to de-serialise as CustomObject.
             //When doing so it might add GUID as a property, which needs to be removed if that is the case,
-            //as MeshResult is not a BHoMObejct and does not contain a BHoM_Guid.
+            //as MeshResult is not a BHoMObject and does not contain a BHoM_Guid.
             if (newVersion.ContainsKey("BHoM_Guid"))
                 newVersion.Remove("BHoM_Guid");
 
