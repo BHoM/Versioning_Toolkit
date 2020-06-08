@@ -49,9 +49,6 @@ namespace BH.Upgrader.v32
             ToNewObject.Add("BH.oM.Structure.Results.GlobalReactions", UpgradeResult);
             ToNewObject.Add("BH.oM.Structure.Results.ModalDynamics", UpgradeResult);
             ToNewObject.Add("BH.oM.Structure.Results.StructuralGlobalResult", UpgradeResult);
-            ToNewObject.Add("BH.oM.Structure.Results.MeshResultLayer", UpgradeResult);
-            ToNewObject.Add("BH.oM.Structure.Results.MeshResultSmoothingType", UpgradeResult);
-            ToNewObject.Add("BH.oM.Structure.Results.MeshResultType", UpgradeResult);
             ToNewObject.Add("BH.oM.Structure.Results.MeshDisplacement", UpgradeResult);
             ToNewObject.Add("BH.oM.Structure.Results.MeshForce", UpgradeResult);
             ToNewObject.Add("BH.oM.Structure.Results.MeshElementResult", UpgradeResult);
