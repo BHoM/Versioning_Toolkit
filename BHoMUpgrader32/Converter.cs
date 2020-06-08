@@ -55,7 +55,7 @@ namespace BH.Upgrader.v32
             ToNewObject.Add("BH.oM.Structure.Results.MeshDisplacement", UpgradeResult);
             ToNewObject.Add("BH.oM.Structure.Results.MeshForce", UpgradeResult);
             ToNewObject.Add("BH.oM.Structure.Results.MeshElementResult", UpgradeResult);
-            ToNewObject.Add("BH.oM.Structure.Results.MeshResult", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.MeshResult", UpgradeMeshResult);
             ToNewObject.Add("BH.oM.Structure.Results.MeshStress", UpgradeResult);
             ToNewObject.Add("BH.oM.Structure.Results.MeshVonMises", UpgradeResult);
             ToNewObject.Add("BH.oM.Structure.Results.NodeAcceleration", UpgradeResult);
@@ -79,6 +79,27 @@ namespace BH.Upgrader.v32
 
             if (!newVersion.ContainsKey("ModeNumber"))
                 newVersion.Add("ModeNumber", -1);
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeMeshResult(Dictionary<string, object> result)
+        {
+            if (result == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(result);
+
+            if (!newVersion.ContainsKey("ModeNumber"))
+                newVersion.Add("ModeNumber", -1);
+
+            //Serialisation_Engine is fallbacking to trying to de-serialise as CustomObject.
+            //When doing so it might add GUID as a property, which needs to be removed if that is the case,
+            //as MeshResult is not a BHoMObejct and does not contain a BHoM_Guid.
+            if (newVersion.ContainsKey("BHoM_Guid"))
+                newVersion.Remove("BHoM_Guid");
 
             return newVersion;
         }
