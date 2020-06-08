@@ -37,6 +37,32 @@ namespace BH.Upgrader.v32
         public Converter() : base()
         {
             PreviousVersion = "3.1";
+
+            ToNewObject.Add("BH.oM.Structure.Results.BarDisplacement", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.BarDeformation", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.BarForce", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.BarResult", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.BarStrain", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.BarStress", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.CompositeUtilisation", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.SteelUtilisation", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.GlobalReactions", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.ModalDynamics", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.StructuralGlobalResult", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.MeshResultLayer", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.MeshResultSmoothingType", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.MeshResultType", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.MeshDisplacement", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.MeshForce", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.MeshElementResult", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.MeshResult", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.MeshStress", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.MeshVonMises", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.NodeAcceleration", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.NodeDisplacement", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.NodeReaction", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.NodeResult", UpgradeResult);
+            ToNewObject.Add("BH.oM.Structure.Results.NodeVelocity", UpgradeResult);
         }
 
 
@@ -44,7 +70,20 @@ namespace BH.Upgrader.v32
         /**** Private Methods                           ****/
         /***************************************************/
 
+        public static Dictionary<string, object> UpgradeResult(Dictionary<string, object> result)
+        {
+            if (result == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(result);
+
+            if (!newVersion.ContainsKey("ModeNumber"))
+                newVersion.Add("ModeNumber", -1);
+
+            return newVersion;
+        }
 
         /***************************************************/
+
     }
 }
