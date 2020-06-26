@@ -66,7 +66,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy /Y /I /E "$(TargetDir)*.dll" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader33
-xcopy /Y /I /E "$(TargetDir)*.exe" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader33
+xcopy /Y /I /E "$(TargetDir)BHoMUpgrader33.exe" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader33
 call "$(TargetDir)PostBuild.exe" ..\..\..\ "C:\ProgramData\BHoM\Upgrades"</PostBuildEvent>
   </PropertyGroup>
 </Project>
