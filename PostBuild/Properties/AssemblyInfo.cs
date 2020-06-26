@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BHoMUpgrader33")]
+[assembly: AssemblyTitle("PostBuild")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BHoMUpgrader33")]
+[assembly: AssemblyProduct("PostBuild")]
 [assembly: AssemblyCopyright("Copyright © https://github.com/BHoM")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8a2966f9-3e84-4f31-80d6-a33bdd3bad95")]
+[assembly: Guid("4ec319a6-67c9-4627-9de6-046bb5bae401")]
 
 // Version information for an assembly consists of the following four values:
 //

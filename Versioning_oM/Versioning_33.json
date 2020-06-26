@@ -1,0 +1,33 @@
+{
+  "Namespace": {
+    "ToNew": {
+      "Test.Old":  "Test.New"
+    },
+    "ToOld": {
+    }
+  },
+  "Type": {
+    "ToNew": {
+
+    },
+    "ToOld": {
+
+    }
+  },
+  "Method": {
+    "ToNew": {
+
+    },
+    "ToOld": {
+
+    }
+  },
+  "Property": {
+    "ToNew": {
+
+    },
+    "ToOld": {
+
+    }
+  }
+}

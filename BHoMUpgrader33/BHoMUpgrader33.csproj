@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Build\</OutputPath>
+    <OutputPath>Build\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -58,11 +58,15 @@
       <Project>{47629a75-8509-491a-82e5-517a2d8b945e}</Project>
       <Name>BHoMUpgrader</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PostBuild\PostBuild.csproj">
+      <Project>{4ec319a6-67c9-4627-9de6-046bb5bae401}</Project>
+      <Name>PostBuild</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy /Y /I /E "$(TargetDir)*.dll" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader33
 xcopy /Y /I /E "$(TargetDir)*.exe" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader33
-xcopy /Y /I /E "$(TargetDir)*.json" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader33</PostBuildEvent>
+call "$(TargetDir)PostBuild.exe" ..\..\ "C:\ProgramData\BHoM\Upgrades"</PostBuildEvent>
   </PropertyGroup>
 </Project>
