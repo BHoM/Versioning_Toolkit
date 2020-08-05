@@ -223,9 +223,11 @@ namespace PostBuild
             BsonDocument toNewContent = content["ToNew"] as BsonDocument;
             foreach (MethodBase method in Query.AllMethodList())
             {
-                PreviousVersionAttribute attribute = method.GetCustomAttribute<PreviousVersionAttribute>();
-                if (attribute != null && attribute.FromVersion == version)
-                    toNewContent.Add(new BsonElement(attribute.PreviousVersionAsText, BH.Engine.Serialiser.Convert.ToBson(method)));
+                foreach (PreviousVersionAttribute attribute in method.GetCustomAttributes<PreviousVersionAttribute>())
+                {
+                    if (attribute != null && attribute.FromVersion == version)
+                        toNewContent.Add(new BsonElement(attribute.PreviousVersionAsText, BH.Engine.Serialiser.Convert.ToBson(method)));
+                }
             }
         }
 
