@@ -258,8 +258,49 @@ namespace BH.Upgrader.Base
 
         private BsonDocument UpgradeObject(BsonDocument document, Converter converter)
         {
-            // Upgrade the property names
+            //Get the old type
             string oldType = document["_t"].AsString;
+
+            //Check if there are any full object upgraders available
+            if (converter.ToNewObject.ContainsKey(oldType))
+            {
+                //If so, use them to upgrade the object
+                return UpgradeObjectExplicit(document, converter, oldType);
+            }
+            else
+            {
+                //If not, try upgrading the names of the types and properties
+                return UpgradeObjectTypeAndPropertyNames(document, converter, oldType);
+            }
+        }
+
+        /***************************************************/
+
+        private BsonDocument UpgradeObjectExplicit(BsonDocument document, Converter converter, string oldType)
+        {
+            object b = converter.ToNewObject[oldType](document.ToDictionary());
+            if (b == null)
+                return null;
+
+            Console.WriteLine("object updated: " + b.GetType().FullName);
+            BsonDocument newDoc = BH.Engine.Serialiser.Convert.ToBson(b);
+
+            // Copy over BHoM properties
+            string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
+            foreach (string p in properties)
+            {
+                if (newDoc.Contains(p) && document.Contains(p))
+                    newDoc[p] = document[p];
+            }
+
+            return newDoc;
+        }
+
+        /***************************************************/
+
+        private BsonDocument UpgradeObjectTypeAndPropertyNames(BsonDocument document, Converter converter, string oldType)
+        {
+            // Upgrade the property names
             Dictionary<string, BsonElement> propertiesToChange = new Dictionary<string, BsonElement>();
             foreach (BsonElement property in document)
             {
@@ -273,32 +314,13 @@ namespace BH.Upgrader.Base
                 document.Remove(kvp.Key);
             }
 
-            // Upgrade the rest
+            //Try to find new type
             string newType = GetTypeFromDic(converter.ToNewType, oldType);
             if (newType != null)
             {
                 document["_t"] = newType;
                 Console.WriteLine("type upgraded from " + oldType + " to " + newType);
                 return document;
-            }
-            else if (converter.ToNewObject.ContainsKey(oldType))
-            {
-                object b = converter.ToNewObject[oldType](document.ToDictionary());
-                if (b == null)
-                    return null;
-
-                Console.WriteLine("object updated: " + b.GetType().FullName);
-                BsonDocument newDoc = BH.Engine.Serialiser.Convert.ToBson(b);
-
-                // Copy over BHoM properties
-                string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
-                foreach (string p in properties)
-                {
-                    if (newDoc.Contains(p) && document.Contains(p))
-                        newDoc[p] = document[p];
-                }
-
-                return newDoc;
             }
             else if (propertiesToChange.Count > 0)
             {
