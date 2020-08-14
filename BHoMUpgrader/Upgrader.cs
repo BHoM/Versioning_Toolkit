@@ -306,7 +306,10 @@ namespace BH.Upgrader.Base
             {
                 string key = oldType + "." + property.Name;
                 if (converter.ToNewProperty.ContainsKey(key))
-                    propertiesToChange.Add(property.Name, new BsonElement(converter.ToNewProperty[key], property.Value));
+                {
+                    string newPropName = converter.ToNewProperty[key].Split('.').Last();
+                    propertiesToChange.Add(property.Name, new BsonElement(newPropName, property.Value));
+                }
             }
             foreach (var kvp in propertiesToChange)
             {
