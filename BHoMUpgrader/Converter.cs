@@ -149,7 +149,7 @@ namespace BH.Upgrader.Base
                 if (toOld != null)
                 {
                     foreach (BsonElement element in toOld)
-                        ToNewType.Add(element.Name, element.Value.AsString);
+                        ToOldType.Add(element.Name, element.Value.AsString);
                 }
             }
         }
