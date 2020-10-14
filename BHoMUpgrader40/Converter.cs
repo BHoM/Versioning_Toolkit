@@ -21,6 +21,7 @@
  */
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,6 +38,8 @@ namespace BH.Upgrader.v40
         public Converter() : base()
         {
             PreviousVersion = "3.3";
+
+            ToNewObject.Add("BH.oM.Geometry.ShapeProfiles.TaperedProfile", UpgradeTaperedProfile);
         }
 
 
@@ -44,7 +47,22 @@ namespace BH.Upgrader.v40
         /**** Private Methods                           ****/
         /***************************************************/
 
+        public static Dictionary<string, object> UpgradeTaperedProfile(Dictionary<string, object> taperedProfile)
+        {
+            if (taperedProfile == null)
+                return null;
 
+            Dictionary<string, object> newTaperedProfile = new Dictionary<string, object>(taperedProfile);
+
+            if (!newTaperedProfile.ContainsKey("interpolationOrder"))
+            {
+                newTaperedProfile.TryGetValue("positions", out object positions);
+                IList positionList = (IList)positions;
+                newTaperedProfile.Add("interpolationOrder", Enumerable.Repeat(1, positionList.Count -1).ToList());
+            }
+
+            return newTaperedProfile;
+        }
 
         /***************************************************/
 
