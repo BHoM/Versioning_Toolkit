@@ -37,6 +37,8 @@ namespace BH.Upgrader.v40
         public Converter() : base()
         {
             PreviousVersion = "3.3";
+
+            ToNewObject.Add("BH.oM.Geometry.BoundaryRepresentation", UpgradeBoundaryRepresentation);
         }
 
 
@@ -44,7 +46,18 @@ namespace BH.Upgrader.v40
         /**** Private Methods                           ****/
         /***************************************************/
 
+        public static Dictionary<string, object> UpgradeBoundaryRepresentation(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
 
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (!newVersion.ContainsKey("Volume"))
+                newVersion.Add("Volume", double.NaN);
+
+            return newVersion;
+        }
 
         /***************************************************/
 
