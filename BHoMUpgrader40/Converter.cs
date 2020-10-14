@@ -56,10 +56,11 @@ namespace BH.Upgrader.v40
 
             if (!newTaperedProfile.ContainsKey("interpolationOrder"))
             {
-                object positions;
-                newTaperedProfile.TryGetValue("positions", out positions);
-                IList positionList = (IList)positions;
-                newTaperedProfile.Add("interpolationOrder", Enumerable.Repeat(1, positionList.Count -1).ToList());
+                object profiles;
+                newTaperedProfile.TryGetValue("Profiles", out profiles);
+                Dictionary<string, object> profileDict = profiles as Dictionary<string, object>;
+                List<string> keys = new List<string>(profileDict.Keys);
+                newTaperedProfile.Add("interpolationOrder", Enumerable.Repeat(1, keys.Count -1).ToList());
             }
 
             return newTaperedProfile;
