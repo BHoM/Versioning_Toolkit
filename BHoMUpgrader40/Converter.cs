@@ -56,7 +56,8 @@ namespace BH.Upgrader.v40
 
             if (!newTaperedProfile.ContainsKey("interpolationOrder"))
             {
-                newTaperedProfile.TryGetValue("positions", out object positions);
+                object positions;
+                newTaperedProfile.TryGetValue("positions", out positions);
                 IList positionList = (IList)positions;
                 newTaperedProfile.Add("interpolationOrder", Enumerable.Repeat(1, positionList.Count -1).ToList());
             }
