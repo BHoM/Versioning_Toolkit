@@ -39,6 +39,7 @@ namespace BH.Upgrader.v40
         {
             PreviousVersion = "3.3";
 
+            ToNewObject.Add("BH.oM.Geometry.BoundaryRepresentation", UpgradeBoundaryRepresentation);
             ToNewObject.Add("BH.oM.Geometry.ShapeProfiles.TaperedProfile", UpgradeTaperedProfile);
         }
 
@@ -46,6 +47,19 @@ namespace BH.Upgrader.v40
         /***************************************************/
         /**** Private Methods                           ****/
         /***************************************************/
+
+        public static Dictionary<string, object> UpgradeBoundaryRepresentation(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (!newVersion.ContainsKey("Volume"))
+                newVersion.Add("Volume", double.NaN);
+
+            return newVersion;
+        }
 
         public static Dictionary<string, object> UpgradeTaperedProfile(Dictionary<string, object> taperedProfile)
         {
@@ -60,7 +74,7 @@ namespace BH.Upgrader.v40
                 newTaperedProfile.TryGetValue("Profiles", out profiles);
                 Dictionary<string, object> profileDict = profiles as Dictionary<string, object>;
                 List<string> keys = new List<string>(profileDict.Keys);
-                newTaperedProfile.Add("interpolationOrder", Enumerable.Repeat(1, keys.Count -1).ToList());
+                newTaperedProfile.Add("interpolationOrder", Enumerable.Repeat(1, keys.Count - 1).ToList());
             }
 
             return newTaperedProfile;
