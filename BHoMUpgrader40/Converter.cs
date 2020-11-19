@@ -72,6 +72,9 @@ namespace BH.Upgrader.v40
             if (!newVersion.ContainsKey("OwnerViewId"))
                 newVersion.Add("OwnerViewId", -1);
 
+            if (!newVersion.ContainsKey("ParentElementId"))
+                newVersion.Add("ParentElementId", -1);
+
             return newVersion;
         }
 
