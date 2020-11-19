@@ -84,12 +84,23 @@ namespace BH.Upgrader.v40
                 return null;
 
             Dictionary<string, object> newTaperedProfile = new Dictionary<string, object>(taperedProfile);
+            newTaperedProfile["_t"] = newTaperedProfile["_t"].ToString().Replace("Geometry", "Spatial");
+
+            object profiles;
+            newTaperedProfile.TryGetValue("Profiles", out profiles);
+            Dictionary<string, object> profileDict = profiles as Dictionary<string, object>;
+            Dictionary<string, object> updateProfileDict = new Dictionary<string, object>();
+            foreach(KeyValuePair<string, object> profilePair in profileDict)
+            {
+                Dictionary<string, object> profileObject = profilePair.Value as Dictionary<string, object>;
+                profileObject["_t"] = profileObject["_t"].ToString().Replace("Geometry", "Spatial");
+                updateProfileDict.Add(profilePair.Key, profileObject);
+            }
+
+            newTaperedProfile["Profiles"] = updateProfileDict;
 
             if (!newTaperedProfile.ContainsKey("interpolationOrder"))
             {
-                object profiles;
-                newTaperedProfile.TryGetValue("Profiles", out profiles);
-                Dictionary<string, object> profileDict = profiles as Dictionary<string, object>;
                 List<string> keys = new List<string>(profileDict.Keys);
                 newTaperedProfile.Add("interpolationOrder", Enumerable.Repeat(1, keys.Count - 1).ToList());
             }
