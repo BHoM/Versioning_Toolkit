@@ -40,6 +40,7 @@ namespace BH.Upgrader.v40
 
             ToNewObject.Add("BH.oM.Geometry.BoundaryRepresentation", UpgradeBoundaryRepresentation);
             ToNewObject.Add("BH.oM.Adapters.Revit.Parameters.RevitIdentifiers", UpgradeRevitIdentifiers);
+            ToNewObject.Add("BH.oM.Geometry.ShapeProfiles.TaperedProfile", UpgradeTaperedProfile);
         }
 
 
@@ -76,5 +77,27 @@ namespace BH.Upgrader.v40
         }
 
         /***************************************************/
+
+        public static Dictionary<string, object> UpgradeTaperedProfile(Dictionary<string, object> taperedProfile)
+        {
+            if (taperedProfile == null)
+                return null;
+
+            Dictionary<string, object> newTaperedProfile = new Dictionary<string, object>(taperedProfile);
+
+            if (!newTaperedProfile.ContainsKey("interpolationOrder"))
+            {
+                object profiles;
+                newTaperedProfile.TryGetValue("Profiles", out profiles);
+                Dictionary<string, object> profileDict = profiles as Dictionary<string, object>;
+                List<string> keys = new List<string>(profileDict.Keys);
+                newTaperedProfile.Add("interpolationOrder", Enumerable.Repeat(1, keys.Count - 1).ToList());
+            }
+
+            return newTaperedProfile;
+        }
+
+        /***************************************************/
+
     }
 }
