@@ -102,10 +102,10 @@ namespace BH.Upgrader.v40
 
             newTaperedProfile["Profiles"] = updateProfileDict;
 
-            if (!newTaperedProfile.ContainsKey("interpolationOrder"))
+            if (!newTaperedProfile.ContainsKey("InterpolationOrder"))
             {
                 List<string> keys = new List<string>(profileDict.Keys);
-                newTaperedProfile.Add("interpolationOrder", Enumerable.Repeat(1, keys.Count - 1).ToList());
+                newTaperedProfile.Add("InterpolationOrder", Enumerable.Repeat(1, keys.Count - 1).ToList());
             }
 
             return newTaperedProfile;
