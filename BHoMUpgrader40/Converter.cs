@@ -113,5 +113,20 @@ namespace BH.Upgrader.v40
 
         /***************************************************/
 
+        public static Dictionary<string, object> UpgradeSpaceObjects(Dictionary<string, object> space)
+        {
+            if (space == null)
+                return null;
+
+            Dictionary<string, object> newSpace = new Dictionary<string, object>(space);
+            newSpace["LightingGain"] = new List<object> { space["LightingGain"] };
+            newSpace["EquipmentGain"] = new List<object> { space["EquipmentGain"] };
+            newSpace["PeopleGain"] = new List<object> { space["PeopleGain"] };
+            newSpace["Infiltration"] = new List<object> { space["Infiltration"] };
+            newSpace["Ventilation"] = new List<object> { space["Ventilation"] };
+            newSpace["Exhaust"] = new List<object> { space["Exhaust"] };
+
+            return newSpace;
+        }
     }
 }
