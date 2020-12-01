@@ -41,6 +41,7 @@ namespace BH.Upgrader.v40
             ToNewObject.Add("BH.oM.Geometry.BoundaryRepresentation", UpgradeBoundaryRepresentation);
             ToNewObject.Add("BH.oM.Adapters.Revit.Parameters.RevitIdentifiers", UpgradeRevitIdentifiers);
             ToNewObject.Add("BH.oM.Geometry.ShapeProfiles.TaperedProfile", UpgradeTaperedProfile);
+            ToNewObject.Add("BH.oM.Environment.Elements.Space", UpgradeSpace);
         }
 
 
@@ -113,7 +114,7 @@ namespace BH.Upgrader.v40
 
         /***************************************************/
 
-        public static Dictionary<string, object> UpgradeSpaceObjects(Dictionary<string, object> space)
+        public static Dictionary<string, object> UpgradeSpace(Dictionary<string, object> space)
         {
             if (space == null)
                 return null;
