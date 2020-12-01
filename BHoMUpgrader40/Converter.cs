@@ -43,6 +43,7 @@ namespace BH.Upgrader.v40
             ToNewObject.Add("BH.oM.Geometry.ShapeProfiles.TaperedProfile", UpgradeTaperedProfile);
             ToNewObject.Add("BH.oM.Environment.Elements.Space", UpgradeSpace);
             ToNewObject.Add("BH.oM.Environment.Gains.Profile", UpgradeProfile);
+            ToNewObject.Add("BH.oM.Environment.Ventilation.Ventilation", UpgradeVentilation);
         }
 
 
@@ -144,6 +145,19 @@ namespace BH.Upgrader.v40
             newProfile["ProfileDay"] = new List<object> { profile["ProfileDay"] };
 
             return newProfile;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeVentilation(Dictionary<string, object> ventilation)
+        {
+            if (ventilation == null)
+                return null;
+
+            Dictionary<string, object> newVentilation = new Dictionary<string, object>(ventilation);
+            newVentilation["_t"] = newVentilation["_t"].ToString().Replace("Ventilation", "SpaceCriteria");
+
+            return newVentilation;
         }
     }
 }
