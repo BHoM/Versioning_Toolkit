@@ -42,6 +42,7 @@ namespace BH.Upgrader.v40
             ToNewObject.Add("BH.oM.Adapters.Revit.Parameters.RevitIdentifiers", UpgradeRevitIdentifiers);
             ToNewObject.Add("BH.oM.Geometry.ShapeProfiles.TaperedProfile", UpgradeTaperedProfile);
             ToNewObject.Add("BH.oM.Environment.Elements.Space", UpgradeSpace);
+            ToNewObject.Add("BH.oM.Environment.Gains.Profile", UpgradeProfile);
         }
 
 
@@ -128,6 +129,21 @@ namespace BH.Upgrader.v40
             newSpace["Exhaust"] = new List<object> { space["Exhaust"] };
 
             return newSpace;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeProfile(Dictionary<string, object> profile)
+        {
+            if (profile == null)
+                return null;
+
+            Dictionary<string, object> newProfile = new Dictionary<string, object>(profile);
+            newProfile["_t"] = newProfile["_t"].ToString().Replace("Gains", "SpaceCriteria");
+
+            newProfile["ProfileDay"] = new List<object> { profile["ProfileDay"] };
+
+            return newProfile;
         }
     }
 }
