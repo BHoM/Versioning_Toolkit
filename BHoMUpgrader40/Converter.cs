@@ -41,9 +41,8 @@ namespace BH.Upgrader.v40
             ToNewObject.Add("BH.oM.Geometry.BoundaryRepresentation", UpgradeBoundaryRepresentation);
             ToNewObject.Add("BH.oM.Adapters.Revit.Parameters.RevitIdentifiers", UpgradeRevitIdentifiers);
             ToNewObject.Add("BH.oM.Geometry.ShapeProfiles.TaperedProfile", UpgradeTaperedProfile);
-            ToNewObject.Add("BH.oM.Environment.Elements.Space", UpgradeSpace);
             ToNewObject.Add("BH.oM.Environment.Gains.Profile", UpgradeProfile);
-            ToNewObject.Add("BH.oM.Environment.Ventilation.Ventilation", UpgradeVentilation);
+            ToNewObject.Add("BH.oM.Environment.Elements.Space", UpgradeSpace);
         }
 
 
@@ -116,24 +115,6 @@ namespace BH.Upgrader.v40
 
         /***************************************************/
 
-        public static Dictionary<string, object> UpgradeSpace(Dictionary<string, object> space)
-        {
-            if (space == null)
-                return null;
-
-            Dictionary<string, object> newSpace = new Dictionary<string, object>(space);
-            newSpace["LightingGain"] = new List<object> { space["LightingGain"] };
-            newSpace["EquipmentGain"] = new List<object> { space["EquipmentGain"] };
-            newSpace["PeopleGain"] = new List<object> { space["PeopleGain"] };
-            newSpace["Infiltration"] = new List<object> { space["Infiltration"] };
-            newSpace["Ventilation"] = new List<object> { space["Ventilation"] };
-            newSpace["Exhaust"] = new List<object> { space["Exhaust"] };
-
-            return newSpace;
-        }
-
-        /***************************************************/
-
         public static Dictionary<string, object> UpgradeProfile(Dictionary<string, object> profile)
         {
             if (profile == null)
@@ -149,15 +130,20 @@ namespace BH.Upgrader.v40
 
         /***************************************************/
 
-        public static Dictionary<string, object> UpgradeVentilation(Dictionary<string, object> ventilation)
+        public static Dictionary<string, object> UpgradeSpace(Dictionary<string, object> space)
         {
-            if (ventilation == null)
+            if (space == null)
                 return null;
 
-            Dictionary<string, object> newVentilation = new Dictionary<string, object>(ventilation);
-            newVentilation["_t"] = newVentilation["_t"].ToString().Replace("Ventilation", "SpaceCriteria");
+            Dictionary<string, object> newSpace = new Dictionary<string, object>(space);
+            newSpace["LightingGain"] = new List<object> { space["LightingGain"] };
+            newSpace["EquipmentGain"] = new List<object> { space["EquipmentGain"] };
+            newSpace["PeopleGain"] = new List<object> { space["PeopleGain"] };
+            newSpace["Infiltration"] = new List<object> { space["Infiltration"] };
+            newSpace["Ventilation"] = new List<object> { space["Ventilation"] };
+            newSpace["Exhaust"] = new List<object> { space["Exhaust"] };
 
-            return newVentilation;
+            return newSpace;
         }
     }
 }
