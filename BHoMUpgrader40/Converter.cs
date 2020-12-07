@@ -43,13 +43,13 @@ namespace BH.Upgrader.v40
             ToNewObject.Add("BH.oM.Geometry.ShapeProfiles.TaperedProfile", UpgradeTaperedProfile);
             ToNewObject.Add("BH.oM.Environment.Gains.Profile", UpgradeProfile);
             ToNewObject.Add("BH.oM.Environment.Elements.Space", UpgradeSpace);
-            ToNewObject.Add("BH.oM.Structure.MaterialFragment.Aluminium", UpgradeMaterialFragment);
-            ToNewObject.Add("BH.oM.Structure.MaterialFragment.Concrete", UpgradeMaterialFragment);
-            ToNewObject.Add("BH.oM.Structure.MaterialFragment.GenericIsoptropicMaterial", UpgradeMaterialFragment);
-            ToNewObject.Add("BH.oM.Structure.MaterialFragment.GenericOrthotropicMaterial", UpgradeMaterialFragment);
-            ToNewObject.Add("BH.oM.Structure.MaterialFragment.IMaterialFragment", UpgradeMaterialFragment);
-            ToNewObject.Add("BH.oM.Structure.MaterialFragment.Steel", UpgradeMaterialFragment);
-            ToNewObject.Add("BH.oM.Structure.MaterialFragment.Timber", UpgradeMaterialFragment);
+            ToNewObject.Add("BH.oM.Structure.MaterialFragments.Aluminium", UpgradeMaterialFragment);
+            ToNewObject.Add("BH.oM.Structure.MaterialFragments.Concrete", UpgradeMaterialFragment);
+            ToNewObject.Add("BH.oM.Structure.MaterialFragments.GenericIsoptropicMaterial", UpgradeMaterialFragment);
+            ToNewObject.Add("BH.oM.Structure.MaterialFragments.GenericOrthotropicMaterial", UpgradeMaterialFragment);
+            ToNewObject.Add("BH.oM.Structure.MaterialFragments.IMaterialFragment", UpgradeMaterialFragment);
+            ToNewObject.Add("BH.oM.Structure.MaterialFragments.Steel", UpgradeMaterialFragment);
+            ToNewObject.Add("BH.oM.Structure.MaterialFragments.Timber", UpgradeMaterialFragment);
         }
 
 
