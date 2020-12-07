@@ -43,6 +43,13 @@ namespace BH.Upgrader.v40
             ToNewObject.Add("BH.oM.Geometry.ShapeProfiles.TaperedProfile", UpgradeTaperedProfile);
             ToNewObject.Add("BH.oM.Environment.Gains.Profile", UpgradeProfile);
             ToNewObject.Add("BH.oM.Environment.Elements.Space", UpgradeSpace);
+            ToNewObject.Add("BH.oM.Structure.MaterialFragment.Aluminium", UpgradeMaterialFragment);
+            ToNewObject.Add("BH.oM.Structure.MaterialFragment.Concrete", UpgradeMaterialFragment);
+            ToNewObject.Add("BH.oM.Structure.MaterialFragment.GenericIsoptropicMaterial", UpgradeMaterialFragment);
+            ToNewObject.Add("BH.oM.Structure.MaterialFragment.GenericOrthotropicMaterial", UpgradeMaterialFragment);
+            ToNewObject.Add("BH.oM.Structure.MaterialFragment.IMaterialFragment", UpgradeMaterialFragment);
+            ToNewObject.Add("BH.oM.Structure.MaterialFragment.Steel", UpgradeMaterialFragment);
+            ToNewObject.Add("BH.oM.Structure.MaterialFragment.Timber", UpgradeMaterialFragment);
         }
 
 
@@ -144,6 +151,21 @@ namespace BH.Upgrader.v40
             newSpace["Exhaust"] = new List<object> { space["Exhaust"] };
 
             return newSpace;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeMaterialFragment(Dictionary<string, object> materialFragment)
+        {
+            if (materialFragment == null)
+                return null;
+
+            Dictionary<string, object> newMaterialFragment = new Dictionary<string, object>(materialFragment);
+
+            if (newMaterialFragment.ContainsKey("EmbodiedCarbon"))
+                newMaterialFragment.Remove("EmbodiedCarbon");
+
+            return newMaterialFragment;
         }
     }
 }
