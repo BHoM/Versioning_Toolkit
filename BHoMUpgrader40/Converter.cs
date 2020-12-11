@@ -50,6 +50,8 @@ namespace BH.Upgrader.v40
             ToNewObject.Add("BH.oM.Structure.MaterialFragments.IMaterialFragment", UpgradeMaterialFragment);
             ToNewObject.Add("BH.oM.Structure.MaterialFragments.Steel", UpgradeMaterialFragment);
             ToNewObject.Add("BH.oM.Structure.MaterialFragments.Timber", UpgradeMaterialFragment);
+            ToNewObject.Add("BH.oM.Adapters.Revit.FamilyLibrary", UpgradeFamilyLibrary);
+            ToNewObject.Add("BH.oM.Adapters.Revit.Elements.ViewPlan", UpgradeViewPlan);
         }
 
 
@@ -167,5 +169,37 @@ namespace BH.Upgrader.v40
 
             return newMaterialFragment;
         }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeFamilyLibrary(Dictionary<string, object> familyLibrary)
+        {
+            if (familyLibrary == null)
+                return null;
+
+            Dictionary<string, object> newFamilyLibrary = new Dictionary<string, object>(familyLibrary);
+
+            if (newFamilyLibrary.ContainsKey("Dictionary"))
+                newFamilyLibrary.Remove("Dictionary");
+
+            return newFamilyLibrary;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeViewPlan(Dictionary<string, object> viewPlan)
+        {
+            if (viewPlan == null)
+                return null;
+
+            Dictionary<string, object> newViewPlan = new Dictionary<string, object>(viewPlan);
+
+            if (newViewPlan.ContainsKey("IsTemplate"))
+                newViewPlan.Remove("IsTemplate");
+
+            return newViewPlan;
+        }
+
+        /***************************************************/
     }
 }
