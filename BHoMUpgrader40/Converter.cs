@@ -181,23 +181,8 @@ namespace BH.Upgrader.v40
 
             if (newFamilyLibrary.ContainsKey("Dictionary"))
                 newFamilyLibrary.Remove("Dictionary");
-
+            
             return newFamilyLibrary;
-        }
-
-        /***************************************************/
-
-        public static Dictionary<string, object> UpgradeViewPlan(Dictionary<string, object> viewPlan)
-        {
-            if (viewPlan == null)
-                return null;
-
-            Dictionary<string, object> newViewPlan = new Dictionary<string, object>(viewPlan);
-
-            if (newViewPlan.ContainsKey("IsTemplate"))
-                newViewPlan.Remove("IsTemplate");
-
-            return newViewPlan;
         }
 
         /***************************************************/
