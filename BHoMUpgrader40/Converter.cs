@@ -45,7 +45,7 @@ namespace BH.Upgrader.v40
             ToNewObject.Add("BH.oM.Environment.Elements.Space", UpgradeSpace);
             ToNewObject.Add("BH.oM.Structure.MaterialFragments.Aluminium", UpgradeMaterialFragment);
             ToNewObject.Add("BH.oM.Structure.MaterialFragments.Concrete", UpgradeMaterialFragment);
-            ToNewObject.Add("BH.oM.Structure.MaterialFragments.GenericIsoptropicMaterial", UpgradeMaterialFragment);
+            ToNewObject.Add("BH.oM.Structure.MaterialFragments.GenericIsotropicMaterial", UpgradeMaterialFragment);
             ToNewObject.Add("BH.oM.Structure.MaterialFragments.GenericOrthotropicMaterial", UpgradeMaterialFragment);
             ToNewObject.Add("BH.oM.Structure.MaterialFragments.IMaterialFragment", UpgradeMaterialFragment);
             ToNewObject.Add("BH.oM.Structure.MaterialFragments.Steel", UpgradeMaterialFragment);
