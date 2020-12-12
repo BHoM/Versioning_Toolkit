@@ -1,0 +1,51 @@
+{
+	"Authors": [
+		"Arnaud Declercq",
+		"Isak Naslund",
+		"Pawel Baran",
+		"Alessio Lombardi"
+	],
+	"LastUpdateDate": "12/12/2020",
+	"Methods": [
+		"BH.Engine.Adapters.ETABS.Compute.UpgradeVersion",
+		"BH.Engine.Adapters.ETABS.Convert.ToCSI",
+		"BH.Engine.Adapters.ETABS.Convert.ToDoubleArray",
+		"BH.Engine.Adapters.ETABS.Convert.ToVector",
+		"BH.Engine.Adapters.Revit.Create.ViewPlan",
+		"BH.Engine.Adapters.Robot.Compute.GroupBarsByLength",
+		"BH.Engine.Geometry.Create.AngleProfileCurves",
+		"BH.Engine.Geometry.Create.BoxProfileCurves",
+		"BH.Engine.Geometry.Create.ChannelProfileCurves",
+		"BH.Engine.Geometry.Create.CircleProfileCurves",
+		"BH.Engine.Geometry.Create.FabricatedBoxProfileCurves",
+		"BH.Engine.Geometry.Create.GeneralisedFabricatedBoxProfileCurves",
+		"BH.Engine.Geometry.Create.GeneralisedTeeProfileCurves",
+		"BH.Engine.Geometry.Create.IProfileCurves",
+		"BH.Engine.Geometry.Create.KiteProfileCurves",
+		"BH.Engine.Geometry.Create.RectangleProfileCurves",
+		"BH.Engine.Geometry.Create.TeeProfileCurves",
+		"BH.Engine.Geometry.Create.TubeProfileCurves",
+		"BH.Engine.Geometry.Create.ZSectionProfile",
+		"BH.Engine.Grasshopper.Compute.IRenderMeshes",
+		"BH.Engine.Grasshopper.Compute.IRenderRhinoMeshes",
+		"BH.Engine.Grasshopper.Compute.IRenderRhinoWires",
+		"BH.Engine.Grasshopper.Compute.IRenderWires",
+		"BH.Engine.Grasshopper.Compute.RenderMeshes",
+		"BH.Engine.Grasshopper.Compute.RenderRhinoMeshes",
+		"BH.Engine.Grasshopper.Compute.RenderRhinoWires",
+		"BH.Engine.Grasshopper.Compute.RenderWires",
+		"BH.Engine.Grasshopper.Convert.FromGoo",
+		"BH.Engine.Grasshopper.Convert.IFromGoo",
+		"BH.Engine.Grasshopper.Convert.IToGoo",
+		"BH.Engine.Grasshopper.Convert.ToGoo",
+		"BH.Engine.Grasshopper.Query.RenderColour",
+		"BH.Engine.Grasshopper.Query.RenderMaterial",
+		"BH.Engine.Grasshopper.Query.Type",
+		"BH.Engine.Structure.Create.NewElement0D",
+		"BH.Engine.Structure.Create.NewElement1D"
+	],
+	"Objects": [
+		"BH.oM.Adapters.Revit.Elements.ViewPlan",
+		"BH.oM.Adapters.Revit.Generic.RevitFilePreview"
+	]
+}
