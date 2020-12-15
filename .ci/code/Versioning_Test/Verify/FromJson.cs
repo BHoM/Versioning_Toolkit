@@ -22,7 +22,7 @@ namespace BH.Test.Versioning
         public static TestResult FromJsonDatasets()
         {
             string currentDirectory = Directory.GetCurrentDirectory();
-            string testFolder = Path.Combine(Directory.GetCurrentDirectory(), @"..\Datasets\TestSets\Versioning");
+            string testFolder = Path.Combine(currentDirectory, @"..\Datasets\TestSets\Versioning");
 
             // Test all the BHoM versions available
             List<TestResult> results = Directory.GetDirectories(testFolder).Select(x => FromJsonDataset(x)).ToList();
