@@ -278,22 +278,29 @@ namespace BH.Upgrader.Base
 
         private BsonDocument UpgradeObjectExplicit(BsonDocument document, Converter converter, string oldType)
         {
-            object b = converter.ToNewObject[oldType](document.ToDictionary());
-            if (b == null)
-                return null;
-
-            Console.WriteLine("object updated: " + b.GetType().FullName);
-            BsonDocument newDoc = BH.Engine.Serialiser.Convert.ToBson(b);
-
-            // Copy over BHoM properties
-            string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
-            foreach (string p in properties)
+            try
             {
-                if (newDoc.Contains(p) && document.Contains(p))
-                    newDoc[p] = document[p];
-            }
+                object b = converter.ToNewObject[oldType](document.ToDictionary());
+                if (b == null)
+                    return null;
 
-            return newDoc;
+                Console.WriteLine("object updated: " + b.GetType().FullName);
+                BsonDocument newDoc = BH.Engine.Serialiser.Convert.ToBson(b);
+
+                // Copy over BHoM properties
+                string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
+                foreach (string p in properties)
+                {
+                    if (newDoc.Contains(p) && document.Contains(p))
+                        newDoc[p] = document[p];
+                }
+
+                return newDoc;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         /***************************************************/
@@ -430,6 +437,9 @@ namespace BH.Upgrader.Base
             if (genericIndex < 0)
                 return typeString;
             typeString = typeString.Substring(0, genericIndex);
+
+            if (!doc.Contains("GenericArguments"))
+                return typeString;
 
             BsonArray generics = doc["GenericArguments"] as BsonArray;
             if (generics == null)
