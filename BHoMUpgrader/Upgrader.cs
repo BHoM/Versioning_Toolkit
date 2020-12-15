@@ -301,21 +301,35 @@ namespace BH.Upgrader.Base
         private BsonDocument UpgradeObjectTypeAndPropertyNames(BsonDocument document, Converter converter, string oldType)
         {
             // Upgrade the property names
-            Dictionary<string, BsonElement> propertiesToChange = new Dictionary<string, BsonElement>();
+            Dictionary<string, BsonElement> propertiesToRename = new Dictionary<string, BsonElement>();
+            Dictionary<string, BsonDocument> propertiesToUpgrade = new Dictionary<string, BsonDocument>();
             foreach (BsonElement property in document)
             {
-                string key = oldType + "." + property.Name;
+                string propName = property.Name;
+                string key = oldType + "." + propName;
                 if (converter.ToNewProperty.ContainsKey(key))
                 {
-                    string newPropName = converter.ToNewProperty[key].Split('.').Last();
-                    propertiesToChange.Add(property.Name, new BsonElement(newPropName, property.Value));
+                    propName = converter.ToNewProperty[key].Split('.').Last();
+                    propertiesToRename.Add(property.Name, new BsonElement(propName, property.Value));
+                }
+
+                BsonDocument prop = property.Value as BsonDocument;
+                if (prop != null)
+                {
+                    BsonDocument upgrade = UpgradeLocally(prop, converter);
+                    if (upgrade != null)
+                        propertiesToUpgrade.Add(propName, upgrade);
                 }
             }
-            foreach (var kvp in propertiesToChange)
+
+            foreach (var kvp in propertiesToRename)
             {
                 document.Add(kvp.Value);
                 document.Remove(kvp.Key);
             }
+
+            foreach (var kvp in propertiesToUpgrade)
+                document[kvp.Key] = kvp.Value;
 
             //Try to find new type
             string newType = GetTypeFromDic(converter.ToNewType, oldType);
@@ -325,7 +339,7 @@ namespace BH.Upgrader.Base
                 Console.WriteLine("type upgraded from " + oldType + " to " + newType);
                 return document;
             }
-            else if (propertiesToChange.Count > 0)
+            else if (propertiesToRename.Count > 0 || propertiesToUpgrade.Count > 0)
             {
                 return document;
             }
