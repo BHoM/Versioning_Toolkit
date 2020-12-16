@@ -72,6 +72,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\CanReplaceMethodWithType.cs" />
     <Compile Include="Helpers\DescriptionFromJson.cs" />
     <Compile Include="Verify\FromJson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

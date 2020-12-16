@@ -61,15 +61,15 @@ namespace BH.Test.Versioning
                     {
                         if (custom.CustomData.ContainsKey("Objects"))
                         {
-                            List<string> list = custom.CustomData["Objects"] as List<string>;
+                            List<object> list = custom.CustomData["Objects"] as List<object>;
                             if (list != null)
-                                objectsToIgnore = new HashSet<string>(list);
+                                objectsToIgnore = new HashSet<string>(list.OfType<string>());
                         }
                         if (custom.CustomData.ContainsKey("Methods"))
                         {
-                            List<string> list = custom.CustomData["Methods"] as List<string>;
-                            if (methodsToIgnore == null)
-                                methodsToIgnore = new HashSet<string>(list);
+                            List<object> list = custom.CustomData["Methods"] as List<object>;
+                            if (list != null)
+                                methodsToIgnore = new HashSet<string>(list.OfType<string>());
                         }
                     }
                 }
@@ -83,7 +83,7 @@ namespace BH.Test.Versioning
             {
                 fails.AddRange(File.ReadAllLines(objectFile)
                     .Where(x => !string.IsNullOrWhiteSpace(x))
-                    .Select(x => FromJsonItem(x))
+                    .Select(x => FromJsonItem(x, false))
                     .Where(x => x.Status == ResultStatus.Fail && !objectsToIgnore.Contains(x.Description)));
             }
 
@@ -93,7 +93,7 @@ namespace BH.Test.Versioning
             {
                 fails.AddRange(File.ReadAllLines(methodFile)
                     .Where(x => !string.IsNullOrWhiteSpace(x))
-                    .Select(x => FromJsonItem(x))
+                    .Select(x => FromJsonItem(x, true))
                     .Where(x => x.Status == ResultStatus.Fail && !methodsToIgnore.Contains(x.Description)));
             }
 
@@ -107,9 +107,13 @@ namespace BH.Test.Versioning
 
         /*************************************/
 
-        public static TestResult FromJsonItem(string json)
+        public static TestResult FromJsonItem(string json, bool isMethod)
         {
+            
             object result = Engine.Serialiser.Convert.FromJson(json);
+            bool success = result != null;
+            if (!success && isMethod)
+                success = Helpers.CanReplaceMethodWithType(json);
 
             string description = "";
             if (result != null && !(result is CustomObject))
@@ -117,7 +121,7 @@ namespace BH.Test.Versioning
             else
                 description = Helpers.DescriptionFromJson(json);
 
-            if (result == null)
+            if (!success)
                 return Engine.Test.Create.FailResult($"Failed to recover {description}", description, false);
             else if (result is CustomObject)
                 return Engine.Test.Create.FailResult($"Object returned as CustomObject: {description}", description, false);
