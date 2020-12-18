@@ -324,7 +324,7 @@ namespace BH.Upgrader.Base
                 if (prop != null)
                 {
                     BsonDocument upgrade = UpgradeLocally(prop, converter);
-                    if (upgrade != null)
+                    if (upgrade != null && prop != upgrade)
                         propertiesToUpgrade.Add(propName, upgrade);
                 }
             }
