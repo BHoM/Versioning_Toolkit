@@ -21,6 +21,7 @@
  */
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -140,16 +141,33 @@ namespace BH.Upgrader.v40
 
         public static Dictionary<string, object> UpgradeSpace(Dictionary<string, object> space)
         {
-            if (space == null)
+            if (space == null || !space.ContainsKey("LightingGain") || 
+                !space.ContainsKey("EquipmentGain") || !space.ContainsKey("PeopleGain") || 
+                !space.ContainsKey("Infiltration") || !space.ContainsKey("Infiltration") || 
+                !space.ContainsKey("Ventilation") || !space.ContainsKey("Exhaust"))
                 return null;
 
             Dictionary<string, object> newSpace = new Dictionary<string, object>(space);
-            newSpace["LightingGain"] = new List<object> { space["LightingGain"] };
-            newSpace["EquipmentGain"] = new List<object> { space["EquipmentGain"] };
-            newSpace["PeopleGain"] = new List<object> { space["PeopleGain"] };
-            newSpace["Infiltration"] = new List<object> { space["Infiltration"] };
-            newSpace["Ventilation"] = new List<object> { space["Ventilation"] };
-            newSpace["Exhaust"] = new List<object> { space["Exhaust"] };
+
+            foreach (Dictionary<string, object> prop in space.Values.OfType <Dictionary<string, object>>())
+            {
+                if (prop.ContainsKey("_t"))
+                {
+                    string t = prop["_t"] as string;
+                    prop["_t"] = t.Replace("BH.oM.Environment.Gains", "BH.oM.Environment.SpaceCriteria")
+                                  .Replace("BH.oM.Environment.Ventilation", "BH.oM.Environment.SpaceCriteria");
+                }
+
+                if (prop.ContainsKey("Profile"))
+                    prop["Profile"] = UpgradeProfile(prop["Profile"] as Dictionary<string, object>);
+            }
+
+            List<string> propToFix = new List<string> { "LightingGain", "EquipmentGain", "PeopleGain", "Infiltration", "Ventilation", "Exhaust" };
+            foreach (string prop in propToFix)
+            {
+                if (!space[prop].GetType().IsArray)
+                    newSpace[prop] = new List<object> { space[prop] };
+            }
 
             return newSpace;
         }
