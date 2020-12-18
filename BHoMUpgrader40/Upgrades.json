@@ -1,32 +1,1403 @@
-﻿{
+{
   "Namespace": {
     "ToNew": {
+      "BH.oM.Environment.Ventilation": "BH.oM.Environment.SpaceCriteria",
+      "BH.oM.MEP.MaterialFragments": "BH.oM.MEP.System.MaterialFragments",
+      "BH.oM.MEP.Parts": "BH.oM.MEP.Equipment.Parts",
+      "BH.oM.Geometry.ShapeProfiles": "BH.oM.Spatial.ShapeProfiles",
+      "BH.Engine.Mongo": "BH.Engine.Adapters.Mongo",
+      "BH.oM.Mongo": "BH.oM.Adapters.Mongo",
+      "BH.oM.Adapter.Mongo": "BH.oM.Adapters.Mongo",
+      "BH.oM.Socket": "BH.oM.Adapters.Socket",
+      "BH.Adapter.FileAdapter": "BH.Adapter.File",
+      "BH.Adapter.Filing": "BH.Adapter.File",
+      "BH.Engine.Adapters.Filing": "BH.Engine.Adapters.File",
+      "BH.oM.Adapters.Filing": "BH.oM.Adapters.File",
+      "BH.oM.Adapters.Lusas.MeshSettings1D": "BH.oM.Adapters.Lusas.Fragments.MeshSettings1D",
+      "BH.oM.Adapters.Lusas.MeshSettings2D": "BH.oM.Adapters.Lusas.Fragments.MeshSettings2D"
     },
     "ToOld": {
+      "BH.oM.MEP.System.MaterialFragments": "BH.oM.MEP.MaterialFragments",
+      "BH.oM.MEP.Equipment.Parts": "BH.oM.MEP.Parts",
+      "BH.oM.Spatial.ShapeProfiles": "BH.oM.Geometry.ShapeProfiles",
+      "BH.Adapter.File": "BH.Adapter.FileAdapter",
+      "BH.Engine.Adapters.File": "BH.Engine.Adapters.Filing",
+      "BH.oM.Adapters.File": "BH.oM.Adapters.Filing",
+      "BH.oM.Adapters.Lusas.Fragments.MeshSettings1D": "BH.oM.Adapters.Lusas.MeshSettings1D",
+      "BH.oM.Adapters.Lusas.Fragments.MeshSettings2D": "BH.oM.Adapters.Lusas.MeshSettings2D"
     }
   },
   "Type": {
     "ToNew": {
-
+      "BH.oM.MEP.MaterialFragments.FluidType": "BH.oM.MEP.Enums.FluidType",
+      "BH.oM.MEP.Systems.PipeTypes": "BH.oM.MEP.Enums.PipeTypes",
+      "BH.oM.MEP.Parts.AirHandlingUnitBase": "BH.oM.MEP.Equipment.Parts.AirHandlingUnitBase",
+      "BH.oM.MEP.Parts.CoolingCoil": "BH.oM.MEP.Equipment.Parts.CoolingCoil",
+      "BH.oM.MEP.Parts.ElectricalConnector": "BH.oM.MEP.Equipment.Parts.ElectricalConnector",
+      "BH.oM.MEP.Parts.EnergyWheel": "BH.oM.MEP.Equipment.Parts.EnergyWheel",
+      "BH.oM.MEP.Parts.Fan": "BH.oM.MEP.Equipment.Parts.Fan",
+      "BH.oM.MEP.Parts.Filter": "BH.oM.MEP.Equipment.Parts.Filter",
+      "BH.oM.MEP.Parts.HeatingCoil": "BH.oM.MEP.Equipment.Parts.HeatingCoil",
+      "BH.oM.MEP.Parts.IPart": "BH.oM.MEP.Equipment.Parts.IPart",
+      "BH.oM.MEP.Elements.CommercialFixtureUsage": "BH.oM.MEP.Fixtures.CommercialFixtureUsage",
+      "BH.oM.MEP.Elements.IFixtureFlow": "BH.oM.MEP.Fixtures.IFixtureFlow",
+      "BH.oM.MEP.Elements.IFixtureUsage": "BH.oM.MEP.Fixtures.IFixtureUsage",
+      "BH.oM.MEP.Elements.LightFixture": "BH.oM.MEP.Fixtures.LightFixture",
+      "BH.oM.MEP.Elements.PlumbingFixtureFlow": "BH.oM.MEP.Fixtures.PlumbingFixtureFlow",
+      "BH.oM.MEP.Elements.ResidentialFixtureUsage": "BH.oM.MEP.Fixtures.ResidentialFixtureUsage",
+      "BH.oM.MEP.Elements.CableTray": "BH.oM.MEP.System.CableTray",
+      "BH.oM.MEP.ConnectionProperties.CableTrayConnectionProperty": "BH.oM.MEP.System.ConnectionProperties.CableTrayConnectionProperty",
+      "BH.oM.MEP.ConnectionProperties.IConnectionProperty": "BH.oM.MEP.System.ConnectionProperties.IConnectionProperty",
+      "BH.oM.MEP.Elements.VolumeDamper": "BH.oM.MEP.System.Dampers.VolumeDamper",
+      "BH.oM.MEP.Elements.Duct": "BH.oM.MEP.System.Duct",
+      "BH.oM.MEP.Elements.FlowSystem": "BH.oM.MEP.System.FlowSystem",
+      "BH.oM.MEP.Elements.IFlow": "BH.oM.MEP.System.IFlow",
+      "BH.oM.MEP.MaterialFragments.CableTrayMaterial": "BH.oM.MEP.System.MaterialFragments.CableTrayMaterial",
+      "BH.oM.MEP.MaterialFragments.DuctMaterial": "BH.oM.MEP.System.MaterialFragments.DuctMaterial",
+      "BH.oM.MEP.MaterialFragments.IInsulationMaterial": "BH.oM.MEP.System.MaterialFragments.IInsulationMaterial",
+      "BH.oM.MEP.MaterialFragments.IMEPMaterial": "BH.oM.MEP.System.MaterialFragments.IMEPMaterial",
+      "BH.oM.MEP.MaterialFragments.InsulationMaterial": "BH.oM.MEP.System.MaterialFragments.InsulationMaterial",
+      "BH.oM.MEP.MaterialFragments.LiningMaterial": "BH.oM.MEP.System.MaterialFragments.LiningMaterial",
+      "BH.oM.MEP.MaterialFragments.PipeMaterial": "BH.oM.MEP.System.MaterialFragments.PipeMaterial",
+      "BH.oM.MEP.MaterialFragments.WireMaterial": "BH.oM.MEP.System.MaterialFragments.WireMaterial",
+      "BH.oM.MEP.Elements.MechanicalSystem": "BH.oM.MEP.System.MechanicalSystem",
+      "BH.oM.MEP.Elements.Pipe": "BH.oM.MEP.System.Pipe",
+      "BH.oM.MEP.SectionProperties.CableTraySectionProperty": "BH.oM.MEP.System.SectionProperties.CableTraySectionProperty",
+      "BH.oM.MEP.SectionProperties.DuctSectionProperty": "BH.oM.MEP.System.SectionProperties.DuctSectionProperty",
+      "BH.oM.MEP.SectionProperties.IFlowSectionProperty": "BH.oM.MEP.System.SectionProperties.IFlowSectionProperty",
+      "BH.oM.MEP.SectionProperties.PipeSectionProperty": "BH.oM.MEP.System.SectionProperties.PipeSectionProperty",
+      "BH.oM.MEP.SectionProperties.SectionProfile": "BH.oM.MEP.System.SectionProperties.SectionProfile",
+      "BH.oM.MEP.SectionProperties.WireSectionProperty": "BH.oM.MEP.System.SectionProperties.WireSectionProperty",
+      "BH.oM.MEP.Elements.ISystemType": "BH.oM.MEP.System.ISystemType",
+      "BH.oM.MEP.Elements.Wire": "BH.oM.MEP.System.Wire",
+      "BH.oM.MEP.Elements.WireSegment": "BH.oM.MEP.System.WireSegment",
+      "BH.oM.Structure.Loads.BarTemperatureLoad": "BH.oM.Structure.Loads.BarUniformTemperatureLoad",
+      "BH.oM.Structure.Loads.AreaTemperatureLoad": "BH.oM.Structure.Loads.AreaUniformTemperatureLoad",
+      "BH.oM.Adapters.ETABS.Fragments.EtabsLabel": "BH.oM.Adapters.ETABS.ETABSId",
+      "BH.Adapter.FileAdapter.FileAdapter": "BH.Adapter.File.FileAdapter",
+      "BH.oM.Adapters.Revit.Generic.FamilyLibrary": "BH.oM.Adapters.Revit.FamilyLibrary",
+      "BH.oM.Adapters.Revit.Generic.RevitFilePreview": "BH.oM.Adapters.Revit.RevitFilePreview"
     },
     "ToOld": {
-
+      "BH.oM.MEP.Enums.FluidType": "BH.oM.MEP.MaterialFragments.FluidType",
+      "BH.oM.MEP.Enums.PipeTypes": "BH.oM.MEP.Systems.PipeTypes",
+      "BH.oM.MEP.Equipment.Parts.AirHandlingUnitBase": "BH.oM.MEP.Parts.AirHandlingUnitBase",
+      "BH.oM.MEP.Equipment.Parts.CoolingCoil": "BH.oM.MEP.Parts.CoolingCoil",
+      "BH.oM.MEP.Equipment.Parts.ElectricalConnector": "BH.oM.MEP.Parts.ElectricalConnector",
+      "BH.oM.MEP.Equipment.Parts.EnergyWheel": "BH.oM.MEP.Parts.EnergyWheel",
+      "BH.oM.MEP.Equipment.Parts.Fan": "BH.oM.MEP.Parts.Fan",
+      "BH.oM.MEP.Equipment.Parts.Filter": "BH.oM.MEP.Parts.Filter",
+      "BH.oM.MEP.Equipment.Parts.HeatingCoil": "BH.oM.MEP.Parts.HeatingCoil",
+      "BH.oM.MEP.Equipment.Parts.IPart": "BH.oM.MEP.Parts.IPart",
+      "BH.oM.MEP.Fixtures.CommercialFixtureUsage": "BH.oM.MEP.Elements.CommercialFixtureUsage",
+      "BH.oM.MEP.Fixtures.IFixtureFlow": "BH.oM.MEP.Elements.IFixtureFlow",
+      "BH.oM.MEP.Fixtures.IFixtureUsage": "BH.oM.MEP.Elements.IFixtureUsage",
+      "BH.oM.MEP.Fixtures.LightFixture": "BH.oM.MEP.Elements.LightFixture",
+      "BH.oM.MEP.Fixtures.PlumbingFixtureFlow": "BH.oM.MEP.Elements.PlumbingFixtureFlow",
+      "BH.oM.MEP.Fixtures.ResidentialFixtureUsage": "BH.oM.MEP.Elements.ResidentialFixtureUsage",
+      "BH.oM.MEP.System.CableTray": "BH.oM.MEP.Elements.CableTray",
+      "BH.oM.MEP.System.ConnectionProperties.CableTrayConnectionProperty": "BH.oM.MEP.ConnectionProperties.CableTrayConnectionProperty",
+      "BH.oM.MEP.System.ConnectionProperties.IConnectionProperty": "BH.oM.MEP.ConnectionProperties.IConnectionProperty",
+      "BH.oM.MEP.System.Dampers.VolumeDamper": "BH.oM.MEP.Elements.VolumeDamper",
+      "BH.oM.MEP.System.Duct": "BH.oM.MEP.Elements.Duct",
+      "BH.oM.MEP.System.FlowSystem": "BH.oM.MEP.Elements.FlowSystem",
+      "BH.oM.MEP.System.IFlow": "BH.oM.MEP.Elements.IFlow",
+      "BH.oM.MEP.System.MaterialFragments.CableTrayMaterial": "BH.oM.MEP.MaterialFragments.CableTrayMaterial",
+      "BH.oM.MEP.System.MaterialFragments.DuctMaterial": "BH.oM.MEP.MaterialFragments.DuctMaterial",
+      "BH.oM.MEP.System.MaterialFragments.IInsulationMaterial": "BH.oM.MEP.MaterialFragments.IInsulationMaterial",
+      "BH.oM.MEP.System.MaterialFragments.IMEPMaterial": "BH.oM.MEP.MaterialFragments.IMEPMaterial",
+      "BH.oM.MEP.System.MaterialFragments.InsulationMaterial": "BH.oM.MEP.MaterialFragments.InsulationMaterial",
+      "BH.oM.MEP.System.MaterialFragments.LiningMaterial": "BH.oM.MEP.MaterialFragments.LiningMaterial",
+      "BH.oM.MEP.System.MaterialFragments.PipeMaterial": "BH.oM.MEP.MaterialFragments.PipeMaterial",
+      "BH.oM.MEP.MaterialFragments.WireMaterial": "BH.oM.MEP.System.MaterialFragments.WireMaterial",
+      "BH.oM.MEP.System.MechanicalSystem": "BH.oM.MEP.Elements.MechanicalSystem",
+      "BH.oM.MEP.System.Pipe": "BH.oM.MEP.Elements.Pipe",
+      "BH.oM.MEP.System.SectionProperties.CableTraySectionProperty": "BH.oM.MEP.SectionProperties.CableTraySectionProperty",
+      "BH.oM.MEP.System.SectionProperties.DuctSectionProperty": "BH.oM.MEP.SectionProperties.DuctSectionProperty",
+      "BH.oM.MEP.System.SectionProperties.IFlowSectionProperty": "BH.oM.MEP.SectionProperties.IFlowSectionProperty",
+      "BH.oM.MEP.System.SectionProperties.PipeSectionProperty": "BH.oM.MEP.SectionProperties.PipeSectionProperty",
+      "BH.oM.MEP.System.SectionProperties.SectionProfile": "BH.oM.MEP.SectionProperties.SectionProfile",
+      "BH.oM.MEP.System.SectionProperties.WireSectionProperty": "BH.oM.MEP.SectionProperties.WireSectionProperty",
+      "BH.oM.MEP.System.ISystemType": "BH.oM.MEP.Elements.ISystemType",
+      "BH.oM.MEP.System.Wire": "BH.oM.MEP.Elements.Wire",
+      "BH.oM.MEP.System.WireSegment": "BH.oM.MEP.Elements.WireSegment",
+      "BH.oM.Structure.Loads.BarUniformTemperatureLoad": "BH.oM.Structure.Loads.BarTemperatureLoad",
+      "BH.oM.Structure.Loads.AreaUniformTemperatureLoad": "BH.oM.Structure.Loads.AreaTemperatureLoad",
+      "BH.oM.Adapters.ETABS.ETABSId": "BH.oM.Adapters.ETABS.Fragments.EtabsLabel",
+      "BH.Adapter.File.FileAdapter": "BH.Adapter.FileAdapter.FileAdapter",
+      "BH.oM.Adapters.Revit.FamilyLibrary": "BH.oM.Adapters.Revit.Generic.FamilyLibrary",
+      "BH.oM.Adapters.Revit.RevitFilePreview": "BH.oM.Adapters.Revit.Generic.RevitFilePreview"
     }
   },
   "Method": {
     "ToNew": {
-
+      "BH.Engine.Reflection.Query.Description(System.Reflection.MemberInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Reflection.Query, Reflection_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Description",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MemberInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Reflection.Query.Description(System.Reflection.ParameterInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Reflection.Query, Reflection_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Description",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.ParameterInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.NewInternalElement2D(BH.oM.Structure.Elements.Panel)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Create, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "NewInternalElement2D",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IPanel`2\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }, { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IOpening`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }] }] }"
+        ]
+      },
+      "BH.Engine.Structure.Modify.SetGeometry(BH.oM.Structure.Elements.Node, BH.oM.Geometry.Point)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Modify, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "SetGeometry",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.INode\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\" }"
+        ]
+      },
+      "BH.Engine.Structure.Modify.SetGeometry(BH.oM.Structure.Elements.Bar, BH.oM.Geometry.ICurve)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Modify, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "SetGeometry",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.ILink`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.INode\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\" }"
+        ]
+      },
+      "BH.Engine.Structure.Modify.SetGeometry(BH.oM.Structure.Elements.Edge, BH.oM.Geometry.ICurve)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Modify, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "SetGeometry",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\" }"
+        ]
+      },
+      "BH.Engine.Structure.Modify.SetGeometry(BH.oM.Structure.Elements.Surface, BH.oM.Geometry.ISurface)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Modify, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "SetGeometry",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.ISurface\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ISurface\" }"
+        ]
+      },
+      "BH.Engine.Structure.Modify.SetInternalElements2D(BH.oM.Structure.Elements.Panel, System.Collections.Generic.List<BH.oM.Dimensional.IElement2D>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Modify, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "SetInternalElements2D",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IPanel`2\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }, { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IOpening`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }] }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\" }] }"
+        ]
+      },
+      "BH.Engine.Structure.Modify.SetOutlineElements1D(BH.oM.Structure.Elements.Opening, System.Collections.Generic.List<BH.oM.Dimensional.IElement1D>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Modify, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "SetOutlineElements1D",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IOpening`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement1D\" }] }"
+        ]
+      },
+      "BH.Engine.Structure.Modify.SetOutlineElements1D(BH.oM.Structure.Elements.Panel, System.Collections.Generic.List<BH.oM.Dimensional.IElement1D>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Modify, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "SetOutlineElements1D",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IPanel`2\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }, { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IOpening`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }] }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement1D\" }] }"
+        ]
+      },
+      "BH.Engine.Structure.Query.Elements0D(BH.oM.Structure.Elements.Bar)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Query, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Elements0D",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.ILink`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.INode\" }] }"
+        ]
+      },
+      "BH.Engine.Structure.Query.Geometry(BH.oM.Structure.Elements.Node)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Query, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Geometry",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.INode\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.Geometry(BH.oM.Structure.Elements.Bar)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Query, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Geometry",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.ILink`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.INode\" }] }"
+        ]
+      },
+      "BH.Engine.Structure.Query.Geometry(BH.oM.Structure.Elements.Edge)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Query, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Geometry",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.Geometry(BH.oM.Structure.Elements.Panel)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Query, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Geometry",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IPanel`2\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }, { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IOpening`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }] }] }"
+        ]
+      },
+      "BH.Engine.Structure.Query.Geometry(BH.oM.Structure.Elements.Surface)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Query, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Geometry",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.ISurface\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.Geometry(BH.oM.Structure.Elements.FEMesh)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Query, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Geometry",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IMesh`2\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.INode\" }, { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IFace\" }] }"
+        ]
+      },
+      "BH.Engine.Structure.Query.Geometry(System.Collections.Generic.IEnumerable<BH.oM.Structure.Elements.FEMeshFace>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Query, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Geometry",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IFace\" }] }"
+        ]
+      },
+      "BH.Engine.Structure.Query.Geometry(BH.oM.Structure.Elements.FEMeshFace)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Query, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Geometry",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IFace\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.InternalElements2D(BH.oM.Structure.Elements.Panel)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Query, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "InternalElements2D",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IPanel`2\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }, { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IOpening`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }] }] }"
+        ]
+      },
+      "BH.Engine.Structure.Query.OutlineElements1D(BH.oM.Structure.Elements.Opening)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Query, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "OutlineElements1D",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IOpening`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }] }"
+        ]
+      },
+      "BH.Engine.Structure.Query.OutlineElements1D(BH.oM.Structure.Elements.Panel)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Query, Analytical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "OutlineElements1D",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IPanel`2\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }, { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IOpening`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IEdge\" }] }] }"
+        ]
+      },
+      "BH.Engine.Climate.Compute.BodyDirectFromDirectHorizontal(System.Double, System.Double, System.Int32, BH.oM.Climate.BodyPosition, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Climate.Compute, Climate_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "BodyDirectFromDirectHorizontal",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Climate.BodyPosition\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Climate.Compute.BodyDirectFromDirectNormal(System.Double, System.Double, System.Int32, BH.oM.Climate.BodyPosition, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Climate.Compute, Climate_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "BodyDirectFromDirectNormal",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Climate.BodyPosition\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Environment.Query.Orientation(BH.oM.Environment.IEnvironmentObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Query, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Orientation",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.IEnvironmentObject\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Adapter.Filing.FilingAdapter(System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.File.FileAdapter, File_Adapter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": ".ctor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Adapter.FileAdapter.FileAdapter(System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.File.FileAdapter, File_Adapter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": ".ctor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.AcidificationPotential(BH.oM.Base.BHoMObject, BH.oM.Base.CustomObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "AcidificationPotential",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData\" }"
+        ]
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.OzoneDepletionPotential(BH.oM.Base.BHoMObject, BH.oM.Base.CustomObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "OzoneDepletionPotential",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData\" }"
+        ]
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EutrophicationPotential(BH.oM.Base.BHoMObject, BH.oM.Base.CustomObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "EutrophicationPotential",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData\" }"
+        ]
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.DepletionOfAbioticResourcesFossilFuels(BH.oM.Base.BHoMObject, BH.oM.Base.CustomObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "DepletionOfAbioticResourcesFossilFuels",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData\" }"
+        ]
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.DepletionOfAbioticResources(BH.oM.Base.BHoMObject, BH.oM.Base.CustomObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "DepletionOfAbioticResources",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData\" }"
+        ]
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.GlobalWarmingPotential(BH.oM.Base.BHoMObject, BH.oM.Base.CustomObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "GlobalWarmingPotential",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData\" }"
+        ]
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.PhotochemicalOzoneCreationPotential(BH.oM.Base.BHoMObject, BH.oM.Base.CustomObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "PhotochemicalOzoneCreationPotential",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData\" }"
+        ]
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateEnvironmentalProductDeclarationPerObject(BH.oM.Base.IBHoMObject, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "EvaluateEnvironmentalProductDeclarationPerObject",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\" }"
+        ]
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.MaterialEndOfLife(BH.oM.Base.CustomObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "MaterialEndOfLifeTreatment",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData\" }"
+        ]
+      },
+      "BH.Engine.Python.Charts.Compute.PlotDiurnal(System.Collections.Generic.List<System.Double>, System.String, System.String, System.Collections.Generic.List<System.Int32>, System.String, System.String, System.String, System.String, System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.MachineLearning.Charts.Compute, MachineLearning_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "PlotDiurnal",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Python.Charts.Compute.PlotFrequency(System.Collections.Generic.List<System.Double>, System.String, System.String, System.String, System.Collections.Generic.List<System.Double>, System.Int32, System.String, System.String, System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.MachineLearning.Charts.Compute, MachineLearning_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "PlotFrequency",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Python.Charts.Compute.PlotHeatmap(System.Collections.Generic.List<System.Double>, System.String, System.String, System.String, System.Collections.Generic.List<System.Double>, System.String, System.String, System.Boolean, System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.MachineLearning.Charts.Compute, MachineLearning_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "PlotHeatmap",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Python.Charts.Compute.PlotUTCI(System.Collections.Generic.List<System.Double>, System.String, System.Boolean, System.String, System.String, System.Boolean, System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.MachineLearning.Charts.Compute, MachineLearning_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "PlotUTCI",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.ModelLaundry.Modify.SnapCoincidentNodes(System.Collections.Generic.IEnumerable<BH.oM.Dimensional.IElement>, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.ModelLaundry.Modify, ModelLaundry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "SnapCoincidentNodes",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Adapters.Plaxis.Convert.ToPlaxisRobotId(BH.oM.Structure.Elements.Node)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Plaxis.Convert, Plaxis_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ToPlaxisAdapterId",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.Node\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Adapters.Revit.Create.DraftingInstance(System.String, System.String, System.String, BH.oM.Geometry.Point)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "DraftingInstance",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Basis\" }"
+        ]
+      },
+      "BH.Engine.Adapters.Revit.Create.DraftingInstance(BH.oM.Adapters.Revit.Properties.InstanceProperties, System.String, BH.oM.Geometry.Point)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "DraftingInstance",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Properties.InstanceProperties\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Basis\" }"
+        ]
+      },
+      "BH.Engine.Adapters.Revit.Create.ModelInstance(System.String, System.String, BH.oM.Geometry.Point)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ModelInstance",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Basis\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Adapters.Revit.Create.ModelInstance(System.String, System.String, BH.oM.Geometry.ICurve)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ModelInstance",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Adapters.Revit.Create.ModelInstance(BH.oM.Adapters.Revit.Properties.InstanceProperties, BH.oM.Geometry.Point)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ModelInstance",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Properties.InstanceProperties\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Basis\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Adapters.Revit.Create.ModelInstance(BH.oM.Adapters.Revit.Properties.InstanceProperties, BH.oM.Geometry.ICurve)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ModelInstance",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Properties.InstanceProperties\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Adapters.Revit.Query.Edges(BH.oM.Base.IBHoMObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Revit.Query, Revit_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "RevitEdges",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.AngleProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "AngleProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.AngleProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "AngleProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.BoxProfile(System.Double, System.Double, System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "BoxProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.BoxProfile(System.Double, System.Double, System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "BoxProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.ChannelProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ChannelProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.ChannelProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ChannelProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.CircleProfile(System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "CircleProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.CircleProfile(System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "CircleProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.FabricatedBoxProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "FabricatedBoxProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.FabricatedBoxProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "FabricatedBoxProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.FabricatedISectionProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "FabricatedISectionProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.FabricatedISectionProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "FabricatedISectionProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Spatial.Create.FreeFormProfile(System.Collections.Generic.IEnumerable<BH.oM.Geometry.ICurve>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "FreeFormProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.FreeFormProfile(System.Collections.Generic.IEnumerable<BH.oM.Geometry.ICurve>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "FreeFormProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.FreeFormProfile(System.Collections.Generic.IEnumerable<BH.oM.Geometry.ICurve>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "FreeFormProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.GeneralisedFabricatedBoxProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "GeneralisedFabricatedBoxProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.GeneralisedFabricatedBoxProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "GeneralisedFabricatedBoxProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.GeneralisedTSectionProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "GeneralisedTSectionProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.GeneralisedTSectionProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "GeneralisedTSectionProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.ISectionProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ISectionProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.ISectionProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ISectionProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.KiteProfile(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "KiteProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.KiteProfile(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "KiteProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.RectangleProfile(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "RectangleProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.RectangleProfile(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "RectangleProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.TaperedProfile(System.Collections.Generic.List<System.Double>, System.Collections.Generic.List<BH.oM.Geometry.ShapeProfiles.IProfile>, System.Collections.Generic.List<System.Int32>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "TaperedProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Spatial.ShapeProfiles.IProfile\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.TaperedProfile(System.Collections.Generic.List<System.Decimal>, System.Collections.Generic.List<BH.oM.Geometry.ShapeProfiles.IProfile>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "TaperedProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Spatial.ShapeProfiles.IProfile\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.TaperedProfile(BH.oM.Geometry.ShapeProfiles.IProfile, BH.oM.Geometry.ShapeProfiles.IProfile, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "TaperedProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Spatial.ShapeProfiles.IProfile\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Spatial.ShapeProfiles.IProfile\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.TaperedProfile(BH.oM.Geometry.ShapeProfiles.IProfile, BH.oM.Geometry.ShapeProfiles.IProfile)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "TaperedProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Spatial.ShapeProfiles.IProfile\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Spatial.ShapeProfiles.IProfile\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.TSectionProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "TSectionProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.TSectionProfile(System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "TSectionProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Geometry.Create.TubeProfile(System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "TubeProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.TubeProfile(System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Create, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "TubeProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.Area(BH.oM.Structure.Elements.Panel)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Query, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Area",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.Area(BH.oM.Structure.Elements.Opening)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Query, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Area",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.ControlPoints(BH.oM.Structure.Elements.Bar)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Query, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ControlPoints",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement1D\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.ControlPoints(System.Collections.Generic.List<BH.oM.Structure.Elements.Edge>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Query, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ControlPoints",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement1D\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.ControlPoints(BH.oM.Structure.Elements.Panel, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Query, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ControlPoints",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.ControlPoints(BH.oM.Structure.Elements.Opening)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Query, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ControlPoints",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.EdgeCurves(BH.oM.Structure.Elements.Opening)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Query, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ElementCurves",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.AllEdgeCurves(BH.oM.Structure.Elements.Panel)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Query, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ElementCurves",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.ExternalEdgeCurves(BH.oM.Structure.Elements.Panel)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Query, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "ExternalElementCurves",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.InternalEdgeCurves(BH.oM.Structure.Elements.Panel)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Query, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "InternalElementCurves",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.Length(BH.oM.Structure.Elements.Bar)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Query, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Length",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement1D\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.Outline(BH.oM.Structure.Elements.Panel)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Query, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "OutlineCurve",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.Outline(BH.oM.Structure.Elements.Opening)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Query, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "OutlineCurve",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.Outline(System.Collections.Generic.List<BH.oM.Structure.Elements.Edge>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Query, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "OutlineCurve",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement1D\" }] }"
+        ]
+      },
+      "BH.Engine.Structure.Results.Query.DisplayForce(System.Collections.Generic.IEnumerable<BH.oM.Structure.Elements.Bar>, System.Collections.Generic.IEnumerable<BH.oM.Structure.Results.BarForce>, System.String, System.String, BH.oM.Structure.Results.DisplayForceSettings)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Results.Query, StructuralEngineering_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "DisplayForce",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.Bar\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Results.BarForce\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Results.DisplayForceSettings\" }"
+        ]
+      },
+      "BH.Engine.Structure.Results.Query.DisplayMeshResults(System.Collections.Generic.IEnumerable<BH.oM.Structure.Elements.FEMesh>, System.Collections.Generic.IEnumerable<BH.oM.Structure.Results.MeshResult>, System.String, System.Collections.Generic.List<System.String>, BH.oM.Structure.Results.MeshResultDisplay, BH.oM.Graphics.GradientOptions)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Results.Query, StructuralEngineering_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "DisplayMeshResults",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.FEMesh\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Results.MeshResult\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Results.MeshResultDisplay\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Graphics.GradientOptions\" }"
+        ]
+      },
+      "BH.Engine.Structure.Results.Query.MapResults(System.Collections.Generic.IEnumerable<BH.oM.Base.IBHoMObject>, System.Collections.Generic.IEnumerable<BH.Engine.Structure.Results.T>, System.String, System.Collections.Generic.List<System.String>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Results.Query, StructuralEngineering_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "MapResults",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Results.IResult\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Results.MapResultsBy\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }"
+        ]
+      },
+      "BH.Engine.Structure.Results.Query.MapResults(System.Collections.Generic.IEnumerable<BH.oM.Base.IBHoMObject>, System.Collections.Generic.IEnumerable<BH.Engine.Structure.Results.T>, BH.oM.Structure.Results.MapResultsBy, System.String, System.Collections.Generic.List<System.String>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Results.Query, StructuralEngineering_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "MapResults",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Results.IResult\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Results.MapResultsBy\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }"
+        ]
+      },
+      "BH.Engine.Structure.Create.AreaTemperatureLoad(BH.oM.Structure.Loads.Loadcase, System.Double, System.Collections.Generic.IEnumerable<BH.oM.Structure.Elements.IAreaElement>, BH.oM.Structure.Loads.LoadAxis, System.Boolean, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "AreaUniformTemperatureLoad",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.Loadcase\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.IAreaElement\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.LoadAxis\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.AreaTemperatureLoad(BH.oM.Structure.Loads.Loadcase, System.Double, BH.oM.Base.BHoMGroup<BH.oM.Structure.Elements.IAreaElement>, BH.oM.Structure.Loads.LoadAxis, System.Boolean, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "AreaUniformTemperatureLoad",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.Loadcase\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.BHoMGroup`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.IAreaElement\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.LoadAxis\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.BarTemperatureLoad(BH.oM.Structure.Loads.Loadcase, System.Double, System.Collections.Generic.IEnumerable<BH.oM.Structure.Elements.Bar>, BH.oM.Structure.Loads.LoadAxis, System.Boolean, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "BarUniformTemperatureLoad",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.Loadcase\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.Bar\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.LoadAxis\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.BarTemperatureLoad(BH.oM.Structure.Loads.Loadcase, System.Double, BH.oM.Base.BHoMGroup<BH.oM.Structure.Elements.Bar>, BH.oM.Structure.Loads.LoadAxis, System.Boolean, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "BarUniformTemperatureLoad",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.Loadcase\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.BHoMGroup`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.Bar\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.LoadAxis\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.BarVaryingDistributedLoad(BH.oM.Structure.Loads.Loadcase, BH.oM.Base.BHoMGroup<BH.oM.Structure.Elements.Bar>, System.Double, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, System.Double, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, BH.oM.Structure.Loads.LoadAxis, System.Boolean, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "BarVaryingDistributedLoadDistanceBothEnds",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.Loadcase\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.BHoMGroup`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.Bar\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.LoadAxis\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.BarVaryingDistributedLoad(BH.oM.Structure.Loads.Loadcase, System.Collections.Generic.IEnumerable<BH.oM.Structure.Elements.Bar>, System.Double, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, System.Double, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, BH.oM.Structure.Loads.LoadAxis, System.Boolean, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "BarVaryingDistributedLoadDistanceBothEnds",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.Loadcase\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.Bar\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.LoadAxis\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.Aluminium(System.String, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Aluminium",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.Concrete(System.String, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Concrete",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.Steel(System.String, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Steel",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Create.Timber(System.String, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Timber",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.DeformedShape(System.Collections.Generic.List<BH.oM.Structure.Elements.Bar>, System.Collections.Generic.List<BH.oM.Structure.Results.BarDisplacement>, System.String, System.Object, System.Double, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "DeformedShape",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.Bar\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Results.BarDisplacement\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.DeformedShape(System.Collections.Generic.List<BH.oM.Structure.Elements.FEMesh>, System.Collections.Generic.List<BH.oM.Structure.Results.MeshResult>, System.String, System.Object, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "DeformedShape",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.FEMesh\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Results.MeshResult\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.PlotBarForce(System.Collections.Generic.List<BH.oM.Structure.Elements.Bar>, System.Collections.Generic.List<BH.oM.Structure.Results.BarForce>, System.String, System.Double, System.Object, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "PlotBarForce",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.Bar\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Results.BarForce\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Engine.Structure.Query.HasAssignedObjectIds(BH.oM.Structure.Loads.IElementLoad<BH.Engine.Structure.T>, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "HasAssignedObjectIds",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.IElementLoad`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }] }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }"
+        ]
+      },
+      "BH.Adapter.TAS.TasTBDAdapter(System.string, BH.oM.Adapters.TAS.Settings.TASSettings": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.TAS.TasTBDAdapter, TASTBD_Adapter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": ".ctor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.FileSettings\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.TAS.Settings.TASSettings\" }"
+        ]
+      },
+      "BH.Adapter.TAS.TasTSDAdapter(System.string, BH.oM.Adapters.TAS.TSDResultType, BH.oM.Environment.Results.SimulationResultType, BH.oM.Environment.Results.ProfileResultUnit, BH.oM.Environment.Results.ProfileResultType, System.Int32, System.Int32, BH.oM.Adapters.TAS.Settings.TASSettings": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.TAS.TasTSDAdapter, TASTSD_Adapter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": ".ctor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.FileSettings\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.TAS.TSDResultType\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Results.SimulationResultType\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Results.ProfileResultUnit\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Results.ProfileResultType\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.TAS.Settings.TASSettings\" }"
+        ]
+      }
     },
     "ToOld": {
-
+      
     }
   },
   "Property": {
     "ToNew": {
-
+      
     },
     "ToOld": {
-
+      
     }
   }
 }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{77ECD961-7EA8-4237-B295-4D0B6EE492F8}</ProjectGuid>
+    <ProjectGuid>{A3CCC3C2-E634-42F2-92AE-785EC6E5B3A0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BH.Upgrader.v40</RootNamespace>
-    <AssemblyName>BHoMUpgrader40</AssemblyName>
+    <RootNamespace>BH.Upgrader.v41</RootNamespace>
+    <AssemblyName>BHoMUpgrader41</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -58,11 +58,15 @@
       <Project>{47629a75-8509-491a-82e5-517a2d8b945e}</Project>
       <Name>BHoMUpgrader</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PostBuild\PostBuild.csproj">
+      <Project>{4ec319a6-67c9-4627-9de6-046bb5bae401}</Project>
+      <Name>PostBuild</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y /I /E "$(TargetDir)*.dll" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader40
-xcopy /Y /I /E "$(TargetDir)BHoMUpgrader40.exe" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader40
-xcopy /Y /I /E "$(TargetDir)Upgrades.json" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader40</PostBuildEvent>
+    <PostBuildEvent>xcopy /Y /I /E "$(TargetDir)*.dll" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader41
+xcopy /Y /I /E "$(TargetDir)BHoMUpgrader41.exe" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader41
+call "$(TargetDir)PostBuild.exe" ..\..\..\ "C:\ProgramData\BHoM\Upgrades"</PostBuildEvent>
   </PropertyGroup>
 </Project>
