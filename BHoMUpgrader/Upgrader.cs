@@ -53,9 +53,6 @@ namespace BH.Upgrader.Base
             }
             Console.WriteLine("");
 
-            // Deactivate the upgrade check in teh serialiser
-            BH.Engine.Serialiser.Compute.AllowUpgradeFromBson(false);
-
             NamedPipeClientStream pipe = null;
 
             BinaryWriter writer = null;
@@ -102,15 +99,7 @@ namespace BH.Upgrader.Base
                 if (document.Contains("_t") && document["_t"] == "DBNull")
                     return null;
 
-                string previousVersion = converter.PreviousVersion;
-                if(previousVersion.Length > 0)
-                {
-                    result = Engine.Versioning.Convert.ToNewVersion(document, converter.PreviousVersion);
-                    BsonDocument localResult = UpgradeLocally(result, converter);
-                    if (localResult != null)
-                        result = localResult;
-                }
-                    
+                result = document;    
             }
                 
             return result;
@@ -260,18 +249,89 @@ namespace BH.Upgrader.Base
         {
             //Get the old type
             string oldType = document["_t"].AsString;
+            BsonDocument withNewProperties = UpgradeObjectProperties(document, converter);
+            BsonDocument newDoc = withNewProperties ?? document;
 
             //Check if there are any full object upgraders available
             if (converter.ToNewObject.ContainsKey(oldType))
             {
                 //If so, use them to upgrade the object
-                return UpgradeObjectExplicit(document, converter, oldType);
+                newDoc = UpgradeObjectExplicit(newDoc, converter, oldType);
             }
             else
             {
                 //If not, try upgrading the names of the types and properties
-                return UpgradeObjectTypeAndPropertyNames(document, converter, oldType);
+                newDoc = UpgradeObjectTypeAndPropertyNames(newDoc, converter, oldType);
             }
+
+            return newDoc ?? withNewProperties;
+        }
+
+        /***************************************************/
+
+        private BsonArray UpgradeArray(BsonArray array, Converter converter, out bool upgraded)
+        {
+            upgraded = false;
+            if (array == null)
+                return null;
+
+            BsonArray newArray = new BsonArray();
+            foreach (BsonValue item in array)
+            {
+                if (item is BsonDocument)
+                {
+                    BsonDocument doc = item as BsonDocument;
+                    BsonDocument upgrade = UpgradeLocally(doc, converter);
+                    if (upgrade == null)
+                        upgrade = doc;
+                    else if (upgrade != doc)
+                        upgraded = true;
+                    newArray.Add(upgrade);
+                }
+                else if (item is BsonArray)
+                {
+                    bool itemUpgraded = false;
+                    newArray.Add(UpgradeArray(item as BsonArray, converter, out itemUpgraded));
+                    if (itemUpgraded)
+                        upgraded = true;
+                }
+            }
+
+            return newArray;
+        }
+
+        /***************************************************/
+
+        private BsonDocument UpgradeObjectProperties(BsonDocument document, Converter converter)
+        {
+            Dictionary<string, BsonValue> propertiesToUpgrade = new Dictionary<string, BsonValue>();
+            foreach (BsonElement property in document)
+            {
+                string propName = property.Name;
+
+                if (property.Value is BsonDocument)
+                {
+                    BsonDocument prop = property.Value as BsonDocument;
+                    BsonDocument upgrade = UpgradeLocally(prop, converter);
+                    if (upgrade != null && prop != upgrade)
+                        propertiesToUpgrade.Add(propName, upgrade);
+                }
+                else if (property.Value is BsonArray)
+                {
+                    bool upgraded = false;
+                    BsonArray newArray = UpgradeArray(property.Value as BsonArray, converter, out upgraded);
+                    if (upgraded)
+                        propertiesToUpgrade.Add(propName, newArray);
+                }
+            }
+
+            foreach (var kvp in propertiesToUpgrade)
+                document[kvp.Key] = kvp.Value;
+
+            if (propertiesToUpgrade.Count > 0)
+                return document;
+            else
+                return null;
         }
 
         /***************************************************/
@@ -280,12 +340,12 @@ namespace BH.Upgrader.Base
         {
             try
             {
-                object b = converter.ToNewObject[oldType](document.ToDictionary());
+                Dictionary<string, object> b = converter.ToNewObject[oldType](document.ToDictionary());
                 if (b == null)
                     return null;
 
                 Console.WriteLine("object updated: " + b.GetType().FullName);
-                BsonDocument newDoc = BH.Engine.Serialiser.Convert.ToBson(b);
+                BsonDocument newDoc = new BsonDocument(b);
 
                 // Copy over BHoM properties
                 string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
@@ -309,7 +369,6 @@ namespace BH.Upgrader.Base
         {
             // Upgrade the property names
             Dictionary<string, BsonElement> propertiesToRename = new Dictionary<string, BsonElement>();
-            Dictionary<string, BsonDocument> propertiesToUpgrade = new Dictionary<string, BsonDocument>();
             foreach (BsonElement property in document)
             {
                 string propName = property.Name;
@@ -319,14 +378,6 @@ namespace BH.Upgrader.Base
                     propName = converter.ToNewProperty[key].Split('.').Last();
                     propertiesToRename.Add(property.Name, new BsonElement(propName, property.Value));
                 }
-
-                BsonDocument prop = property.Value as BsonDocument;
-                if (prop != null)
-                {
-                    BsonDocument upgrade = UpgradeLocally(prop, converter);
-                    if (upgrade != null && prop != upgrade)
-                        propertiesToUpgrade.Add(propName, upgrade);
-                }
             }
 
             foreach (var kvp in propertiesToRename)
@@ -334,9 +385,6 @@ namespace BH.Upgrader.Base
                 document.Add(kvp.Value);
                 document.Remove(kvp.Key);
             }
-
-            foreach (var kvp in propertiesToUpgrade)
-                document[kvp.Key] = kvp.Value;
 
             //Try to find new type
             string newType = GetTypeFromDic(converter.ToNewType, oldType);
@@ -346,14 +394,10 @@ namespace BH.Upgrader.Base
                 Console.WriteLine("type upgraded from " + oldType + " to " + newType);
                 return document;
             }
-            else if (propertiesToRename.Count > 0 || propertiesToUpgrade.Count > 0)
-            {
+            else if (propertiesToRename.Count > 0)
                 return document;
-            }
             else
-            {
                 return null;
-            }
         }
 
         /***************************************************/
