@@ -52,6 +52,7 @@ namespace BH.Upgrader.v40
             ToNewObject.Add("BH.oM.Structure.MaterialFragments.Steel", UpgradeMaterialFragment);
             ToNewObject.Add("BH.oM.Structure.MaterialFragments.Timber", UpgradeMaterialFragment);
             ToNewObject.Add("BH.oM.Adapters.Revit.FamilyLibrary", UpgradeFamilyLibrary);
+            ToNewObject.Add("BH.oM.MEP.Elements.Node", UpgradeMEPNode);
         }
 
 
@@ -200,6 +201,16 @@ namespace BH.Upgrader.v40
                 newFamilyLibrary.Remove("Dictionary");
             
             return newFamilyLibrary;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeMEPNode(Dictionary<string, object> node)
+        {
+            if (node == null || !node.ContainsKey("Position"))
+                return null;
+
+            return node["Position"] as Dictionary<string, object>;
         }
 
         /***************************************************/
