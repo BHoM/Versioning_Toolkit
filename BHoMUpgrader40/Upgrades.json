@@ -1394,7 +1394,16 @@
   },
   "Property": {
     "ToNew": {
-      
+      "BH.oM.MEP.Elements.CableTray.StartNode": "StartPoint",
+      "BH.oM.MEP.Elements.CableTray.EndNode": "EndPoint",
+      "BH.oM.MEP.Elements.CableTrayConnectionProperty.StartNode": "StartPoint",
+      "BH.oM.MEP.Elements.CableTrayConnectionProperty.EndNode": "EndPoint",
+      "BH.oM.MEP.Elements.Duct.StartNode": "StartPoint",
+      "BH.oM.MEP.Elements.Duct.EndNode": "EndPoint",
+      "BH.oM.MEP.Elements.Pipe.StartNode": "StartPoint",
+      "BH.oM.MEP.Elements.Pipe.EndNode": "EndPoint",
+      "BH.oM.MEP.Elements.WireSegment.StartNode": "StartPoint",
+      "BH.oM.MEP.Elements.WireSegment.EndNode": "EndPoint"
     },
     "ToOld": {
       
