@@ -100,7 +100,9 @@ namespace PostBuild
                 { "Namespace", namespaceUpgrades },
                 { "Type", typeUpgrades },
                 { "Method", methodUpgrades },
-                { "Property", propertyUpgrades }
+                { "Property", propertyUpgrades },
+                { "MessageForDeleted", new Dictionary<string, object>() },
+                { "MessageForNoUpgrade", new Dictionary<string, object>() }
             });
         }
 
@@ -147,6 +149,12 @@ namespace PostBuild
 
             if (source.Contains("Property"))
                 CopySectionAccross(source["Property"] as BsonDocument, target["Property"] as BsonDocument);
+
+            if (source.Contains("MessageForDeleted"))
+                CopyDictionaryAccross(source["MessageForDeleted"] as BsonDocument, target["MessageForDeleted"] as BsonDocument);
+
+            if (source.Contains("MessageForNoUpgrade"))
+                CopyDictionaryAccross(source["MessageForNoUpgrade"] as BsonDocument, target["MessageForNoUpgrade"] as BsonDocument);
         }
 
         /***************************************************/
@@ -154,25 +162,23 @@ namespace PostBuild
         private static void CopySectionAccross(BsonDocument source, BsonDocument target)
         {
             if (source.Contains("ToNew"))
-            {
-                BsonDocument toNewSource = source["ToNew"] as BsonDocument;
-                BsonDocument toNewTarget = target["ToNew"] as BsonDocument;
-                foreach (BsonElement element in toNewSource.Elements)
-                {
-                    if (!toNewTarget.Contains(element.Name))
-                        toNewTarget.Add(element);
-                }   
-            }
+                CopyDictionaryAccross(source["ToNew"] as BsonDocument, target["ToNew"] as BsonDocument);  
 
             if (source.Contains("ToOld"))
+                CopyDictionaryAccross(source["ToOld"] as BsonDocument, target["ToOld"] as BsonDocument);
+        }
+
+        /***************************************************/
+
+        private static void CopyDictionaryAccross(BsonDocument source, BsonDocument target)
+        {
+            if (source == null || target == null)
+                return;
+
+            foreach (BsonElement element in source.Elements)
             {
-                BsonDocument toOldSource = source["ToOld"] as BsonDocument;
-                BsonDocument toOldTarget = target["ToOld"] as BsonDocument;
-                foreach (BsonElement element in toOldSource.Elements)
-                {
-                    if (!toOldTarget.Contains(element.Name))
-                        toOldTarget.Add(element);
-                }
+                if (!target.Contains(element.Name))
+                    target.Add(element);
             }
         }
 

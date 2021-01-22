@@ -68,8 +68,23 @@ namespace BH.Upgrader.Base
 
                 while (pipe.IsConnected)
                 {
-                    BsonDocument doc = ReadDocument(reader);
-                    BsonDocument newDoc = Upgrade(doc, converter);
+                    BsonDocument newDoc = null;
+                    try
+                    {
+                        BsonDocument doc = ReadDocument(reader);
+                        if (doc != null)
+                            Console.WriteLine("document received: " + doc.ToJson());
+                        newDoc = Upgrade(doc, converter);
+                    }
+                    catch (NoUpdateException e)
+                    {
+                        newDoc = new BsonDocument
+                        {
+                            { "_t", "NoUpdate" },
+                            { "Message", e.Message }
+                        };
+                    }
+                    catch { }
                     SendDocument(newDoc, writer);
                 }
             }
@@ -92,28 +107,7 @@ namespace BH.Upgrader.Base
 
             Console.WriteLine("document received: " + document.ToJson());
 
-            BsonDocument result = UpgradeLocally(document, converter);
-
-            if (result == null)
-            {
-                if (document.Contains("_t") && document["_t"] == "DBNull")
-                    return null;
-
-                result = document;    
-            }
-                
-            return result;
-        }
-
-        /***************************************************/
-
-        private BsonDocument UpgradeLocally(BsonDocument document, Converter converter)
-        {
-            if (document == null)
-                return null;
-
             BsonDocument result = null;
-
             if (document.Contains("_t"))
             {
                 if (document["_t"] == "System.Reflection.MethodBase")
@@ -123,7 +117,7 @@ namespace BH.Upgrader.Base
                 else
                     result = UpgradeObject(document, converter);
             }
-
+                
             return result;
         }
 
@@ -137,10 +131,17 @@ namespace BH.Upgrader.Base
             if (typeName == null || methodName == null || parameterArray == null)
                 return null;
 
+            // Get the method key
+            string key = GetMethodKey(document);
+            if (string.IsNullOrEmpty(key))
+                return null;
+
             // First see if the method can be found in the dictionary using the old parameters
-            BsonDocument result = GetMethodFromDic(converter.ToNewMethod, document);
-            if (result != null)
-                return result;
+            if (converter.ToNewMethod.ContainsKey(key))
+                return converter.ToNewMethod[key];
+
+            // Check if the method is classified as deleted or without update
+            CheckForNoUpgrade(converter, key, "method");
 
             // Update the parameter types if needed
             bool modified = false;
@@ -174,23 +175,32 @@ namespace BH.Upgrader.Base
                     { "MethodName", methodName.AsString },
                     { "Parameters", parameters }
                 });
+                key = GetMethodKey(document);
+
+                if (converter.ToNewMethod.ContainsKey(key))
+                    return converter.ToNewMethod[key];
+                else
+                    return document;
             }
 
-            result = GetMethodFromDic(converter.ToNewMethod, document);
-            if (result == null && modified)
-                result = document;
-            return result;
+            // No match found -> return null
+            return null;
         }
 
         /***************************************************/
 
         private BsonDocument UpgradeType(BsonDocument document, Converter converter)
         {
-            if (document == null)
+            if (document == null || !document.Contains("Name"))
                 return null;
 
+            // Check if the type is classified as deleted or without update
+            string type = document["Name"].AsString;
+            CheckForNoUpgrade(converter, type.Split(',').First(), "type");
+
+            // Then check if the type can be upgraded
             bool modified = false;
-            string typeFromDic = GetTypeFromDic(converter.ToNewType, document["Name"].AsString);
+            string typeFromDic = GetTypeFromDic(converter.ToNewType, type);
             if (typeFromDic != null)
             {
                 document["Name"] = typeFromDic;
@@ -248,7 +258,12 @@ namespace BH.Upgrader.Base
         private BsonDocument UpgradeObject(BsonDocument document, Converter converter)
         {
             //Get the old type
-            string oldType = document["_t"].AsString;
+            string oldType = document["_t"].AsString.Split(',').First();
+
+            // Check if the object type is classified as deleted or without update
+            CheckForNoUpgrade(converter, oldType, "object type");
+
+            // Upgrade porperties
             BsonDocument withNewProperties = UpgradeObjectProperties(document, converter);
             BsonDocument newDoc = withNewProperties ?? document;
 
@@ -256,15 +271,15 @@ namespace BH.Upgrader.Base
             if (converter.ToNewObject.ContainsKey(oldType))
             {
                 //If so, use them to upgrade the object
-                newDoc = UpgradeObjectExplicit(newDoc, converter, oldType);
+                newDoc = UpgradeObjectExplicit(newDoc, converter, oldType) ?? newDoc;
             }
             else
             {
                 //If not, try upgrading the names of the types and properties
-                newDoc = UpgradeObjectTypeAndPropertyNames(newDoc, converter, oldType);
+                newDoc = UpgradeObjectTypeAndPropertyNames(newDoc, converter, oldType) ?? newDoc;
             }
 
-            return newDoc ?? withNewProperties;
+            return newDoc;
         }
 
         /***************************************************/
@@ -281,7 +296,7 @@ namespace BH.Upgrader.Base
                 if (item is BsonDocument)
                 {
                     BsonDocument doc = item as BsonDocument;
-                    BsonDocument upgrade = UpgradeLocally(doc, converter);
+                    BsonDocument upgrade = Upgrade(doc, converter);
                     if (upgrade == null)
                         upgrade = doc;
                     else if (upgrade != doc)
@@ -312,7 +327,7 @@ namespace BH.Upgrader.Base
                 if (property.Value is BsonDocument)
                 {
                     BsonDocument prop = property.Value as BsonDocument;
-                    BsonDocument upgrade = UpgradeLocally(prop, converter);
+                    BsonDocument upgrade = Upgrade(prop, converter);
                     if (upgrade != null && prop != upgrade)
                         propertiesToUpgrade.Add(propName, upgrade);
                 }
@@ -402,14 +417,14 @@ namespace BH.Upgrader.Base
 
         /***************************************************/
 
-        private static string GetTypeFromDic(Dictionary<string, string> dic, string type)
+        private static string GetTypeFromDic(Dictionary<string, string> dic, string type, bool acceptPartialNamespace = true)
         {
             if (type.Contains(","))
                 type = type.Split(',').First();
 
             if (dic.ContainsKey(type))
                 return dic[type];
-            else
+            else if (acceptPartialNamespace)
             {
                 int index = type.LastIndexOf('.');
                 while (index > 0)
@@ -420,14 +435,29 @@ namespace BH.Upgrader.Base
                     else
                         index = ns.LastIndexOf('.');
                 }
-
-                return null;
             }
+
+            return null;
         }
 
         /***************************************************/
 
-        private static BsonDocument GetMethodFromDic(Dictionary<string, BsonDocument> dic, BsonDocument method)
+        private static void CheckForNoUpgrade(Converter converter, string key, string itemTypeName)
+        {
+            // Check if the method is classified as deleted or without update
+            string message = "";
+            if (converter.MessageForDeleted.ContainsKey(key))
+                message = $"No upgrade for {key}. This {itemTypeName} has been deleted without replacement.\n" + converter.MessageForDeleted[key];
+            else if (converter.MessageForNoUpgrade.ContainsKey(key))
+                message = $"No upgrade for {key}. This {itemTypeName} cannot be upgraded automatically.\n" + converter.MessageForNoUpgrade[key];
+
+            if (!string.IsNullOrWhiteSpace(message))
+                throw new NoUpdateException(message);
+        }
+
+        /***************************************************/
+
+        private static string GetMethodKey(BsonDocument method)
         {
             BsonValue typeName = method["TypeName"];
             BsonValue methodName = method["MethodName"];
@@ -448,12 +478,7 @@ namespace BH.Upgrader.Base
             if (parameterTypes.Count > 0)
                 parametersString = parameterTypes.Aggregate((a, b) => a + ", " + b);
 
-            string key = declaringType + name + "(" + parametersString + ")";
-
-            if (dic.ContainsKey(key))
-                return dic[key];
-            else
-                return null;
+            return declaringType + name + "(" + parametersString + ")";
         }
 
         /***************************************************/

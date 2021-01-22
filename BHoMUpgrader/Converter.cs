@@ -59,6 +59,10 @@ namespace BH.Upgrader.Base
 
         public Dictionary<string, CustomUpgrader> ToOldObject { get; set; } = new Dictionary<string, CustomUpgrader>();
 
+        public Dictionary<string, string> MessageForDeleted { get; set; } = new Dictionary<string, string>();
+
+        public Dictionary<string, string> MessageForNoUpgrade { get; set; } = new Dictionary<string, string>();
+
 
         /***************************************************/
         /**** Constructors                              ****/
@@ -102,6 +106,12 @@ namespace BH.Upgrader.Base
 
             if (upgrades.Contains("Property"))
                 LoadPropertyUpgrades(upgrades["Property"] as BsonDocument);
+
+            if (upgrades.Contains("MessageForDeleted"))
+                LoadMessageForDeleted(upgrades["MessageForDeleted"] as BsonDocument);
+
+            if (upgrades.Contains("MessageForNoUpgrade"))
+                LoadMessageForNoUpgrade(upgrades["MessageForNoUpgrade"] as BsonDocument);
         }
 
         /***************************************************/
@@ -193,6 +203,22 @@ namespace BH.Upgrader.Base
                 if (toOld != null)
                     ToOldProperty = toOld.ToDictionary(x => x.Name, x => x.Value.ToString());
             }
+        }
+
+        /***************************************************/
+
+        protected void LoadMessageForDeleted(BsonDocument data)
+        {
+            if (data != null)
+                MessageForDeleted = data.ToDictionary(x => x.Name, x => x.Value.AsString);
+        }
+
+        /***************************************************/
+
+        protected void LoadMessageForNoUpgrade(BsonDocument data)
+        {
+            if (data != null)
+                MessageForNoUpgrade = data.ToDictionary(x => x.Name, x => x.Value.AsString);
         }
 
         /***************************************************/
