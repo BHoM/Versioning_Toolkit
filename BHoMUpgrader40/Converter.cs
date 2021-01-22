@@ -53,6 +53,10 @@ namespace BH.Upgrader.v40
             ToNewObject.Add("BH.oM.Structure.MaterialFragments.Timber", UpgradeMaterialFragment);
             ToNewObject.Add("BH.oM.Adapters.Revit.FamilyLibrary", UpgradeFamilyLibrary);
             ToNewObject.Add("BH.oM.MEP.Elements.Node", UpgradeMEPNode);
+            ToNewObject.Add("BH.oM.Diffing.DiffConfig", UpgradeDiffConfig);
+            ToNewObject.Add("BH.oM.Diffing.HashFragment", UpgradeHashFragment);
+            ToNewObject.Add("BH.oM.Adapters.Filing.PushConfig", UpgradeFilingPushConfig);
+            ToNewObject.Add("BH.oM.Graphics.RenderMeshOptions", UpgradeRenderMeshOptions);
         }
 
 
@@ -133,7 +137,8 @@ namespace BH.Upgrader.v40
             Dictionary<string, object> newProfile = new Dictionary<string, object>(profile);
             newProfile["_t"] = newProfile["_t"].ToString().Replace("Gains", "SpaceCriteria");
 
-            newProfile["ProfileDay"] = new List<object> { profile["ProfileDay"] };
+            if (!newProfile["ProfileDay"].GetType().IsArray)
+                newProfile["ProfileDay"] = new List<object> { profile["ProfileDay"] };
 
             return newProfile;
         }
@@ -211,6 +216,82 @@ namespace BH.Upgrader.v40
                 return null;
 
             return node["Position"] as Dictionary<string, object>;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeDiffConfig(Dictionary<string, object> config)
+        {
+            if (config == null)
+                return null;
+
+            Dictionary<string, object> newConfig = new Dictionary<string, object> { { "_t", "BH.oM.Diffing.DiffingConfig" } };
+            if (config.ContainsKey("EnablePropertyDiffing"))
+                newConfig["EnablePropertyDiffing"] = config["EnablePropertyDiffing"];
+            if (config.ContainsKey("MaxPropertyDifferences"))
+                newConfig["MaxPropertyDifferences"] = config["MaxPropertyDifferences"];
+            if (config.ContainsKey("StoreUnchangedObjects"))
+                newConfig["IncludeUnchangedObjects"] = config["StoreUnchangedObjects"];
+
+            Dictionary<string, object> comparison = new Dictionary<string, object> { { "_t", "BH.oM.Base.ComparisonConfig" } };
+            if (config.ContainsKey("NumericTolerance"))
+                comparison["NumericTolerance"] = config["NumericTolerance"];
+            if (config.ContainsKey("PropertiesToConsider"))
+                comparison["PropertiesToConsider"] = config["PropertiesToConsider"];
+            if (config.ContainsKey("PropertiesToIgnore"))
+                comparison["PropertyExceptions"] = config["PropertiesToIgnore"];
+            if (config.ContainsKey("CustomDataToIgnore"))
+                comparison["CustomdataKeysExceptions"] = config["CustomDataToIgnore"];
+            newConfig["ComparisonConfig"] = comparison;
+
+            return newConfig;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeHashFragment(Dictionary<string, object> hash)
+        {
+            if (hash == null)
+                return null;
+
+            Dictionary<string, object> newHash = new Dictionary<string, object> { { "_t", "BH.oM.Base.HashFragment" } };
+            if (hash.ContainsKey("CurrentHash"))
+                newHash["Hash"] = hash["CurrentHash"];
+
+            return newHash;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeFilingPushConfig(Dictionary<string, object> config)
+        {
+            if (config == null)
+                return null;
+
+            Dictionary<string, object> newConfig = new Dictionary<string, object>(config);
+            newConfig["_t"] = "BH.oM.Adapters.File.PushConfig";
+
+            if (config.ContainsKey("DiffConfig"))
+                newConfig["DiffingConfig"] = config["DiffConfig"];
+            newConfig.Remove("DiffConfig");
+
+            newConfig.Remove("DefaultFilePath");
+            newConfig.Remove("AppendContent");
+
+            return newConfig;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeRenderMeshOptions(Dictionary<string, object> options)
+        {
+            if (options == null)
+                return null;
+
+            Dictionary<string, object> newOptions = new Dictionary<string, object>(options);
+            newOptions.Remove("CustomRendermeshKey");
+
+            return newOptions;
         }
 
         /***************************************************/
