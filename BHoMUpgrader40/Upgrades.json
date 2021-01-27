@@ -77,7 +77,8 @@
       "BH.oM.Adapters.ETABS.Fragments.EtabsLabel": "BH.oM.Adapters.ETABS.ETABSId",
       "BH.Adapter.FileAdapter.FileAdapter": "BH.Adapter.File.FileAdapter",
       "BH.oM.Adapters.Revit.Generic.FamilyLibrary": "BH.oM.Adapters.Revit.FamilyLibrary",
-      "BH.oM.Adapters.Revit.Generic.RevitFilePreview": "BH.oM.Adapters.Revit.RevitFilePreview"
+      "BH.oM.Adapters.Revit.Generic.RevitFilePreview": "BH.oM.Adapters.Revit.RevitFilePreview",
+      "BH.oM.Diffing.DiffConfig": "BH.oM.Diffing.DiffingConfig"
     },
     "ToOld": {
       "BH.oM.MEP.Enums.FluidType": "BH.oM.MEP.MaterialFragments.FluidType",
