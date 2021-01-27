@@ -1578,6 +1578,72 @@
         "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Representation.Query, TriangleNet_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
         "MethodName": "TryGetRendermesh",
         "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Graphics.RenderMesh&\" }" ]
+      },
+      "BH.Engine.Diffing.Compute.Diffing(System.Collections.Generic.IEnumerable<System.Object>, System.Collections.Generic.IEnumerable<System.Object>, null, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Diffing.Compute, Diffing_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "IDiffing",
+        "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }", "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }", "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Diffing.DiffingType\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Diffing.DiffingConfig\" }" ]
+      },
+      "BH.Engine.Diffing.Compute.DiffingHash(System.Object, null)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "Hash",
+        "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IObject\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.ComparisonConfig\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }" ]
+      },
+      "BH.Engine.Diffing.Compute.DiffOneByOne(System.Collections.Generic.IEnumerable<System.Object>, System.Collections.Generic.IEnumerable<System.Object>, null, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Diffing.Compute, Diffing_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "DiffOneByOne",
+        "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }", "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }", "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Diffing.DiffingConfig\" }" ]
+      },
+      "BH.Engine.Diffing.Compute.DiffRevisions(BH.oM.Diffing.Revision, BH.oM.Diffing.Revision, null)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Diffing.Compute, Diffing_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "DiffRevisions",
+        "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Diffing.Revision\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Diffing.Revision\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Diffing.DiffingConfig\" }" ]
+      },
+      "BH.Engine.Diffing.Compute.DiffWithCustomId(System.Collections.Generic.IEnumerable<BH.oM.Base.IBHoMObject>, System.Collections.Generic.IEnumerable<BH.oM.Base.IBHoMObject>, System.String, null)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Diffing.Compute, Diffing_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "DiffWithCustomId",
+        "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }] }", "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }] }", "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Diffing.DiffingConfig\" }" ]
+      },
+      "BH.Engine.Diffing.Compute.DiffWithFragmentId(System.Collections.Generic.IEnumerable<BH.oM.Base.IBHoMObject>, System.Collections.Generic.IEnumerable<BH.oM.Base.IBHoMObject>, System.Type, System.String, null)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Diffing.Compute, Diffing_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "DiffWithFragmentId",
+        "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }] }", "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }] }", "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Diffing.DiffingConfig\" }" ]
+      },
+      "BH.Engine.Diffing.Create.DiffConfig(System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Diffing.Create, Diffing_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "DiffingConfig",
+        "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }" ]
+      },
+      "BH.Engine.Diffing.Create.DiffConfig(System.Boolean, System.Boolean, System.Collections.Generic.List<System.String>, System.Collections.Generic.List<System.String>, System.Collections.Generic.List<System.String>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Diffing.Create, Diffing_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "DiffingConfig",
+        "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }" ]
+      },
+      "BH.Engine.Diffing.Modify.PrepareForRevision(System.Collections.Generic.IEnumerable<BH.oM.Base.IBHoMObject>, null)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Diffing.Modify, Diffing_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "PrepareForRevision",
+        "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }] }", "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Diffing.DiffingConfig\" }" ]
+      },
+      "BH.Engine.Diffing.Modify.RemoveDuplicatesByHash(System.Collections.Generic.IEnumerable<BH.oM.Base.IBHoMObject>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Diffing.Modify, Diffing_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "RemoveDuplicatesByHash",
+        "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }] }", "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.ComparisonConfig\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }" ]
+      },
+      "BH.Engine.Diffing.Query.DifferentProperties(System.Object, System.Object, null)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Diffing.Query, Diffing_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "DifferentProperties",
+        "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Diffing.DiffingConfig\" }" ]
       }
     },
     "ToOld": {
@@ -1804,7 +1870,10 @@
     "BH.Engine.Adapters.Revit.Query.ViewName(BH.oM.Adapters.Revit.Elements.Viewport)": "Message needed",
     "BH.Engine.Adapters.Revit.Query.WorksetId(BH.oM.Base.IBHoMObject)": "Message needed",
     "BH.Engine.Adapters.XML.Create.XMLSettings(System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean, BH.oM.Adapters.XML.Enums.UnitType, BH.oM.Adapters.XML.Enums.ExportDetail, System.Double, System.Double)": "This is now handled by the GBXMLSettings constructor component.",
-    "BH.Engine.Adapters.XML.Create.XMLSettings(System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean, BH.oM.Adapters.XML.Enums.UnitType, BH.oM.Adapters.XML.Enums.ExportDetail, System.Double, System.Double, System.Double)": "This is now handled by the GBXMLSettings constructor component."
+    "BH.Engine.Adapters.XML.Create.XMLSettings(System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean, BH.oM.Adapters.XML.Enums.UnitType, BH.oM.Adapters.XML.Enums.ExportDetail, System.Double, System.Double, System.Double)": "This is now handled by the GBXMLSettings constructor component.",
+    "BH.Engine.Diffing.Compute.DiffGenericObjects(System.Collections.Generic.IEnumerable<System.Object>, System.Collections.Generic.IEnumerable<System.Object>, null, System.Boolean)": "This method does not exist anymore, because its functionality has been incorporated in BH.Engine.Diffing.Compute.Diffing. Please use that method instead.",
+    "BH.Engine.Diffing.Query.AnyDuplicateByHash(System.Collections.Generic.IEnumerable<BH.oM.Base.IBHoMObject>)": "This method was deleted in this newer version of BHoM. You may want to replace it with a similar method, `RemoveDuplicatesByHash`.",
+    "BH.Engine.Diffing.Query.GetHashFragment(BH.oM.Base.IBHoMObject)": "This method was deleted in this newer version of BHoM. You may want to replace it with BH.Engine.Base.Query.Hash()."
   },
   "MessageForNoUpgrade": {
     "BH.Engine.Adapters.Revit.Create.ViewPlan": "Message needed",
@@ -1819,6 +1888,9 @@
     "BH.oM.LifeCycleAssessment.TenantImprovementScope": "Message needed",
     "BH.oM.Structure.Loads.BarVaryingDistributedLoad": "The object has been redefined in such a way that automatic versioning is not possible. To reinstate the objects you could try exploding the CustomObject that will have been returned and make use of the BH.Enigne.Structure.Create.BarVaryingDistributedLoadDistanceBothEnds method from the Structures_Engine. If doing this, treat DistanceFromA as startToStartDistance and DistanceFromB as endToEndDistance. Also, treat ForceA and MomentA as ForceAtStart and MomentAtStart, and ForceB and MomentB as ForceAtEnd and MomentAtEnd. If you have any issues with the above, please feel free to raise an issue at https://github.com/BHoM/BHoM_Engine/issues.",
     "BH.Engine.Reflection.Modify.SetPropertyValue(System.Collections.Generic.List<BH.oM.Base.IBHoMObject>, System.Type, System.String, System.Object)": "Please use BH.Engine.Reflection.Modify.SetPropertyValue(object obj, string propName, object value) instead.",
-    "BH.Engine.Base.Compute.Hash(BH.oM.Base.IObject, System.Collections.Generic.List<System.String>, System.Collections.Generic.List<System.String>, System.Collections.Generic.List<System.String>, System.Collections.Generic.List<System.Type>, System.Int32)": "Please use BH.Engine.Base.Query.Hash(IObject iObj, ComparisonConfig comparisonConfig, Boolean hashFromFragment) instead."
+    "BH.Engine.Base.Compute.Hash(BH.oM.Base.IObject, System.Collections.Generic.List<System.String>, System.Collections.Generic.List<System.String>, System.Collections.Generic.List<System.String>, System.Collections.Generic.List<System.Type>, System.Int32)": "This method's functionality has changed deeply with respect to an older version of BHoM. Please replace this component with BH.Engine.Base.Query.Hash(), then plug the inputs as needed.",
+    "BH.Engine.Diffing.Modify.SetHashFragment(BH.oM.Base.IBHoMObject, null)": "This method's functionality has changed deeply with respect to an older version of BHoM, and it was splitted in 2 separate methods. You may want to replace this with either `SetHashFragment` or `SetRevisionFragment`, depending on your workflow.",
+    "BH.Engine.Diffing.Modify.SetHashFragment(BH.oM.Base.IBHoMObject, System.String)": "This method's functionality has changed deeply with respect to an older version of BHoM, and it was splitted in 2 separate methods. You may want to replace this with either `SetHashFragment` or `SetRevisionFragment`, depending on your workflow.",
+    "BH.Engine.Diffing.Modify.SetHashFragment(System.Collections.Generic.IEnumerable<BH.oM.Base.IBHoMObject>, null)": "This method's functionality has changed deeply with respect to an older version of BHoM, and it was splitted in 2 separate methods. You may want to replace this with either `SetHashFragment` or `SetRevisionFragment`, depending on your workflow."
   }
 }
