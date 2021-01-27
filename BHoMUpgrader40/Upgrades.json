@@ -1427,6 +1427,30 @@
         "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
         "MethodName": "MaterialEndOfLifeTreatment",
         "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData\" }" ]
+      },
+      "BH.Engine.Adapters.CarbonQueryDatabase.Create.CarbonQueryDatabaseRequest(System.String, System.String, BH.oM.Base.CustomObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.CarbonQueryDatabase.Create, CarbonQueryDatabase_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "CarbonQueryDatabaseRequest",
+        "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.CarbonQueryDatabase.CQDConfig\" }" ]
+      },
+      "BH.Engine.Adapters.IES.Modify.RoundedPoint(BH.oM.Geometry.Point, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Modify, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "RoundCoordinates",
+        "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }" ]
+      },
+      "BH.Engine.Architecture.Modify.SetGeometry(BH.oM.Geometry.SettingOut.Grid, BH.oM.Geometry.ICurve)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Modify, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "SetGeometry",
+        "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.SettingOut.Grid\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\" }" ]
+      },
+      "BH.Engine.MEP.Modify.SetGeometry(BH.oM.MEP.Elements.Node, BH.oM.Geometry.Point)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Modify, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
+        "MethodName": "SetGeometry",
+        "Parameters": [ "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\" }", "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\" }" ]
       }
 
     },
@@ -1623,6 +1647,7 @@
     "BH.Engine.Adapters.DIALux.Convert.FromDialUXOpeningType(System.String)": "This operation is now handled automatically by the DIALux Adapter and it is no longer necessary to perform this manually. As such, this method has been removed from UI use. If you need further assistance with this change, please raise an issue on https://github.com/BHoM/DIALux_Toolkit/issues",
     "BH.Engine.Adapters.DIALux.Convert.FromDialUXPoint(System.String)": "This operation is now handled automatically by the DIALux Adapter and it is no longer necessary to perform this manually. As such, this method has been removed from UI use. If you need further assistance with this change, please raise an issue on https://github.com/BHoM/DIALux_Toolkit/issues",
     "BH.Engine.Adapters.DIALux.Convert.FromDialUXSpace(System.Collections.Generic.List<System.String>)": "This operation is now handled automatically by the DIALux Adapter and it is no longer necessary to perform this manually. As such, this method has been removed from UI use. If you need further assistance with this change, please raise an issue on https://github.com/BHoM/DIALux_Toolkit/issues",
+    "BH.Engine.Adapters.DIALux.Convert.FromDialUXOpening(System.Collections.Generic.List<System.String>, BH.oM.Environment.Elements.Panel, System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>)": "This operation is now handled automatically by the DIALux Adapter and it is no longer necessary to perform this manually. As such, this method has been removed from UI use. If you need further assistance with this change, please raise an issue on https://github.com/BHoM/DIALux_Toolkit/issues",
     "BH.Engine.Adapters.DIALux.Convert.ToDIALux(BH.oM.Environment.Elements.Opening)": "This operation is now handled automatically by the DIALux Adapter and it is no longer necessary to perform this manually. As such, this method has been removed from UI use. If you need further assistance with this change, please raise an issue on https://github.com/BHoM/DIALux_Toolkit/issues",
     "BH.Engine.Adapters.DIALux.Convert.ToDialUX(BH.oM.Environment.Elements.OpeningType)": "This operation is now handled automatically by the DIALux Adapter and it is no longer necessary to perform this manually. As such, this method has been removed from UI use. If you need further assistance with this change, please raise an issue on https://github.com/BHoM/DIALux_Toolkit/issues",
     "BH.Engine.Adapters.DIALux.Convert.ToDialUX(BH.oM.Geometry.Point, System.Int32, System.Boolean)": "This operation is now handled automatically by the DIALux Adapter and it is no longer necessary to perform this manually. As such, this method has been removed from UI use. If you need further assistance with this change, please raise an issue on https://github.com/BHoM/DIALux_Toolkit/issues",
@@ -1651,7 +1676,9 @@
     "BH.Engine.Adapters.Revit.Query.SpaceId(BH.oM.Base.IBHoMObject)": "Message needed",
     "BH.Engine.Adapters.Revit.Query.UniqueIds(System.Collections.Generic.IEnumerable<BH.oM.Base.IBHoMObject>, System.Boolean)": "Message needed",
     "BH.Engine.Adapters.Revit.Query.ViewName(BH.oM.Adapters.Revit.Elements.Viewport)": "Message needed",
-    "BH.Engine.Adapters.Revit.Query.WorksetId(BH.oM.Base.IBHoMObject)": "Message needed"
+    "BH.Engine.Adapters.Revit.Query.WorksetId(BH.oM.Base.IBHoMObject)": "Message needed",
+    "BH.Engine.Adapters.XML.Create.XMLSettings(System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean, BH.oM.Adapters.XML.Enums.UnitType, BH.oM.Adapters.XML.Enums.ExportDetail, System.Double, System.Double)": "This is now handled by the GBXMLSettings constructor component.",
+    "BH.Engine.Adapters.XML.Create.XMLSettings(System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean, BH.oM.Adapters.XML.Enums.UnitType, BH.oM.Adapters.XML.Enums.ExportDetail, System.Double, System.Double, System.Double)": "This is now handled by the GBXMLSettings constructor component."
   },
   "MessageForNoUpgrade": {
     "BH.Engine.Adapters.Revit.Create.ViewPlan": "Message needed",
