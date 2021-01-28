@@ -39,6 +39,9 @@ namespace BH.Upgrader.v41
         {
             PreviousVersion = "4.0";
 
+            ToNewObject.Add("BH.oM.Programming.DataParam", UpdateNodeParam);
+            ToNewObject.Add("BH.oM.Programming.ReceiverParam", UpdateNodeParam);
+
         }
 
 
@@ -46,7 +49,16 @@ namespace BH.Upgrader.v41
         /**** Private Methods                           ****/
         /***************************************************/
 
-        
+        private static Dictionary<string, object> UpdateNodeParam(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            newVersion.Remove("ParentId");
+
+            return newVersion;
+        }
 
         /***************************************************/
     }
