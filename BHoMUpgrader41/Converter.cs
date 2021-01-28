@@ -41,7 +41,9 @@ namespace BH.Upgrader.v41
 
             ToNewObject.Add("BH.oM.Programming.DataParam", UpdateNodeParam);
             ToNewObject.Add("BH.oM.Programming.ReceiverParam", UpdateNodeParam);
-
+            ToNewObject.Add("BH.oM.CFD.Harpoon.HarpoonSettings", UpgradeHarpoonSettings);
+            ToNewObject.Add("BH.oM.CFD.CFX.RadiantSource", UpgradeRadiantSource);
+            ToNewObject.Add("BH.oM.CFD.CFX.TemperatureBoundary", UpgradeTemperatureBoundary);
         }
 
 
@@ -60,6 +62,55 @@ namespace BH.Upgrader.v41
             return newVersion;
         }
 
+        public static Dictionary<string, object> UpgradeHarpoonSettings(Dictionary<string, object> harpoonSettings)
+        {
+            if (harpoonSettings == null)
+                return null;
+
+            Dictionary<string, object> newHarpoonSettings = new Dictionary<string, object>(harpoonSettings);
+            if (!newHarpoonSettings.ContainsKey("AdvanceConfig"))
+            {
+                newHarpoonSettings.Add("AdvanceConfig", new List<string>());
+            }
+
+            return newHarpoonSettings;
+        }
+
+        public static Dictionary<string, object> UpgradeRadiantSource(Dictionary<string, object> radiantSource)
+        {
+            if (radiantSource == null)
+                return null;
+
+            Dictionary<string, object> energySource = new Dictionary<string, object>(radiantSource);
+            energySource["_t"] = energySource["_t"].ToString().Replace("RadiantSource", "EnergySource");
+
+            if (!energySource.ContainsKey("EnergyFluxInput"))
+            {
+                energySource.Add("EnergyFluxInput", "0 [W m^-2]");
+            }
+            if (energySource.ContainsKey("Direction"))
+            {
+                energySource.Add("RadiationDirection", radiantSource["Direction"]);
+                energySource.Remove("Direction");
+            }
+
+            return energySource;
+        }
+
+        public static Dictionary<string, object> UpgradeTemperatureBoundary(Dictionary<string, object> temperatureBoundary)
+        {
+            if (temperatureBoundary == null)
+                return null;
+
+            Dictionary<string, object> newTemperatureBoundary = new Dictionary<string, object>(temperatureBoundary);
+            if (newTemperatureBoundary.ContainsKey("RadiantSource"))
+            {
+                newTemperatureBoundary.Add("EnergySource", newTemperatureBoundary["RadiantSource"]);
+                newTemperatureBoundary.Remove("RadiantSource");
+            }
+
+            return newTemperatureBoundary;
+        }
         /***************************************************/
     }
 }
