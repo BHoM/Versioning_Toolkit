@@ -43,6 +43,9 @@ namespace BH.Upgrader.v41
             ToNewObject.Add("BH.oM.Programming.ReceiverParam", UpdateNodeParam);
             ToNewObject.Add("BH.oM.CFD.Harpoon.HarpoonSettings", UpgradeHarpoonSettings);
             ToNewObject.Add("BH.oM.CFD.CFX.RadiantSource", UpgradeRadiantSource);
+            ToNewObject.Add("BH.oM.CFD.CFX.AdiabaticBoundary", UpgradeAdiabaticBoundary);
+            ToNewObject.Add("BH.oM.CFD.CFX.HeatFluxBoundary", UpgradeHeatFluxBoundary);
+            ToNewObject.Add("BH.oM.CFD.CFX.HeatTransferBoundary", UpgradeHeatTransferBoundary);
             ToNewObject.Add("BH.oM.CFD.CFX.TemperatureBoundary", UpgradeTemperatureBoundary);
         }
 
@@ -95,6 +98,51 @@ namespace BH.Upgrader.v41
             }
 
             return energySource;
+        }
+
+        public static Dictionary<string, object> UpgradeAdiabaticBoundary(Dictionary<string, object> adiabaticBoundary)
+        {
+            if (adiabaticBoundary == null)
+                return null;
+
+            Dictionary<string, object> newAdiabaticBoundary = new Dictionary<string, object>(adiabaticBoundary);
+            if (newAdiabaticBoundary.ContainsKey("RadiantSource"))
+            {
+                newAdiabaticBoundary.Add("EnergySource", newAdiabaticBoundary["RadiantSource"]);
+                newAdiabaticBoundary.Remove("RadiantSource");
+            }
+
+            return newAdiabaticBoundary;
+        }
+
+        public static Dictionary<string, object> UpgradeHeatFluxBoundary(Dictionary<string, object> heatFluxBoundary)
+        {
+            if (heatFluxBoundary == null)
+                return null;
+
+            Dictionary<string, object> newHeatFluxBoundary = new Dictionary<string, object>(heatFluxBoundary);
+            if (newHeatFluxBoundary.ContainsKey("RadiantSource"))
+            {
+                newHeatFluxBoundary.Add("EnergySource", newHeatFluxBoundary["RadiantSource"]);
+                newHeatFluxBoundary.Remove("RadiantSource");
+            }
+
+            return newHeatFluxBoundary;
+        }
+
+        public static Dictionary<string, object> UpgradeHeatTransferBoundary(Dictionary<string, object> heatTransferBoundary)
+        {
+            if (heatTransferBoundary == null)
+                return null;
+
+            Dictionary<string, object> newHeatTransferBoundary = new Dictionary<string, object>(heatTransferBoundary);
+            if (newHeatTransferBoundary.ContainsKey("RadiantSource"))
+            {
+                newHeatTransferBoundary.Add("EnergySource", newHeatTransferBoundary["RadiantSource"]);
+                newHeatTransferBoundary.Remove("RadiantSource");
+            }
+
+            return newHeatTransferBoundary;
         }
 
         public static Dictionary<string, object> UpgradeTemperatureBoundary(Dictionary<string, object> temperatureBoundary)
