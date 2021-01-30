@@ -57,6 +57,7 @@ namespace BH.Upgrader.v40
             ToNewObject.Add("BH.oM.Diffing.HashFragment", UpgradeHashFragment);
             ToNewObject.Add("BH.oM.Adapters.Filing.PushConfig", UpgradeFilingPushConfig);
             ToNewObject.Add("BH.oM.Graphics.RenderMeshOptions", UpgradeRenderMeshOptions);
+            ToNewObject.Add("BH.oM.Adapters.Revit.Elements.ViewPlan", UpgradeViewPlan);
         }
 
 
@@ -292,6 +293,19 @@ namespace BH.Upgrader.v40
             newOptions.Remove("CustomRendermeshKey");
 
             return newOptions;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeViewPlan(Dictionary<string, object> plan)
+        {
+            if (plan == null)
+                return null;
+
+            Dictionary<string, object> newPlan = new Dictionary<string, object>(plan);
+            newPlan.Remove("IsTemplate");
+
+            return newPlan;
         }
 
         /***************************************************/
