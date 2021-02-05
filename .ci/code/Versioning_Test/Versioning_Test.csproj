@@ -78,7 +78,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Datasets\3.3\Exceptions.json" />
     <None Include="Datasets\3.3\Methods.json" />
     <None Include="Datasets\3.3\Objects.json" />
   </ItemGroup>
