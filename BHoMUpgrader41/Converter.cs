@@ -41,7 +41,7 @@ namespace BH.Upgrader.v41
 
             ToNewObject.Add("BH.oM.Programming.DataParam", UpdateNodeParam);
             ToNewObject.Add("BH.oM.Programming.ReceiverParam", UpdateNodeParam);
-
+            ToNewObject.Add("BH.oM.Test.Results.TestResult", UpdateTestResult);
         }
 
 
@@ -56,6 +56,78 @@ namespace BH.Upgrader.v41
 
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
             newVersion.Remove("ParentId");
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> UpdateTestResult(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            if (oldVersion.ContainsKey("Status"))
+            {
+                switch (oldVersion["Status"].ToString())
+                {
+                    case "Undefined":
+                    case "CriticalFail":
+                        newVersion["Status"] = "Error";
+                        break;
+                    case "Fail":
+                        newVersion["Status"] = "Warning";
+                        break;
+                    case "Pass":
+                        newVersion["Status"] = "Pass";
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            if (oldVersion.ContainsKey("Events") && oldVersion["Events"] is object[])
+            {
+                IEnumerable<Dictionary<string, object>> events = (oldVersion["Events"] as object[]).OfType<Dictionary<string, object>>();
+
+                newVersion.Remove("Events");
+                newVersion["Information"] = events.Select(oldEvent =>
+                {
+                    Dictionary<string, object> newInfo = new Dictionary<string, object>();
+                    newInfo["_t"] = "BH.oM.Test.Results.EventMessage";
+
+                    if (oldEvent.ContainsKey("Message"))
+                        newInfo["Message"] = oldEvent["Message"];
+
+                    if (oldEvent.ContainsKey("UtcTime"))
+                        newInfo["UTCTime"] = oldEvent["UtcTime"];
+
+                    if (oldEvent.ContainsKey("StackTrace"))
+                        newInfo["StackTrace"] = oldEvent["StackTrace"];
+
+                    if (oldEvent.ContainsKey("Type"))
+                    {
+                        switch (oldEvent["Type"].ToString())
+                        {
+                            case "Unknown":
+                            case "Error":
+                                newInfo["Status"] = "Error";
+                                break;
+                            case "Warning":
+                                newInfo["Status"] = "Warning";
+                                break;
+                            case "Note":
+                                newInfo["Status"] = "Pass";
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+
+                    return newInfo;
+                }).ToList();
+            }
 
             return newVersion;
         }
