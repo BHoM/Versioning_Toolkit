@@ -42,6 +42,7 @@ namespace BH.Upgrader.v41
             ToNewObject.Add("BH.oM.Programming.DataParam", UpdateNodeParam);
             ToNewObject.Add("BH.oM.Programming.ReceiverParam", UpdateNodeParam);
             ToNewObject.Add("BH.oM.Test.Results.TestResult", UpdateTestResult);
+            ToNewObject.Add("BH.oM.Adapters.Revit.Parameters.RevitIdentifiers", UpgradeRevitIdentifiers);
         }
 
 
@@ -128,6 +129,27 @@ namespace BH.Upgrader.v41
                     return newInfo;
                 }).ToList();
             }
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeRevitIdentifiers(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (!newVersion.ContainsKey("Workset"))
+                newVersion.Add("Workset", "");
+
+            if (!newVersion.ContainsKey("HostId"))
+                newVersion.Add("HostId", -1);
+
+            if (!newVersion.ContainsKey("LinkPath"))
+                newVersion.Add("LinkPath", "");
 
             return newVersion;
         }
