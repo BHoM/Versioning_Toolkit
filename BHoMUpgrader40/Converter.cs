@@ -58,6 +58,7 @@ namespace BH.Upgrader.v40
             ToNewObject.Add("BH.oM.Adapters.Filing.PushConfig", UpgradeFilingPushConfig);
             ToNewObject.Add("BH.oM.Graphics.RenderMeshOptions", UpgradeRenderMeshOptions);
             ToNewObject.Add("BH.oM.Adapters.Revit.Elements.ViewPlan", UpgradeViewPlan);
+            ToNewObject.Add("BH.oM.MEP.System.SectionProperties.DuctSectionProperty", UpgradeDuctSectionProperty);
         }
 
 
