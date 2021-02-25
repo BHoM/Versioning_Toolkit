@@ -65,6 +65,37 @@ namespace BH.Upgrader.v40
         /**** Private Methods                           ****/
         /***************************************************/
 
+        private static Dictionary<string, object> UpgradeDuctSectionProperty(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if(newVersion.ContainsKey("DuctMaterial"))
+                newVersion["DuctMaterial"] = ConvertIMEPMaterialToPhysicalMaterial(newVersion["DuctMaterial"] as Dictionary<string, object>);
+
+            if (newVersion.ContainsKey("InsulationMaterial"))
+                newVersion["InsulationMaterial"] = ConvertIMEPMaterialToPhysicalMaterial(newVersion["InsulationMaterial"] as Dictionary<string, object>);
+
+            if (newVersion.ContainsKey("LiningMaterial"))
+                newVersion["LiningMaterial"] = ConvertIMEPMaterialToPhysicalMaterial(newVersion["LiningMaterial"] as Dictionary<string, object>);
+
+            return newVersion;
+        }
+
+        private static Dictionary<string, object> ConvertIMEPMaterialToPhysicalMaterial(Dictionary<string, object> mepMaterial)
+        {
+            if (mepMaterial == null)
+                return null;
+
+            Dictionary<string, object> physicalMaterial = new Dictionary<string, object>();
+            physicalMaterial.Add("_t", "BH.oM.Physical.Materials.Material");
+            physicalMaterial.Add("Properties", new List<Dictionary<string, object>>() { mepMaterial });
+
+            return physicalMaterial;
+        }
+
         private static Dictionary<string, object> UpgradeBoundaryRepresentation(Dictionary<string, object> oldVersion)
         {
             if (oldVersion == null)
