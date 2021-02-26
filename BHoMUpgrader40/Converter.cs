@@ -58,7 +58,6 @@ namespace BH.Upgrader.v40
             ToNewObject.Add("BH.oM.Adapters.Filing.PushConfig", UpgradeFilingPushConfig);
             ToNewObject.Add("BH.oM.Graphics.RenderMeshOptions", UpgradeRenderMeshOptions);
             ToNewObject.Add("BH.oM.Adapters.Revit.Elements.ViewPlan", UpgradeViewPlan);
-            ToNewObject.Add("BH.oM.MEP.Elements.Duct", UpgradeDuct);
             ToNewObject.Add("BH.oM.MEP.System.SectionProperties.DuctSectionProperty", UpgradeDuctSectionProperty);
         }
 
@@ -66,19 +65,6 @@ namespace BH.Upgrader.v40
         /***************************************************/
         /**** Private Methods                           ****/
         /***************************************************/
-
-        private static Dictionary<string, object> UpgradeDuct(Dictionary<string, object> oldVersion)
-        {
-            if (oldVersion == null)
-                return null;
-
-            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
-
-            if (newVersion.ContainsKey("_t"))
-                newVersion["_t"] = "BH.oM.MEP.System.Duct";
-
-            return newVersion;
-        }
 
         private static Dictionary<string, object> UpgradeDuctSectionProperty(Dictionary<string, object> oldVersion)
         {
@@ -103,6 +89,9 @@ namespace BH.Upgrader.v40
         {
             if (mepMaterial == null)
                 return null;
+
+            if (mepMaterial.ContainsKey("_t") && (mepMaterial["_t"] as string) == "BH.oM.Physical.Materials.Material")
+                return mepMaterial; //Already a physical material, doesn't need converting
 
             Dictionary<string, object> physicalMaterial = new Dictionary<string, object>();
             physicalMaterial.Add("_t", "BH.oM.Physical.Materials.Material");
