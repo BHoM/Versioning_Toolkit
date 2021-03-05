@@ -47,6 +47,7 @@ namespace BH.Upgrader.v41
             ToNewObject.Add("BH.oM.MEP.Fixtures.LightFixture", UpgradeLightFixture);
             ToNewObject.Add("BH.oM.MEP.System.Dampers.VolumeDamper", UpgradeVolumeDamper);
             ToNewObject.Add("BH.oM.MEP.Equipment.MechanicalEquipment", UpgradeMechanicalEquipment);
+            ToNewObject.Add("BH.oM.CFD.Harpoon.HarpoonObject", UpgradeHarpoonObject);
         }
 
 
@@ -270,6 +271,32 @@ namespace BH.Upgrader.v41
 
             if (!newVersion.ContainsKey("LinkPath"))
                 newVersion.Add("LinkPath", "");
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeHarpoonObject(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            if (newVersion.ContainsKey("Center"))
+            {
+                if (newVersion["Center"] == null)
+                {
+                    newVersion["_t"] = newVersion["_t"].ToString().Replace("HarpoonObject", "SurfaceHarpoonObject");
+                    newVersion.Remove("Center");
+                }
+                else
+                {
+                    newVersion["_t"] = newVersion["_t"].ToString().Replace("HarpoonObject", "VolumeHarpoonObject");
+                    newVersion.Add("Location", newVersion["Center"]);
+                    newVersion.Remove("Center");
+                }
+            }
 
             return newVersion;
         }
