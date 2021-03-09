@@ -44,11 +44,36 @@ namespace BH.Upgrader.v41
             ToNewObject.Add("BH.oM.Test.Results.TestResult", UpdateTestResult);
             ToNewObject.Add("BH.oM.Adapters.Revit.Parameters.RevitIdentifiers", UpgradeRevitIdentifiers);
             ToNewObject.Add("BH.oM.MEP.Fixtures.AirTerminal", UpgradeAirTerminalUnit);
+            ToNewObject.Add("BH.oM.MEP.Fixtures.LightFixture", UpgradeLightFixture);
         }
 
 
         /***************************************************/
         /**** Private Methods                           ****/
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeLightFixture(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (newVersion.ContainsKey("Position"))
+            {
+                newVersion.Add("Location", UpgradeMEPPointToMEPNode(newVersion["Position"] as Dictionary<string, object>));
+                newVersion.Remove("Position");
+            }
+
+            if (!newVersion.ContainsKey("OrientationAngle"))
+                newVersion.Add("OrientationAngle", 0);
+
+            if (!newVersion.ContainsKey("Power"))
+                newVersion.Add("Power", 0);
+
+            return newVersion;
+        }
+
         /***************************************************/
 
         private static Dictionary<string, object> UpgradeAirTerminalUnit(Dictionary<string, object> oldVersion)
@@ -66,15 +91,28 @@ namespace BH.Upgrader.v41
 
             if(newVersion.ContainsKey("Position"))
             {
-                Dictionary<string, object> node = new Dictionary<string, object>();
-                node.Add("_t", "BH.oM.MEP.System.Node");
-                node.Add("Position", newVersion["Position"]);
-
-                newVersion.Add("Location", node);
+                newVersion.Add("Location", UpgradeMEPPointToMEPNode(newVersion["Position"] as Dictionary<string, object>));
                 newVersion.Remove("Position");
             }
 
             return newVersion;
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeMEPPointToMEPNode(Dictionary<string, object> mepPoint)
+        {
+            if (mepPoint == null)
+                return null;
+
+            if (mepPoint.ContainsKey("_t") && (mepPoint["_t"] as string) == "BH.oM.MEP.System.Node")
+                return mepPoint; //Already a node, doesn't need converting
+
+            Dictionary<string, object> node = new Dictionary<string, object>();
+            node.Add("_t", "BH.oM.MEP.System.Node");
+            node.Add("Position", mepPoint);
+
+            return node;
         }
 
         /***************************************************/
