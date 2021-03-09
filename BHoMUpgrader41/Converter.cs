@@ -46,11 +46,39 @@ namespace BH.Upgrader.v41
             ToNewObject.Add("BH.oM.MEP.Fixtures.AirTerminal", UpgradeAirTerminalUnit);
             ToNewObject.Add("BH.oM.MEP.Fixtures.LightFixture", UpgradeLightFixture);
             ToNewObject.Add("BH.oM.MEP.System.Dampers.VolumeDamper", UpgradeVolumeDamper);
+            ToNewObject.Add("BH.oM.MEP.Equipment.MechanicalEquipment", UpgradeMechanicalEquipment);
         }
 
 
         /***************************************************/
         /**** Private Methods                           ****/
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeMechanicalEquipment(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (newVersion.ContainsKey("Position"))
+            {
+                newVersion.Add("Location", UpgradeMEPPointToMEPNode(newVersion["Position"] as Dictionary<string, object>));
+                newVersion.Remove("Position");
+            }
+
+            if (!newVersion.ContainsKey("OrientationAngle"))
+                newVersion.Add("OrientationAngle", 0);
+
+            if (!newVersion.ContainsKey("Power"))
+                newVersion.Add("Power", 0);
+
+            if (!newVersion.ContainsKey("FlowRate"))
+                newVersion.Add("FlowRate", 0);
+
+            return newVersion;
+        }
+
         /***************************************************/
 
         private static Dictionary<string, object> UpgradeVolumeDamper(Dictionary<string, object> oldVersion)
