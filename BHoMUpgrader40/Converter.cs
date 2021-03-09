@@ -59,11 +59,49 @@ namespace BH.Upgrader.v40
             ToNewObject.Add("BH.oM.Graphics.RenderMeshOptions", UpgradeRenderMeshOptions);
             ToNewObject.Add("BH.oM.Adapters.Revit.Elements.ViewPlan", UpgradeViewPlan);
             ToNewObject.Add("BH.oM.MEP.System.SectionProperties.DuctSectionProperty", UpgradeDuctSectionProperty);
+            ToNewObject.Add("BH.oM.MEP.System.SectionProperties.PipeSectionProperty", UpgradePipeSectionProperty);
+            ToNewObject.Add("BH.oM.MEP.System.SectionProperties.WireSectionProperty", UpgradeWireSectionProperty);
         }
 
 
         /***************************************************/
         /**** Private Methods                           ****/
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeWireSectionProperty(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (newVersion.ContainsKey("ConductiveMaterial"))
+                newVersion["ConductiveMaterial"] = ConvertIMEPMaterialToPhysicalMaterial(newVersion["ConductiveMaterial"] as Dictionary<string, object>);
+
+            if (newVersion.ContainsKey("InsulationMaterial"))
+                newVersion["InsulationMaterial"] = ConvertIMEPMaterialToPhysicalMaterial(newVersion["InsulationMaterial"] as Dictionary<string, object>);
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradePipeSectionProperty(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (newVersion.ContainsKey("PipeMaterial"))
+                newVersion["PipeMaterial"] = ConvertIMEPMaterialToPhysicalMaterial(newVersion["PipeMaterial"] as Dictionary<string, object>);
+
+            if (newVersion.ContainsKey("InsulationMaterial"))
+                newVersion["InsulationMaterial"] = ConvertIMEPMaterialToPhysicalMaterial(newVersion["InsulationMaterial"] as Dictionary<string, object>);
+
+            return newVersion;
+        }
+
         /***************************************************/
 
         private static Dictionary<string, object> UpgradeDuctSectionProperty(Dictionary<string, object> oldVersion)
@@ -85,6 +123,8 @@ namespace BH.Upgrader.v40
             return newVersion;
         }
 
+        /***************************************************/
+
         private static Dictionary<string, object> ConvertIMEPMaterialToPhysicalMaterial(Dictionary<string, object> mepMaterial)
         {
             if (mepMaterial == null)
@@ -99,6 +139,8 @@ namespace BH.Upgrader.v40
 
             return physicalMaterial;
         }
+
+        /***************************************************/
 
         private static Dictionary<string, object> UpgradeBoundaryRepresentation(Dictionary<string, object> oldVersion)
         {
