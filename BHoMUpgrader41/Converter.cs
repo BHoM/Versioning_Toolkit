@@ -43,11 +43,40 @@ namespace BH.Upgrader.v41
             ToNewObject.Add("BH.oM.Programming.ReceiverParam", UpdateNodeParam);
             ToNewObject.Add("BH.oM.Test.Results.TestResult", UpdateTestResult);
             ToNewObject.Add("BH.oM.Adapters.Revit.Parameters.RevitIdentifiers", UpgradeRevitIdentifiers);
+            ToNewObject.Add("BH.oM.MEP.Fixtures.AirTerminal", UpgradeAirTerminalUnit);
         }
 
 
         /***************************************************/
         /**** Private Methods                           ****/
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeAirTerminalUnit(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if(newVersion.ContainsKey("FlowRate"))
+            {
+                newVersion.Add("AirFlowRate", newVersion["FlowRate"]);
+                newVersion.Remove("FlowRate");
+            }
+
+            if(newVersion.ContainsKey("Position"))
+            {
+                Dictionary<string, object> node = new Dictionary<string, object>();
+                node.Add("_t", "BH.oM.MEP.System.Node");
+                node.Add("Position", newVersion["Position"]);
+
+                newVersion.Add("Location", node);
+                newVersion.Remove("Position");
+            }
+
+            return newVersion;
+        }
+
         /***************************************************/
 
         private static Dictionary<string, object> UpdateNodeParam(Dictionary<string, object> oldVersion)
