@@ -283,7 +283,7 @@ namespace BH.Upgrader.v41
                 return null;
 
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
-            if (newVersion.ContainsKey("Center") && newVersion["Centre"] != null)
+            if (newVersion.ContainsKey("Center") && newVersion["Center"] != null)
             {
                 newVersion["_t"] = newVersion["_t"].ToString().Replace("HarpoonObject", "VolumeHarpoonObject");
                 newVersion.Add("Location", newVersion["Center"]);
