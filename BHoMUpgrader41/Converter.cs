@@ -283,20 +283,15 @@ namespace BH.Upgrader.v41
                 return null;
 
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
-            if (newVersion.ContainsKey("Center"))
+            if (newVersion.ContainsKey("Center") && newVersion["Centre"] != null)
             {
-                if (newVersion["Center"] == null)
-                {
-                    newVersion["_t"] = newVersion["_t"].ToString().Replace("HarpoonObject", "SurfaceHarpoonObject");
-                    newVersion.Remove("Center");
-                }
-                else
-                {
-                    newVersion["_t"] = newVersion["_t"].ToString().Replace("HarpoonObject", "VolumeHarpoonObject");
-                    newVersion.Add("Location", newVersion["Center"]);
-                    newVersion.Remove("Center");
-                }
+                newVersion["_t"] = newVersion["_t"].ToString().Replace("HarpoonObject", "VolumeHarpoonObject");
+                newVersion.Add("Location", newVersion["Center"]);
             }
+            else
+                newVersion["_t"] = newVersion["_t"].ToString().Replace("HarpoonObject", "SurfaceHarpoonObject");
+
+            newVersion.Remove("Center");
 
             return newVersion;
         }
