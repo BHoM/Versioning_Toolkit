@@ -28,11 +28,5 @@
     "ToOld": {
 
     }
-  },
-  "MessageForDeleted": {
-    "BH.Engine.CFD.Create.HarpoonObject(System.Collections.Generic.List<System.String>, System.String, System.Collections.Generic.List<System.Int32>, System.Collections.Generic.List<System.Int32>, BH.oM.Geometry.Point)": "This create method no longer exists due to change of Harpoon Object. Please use create method of Surface Harpoon Object or Volume Harpoon Object accordingly."
-  },
-  "MessageForNoUpgrade": {
-
   }
 }
