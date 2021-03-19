@@ -48,6 +48,7 @@ namespace BH.Upgrader.v41
             ToNewObject.Add("BH.oM.MEP.System.Dampers.VolumeDamper", UpgradeVolumeDamper);
             ToNewObject.Add("BH.oM.MEP.Equipment.MechanicalEquipment", UpgradeMechanicalEquipment);
             ToNewObject.Add("BH.oM.CFD.Harpoon.HarpoonObject", UpgradeHarpoonObject);
+            ToNewObject.Add("BH.oM.Inspection.Audit", UpgradeAudit);
         }
 
 
@@ -292,6 +293,26 @@ namespace BH.Upgrader.v41
                 newVersion["_t"] = newVersion["_t"].ToString().Replace("HarpoonObject", "SurfaceHarpoonObject");
 
             newVersion.Remove("Center");
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeAudit(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            if (newVersion.ContainsKey("Issues") && newVersion["Issues"] is List<Dictionary<string, object>>)
+            {
+                newVersion["IssueNumbers"] = ((List<Dictionary<string, object>>)newVersion["Issues"])
+                    .Select(x => x.ContainsKey("IssueNumber") ? x["IssueNumber"] : "")
+                    .ToList();
+            }
+
+            newVersion.Remove("Issues");
 
             return newVersion;
         }
