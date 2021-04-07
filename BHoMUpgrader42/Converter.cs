@@ -39,6 +39,8 @@ namespace BH.Upgrader.v42
         {
             PreviousVersion = "4.1";
 
+            ToNewObject.Add("BH.oM.Adapters.RAM.UniformLoadSet", UpgradeUniformLoadSet);
+            ToNewObject.Add("BH.oM.Adapters.RAM.ContourLoadSet", UpgradeContourLoadSet);
         }
 
 
@@ -47,7 +49,73 @@ namespace BH.Upgrader.v42
         /***************************************************/
 
 
+        public static Dictionary<string, object> UpgradeUniformLoadSet(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
 
+            Dictionary<string, object> newVersion = new Dictionary<string, object>();
+
+            newVersion["_t"] = "BH.oM.Structure.Loads.UniformLoadSet";
+            newVersion["Name"] = oldVersion["Name"];
+            newVersion["CustomData"] = oldVersion["CustomData"];
+            newVersion["BHoM_Guid"] = oldVersion["BHoM_Guid"];
+            newVersion["Tags"] = oldVersion["Tags"];
+            newVersion["Fragments"] = oldVersion["Fragments"];
+
+            object outObject;
+            
+            if ( oldVersion.TryGetValue("Loads", out outObject) )
+            {
+                Dictionary<string, object> oldLoadDict = outObject as Dictionary<string, object>;
+
+                if (oldVersion.TryGetValue("Loadcases", out outObject))
+                {
+                    Dictionary<string, object> oldLoadcaseDict = outObject as Dictionary<string, object>;
+                    List<string> names = oldLoadDict.Keys.ToList();
+
+                    newVersion["Loads"] = names.Select(x => new Dictionary<string, object>()
+                    {
+                        { "Name", x },
+                        { "Loadcase", oldLoadcaseDict[x] },
+                        { "Load", oldLoadDict[x] },
+                }).ToList();
+                }
+                else
+                {
+                    List<string> names = oldLoadDict.Keys.ToList();
+
+                    newVersion["Loads"] = names.Select(x => new Dictionary<string, object>()
+                    {
+                        { "Name", x },
+                        { "Loadcase", null },
+                        { "Load", oldLoadDict[x] },
+                    }).ToList();
+                }
+            }
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeContourLoadSet(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>();
+
+            newVersion["_t"] = "BH.oM.Structure.Loads.ContourLoadSet";
+            newVersion["CustomData"] = oldVersion["CustomData"];
+            newVersion["BHoM_Guid"] = oldVersion["BHoM_Guid"];
+            newVersion["Tags"] = oldVersion["Tags"];
+            newVersion["Fragments"] = oldVersion["Fragments"];
+            newVersion["UniformLoadSet"] = oldVersion["UniformLoadSet"];
+            newVersion["Contour"] = oldVersion["Contour"];
+
+            return newVersion;
+        }
 
         /***************************************************/
     }
