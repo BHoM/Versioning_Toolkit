@@ -81,7 +81,7 @@ namespace BH.Upgrader.v42
                         { "Name", x },
                         { "Loadcase", oldLoadcaseDict[x] },
                         { "Load", oldLoadDict[x] },
-                }).ToList();
+                    }).ToList();
                 }
                 else
                 {
