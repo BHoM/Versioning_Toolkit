@@ -39,6 +39,7 @@ namespace BH.Upgrader.v42
         {
             PreviousVersion = "4.1";
 
+            ToNewObject.Add("BH.oM.CFD.CFX.MonitorPoints", UpgradeMonitorPoints);
         }
 
 
@@ -46,7 +47,100 @@ namespace BH.Upgrader.v42
         /**** Private Methods                           ****/
         /***************************************************/
 
+        private static Dictionary<string, object> UpgradeMonitorPoints(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
 
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            List<string> coordinatesInputs = new List<string>();
+            List<string> units = new List<string>();
+            
+            if (newVersion.ContainsKey("CoordinatesInputs") && newVersion["CoordinatesInputs"] is List<string>)
+            {
+                coordinatesInputs = ((List<string>)newVersion["CoordinatesInputs"]);
+                
+                List<Dictionary<string, object>> points = new List<Dictionary<string, object>>(); 
+                foreach (string coordinatesInput in coordinatesInputs)
+                {
+                    Dictionary<string, object> point = new Dictionary<string, object>();
+
+                    double x = 0;
+                    try
+                    { x = Convert.ToDouble(coordinatesInput.Split(',')[0].Split('[')[0].Trim()); }
+                    catch
+                    // TODO provide warning here
+                    { x = 0; }
+                    units.Add(coordinatesInput.Split(',')[0].Split('[')[1].Split(']')[0].Trim());
+
+                    double y = 0;
+                    try
+                    { y = Convert.ToDouble(coordinatesInput.Split(',')[1].Split('[')[0].Trim()); }
+                    catch
+                    // TODO provide warning here
+                    { y = 0; }
+                    units.Add(coordinatesInput.Split(',')[1].Split('[')[1].Split(']')[0].Trim());
+
+                    double z = 0;
+                    try
+                    { z = Convert.ToDouble(coordinatesInput.Split(',')[2].Split('[')[0].Trim()); }
+                    catch
+                    // TODO provide warning here
+                    { z = 0; }
+                    units.Add(coordinatesInput.Split(',')[2].Split('[')[1].Split(']')[0].Trim());
+
+                    point.Add("_t", "BH.oM.Geometry.Point");
+                    point.Add("X", x);
+                    point.Add("Y", y);
+                    point.Add("Z", z);
+
+                    points.Add(point);
+                }
+
+                newVersion.Add("Points", points);
+                newVersion.Remove("CoordinatesInputs");
+            }
+
+            string unit = "";
+            if (units.Distinct().Count() == 1)
+            {
+                switch (units.Distinct().First())
+                {
+                    case "cm":
+                        unit = "Centimeters";
+                        break;
+                    case "ft":
+                        unit = "Feet";
+                        break;
+                    case "in":
+                        unit = "Inches";
+                        break;
+                    case "m":
+                        unit = "Meters";
+                        break;
+                    case "mm":
+                        unit = "Millimeters";
+                        break;
+                }
+            }
+            // TODO provide warning here
+            else
+                unit = "Meters";
+            newVersion.Add("LengthUnit", unit);
+
+            if (newVersion.ContainsKey("Variables"))
+            {
+                newVersion.Add("MonitorVariables", newVersion["Variables"]);
+                newVersion.Remove("Variables");
+            }
+
+            newVersion.Add("Label", "");
+
+            return newVersion;
+        }
+
+        /***************************************************/
 
 
         /***************************************************/
