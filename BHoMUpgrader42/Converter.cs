@@ -57,10 +57,10 @@ namespace BH.Upgrader.v42
             List<string> coordinatesInputs = new List<string>();
             List<string> units = new List<string>();
             
-            if (newVersion.ContainsKey("CoordinatesInputs") && newVersion["CoordinatesInputs"] is List<string>)
+            if (newVersion.ContainsKey("CoordinatesInputs"))
             {
-                coordinatesInputs = ((List<string>)newVersion["CoordinatesInputs"]);
-                
+                coordinatesInputs = (newVersion["CoordinatesInputs"] as object[]).Cast<string>().ToList();
+
                 List<Dictionary<string, object>> points = new List<Dictionary<string, object>>(); 
                 foreach (string coordinatesInput in coordinatesInputs)
                 {
@@ -94,40 +94,39 @@ namespace BH.Upgrader.v42
                     point.Add("X", x);
                     point.Add("Y", y);
                     point.Add("Z", z);
-
                     points.Add(point);
                 }
-
                 newVersion.Add("Points", points);
+
+                string unit = "";
+                if (units.Distinct().Count() == 1)
+                {
+                    switch (units.Distinct().First())
+                    {
+                        case "cm":
+                            unit = "Centimeters";
+                            break;
+                        case "ft":
+                            unit = "Feet";
+                            break;
+                        case "in":
+                            unit = "Inches";
+                            break;
+                        case "m":
+                            unit = "Meters";
+                            break;
+                        case "mm":
+                            unit = "Millimeters";
+                            break;
+                    }
+                }
+                // TODO provide warning here
+                else
+                    unit = "Meters";
+                newVersion.Add("LengthUnit", unit);
+
                 newVersion.Remove("CoordinatesInputs");
             }
-
-            string unit = "";
-            if (units.Distinct().Count() == 1)
-            {
-                switch (units.Distinct().First())
-                {
-                    case "cm":
-                        unit = "Centimeters";
-                        break;
-                    case "ft":
-                        unit = "Feet";
-                        break;
-                    case "in":
-                        unit = "Inches";
-                        break;
-                    case "m":
-                        unit = "Meters";
-                        break;
-                    case "mm":
-                        unit = "Millimeters";
-                        break;
-                }
-            }
-            // TODO provide warning here
-            else
-                unit = "Meters";
-            newVersion.Add("LengthUnit", unit);
 
             if (newVersion.ContainsKey("Variables"))
             {
