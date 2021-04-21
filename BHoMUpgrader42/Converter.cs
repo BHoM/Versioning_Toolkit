@@ -118,10 +118,14 @@ namespace BH.Upgrader.v42
                         case "mm":
                             unit = "Millimeters";
                             break;
+                        default:
+                            // TODO provide warning here
+                            unit = "Meters";
+                            break;
                     }
                 }
-                // TODO provide warning here
                 else
+                    // TODO provide warning here
                     unit = "Meters";
                 newVersion.Add("LengthUnit", unit);
 
