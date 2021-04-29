@@ -73,10 +73,6 @@
       <Project>{47629A75-8509-491A-82E5-517A2D8B945E}</Project>
       <Name>BHoMUpgrader</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Versioning_oM\Versioning_oM.csproj">
-      <Project>{660d9a85-66b8-456b-b419-d3b176bbc66d}</Project>
-      <Name>Versioning_oM</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
