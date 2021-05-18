@@ -40,6 +40,7 @@ namespace BH.Upgrader.v42
             PreviousVersion = "4.1";
 
             ToNewObject.Add("BH.oM.Adapters.RAM.UniformLoadSet", UpgradeUniformLoadSet);
+            ToNewObject.Add("BH.oM.CFD.CFX.AutoTimescale", UpgradeAutoTimescale);
         }
 
 
@@ -96,6 +97,20 @@ namespace BH.Upgrader.v42
                     }).ToList();
                 }
             }
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeAutoTimescale(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            if (newVersion.ContainsKey("Factor") && newVersion["Factor"] != null)
+                newVersion["Factor"] = newVersion["Factor"].ToString();
 
             return newVersion;
         }
