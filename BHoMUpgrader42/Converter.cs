@@ -41,6 +41,7 @@ namespace BH.Upgrader.v42
 
             ToNewObject.Add("BH.oM.Adapters.RAM.UniformLoadSet", UpgradeUniformLoadSet);
             ToNewObject.Add("BH.oM.CFD.CFX.AutoTimescale", UpgradeAutoTimescale);
+            ToNewObject.Add("BH.oM.MEP.System.CableTray", UpgradeCableTray);
         }
 
 
@@ -111,6 +112,27 @@ namespace BH.Upgrader.v42
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
             if (newVersion.ContainsKey("Factor") && newVersion["Factor"] != null)
                 newVersion["Factor"] = newVersion["Factor"].ToString();
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeCableTray(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (newVersion.ContainsKey("SectionProperty"))
+                newVersion.Add("SectionProperty", null);
+
+            if (newVersion.ContainsKey("OrientationAngle"))
+                newVersion.Add("OrientationAngle", 0);
+
+            if (newVersion.ContainsKey("ConnectionProperty"))
+                newVersion.Remove("ConnectionProperty");
 
             return newVersion;
         }
