@@ -125,6 +125,12 @@ namespace BH.Upgrader.v42
 
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
 
+            if (newVersion.ContainsKey("StartPoint"))
+                newVersion.Add("_t", "BH.oM.Geometry.Point");
+
+            if (newVersion.ContainsKey("EndPoint"))
+                newVersion.Add("_t", "BH.oM.Geometry.Point");
+
             if (newVersion.ContainsKey("SectionProperty"))
                 newVersion.Add("SectionProperty", null);
 
