@@ -35,23 +35,26 @@
 
     }
   },
-  "MessageForDeleted": {
-    "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.ExplicitMethods.AcidificationPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
-    "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.ExplicitMethods.EutrophicationPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
-    "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.ExplicitMethods.DepletionOfAbioticResources": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
-    "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.ExplicitMethods.DepletionOfAbioticResourcesFossilFuels": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
-    "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.ExplicitMethods.GlobalWarmingPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
-    "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.ExplicitMethods.OzoneDepletionPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
-    "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.ExplicitMethods.PhotochemicalOzoneCreationPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
-    "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.AcidificationPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
-    "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.OzoneDepletionPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
-    "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.EutrophicationPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
-    "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.DepletionOfAbioticResourcesFossilFuels": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
-    "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.DepletionOfAbioticResources": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
-    "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.GlobalWarmingPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
-    "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.PhotochemicalOzoneCreationPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
-    "BH.Engine.LifeCycleAssessment.Query.GetElementDensity": "This method has been removed as GetEPDDensity now contains this functionality."
-  },
+    "MessageForDeleted": {
+      "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.ExplicitMethods.AcidificationPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+      "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.ExplicitMethods.EutrophicationPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+      "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.ExplicitMethods.DepletionOfAbioticResources": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+      "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.ExplicitMethods.DepletionOfAbioticResourcesFossilFuels": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+      "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.ExplicitMethods.GlobalWarmingPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+      "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.ExplicitMethods.OzoneDepletionPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+      "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.ExplicitMethods.PhotochemicalOzoneCreationPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+      "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.AcidificationPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+      "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.OzoneDepletionPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+      "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.EutrophicationPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+      "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.DepletionOfAbioticResourcesFossilFuels": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+      "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.DepletionOfAbioticResources": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+      "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.GlobalWarmingPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+      "BH.Engine.LifeCycleAssessment.Compute.EnvironmentalProductDeclarationMetrics.PhotochemicalOzoneCreationPotential": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+      "BH.Engine.LifeCycleAssessment.Query.GetElementDensity": "This method has been removed as GetEPDDensity now contains this functionality.",
+      "BH.oM.LifeCycleAssessment.MaterialFragment.SectorEnvironmentalProductDeclaration": "This object has been replaced with a single EPD object and a specific Type parameter.",
+      "BH.oM.LifeCycleAssessment.MaterialFragment.IEnvironmentalProductDeclaration": "This interface has been removed as changes to the EPD object have rendered this unnecessary.",
+      "BH.oM.LifeCycleAssessment.MaterialFragment.EnvironmentalProductDeclaration": "This object has been replaced with a single EPD object and a specific Type parameter."
+    },
   "MessageForNoUpgrade": {
 
   }
