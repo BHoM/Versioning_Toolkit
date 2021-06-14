@@ -15,13 +15,7 @@
   },
   "Method": {
     "ToNew": {
-      "BH.Engine.LifeCycleAssessment.Query.TotalFieldQuantity(BH.oM.LifeCycleAssessment.LifeCycleAssessmentElementResult)": {
-        "_t": "System.Reflection.MethodBase",
-        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentElementResult, LifeCycleAssessment_Toolkit, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\" }",
-        "MethodName": "TotalFieldQuantity",
-        "Parameters": [
-          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentElementResult\" }"
-        ]
+
       },
       "ToOld": {
 
@@ -53,7 +47,6 @@
       "BH.Engine.LifeCycleAssessment.Query.GetElementDensity": "This method has been removed as GetEPDDensity now contains this functionality.",
       "BH.oM.LifeCycleAssessment.MaterialFragment.SectorEnvironmentalProductDeclaration": "This object has been replaced with a single EPD object and a specific Type parameter.",
       "BH.oM.LifeCycleAssessment.MaterialFragment.IEnvironmentalProductDeclaration": "This interface has been removed as changes to the EPD object have rendered this unnecessary.",
-      "BH.oM.LifeCycleAssessment.MaterialFragment.EnvironmentalProductDeclaration": "This object has been replaced with a single EPD object and a specific Type parameter."
     },
   "MessageForNoUpgrade": {
 
