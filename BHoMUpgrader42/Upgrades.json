@@ -31,7 +31,7 @@
   },
     "MessageForDeleted": {
       "BH.Engine.LifeCycleAssessment.Compute.AcidificationPotential(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
-"BH.Engine.LifeCycleAssessment.Compute.AcidificationPotential(System.Double, System.Double, System.Double)", "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+"BH.Engine.LifeCycleAssessment.Compute.AcidificationPotential(System.Double, System.Double, System.Double)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
       "BH.Engine.LifeCycleAssessment.Compute.EutrophicationPotential(System.Double, System.Double, System.Double)" : "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
 "BH.Engine.LifeCycleAssessment.Compute.EutrophicationPotential(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData)" : "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
       "BH.Engine.LifeCycleAssessment.Compute.DepletionOfAbioticResources(System.Double, System.Double, System.Double)" : "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
