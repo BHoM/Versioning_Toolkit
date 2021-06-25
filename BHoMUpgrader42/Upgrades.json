@@ -1,38 +1,778 @@
-﻿{
+{
   "Namespace": {
     "ToNew": {
+      
     },
     "ToOld": {
+      
     }
   },
   "Type": {
     "ToNew": {
-
+      "BH.oM.Graphics.GradientOptions": "BH.oM.Graphics.Colours.GradientOptions",
+      "BH.oM.Graphics.GradientCenteringOptions": "BH.oM.Graphics.Enums.GradientCenteringOptions",
+      "BH.oM.Adapters.RAM.ContourLoadSet": "BH.oM.Structure.Loads.ContourLoadSet",
+      "BH.oM.Adapters.RAM.UniformLoadSet": "BH.oM.Structure.Loads.UniformLoadSet",
+      "BH.oM.UI.ISettings": "BH.oM.Base.ISettings"
     },
     "ToOld": {
-
+      "BH.oM.Graphics.Colours.GradientOptions": "BH.oM.Graphics.GradientOptions",
+      "BH.oM.Graphics.Enums.GradientCenteringOptions": "BH.oM.Graphics.GradientCenteringOptions",
+      "BH.oM.Structure.Loads.ContourLoadSet": "BH.oM.Adapters.RAM.ContourLoadSet"
     }
   },
   "Method": {
     "ToNew": {
-
+      "BH.Engine.CFD.Create.MonitorPoints(System.Collections.Generic.List<System.String>, System.Collections.Generic.List<System.String>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.CFD.Create, CFD_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "MonitorPoints",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.Enums.LengthUnit\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.Enums.MonitorVariable\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.CFD.Create.AutoTimescale(System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.CFD.Create, CFD_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "AutoTimescale",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.CFD.Create.CFXSettings(System.Boolean, BH.oM.CFD.CFX.FluidModelSettings, BH.oM.CFD.CFX.InitialisationSettings, BH.oM.CFD.CFX.SolverSettings, BH.oM.CFD.CFX.OutputSettings, System.Collections.Generic.List<System.String>": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.CFD.Create, CFD_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "CFXSettings",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.CFX.FluidModelSettings\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.CFX.InitialisationSettings\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.CFX.SolverSettings\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.CFX.OutputSettings\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.CFX.UserFunction\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Compute.MapToLevel(System.Collections.Generic.List<BH.oM.Environment.Elements.Space>, System.Collections.Generic.List<BH.oM.Geometry.SettingOut.Level>, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Compute, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "MapToLevel",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IRegion\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.SettingOut.Level\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Compute.MapToLevel(System.Collections.Generic.List<BH.oM.Architecture.Elements.Room>, System.Collections.Generic.List<BH.oM.Geometry.SettingOut.Level>, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Compute, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "MapToLevel",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IRegion\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.SettingOut.Level\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Compute.MergePanels(BH.oM.Environment.Elements.Panel, BH.oM.Environment.Elements.Panel)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Compute, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "MergePanels",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Create.Panels(BH.oM.Geometry.BoundaryRepresentation, System.String, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Create, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "Panels",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.BoundaryRepresentation\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Create.Panels(System.Collections.Generic.List<BH.oM.Geometry.ISurface>, System.String, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Create, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "Panels",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ISurface\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Create.Panel(BH.oM.Geometry.ISurface, System.String, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Create, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "Panel",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ISurface\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Modify.SetAdjancentSpaces(BH.oM.Environment.Elements.Panel, System.Collections.Generic.List<System.String>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Modify, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "SetAdjacentSpaces",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Query.Tilt(BH.oM.Environment.IEnvironmentObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Query, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "Tilt",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.IEnvironmentObject\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Query.Tilt(BH.oM.Geometry.Polyline)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Query, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "Tilt",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Query.MaximumLevel(BH.oM.Geometry.Polyline)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Query, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "MaximumLevel",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Query.MaximumLevel(BH.oM.Environment.Elements.Panel)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Query, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "MaximumLevel",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Query.MaximumLevel(BH.oM.Environment.Elements.Opening)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Query, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "MaximumLevel",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Opening\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Query.MinimumLevel(BH.oM.Geometry.Polyline)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Query, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "MinimumLevel",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Query.MinimumLevel(BH.oM.Environment.Elements.Panel)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Query, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "MinimumLevel",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Query.MinimumLevel(BH.oM.Environment.Elements.Opening)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Query, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "MinimumLevel",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Opening\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Graphics.Query.AutoRange(BH.oM.Graphics.GradientOptions, System.Collections.Generic.IEnumerable<System.Double>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Graphics.Modify, Graphics_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "ApplyGradientOptions",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Graphics.Colours.GradientOptions\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Graphics.Query.CenteringOptions(BH.oM.Graphics.GradientOptions)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Graphics.Modify, Graphics_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "ApplyGradientOptions",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Graphics.Colours.GradientOptions\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Graphics.Query.DefaultGradient(BH.oM.Graphics.GradientOptions, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Graphics.Modify, Graphics_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "ApplyGradientOptions",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Graphics.Colours.GradientOptions\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Graphics.Query.CenterGradientAsymmetric(BH.oM.Graphics.Gradient, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Graphics.Modify, Graphics_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "CenterGradientAsymmetric",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Graphics.Gradient\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateEnvironmentalProductDeclarationByLength(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "EvaluateEnvironmentalProductDeclarationByLength",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateEnvironmentalProductDeclarationByArea(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "EvaluateEnvironmentalProductDeclarationByArea",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateEnvironmentalProductDeclarationByVolume(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "EvaluateEnvironmentalProductDeclarationByVolume",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateEnvironmentalProductDeclarationByMass(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "EvaluateEnvironmentalProductDeclarationByMass",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateLifeCycleAssessment(BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "EvaluateLifeCycleAssessment",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateLifeCycleAssessmentScope(BH.oM.LifeCycleAssessment.StructuresScope, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "EvaluateLifeCycleAssessmentScope",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.StructuresScope\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateLifeCycleAssessmentScope(BH.oM.LifeCycleAssessment.FoundationsScope, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "EvaluateLifeCycleAssessmentScope",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.FoundationsScope\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateLifeCycleAssessmentScope(BH.oM.LifeCycleAssessment.EnclosuresScope, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "EvaluateLifeCycleAssessmentScope",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnclosuresScope\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateLifeCycleAssessmentScope(BH.oM.LifeCycleAssessment.MEPScope, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "EvaluateLifeCycleAssessmentScope",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MEPScope\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateLifeCycleAssessmentScope(BH.oM.LifeCycleAssessment.TenantImprovementScope, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "EvaluateLifeCycleAssessmentScope",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.TenantImprovementScope\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateReferenceValue(System.Double, BH.oM.LifeCycleAssessment.MaterialFragment.IEnvironmentalProductDeclarationData, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "EvaluateReferenceValue",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateEnvironmentalProductDeclaration(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "EvaluateEnvironmentalProductDeclaration",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.GetElementEpd(System.Collections.Generic.List<BH.oM.LifeCycleAssessment.MaterialFragment.IEnvironmentalProductDeclarationData>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "GetElementEpd",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.GetQuantityType(BH.oM.LifeCycleAssessment.MaterialFragment.IEnvironmentalProductDeclarationData)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "GetQuantityType",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.GetQuantityTypeValue(BH.oM.LifeCycleAssessment.MaterialFragment.IEnvironmentalProductDeclarationData)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "GetQuantityTypeValue",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.MaterialEndOfLifeTreatment(BH.oM.LifeCycleAssessment.MaterialFragment.IEnvironmentalProductDeclarationData)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "MaterialEndOfLifeTreatment",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.GetFragmentDensity(BH.oM.LifeCycleAssessment.MaterialFragment.EnvironmentalProductDeclaration)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "GetEPDDensity",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.GetFragmentQuantityType(BH.oM.LifeCycleAssessment.MaterialFragment.EnvironmentalProductDeclaration)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "GetEPDQuantityType",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.GetEvaluationValue(BH.oM.LifeCycleAssessment.MaterialFragment.IEnvironmentalProductDeclarationData, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "GetEvaluationValue",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.GetEvaluationValue(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField, BH.oM.LifeCycleAssessment.QuantityType)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "GetEvaluationValue",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.QuantityType\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.GetEvaluationValue(BH.oM.Physical.Constructions.Construction, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField, BH.oM.LifeCycleAssessment.QuantityType)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "GetEvaluationValue",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Physical.Constructions.Construction\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.QuantityType\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.ProjectLifeCycleAssessmentResult(BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentResult)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "ProjectLifeCycleAssessmentResults",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentResult\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.TotalGlobalWarmingPotential(System.Collections.Generic.List<BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "TotalFieldQuantity",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Environment.Modify.AddMaterialProperties(BH.oM.Physical.Materials.Material, BH.oM.Physical.Materials.IMaterialProperties)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Physical.Modify, Physical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "AddMaterialProperties",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Physical.Materials.Material\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Physical.Materials.IMaterialProperties\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Physical.Query.Geometry3D(BH.oM.Physical.Elements.Floor)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Physical.Query, Physical_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "Geometry3D",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Physical.Elements.Floor\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Adapters.RAM.Create.CreateRAMUniformLoadSet(System.Double, System.Double, System.Double, BH.oM.Adapters.RAM.RAMLiveLoadTypes, System.Double, System.Double, System.Double, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.RAM.Create, RAM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "RAMUniformLoadSet",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.RAM.RAMLiveLoadTypes\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Structure.Results.Query.DisplayMeshResults(System.Collections.Generic.IEnumerable<BH.oM.Structure.Elements.FEMesh>, System.Collections.Generic.IEnumerable<BH.oM.Structure.Results.MeshResult>, System.Type, System.Collections.Generic.List<System.String>, BH.oM.Structure.Results.MeshResultDisplay, BH.oM.Graphics.GradientOptions)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Results.Query, Results_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "DisplayMeshResults",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IMesh`2\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.INode\", \"_bhomVersion\" : \"4.2\" }, { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IFace\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Results.IMeshResult`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Results.IMeshElementResult\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Graphics.Colours.GradientOptions\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Structure.Results.Query.MapResults(System.Collections.Generic.IEnumerable<BH.oM.Base.IBHoMObject>, System.Collections.Generic.IEnumerable<BH.oM.Analytical.Results.IResult>, BH.oM.Structure.Results.MapResultsBy, System.Type, System.Collections.Generic.List<System.String>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Results.Query, Results_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "MapResults",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Results.IResult\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Adapters.RFEM.Query.GetSectionProfile(System.String, Dlubal.RFEM3.DB_CRSC_PROPERTY[])": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.RFEM.Compute, RFEM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "GetSectionProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Dlubal.RFEM3.DB_CRSC_PROPERTY[], RFEM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.MEP.Query.Geometry(BH.oM.Security.Elements.CameraDevice)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Security.Query, Security_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "Geometry",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Security.Elements.CameraDevice\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.ModelLaundry.Compute.FitPlane(BH.oM.Dimensional.IElement0D, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Compute, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "FitPlane",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement0D\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.ModelLaundry.Compute.FitPlane(BH.oM.Dimensional.IElement1D, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Compute, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "FitPlane",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement1D\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.ModelLaundry.Compute.FitPlane(BH.oM.Dimensional.IElement2D, System.Boolean, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Compute, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "FitPlane",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.ModelLaundry.Compute.IFitPlane(BH.oM.Dimensional.IElement, System.Boolean, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Compute, Spatial_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "IFitPlane",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Structure.Compute.NullCheck(BH.oM.Structure.Elements.Node, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "IsNull",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.Node\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Structure.Compute.NullCheck(BH.oM.Structure.Elements.Bar, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "IsNull",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.Bar\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Structure.Compute.NullCheck(BH.oM.Structure.Elements.FEMesh, System.String, System.Boolean, System.Boolean, System.Collections.Generic.List<System.Int32>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "IsNull",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.FEMesh\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }], \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Structure.Compute.NullCheck(BH.oM.Structure.Elements.FEMeshFace, BH.oM.Structure.Elements.FEMesh, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "IsNull",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.FEMeshFace\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.FEMesh\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Structure.Compute.NullCheck(BH.oM.Structure.Elements.FEMeshFace, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "IsNull",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.FEMeshFace\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Structure.Compute.NullCheck(BH.oM.Structure.Elements.Panel, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "IsNull",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.Panel\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      },
+      "BH.Engine.Structure.Compute.NullCheck(BH.oM.Structure.Elements.Edge, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.2\" }",
+        "MethodName": "IsNull",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.Edge\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.2\" }"
+        ],
+        "_bhomVersion": "4.2"
+      }
     },
     "ToOld": {
-
+      
     }
   },
   "Property": {
     "ToNew": {
-
+      "BH.oM.Graphics.GradientOptions.From": "BH.oM.Graphics.Colours.GradientOptions.LowerBound",
+      "BH.oM.Graphics.GradientOptions.To": "BH.oM.Graphics.Enums.GradientOptions.UpperBound"
     },
     "ToOld": {
-
+      "BH.oM.Graphics.Colours.GradientOptions.LowerBound": "BH.oM.Graphics.GradientOptions.From",
+      "BH.oM.Graphics.Colours.GradientOptions.UpperBound": "BH.oM.Graphics.GradientOptions.To"
     }
   },
   "MessageForDeleted": {
-
+    "BH.oM.Versioning.NewVersion": "This type was only used in the inital testing of the versioning toolkit and is not necessary anymore.",
+    "BH.oM.Versioning.OldVersion": "This type was only used in the inital testing of the versioning toolkit and is not necessary anymore.",
+    "BH.oM.Versioning.Parent": "This type was only used in the inital testing of the versioning toolkit and is not necessary anymore.",
+    "BH.Engine.MEP.Query.CircularEquivalentDiameter(System.Object)": "The method for calculating the Circular Equivalent Diameter of a plain System.Object has been removed from the UI to avoid confusion. Please use the appropriate method from the MEP_Engine to query the Circular Equivalent Diameter of an MEP Profile Object.",
+    "BH.Engine.LifeCycleAssessment.Compute.AcidificationPotential(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+    "BH.Engine.LifeCycleAssessment.Compute.AcidificationPotential(System.Double, System.Double, System.Double)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+    "BH.Engine.LifeCycleAssessment.Compute.EutrophicationPotential(System.Double, System.Double, System.Double)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+    "BH.Engine.LifeCycleAssessment.Compute.EutrophicationPotential(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+    "BH.Engine.LifeCycleAssessment.Compute.DepletionOfAbioticResources(System.Double, System.Double, System.Double)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+    "BH.Engine.LifeCycleAssessment.Compute.DepletionOfAbioticResources(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+    "BH.Engine.LifeCycleAssessment.Compute.DepletionOfAbioticResourcesFossilFuels(System.Double, System.Double, System.Double)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+    "BH.Engine.LifeCycleAssessment.Compute.DepletionOfAbioticResourcesFossilFuels(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+    "BH.Engine.LifeCycleAssessment.Compute.GlobalWarmingPotential(System.Double, System.Double, System.Double)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+    "BH.Engine.LifeCycleAssessment.Compute.GlobalWarmingPotential(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+    "BH.Engine.LifeCycleAssessment.Compute.OzoneDepletionPotential(System.Double, System.Double, System.Double)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+    "BH.Engine.LifeCycleAssessment.Compute.OzoneDepletionPotential(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+    "BH.Engine.LifeCycleAssessment.Compute.PhotochemicalOzoneCreationPotential(System.Double, System.Double, System.Double)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+    "BH.Engine.LifeCycleAssessment.Compute.PhotochemicalOzoneCreationPotential(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData)": "This method has been removed as EvaluateEnvironmentalProductDeclaration contains the same functionality.",
+    "BH.oM.LifeCycleAssessment.MaterialFragments.SectorEnvironmentalProductDeclaration": "This object has been replaced with a single EPD object and a specific Type parameter.",
+    "BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalProductDeclarationData": "This interface has been removed as changes to the EPD object have rendered this unnecessary.",
+    "BH.Engine.LifeCycleAssessment.Query.GetElementDensity(BH.oM.Dimensional.IElementM)": "This method as been removed as the functionality has been wrapped into other methods to improve the workflow.",
+    "BH.Engine.LifeCycleAssessment.Convert.ToEnvironmentalProductDeclarationData(BH.oM.Base.CustomObject)": "This method has been removed as better evaluation methods exist for EPD objects without needing to convert from a custom object.",
+    "BH.Engine.LifeCycleAssessment.Convert.ToSectorEnvironmentalProductDeclarationData(BH.oM.Base.CustomObject)": "This method has been removed as better evaluation methods exist for Sector EPD objects without needing to convert from a custom object.",
+    "BH.Engine.Adapters.RAM.Create.CreateContourLoadSet(BH.oM.Adapters.RAM.UniformLoadSet, BH.oM.Geometry.Polyline, System.String)": "This method has been removed as it provides no additional functionality to the default create method",
+    "BH.Engine.Adapters.XML.Query.ConstructionID(BH.oM.Physical.Constructions.Construction)": "The ConstructionID method has moved to the XML Adapter as it was primarily for internal querying of data for XML serialisation to the gbXML schema. The method has been deleted to avoid cluttering the UIs. If this causes you an issue please raise an issue at https://github.com/BHoM/XML_Toolkit/issues",
+    "BH.Engine.Adapters.XML.Query.ConstructionID(BH.oM.Physical.Constructions.IConstruction)": "The ConstructionID method has moved to the XML Adapter as it was primarily for internal querying of data for XML serialisation to the gbXML schema. The method has been deleted to avoid cluttering the UIs. If this causes you an issue please raise an issue at https://github.com/BHoM/XML_Toolkit/issues",
+    "BH.Engine.Adapters.XML.Query.ConstructionID(BH.oM.Environment.Elements.Panel)": "The ConstructionID method has moved to the XML Adapter as it was primarily for internal querying of data for XML serialisation to the gbXML schema. The method has been deleted to avoid cluttering the UIs. If this causes you an issue please raise an issue at https://github.com/BHoM/XML_Toolkit/issues",
+    "BH.Engine.Adapters.XML.Query.CADObjectID(BH.oM.Environment.Elements.Panel, System.Boolean)": "The CADObjectID method has moved to the XML Adapter as it was primarily for internal querying of data for XML serialisation to the gbXML schema. The method has been deleted to avoid cluttering the UIs. If this causes you an issue please raise an issue at https://github.com/BHoM/XML_Toolkit/issues",
+    "BH.Engine.Adapters.XML.Query.CADObjectID(System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>)": "The CADObjectID method has moved to the XML Adapter as it was primarily for internal querying of data for XML serialisation to the gbXML schema. The method has been deleted to avoid cluttering the UIs. If this causes you an issue please raise an issue at https://github.com/BHoM/XML_Toolkit/issues",
+    "BH.Engine.Adapters.XML.Query.CADObjectID(BH.oM.Environment.Elements.Opening)": "The CADObjectID method has moved to the XML Adapter as it was primarily for internal querying of data for XML serialisation to the gbXML schema. The method has been deleted to avoid cluttering the UIs. If this causes you an issue please raise an issue at https://github.com/BHoM/XML_Toolkit/issues",
+    "BH.Engine.Adapters.XML.Query.CADObjectID(BH.oM.Environment.Elements.Space)": "The CADObjectID method has moved to the XML Adapter as it was primarily for internal querying of data for XML serialisation to the gbXML schema. The method has been deleted to avoid cluttering the UIs. If this causes you an issue please raise an issue at https://github.com/BHoM/XML_Toolkit/issues"
   },
   "MessageForNoUpgrade": {
-
+    "BH.oM.CFD.CFX.MonitorPoints": "The MonitorPoints object has been replaced with a new object for more robust inputs. Please use a new monitorPoints object to replace this."
   }
 }
