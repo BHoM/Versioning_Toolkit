@@ -38,7 +38,8 @@ namespace BH.Upgrader.v43
         public Converter() : base()
         {
             PreviousVersion = "4.2";
-
+			
+            ToNewObject.Add("BH.oM.Structure.SectionProperties.ConcreteSection", UpgradeConcreteSection);
             ToNewObject.Add("BH.oM.MEP.System.CableTray", UpgradeCableTray);
             ToNewObject.Add("BH.oM.Adapters.Revit.Parameters.RevitIdentifiers", UpgradeRevitIdentifiers);
         }
@@ -47,6 +48,32 @@ namespace BH.Upgrader.v43
         /***************************************************/
         /**** Private Methods                           ****/
         /***************************************************/
+
+        public static Dictionary<string, object> UpgradeConcreteSection(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            Dictionary<string, object> barRebarIntent = new Dictionary<string, object>();
+            barRebarIntent["_t"] = "BH.oM.Structure.Reinforcement.BarRebarIntent";
+
+            barRebarIntent["BarReinforcement"] = "[]";
+            if (newVersion.ContainsKey("Reinforcement"))
+            {
+                barRebarIntent["BarReinforcement"] = newVersion["Reinforcement"];
+                newVersion.Remove("Reinforcement");
+            }
+			
+			barRebarIntent["MinimumCover"] = "";
+            if (newVersion.ContainsKey("MinimumCover"))
+            {
+                barRebarIntent["MinimumCover"] = newVersion["MinimumCover"];
+                newVersion.Remove("MinimumCover");
+            }
+			
+			newVersion.Add("RebarIntent", barRebarIntent);
+
+            return newVersion;
+		}
 
         private static Dictionary<string, object> UpgradeCableTray(Dictionary<string, object> oldVersion)
         {
@@ -60,8 +87,6 @@ namespace BH.Upgrader.v43
 
             return newVersion;
         }
-
-        /***************************************************/
 
         private static Dictionary<string, object> UpgradeRevitIdentifiers(Dictionary<string, object> oldVersion)
         {
@@ -80,6 +105,8 @@ namespace BH.Upgrader.v43
         }
 
         /***************************************************/
+
+
     }
 }
 
