@@ -38,6 +38,8 @@ namespace BH.Upgrader.v43
         public Converter() : base()
         {
             PreviousVersion = "4.2";
+
+            ToNewObject.Add("BH.oM.Structure.SectionProperties.ConcreteSection", UpgradeConcreteSection);
         }
 
 
@@ -45,11 +47,33 @@ namespace BH.Upgrader.v43
         /**** Private Methods                           ****/
         /***************************************************/
 
+        public static Dictionary<string, object> UpgradeConcreteSection(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
 
-        
+            Dictionary<string, object> barRebarIntent = new Dictionary<string, object>();
+            barRebarIntent["_t"] = "BH.oM.Structure.SectionProperties.Reinforcement.BarRebarIntent";
 
-        /***************************************************/
 
-    }
+            if (newVersion.ContainsKey("Reinforcement"))
+            {
+                barRebarIntent["BarReinforcement"] = newVersion["Reinforcement"];
+                newVersion.Remove("Reinforcement");
+            }
+
+            if (newVersion.ContainsKey("MinimumCover"))
+            {
+                barRebarIntent["MinimumCover"] = newVersion["MinimumCover"];
+                newVersion.Remove("MinimumCover");
+            }
+
+            newVersion["RebarIntent"] = barRebarIntent;
+
+            return newVersion;
+        }
+
+            /***************************************************/
+
+        }
 }
 
