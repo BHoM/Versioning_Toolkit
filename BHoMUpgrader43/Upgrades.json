@@ -30,7 +30,7 @@
     }
   },
   "MessageForDeleted": {
-    "BH.oM.MEP.System.ConnectionProperties.CableTrayConnectionProperty": "This object has been removed as the updates to the CableTray object have made this unnecessary."
+
   },
   "MessageForNoUpgrade": {
 
