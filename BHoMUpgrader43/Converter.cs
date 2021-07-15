@@ -54,23 +54,24 @@ namespace BH.Upgrader.v43
             Dictionary<string, object> barRebarIntent = new Dictionary<string, object>();
             barRebarIntent["_t"] = "BH.oM.Structure.SectionProperties.Reinforcement.BarRebarIntent";
 
-
+            barRebarIntent["BarReinforcement"] = "[]";
             if (newVersion.ContainsKey("Reinforcement"))
             {
                 barRebarIntent["BarReinforcement"] = newVersion["Reinforcement"];
                 newVersion.Remove("Reinforcement");
             }
 
+            barRebarIntent["MinimumCover"] = "";
             if (newVersion.ContainsKey("MinimumCover"))
             {
                 barRebarIntent["MinimumCover"] = newVersion["MinimumCover"];
                 newVersion.Remove("MinimumCover");
             }
 
-            newVersion["RebarIntent"] = barRebarIntent;
+            newVersion.Add("RebarIntent", barRebarIntent);
 
             return newVersion;
-        }
+    }
 
             /***************************************************/
 
