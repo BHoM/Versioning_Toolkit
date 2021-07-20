@@ -54,18 +54,6 @@ namespace BH.Upgrader.v43
 
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
 
-            if (newVersion.ContainsKey("StartPoint"))
-                newVersion.Add("_t", "BH.oM.Geometry.Point");
-
-            if (newVersion.ContainsKey("EndPoint"))
-                newVersion.Add("_t", "BH.oM.Geometry.Point");
-
-            if (newVersion.ContainsKey("SectionProperty"))
-                newVersion.Add("SectionProperty", null);
-
-            if (newVersion.ContainsKey("OrientationAngle"))
-                newVersion.Add("OrientationAngle", 0);
-
             if (newVersion.ContainsKey("ConnectionProperty"))
                 newVersion.Remove("ConnectionProperty");
 
