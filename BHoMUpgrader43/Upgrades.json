@@ -1,38 +1,706 @@
-﻿{
+{
   "Namespace": {
     "ToNew": {
+      "BH.oM.Structure.SectionProperties.Reinforcement": "BH.oM.Structure.Reinforcement"
     },
     "ToOld": {
+      
     }
   },
   "Type": {
     "ToNew": {
-
+      "BH.oM.CFD.Enums.HarpoonRunMode": "BH.oM.CFD.Harpoon.HarpoonRunMode",
+      "BH.oM.CFD.Enums.LengthUnit": "BH.oM.CFD.CFX.LengthUnit",
+      "BH.oM.CFD.Enums.MeshExtent": "BH.oM.CFD.Harpoon.MeshExtent",
+      "BH.oM.CFD.Enums.MonitorVariable": "BH.oM.CFD.CFX.MonitorVariable",
+      "BH.oM.CFD.Enums.TurbulenceModel": "BH.oM.CFD.CFX.TurbulenceModel",
+      "BH.oM.Adapters.Revit.Settings.ParameterSettings": "BH.oM.Adapters.Revit.Settings.MappingSettings",
+      "BH.oM.Adapters.Revit.Parameters.ElementParameterLink": "BH.oM.Adapters.Revit.Mapping.ElementParameterLink",
+      "BH.oM.Adapters.Revit.Parameters.ElementTypeParameterLink": "BH.oM.Adapters.Revit.Mapping.ElementTypeParameterLink",
+      "BH.oM.Adapters.Revit.Parameters.IParameterLink": "BH.oM.Adapters.Revit.Mapping.IParameterLink",
+      "BH.oM.Adapters.Revit.Parameters.ParameterMap": "BH.oM.Adapters.Revit.Mapping.ParameterMap",
+      "BH.oM.Revit.Parameters": "BH.oM.Adapters.Revit.Parameters"
     },
     "ToOld": {
-
+      "BH.oM.CFD.Harpoon.HarpoonRunMode": "BH.oM.CFD.Enums.HarpoonRunMode",
+      "BH.oM.CFD.CFX.LengthUnit": "BH.oM.CFD.Enums.LengthUnit",
+      "BH.oM.CFD.Harpoon.MeshExtent": "BH.oM.CFD.Enums.MeshExtent",
+      "BH.oM.CFD.CFX.MonitorVariable": "BH.oM.CFD.Enums.MonitorVariable",
+      "BH.oM.CFD.CFX.TurbulenceModel": "BH.oM.CFD.Enums.TurbulenceModel",
+      "BH.oM.Adapters.Revit.Settings.MappingSettings": "BH.oM.Adapters.Revit.Settings.ParameterSettings",
+      "BH.oM.Adapters.Revit.Mapping.ElementParameterLink": "BH.oM.Adapters.Revit.Parameters.ElementParameterLink",
+      "BH.oM.Adapters.Revit.Mapping.ElementTypeParameterLink": "BH.oM.Adapters.Revit.Parameters.ElementTypeParameterLink",
+      "BH.oM.Adapters.Revit.Mapping.IParameterLink": "BH.oM.Adapters.Revit.Parameters.IParameterLink",
+      "BH.oM.Adapters.Revit.Mapping.ParameterMap": "BH.oM.Adapters.Revit.Parameters.ParameterMap",
+      "BH.oM.Adapters.Revit.Parameters": "BH.oM.Revit.Parameters"
     }
   },
   "Method": {
     "ToNew": {
-
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.Plane)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.Point)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.Vector)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.CoordinateSystem.Cartesian)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.Arc)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.Circle)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.Ellipse)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.Line)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.NurbsCurve)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.PolyCurve)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.Polyline)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.Extrusion)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.Loft)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.NurbsSurface)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.PlanarSurface)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.Pipe)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.PolySurface)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.Mesh)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.Face)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.BoundingBox)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.CompositeGeometry)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.Quaternion)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.TransformMatrix)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.Basis)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Clone(BH.oM.Geometry.SurfaceTrim)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.IClone(BH.oM.Geometry.IGeometry)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.IClone(BH.oM.Geometry.ICurve)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.IClone(BH.oM.Geometry.ISurface)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DeepClone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.CFD.Create.CFXSettings(System.Boolean, BH.oM.CFD.CFX.FluidModelSettings, BH.oM.CFD.CFX.InitialisationSettings, BH.oM.CFD.CFX.SolverSettings, BH.oM.CFD.CFX.OutputSettings, System.Collections.Generic.List<System.String>, System.Collections.Generic.List<BH.oM.CFD.CFX.UserFunction>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.CFD.Create, CFD_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "CFXSettings",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.CFX.FluidModelSettings\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.CFX.InitialisationSettings\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.CFX.SolverSettings\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.CFX.OutputSettings\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.CFX.MonitorPoints\", \"_bhomVersion\" : \"4.3\" }], \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }], \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.CFX.UserFunction\", \"_bhomVersion\" : \"4.3\" }], \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Environment.Compute.TidyPanels(System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Compute, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "TidyPanels",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\", \"_bhomVersion\" : \"4.3\" }], \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Environment.Query.Top(BH.oM.Environment.IEnvironmentObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Query, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "Top",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.IEnvironmentObject\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Environment.Query.Bottom(BH.oM.Environment.IEnvironmentObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Query, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "Bottom",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.IEnvironmentObject\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Environment.Query.ExplodeToParts(BH.oM.Environment.IEnvironmentObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Query, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "ExplodeToParts",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.IEnvironmentObject\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Environment.Query.Sides(BH.oM.Environment.IEnvironmentObject)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Query, Environment_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "Sides",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.IEnvironmentObject\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Area(BH.oM.Geometry.Polyline)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "Area",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Area(BH.oM.Geometry.Mesh)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "Area",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Mesh\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Area(BH.oM.Geometry.PolySurface)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "Area",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.PolySurface\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Area(BH.oM.Geometry.PlanarSurface)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "Area",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.PlanarSurface\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Area(BH.oM.Geometry.Vector, BH.oM.Geometry.Vector)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "Area",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Area(BH.oM.Geometry.IGeometry)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "Area",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.IGeometry\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.IArea(BH.oM.Geometry.IGeometry)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "IArea",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.IGeometry\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Area(BH.oM.Geometry.Arc)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "Area",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Arc\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Area(BH.oM.Geometry.Circle)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "Area",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Circle\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Area(BH.oM.Geometry.Line)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "Area",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Line\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Query.Area(BH.oM.Geometry.PolyCurve)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "Area",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.PolyCurve\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Create.PlanarSurface(BH.oM.Geometry.ICurve, System.Collections.Generic.List<BH.oM.Geometry.ICurve>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Create, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "PlanarSurface",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\", \"_bhomVersion\" : \"4.3\" }], \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Geometry.Create.PlanarSurface(System.Collections.Generic.List<BH.oM.Geometry.ICurve)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Create, Geometry_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "PlanarSurface",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\", \"_bhomVersion\" : \"4.3\" }], \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Humans.ViewQuality.Create.Spectator(BH.oM.Geometry.Point, BH.oM.Geometry.Vector, System.Boolean, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Humans.ViewQuality.Create, Humans_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "Spectator",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Humans.ViewQuality.Query.AvalueAnalysis(BH.oM.Humans.ViewQuality.Audience, BH.oM.Humans.ViewQuality.AvalueSettings, BH.oM.Architecture.Theatron.ActivityArea)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Humans.ViewQuality.Query, Humans_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "AvalueAnalysis",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Humans.ViewQuality.Audience\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Humans.ViewQuality.AvalueSettings\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Humans.ViewQuality.Query.AvalueAnalysis(System.Collections.Generic.List<BH.oM.Humans.ViewQuality.Audience>, BH.oM.Humans.ViewQuality.AvalueSettings, BH.oM.Architecture.Theatron.ActivityArea)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Humans.ViewQuality.Query, Humans_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "AvalueAnalysis",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Humans.ViewQuality.Audience\", \"_bhomVersion\" : \"4.3\" }], \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Humans.ViewQuality.AvalueSettings\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Adapters.Revit.Create.RevitPullConfig(BH.oM.Adapters.Revit.Enums.Discipline, System.Boolean, BH.oM.Adapters.Revit.PullGeometryConfig, BH.oM.Adapters.Revit.PullRepresentationConfig, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "RevitPullConfig",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Enums.Discipline\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.PullGeometryConfig\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.PullRepresentationConfig\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Adapters.Revit.Create.RevitPullConfig(BH.oM.Adapters.Revit.Enums.Discipline, System.Boolean, BH.oM.Adapters.Revit.PullGeometryConfig, BH.oM.Adapters.Revit.PullRepresentationConfig)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "RevitPullConfig",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Enums.Discipline\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.PullGeometryConfig\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.PullRepresentationConfig\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Adapters.Revit.Create.ParameterSettings(System.Collections.Generic.IEnumerable<BH.oM.Adapters.Revit.Mapping.ParameterMap>, System.Collections.Generic.IEnumerable<BH.oM.Adapters.Revit.Mapping.FamilyMap>, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "MappingSettings",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Mapping.ParameterMap\", \"_bhomVersion\" : \"4.3\" }], \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Mapping.FamilyMap\", \"_bhomVersion\" : \"4.3\" }], \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Adapters.Revit.Create.ParameterSettings(System.Collections.Generic.IEnumerable<BH.oM.Adapters.Revit.Mapping.ParameterMap>, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "MappingSettings",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Mapping.ParameterMap\", \"_bhomVersion\" : \"4.3\" }], \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Revit.Modify.Transform(BH.oM.Adapters.Revit.Elements.IInstance, BH.oM.Geometry.TransformMatrix, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Revit.Modify, Revit_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "Transform",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Elements.IInstance\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.TransformMatrix\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Adapters.Revit.Query.DefaultParameterSettings()": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Revit.Query, Revit_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "DefaultMappingSettings",
+        "Parameters": [
+          
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Structure.Create.ConcreteCircularSection(System.Double, BH.oM.Structure.MaterialFragments.Concrete, System.String, System.Collections.Generic.List<BH.oM.Structure.SectionProperties.Reinforcement.IBarReinforcement>, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "ConcreteCircularSection",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.MaterialFragments.Concrete\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Reinforcement.BarRebarIntent\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Structure.Create.ConcreteFreeFormSection(System.Collections.Generic.List<BH.oM.Geometry.ICurve>, BH.oM.Structure.MaterialFragments.Concrete, System.String, System.Collections.Generic.List<BH.oM.Structure.SectionProperties.Reinforcement.IBarReinforcement>, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "ConcreteFreeFormSection",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\", \"_bhomVersion\" : \"4.3\" }], \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.MaterialFragments.Concrete\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Reinforcement.BarRebarIntent\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Structure.Create.ConcreteRectangleSection(System.Double, System.Double, BH.oM.Structure.MaterialFragments.Concrete, System.String, System.Collections.Generic.List<BH.oM.Structure.SectionProperties.Reinforcement.IBarReinforcement>, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "ConcreteRectangleSection",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.MaterialFragments.Concrete\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Reinforcement.BarRebarIntent\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Structure.Create.ConcreteSectionFromProfile(BH.oM.Spatial.ShapeProfiles.IProfile, BH.oM.Structure.MaterialFragments.Concrete, System.String, System.Collections.Generic.List<BH.oM.Structure.SectionProperties.Reinforcement.IBarReinforcement>, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "ConcreteSectionFromProfile",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Spatial.ShapeProfiles.IProfile\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.MaterialFragments.Concrete\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Reinforcement.BarRebarIntent\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      },
+      "BH.Engine.Structure.Create.ConcreteTSection(System.Double, System.Double, System.Double, System.Double, BH.oM.Structure.MaterialFragments.Concrete, System.String, System.Collections.Generic.List<BH.oM.Structure.SectionProperties.Reinforcement.IBarReinforcement>, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"4.3\" }",
+        "MethodName": "ConcreteTSection",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.MaterialFragments.Concrete\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"4.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Reinforcement.BarRebarIntent\", \"_bhomVersion\" : \"4.3\" }"
+        ],
+        "_bhomVersion": "4.3"
+      }
     },
     "ToOld": {
-
+      
     }
   },
   "Property": {
     "ToNew": {
-
+      "BH.oM.Adapters.Revit.Settings.RevitSettings.ParameterSettings": "BH.oM.Adapters.Revit.Settings.RevitSettings.MappingSettings"
     },
     "ToOld": {
-
+      "BH.oM.Adapters.Revit.Settings.RevitSettings.MappingSettings": "BH.oM.Adapters.Revit.Settings.RevitSettings.ParameterSettings"
     }
   },
   "MessageForDeleted": {
-
+    "BH.oM.Humans.ViewQuality.ViewCone": "The object has been removed and automatic versioning is not possible. For view quality analysis use the EffectiveConeOfVision property of the AvalueSettings to specify View Cone as a Polyline.",
+    "BH.Engine.Humans.ViewQuality.Create.ViewConeType(System.Int32)": "The method has been removed and automatic versioning is not possible. For view quality analysis use the EffectiveConeOfVision property of the AvalueSettings to specify View Cone as a Polyline.",
+    "BH.Engine.Humans.ViewQuality.Create.ViewCone(BH.oM.Geometry.Vector,BH.oM.Geometry.Vector, BH.oM.Geometry.Point, System.Double, BH.oM.Humans.ViewQuality.ViewConeEnum)": "The method has been removed and automatic versioning is not possible. For view quality analysis use the EffectiveConeOfVision property of the AvalueSettings to specify View Cone as a Polyline.",
+    "BH.Engine.Humans.ViewQuality.Create.GetHeadOutline(BH.oM.Humans.BodyParts.Head, System.Double)": "The method has been removed and automatic versioning is not possible. To provide a custom head outline for a spectator use BH.Engine.Humans.ViewQuality.Create.Spectator method and pass a Polyline to the headOutline input parameter.",
+    "BH.oM.Humans.ViewQuality.ViewConeEnum": "The object has been removed and automatic versioning is not possible. For view quality analysis use the EffectiveConeOfVision property of the AvalueSettings to specify View Cone as a Polyline.",
+    "BH.oM.MEP.System.ConnectionProperties.CableTrayConnectionProperty": "This object has been removed as the updates to the CableTray object have made this unnecessary.",
+    "BH.Engine.Adapters.Revit.Create.RevitPullConfig(BH.oM.Adapters.Revit.Enums.Discipline, System.Boolean, BH.oM.Adapters.Revit.PullGeometryConfig, BH.oM.Adapters.Revit.PullRepresentationConfig, System.Boolean)": "RevitPullConfig create method has been replaced with a new version with updated number and order of parameters.",
+    "BH.Engine.Adapters.Revit.Query.CategoryName(BH.oM.Adapters.Revit.RevitFilePreview)": "CategoryName query method has been deleted to avoid cluttering of the UI, the same output can be achieved by a simple property query.",
+    "BH.Engine.Adapters.Revit.Query.FamilyName(BH.oM.Adapters.Revit.RevitFilePreview)": "FamilyName query method has been deleted to avoid cluttering of the UI, the same output can be achieved by a simple property query.",
+    "BH.Engine.Adapters.Revit.Query.FamilyTypeNames(BH.oM.Adapters.Revit.RevitFilePreview)": "FamilyTypeNames query method has been deleted to avoid cluttering of the UI, the same output can be achieved by a simple property query.",
+    "BH.Engine.Adapters.Revit.Query.CategoryNames(BH.oM.Adapters.Revit.FamilyLibrary, System.String, System.String)": "CategoryNames query method has been deleted because no practical use has been identified for it, please raise an issue on GibHub in case if this change breaks your workflow.",
+    "BH.Engine.Adapters.Revit.Query.Plane(BH.oM.Geometry.PolyCurve, System.Double)": "Plane query method has been deleted from Revit_Toolkit because it is a geometrical query, please try to replace it with another suitable method (e.g. FitPlane) or raise an issue on GitHub.",
+    "BH.Engine.Adapters.Revit.Query.Plane(BH.oM.Geometry.Polyline, System.Double)": "Plane query method has been deleted from Revit_Toolkit because it is a geometrical query, please try to replace it with another suitable method (e.g. FitPlane) or raise an issue on GitHub.",
+    "BH.Engine.Adapters.Revit.Query.Plane(System.Collections.Generic.IEnumerable<BH.oM.Geometry.Point>)": "Plane query method has been deleted from Revit_Toolkit because it is a geometrical query, please try to replace it with another suitable method (e.g. FitPlane) or raise an issue on GitHub."
   },
   "MessageForNoUpgrade": {
-
+    "BH.oM.Humans.ViewQuality.AvalueSettings": "The object has been redefined in such a way that automatic versioning is not possible.",
+    "BH.oM.Humans.ViewQuality.Avalue": "The object has been redefined in such a way that automatic versioning is not possible."
   }
 }
