@@ -103,7 +103,7 @@ namespace BH.Upgrader.v50
             if (!param.Contains("."))
                 param = $"System.{param}";
 
-            if (param.EndsWith("]"))
+            if (param.EndsWith("]") && !param.EndsWith("[]"))
             {
                 int bracket = param.IndexOf('[');
                 string genericArgs = param.Substring(bracket + 1, param.Length - bracket - 2);
