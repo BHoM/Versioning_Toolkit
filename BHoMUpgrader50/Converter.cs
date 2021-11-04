@@ -64,7 +64,7 @@ namespace BH.Upgrader.v50
                     methodProps["_t"] = "System.Reflection.MethodBase";
                     methodProps["TypeName"] = $"{{ \"_t\" : \"System.Type\", \"Name\" : \"{typeName}\", \"_bhomVersion\" : \"5.0\" }}";
                     methodProps["MethodName"] = methodName;
-                    methodProps["Parameters"] = parameters.Select(x => $"{{ \"_t\" : \"System.Type\", \"Name\" : \"{x}\", \"_bhomVersion\" : \"5.0\" }}").ToList();
+                    methodProps["Parameters"] = parameters.Select(x => ParameterString(x)).ToList();
                     methodProps["_bhomVersion"] = "5.0";
                     newVersion["Method"] = methodProps;
                 }                    
@@ -93,6 +93,26 @@ namespace BH.Upgrader.v50
             parameters = infostring.Substring(parenthesis + 1, infostring.Length - parenthesis - 2).Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.Replace(" ", "")).ToList();
 
             return true;
+        }
+
+        /***************************************************/
+
+        private static string ParameterString(string param)
+        {
+            param = param.Trim();
+            if (!param.Contains("."))
+                param = $"System.{param}";
+
+            if (param.EndsWith("]"))
+            {
+                int bracket = param.IndexOf('[');
+                string genericArgs = param.Substring(bracket + 1, param.Length - bracket - 2);
+                genericArgs = string.Join(", ", genericArgs.Split(',').Select(x => ParameterString(x)));
+
+                return $"{{ \"_t\" : \"System.Type\", \"Name\" : \"{param.Substring(0, bracket)}\", \"GenericArguments\" : [{genericArgs}], \"_bhomVersion\" : \"5.0\" }}";
+            }
+            else
+                return $"{{ \"_t\" : \"System.Type\", \"Name\" : \"{param}\", \"_bhomVersion\" : \"5.0\" }}";
         }
 
         /***************************************************/
