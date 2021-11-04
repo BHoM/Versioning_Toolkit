@@ -67,7 +67,9 @@ namespace BH.Upgrader.v50
                     methodProps["Parameters"] = parameters.Select(x => ParameterString(x)).ToList();
                     methodProps["_bhomVersion"] = "5.0";
                     newVersion["Method"] = methodProps;
-                }                    
+                }
+                else
+                    newVersion["Method"] = null;
                 
                 newVersion.Remove("InfoString");
             }
@@ -82,7 +84,7 @@ namespace BH.Upgrader.v50
             typeName = "";
             methodName = "";
             parameters = null;
-            if (string.IsNullOrWhiteSpace(infostring))
+            if (string.IsNullOrWhiteSpace(infostring) || infostring == "null")
                 return false;
 
             int parenthesis = infostring.IndexOf('(');
