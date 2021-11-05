@@ -84,12 +84,18 @@ namespace BH.Upgrader.v50
             typeName = "";
             methodName = "";
             parameters = null;
-            if (string.IsNullOrWhiteSpace(infostring) || infostring == "null")
+            if (string.IsNullOrWhiteSpace(infostring) || infostring == "null" || !infostring.EndsWith(")"))
                 return false;
 
             int parenthesis = infostring.IndexOf('(');
+            if (parenthesis == -1)
+                return false;
+
             string method = infostring.Substring(0, parenthesis);
             int dot = method.LastIndexOf('.');
+            if (dot == -1)
+                return false;
+
             typeName = method.Substring(0, dot);
             methodName = method.Substring(dot + 1);
             parameters = infostring.Substring(parenthesis + 1, infostring.Length - parenthesis - 2).Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.Replace(" ", "")).ToList();
