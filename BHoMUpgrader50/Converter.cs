@@ -41,6 +41,7 @@ namespace BH.Upgrader.v50
 
             ToNewObject.Add("BH.oM.Revit.PinnedButtonInfo", UpgradePinnedButtonInfo);
             ToNewObject.Add("BH.oM.Adapters.Revit.Parameters.RevitIdentifiers", UpgradeRevitIdentifiers);
+            ToNewObject.Add("BH.oM.Adapters.Revit.Elements.ModelInstance", UpgradeModelInstance);
         }
 
 
@@ -94,6 +95,42 @@ namespace BH.Upgrader.v50
         }
 
         /***************************************************/
+		
+        private static Dictionary<string, object> UpgradeModelInstance(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (newVersion.ContainsKey("HostId"))
+            {
+                Dictionary<string, object> hostFragment = new Dictionary<string, object>();
+                hostFragment["_t"] = "BH.oM.Revit.RevitHostFragment";
+                hostFragment["HostId"] = newVersion["HostId"];
+                hostFragment["LinkDocumentId"] = -1;
+                if (newVersion.ContainsKey("Fragments"))
+                {
+                    object[] oldFragments = newVersion["Fragments"] as object[];
+                    object[] newFragments = new object[oldFragments.Length + 1];
+                    for (int i = 0; i < oldFragments.Length; i++)
+                    {
+                        newFragments[i] = oldFragments[i];
+                    }
+
+                    newFragments[newFragments.Length - 1] = hostFragment;
+                    newVersion["Fragments"] = newFragments;
+                }
+                else
+                    newVersion["Fragments"] = new object[] { hostFragment };
+
+                newVersion.Remove("HostId");
+            }
+
+            return newVersion;
+        }
+
+        /***************************************************/
 
         private static bool ParseInfoString(string infostring, out string typeName, out string methodName, out List<string> parameters)
         {
@@ -137,8 +174,8 @@ namespace BH.Upgrader.v50
             }
             else
                 return $"{{ \"_t\" : \"System.Type\", \"Name\" : \"{param}\", \"_bhomVersion\" : \"5.0\" }}";
-        }
-
+		}
+		
         /***************************************************/
     }
 }
