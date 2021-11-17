@@ -40,6 +40,7 @@ namespace BH.Upgrader.v50
             PreviousVersion = "4.3";
 
             ToNewObject.Add("BH.oM.Revit.PinnedButtonInfo", UpgradePinnedButtonInfo);
+            ToNewObject.Add("BH.oM.Adapters.Revit.Parameters.RevitIdentifiers", UpgradeRevitIdentifiers);
         }
 
 
@@ -73,6 +74,21 @@ namespace BH.Upgrader.v50
                 
                 newVersion.Remove("InfoString");
             }
+			
+            return newVersion;
+		}
+		
+        /***************************************************/
+		
+        private static Dictionary<string, object> UpgradeRevitIdentifiers(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (newVersion.ContainsKey("HostId"))
+                newVersion.Remove("HostId");
 
             return newVersion;
         }
