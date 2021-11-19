@@ -88,6 +88,16 @@ namespace BH.Upgrader.v50
 
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
 
+            newVersion["LinkDocument"] = "";
+            if (newVersion.ContainsKey("LinkPath"))
+            {
+                string path = newVersion["LinkPath"] as string;
+                if (!string.IsNullOrWhiteSpace(path))
+                    newVersion["LinkDocument"] = path.Split(new char[] { '\\' }, StringSplitOptions.RemoveEmptyEntries).Last();
+
+                newVersion.Remove("LinkPath");
+            }
+
             if (newVersion.ContainsKey("HostId"))
                 newVersion.Remove("HostId");
 
