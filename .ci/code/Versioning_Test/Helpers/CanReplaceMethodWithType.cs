@@ -66,14 +66,14 @@ namespace BH.Test.Versioning
             if (m_TypeDic.Count == 0)
             {
                 m_TypeDic = Engine.Reflection.Query.BHoMTypeList()
-                    .GroupBy(x => x.Namespace.Split(new char[] { '.' })[2])
+                    .GroupBy(x => x.Namespace.NameSpaceKey())
                     .ToDictionary(x => x.Key, x => x.ToList());
             }
 
             if (!typeName.EndsWith("Create"))
                 return null;
 
-            string key = typeName.Split(new char[] { '.' })[2];
+            string key = typeName.NameSpaceKey();
             List<Type> types = new List<Type>();
             if (m_TypeDic.ContainsKey(key))
                 types = m_TypeDic[key];
@@ -93,6 +93,16 @@ namespace BH.Test.Versioning
             return match;
         }
 
+        /*************************************/
+
+        private static string NameSpaceKey(this string typeName)
+        {
+            string[] splitNamespace = typeName.Split(new char[] { '.' });
+            string key = splitNamespace[2];
+            if (key == "Adapters" && splitNamespace.Length > 3)
+                key += "." + splitNamespace[3];
+            return key;
+        }
 
         /*************************************/
         /**** Private Methods             ****/
