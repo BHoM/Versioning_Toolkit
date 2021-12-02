@@ -79,16 +79,8 @@ namespace BH.Test.Versioning
                 types = m_TypeDic[key];
 
             Type match = null;
-            List<Type> matches = types.Where(x => x.Name == methodName).ToList();
-            if (matches.Count == 1)
-                match = matches.First();
-
-            if (match == null)
-            {
-                matches = types.Where(x => x.Name.StartsWith(methodName)).ToList();
-                if (matches.Count == 1)
-                    match = matches.First();
-            }
+            //Splitting by ` to acount for generics
+            List<Type> matches = types.Where(x => x.Name.Split('`')[0] == methodName).ToList();
 
             return match;
         }
