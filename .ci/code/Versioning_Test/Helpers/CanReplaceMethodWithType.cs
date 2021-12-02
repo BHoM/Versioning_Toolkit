@@ -81,6 +81,8 @@ namespace BH.Test.Versioning
             Type match = null;
             //Splitting by ` to acount for generics
             List<Type> matches = types.Where(x => x.Name.Split('`')[0] == methodName).ToList();
+            if (matches.Count == 1)
+                match = matches.First();
 
             return match;
         }
