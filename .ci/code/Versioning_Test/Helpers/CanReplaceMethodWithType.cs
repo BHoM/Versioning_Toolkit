@@ -65,7 +65,7 @@ namespace BH.Test.Versioning
         {
             if (m_TypeDic.Count == 0)
             {
-                m_TypeDic = Engine.Reflection.Query.BHoMTypeList()
+                m_TypeDic = Engine.Base.Query.BHoMTypeList()
                     .GroupBy(x => x.Namespace.NameSpaceKey())
                     .ToDictionary(x => x.Key, x => x.ToList());
             }
