@@ -21,11 +21,11 @@
  */
 
 
-using BH.Engine.Reflection;
+using BH.Engine.Base;
 using BH.Engine.Serialiser;
 using BH.Engine.Test;
 using BH.oM.Base;
-using BH.oM.Reflection.Debugging;
+using BH.oM.Base.Debugging;
 using BH.oM.Test;
 using BH.oM.Test.Results;
 using System;
@@ -73,7 +73,7 @@ namespace BH.Test.Versioning
 
         public static TestResult FromJsonDataset(string testFolder, string exceptions = "")
         {
-            Engine.Reflection.Compute.LoadAllAssemblies();
+            Engine.Base.Compute.LoadAllAssemblies();
             List<TestResult> results = new List<TestResult>();
 
             // Test all objects
@@ -122,13 +122,13 @@ namespace BH.Test.Versioning
             bool detected = false;
             try
             {
-                Engine.Reflection.Compute.ClearCurrentEvents();
+                Engine.Base.Compute.ClearCurrentEvents();
                 result = Engine.Serialiser.Convert.FromJson(json);
-                detected = BH.Engine.Reflection.Query.CurrentEvents().Any(x => x.Message.StartsWith("No upgrade for"));
+                detected = BH.Engine.Base.Query.CurrentEvents().Any(x => x.Message.StartsWith("No upgrade for"));
             }
             catch (Exception e)
             {
-                Engine.Reflection.Compute.RecordError("Deserialisation from json failed. Error: " + e.Message);
+                Engine.Base.Compute.RecordError("Deserialisation from json failed. Error: " + e.Message);
             }
 
             bool success = result != null || detected;
@@ -155,7 +155,7 @@ namespace BH.Test.Versioning
                     Description = description,
                     Status = TestStatus.Error,
                     Message = message,
-                    Information = Engine.Reflection.Query.CurrentEvents().Select(x => x.ToEventMessage()).ToList<ITestInformation>()
+                    Information = Engine.Base.Query.CurrentEvents().Select(x => x.ToEventMessage()).ToList<ITestInformation>()
                 };
         }
 
