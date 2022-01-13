@@ -258,7 +258,7 @@ namespace BH.Upgrader.Base
         private BsonDocument UpgradeObject(BsonDocument document, Converter converter)
         {
             //Get the old type
-            string oldType = document["_t"].AsString.Split(',').First();
+            string oldType = CleanTypeString(document["_t"].AsString);
 
             // Check if the object type is classified as deleted or without update
             CheckForNoUpgrade(converter, oldType, "object type");
@@ -420,7 +420,7 @@ namespace BH.Upgrader.Base
         private static string GetTypeFromDic(Dictionary<string, string> dic, string type, bool acceptPartialNamespace = true)
         {
             if (type.Contains(","))
-                type = type.Split(',').First();
+                type = CleanTypeString(type);
 
             if (dic.ContainsKey(type))
                 return dic[type];
@@ -516,6 +516,30 @@ namespace BH.Upgrader.Base
 
             string genericString = generics.Select(x => GetTypeString(x.ToString())).Aggregate((a, b) => a + ", " + b);
             return typeString + "<" + genericString + ">";
+        }
+
+        /***************************************************/
+
+        private static string CleanTypeString(string oldType)
+        {
+            // The string might contain some version number, toke, culture, etc. So it neds cleaning first
+            if (oldType.Contains("[["))
+            {
+                int startIndex = oldType.IndexOf("[[");
+                int endIndex = oldType.LastIndexOf("]]");
+                string firstPart = oldType.Substring(0, startIndex);
+
+                // We need something that can deal with recursive generics as well
+                List<string> generics = oldType.Substring(startIndex + 2, endIndex - startIndex - 2)
+                    .Split(new string[] { "],[" }, StringSplitOptions.RemoveEmptyEntries)
+                    .Select(x => CleanTypeString(x))
+                    .ToList();
+
+                return firstPart + "[[" + generics.Aggregate((a, b) => a + "],[" + b) + "]]";
+                
+            }
+            else
+                return oldType.Split(',').First();
         }
 
         /***************************************************/
