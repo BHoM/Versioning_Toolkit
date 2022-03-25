@@ -1,18 +1,31 @@
 {
   "Namespace": {
     "ToNew": {
-      
+      "BH.oM.Reflection": "BH.oM.Base",
+      "BH.oM.Reflection.Attributes": "BH.oM.Base.Attributes",
+      "BH.oM.Reflection.Debugging": "BH.oM.Base.Debugging",
+      "BH.oM.Reflection.Interface": "BH.oM.Base"
     },
     "ToOld": {
-      
+      "BH.oM.Base.Attributes": "BH.oM.Reflection.Attributes",
+      "BH.oM.Base.Debugging": "BH.oM.Reflection.Debugging"
     }
   },
   "Type": {
     "ToNew": {
-      
+      "BH.oM.Analytical.Results.IAnalysisResult": "BH.oM.Analytical.Results.IResult",
+      "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope",
+      "BH.oM.Geometry.SettingOut.Grid": "BH.oM.Spatial.SettingOut.Grid",
+      "BH.oM.Geometry.SettingOut.Level": "BH.oM.Spatial.SettingOut.Level",
+      "BH.oM.Architecture.Elements.Grid": "BH.oM.Spatial.SettingOut.Grid",
+      "BH.oM.Architecture.Elements.Level": "BH.oM.Spatial.SettingOut.Level",
+      "BH.Adapter.ETABS.ETABS18Adapter": "BH.Adapter.ETABS.ETABSAdapter"
     },
     "ToOld": {
-      
+      "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope",
+      "BH.oM.Spatial.SettingOut.Grid": "BH.oM.Geometry.SettingOut.Grid",
+      "BH.oM.Spatial.SettingOut.Level": "BH.oM.Geometry.SettingOut.Level",
+      "BH.Adapter.ETABS.ETABSAdapter": "BH.Adapter.ETABS.ETABS18Adapter"
     }
   },
   "Method": {
@@ -1575,16 +1588,66 @@
   },
   "Property": {
     "ToNew": {
-      
+      "BH.oM.Diffing.PropertyDifference.DisplayName": "BH.oM.Diffing.PropertyDifference.Name"
     },
     "ToOld": {
-      
+      "BH.oM.Diffing.PropertyDifference.Name": "BH.oM.Diffing.PropertyDifference.DisplayName"
     }
   },
   "MessageForDeleted": {
-    
+    "BH.oM.Base.Attributes.DeprecatedAttribute": "DeprecatedAttribute was discontinued in 3.2. Use ReplacedAttribute or ToBeDeletedAttribute or PreviousVersionAttribute instead",
+    "BH.Engine.Adapters.Civil3D.Create.Civil3DConfig(System.Int32, System.Int32, System.Int32)": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Adapters.Civil3D.Civil3DConfig": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Adapters.Civil3D.Elements.ChamberShape": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Adapters.Civil3D.Elements.CivAlignmentType": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Adapters.Civil3D.Elements.CivProfileConstraintType": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Adapters.Civil3D.Elements.CivProfileCurveType": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Adapters.Civil3D.Elements.CivProfileEntityType": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Adapters.Civil3D.Elements.CivProfileType": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Adapters.Civil3D.Elements.CollisionType": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Adapters.Civil3D.Elements.FlowDirection": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Civils.Elements.Alignment": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Civils.Elements.AlignmentCurve": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Civils.Elements.Block": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Civils.Elements.CoGoPoint": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Civils.Elements.CivProfile": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Civils.Elements.CivProfileCircularCurve": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Civils.Elements.CivProfileParabolaAsymmetric": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Civils.Elements.CivProfileParabolaSymmetric": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Civils.Elements.CivProfileTangent": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Civils.Elements.CivSurface": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Civils.Elements.FeatureLine": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Adapters.Civil3D.Elements.ICivProfileEntity": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Civils.Elements.ManholeChamber": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Civils.Elements.Parcel": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Civils.Elements.Pipe": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.Adapters.Civil3D.PackageType": "The Civil3D Toolkit has been moved from beta state to prototype state. If you would like to experiment with the latest Civil3D capabilities, please clone https://github.com/BHoM/Civil3D_Toolkit and compile the source.",
+    "BH.oM.LifeCycleAssessment.ElectricalScope": "This object has been replaced with a Scope fragment.",
+    "BH.oM.LifeCycleAssessment.EnclosuresScope": "This object has been replaced with a Scope fragment.",
+    "BH.oM.LifeCycleAssessment.FireProtectionScope": "This object has been replaced with a Scope fragment.",
+    "BH.oM.LifeCycleAssessment.FoundationsScope": "This object has been replaced with a Scope fragment.",
+    "BH.oM.LifeCycleAssessment.IScope": "This interface has been removed.",
+    "BH.oM.LifeCycleAssessment.MechanicalScope": "This object has been replaced with a Scope fragment.",
+    "BH.oM.LifeCycleAssessment.MEPScope": "This object has been replaced with a Scope fragment.",
+    "BH.oM.LifeCycleAssessment.PlumbingScope": "This object has been replaced with a Scope fragment.",
+    "BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessmentScope": "This object has been replaced with a Scope fragment.",
+    "BH.oM.LifeCycleAssessment.StructuresScope": "This object has been replaced with a Scope fragment.",
+    "BH.oM.LifeCycleAssessment.TenantImprovementScope": "This object has been replaced with a Scope fragment.",
+    "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentResult": "This object has been removed. Please use EvaluateEnvironmentalProductDeclaration for any LCA.",
+    "BH.oM.LifeCycleAssessment.Results.ProjectLifeCycleAssessmentResult": "This object has been removed. Please use EvaluateEnvironmentalProductDeclaration for any LCA.",
+    "BH.oM.LifeCycleAssessment.Results.GlobalWarmingPotentialResult": "This result class has been removed. Please use the EvaluateEnvironmentalProductDeclaration method to return a standard results class.",
+    "BH.Engine.BuildingEnvironment.Compute.FunkyStuff(System.Collections.Generic.List<BH.oM.Geometry.ICurve>, System.Collections.Generic.List<BH.oM.Geometry.Point>)": "This method has been removed from the BuildingEnvironments_Toolkit and placed in the BuildingEnvironments_Prototype as it is still undergoing development for broader use before being deployed in alpha state. Please clone the prototype repository and compile the code manually if you would like to utilise this method.",
+    "BH.oM.Revit.MainSettings": "Main settings for the Revit UI have been split into 3 separate objects: AddinManagementSettings, DockablePaneSettings and UIManagementSettings, which should be generated automatically on startup of Revit.",
+    "BH.Engine.Adapters.ETABS.Compute.UpgradeVersion(System.Collections.Generic.List<BH.oM.Architecture.Elements.Level>)": "The method was used to upgrade objects before a central Versioning system existed in the BHoM. With the proper Versioning system in place, the method is redundant and is hence removed.",
+    "BH.Engine.Adapters.ETABS.Compute.UpgradeVersion(BH.oM.Architecture.Elements.Level)": "The method was used to upgrade objects before a central Versioning system existed in the BHoM. With the proper Versioning system in place, the method is redundant and is hence removed.",
+    "BH.Engine.Adapters.IES.Create.SettingsIES(System.Double)": "This method was replaced by the default constructor method for IES Settings. Please replace with that component.",
+    "BH.Engine.Adapters.IES.Create.SettingsIES(System.Double, System.Int32)": "This method was replaced by the default constructor method for IES Settings. Please replace with that component.",
+    "BH.Engine.LifeCycleAssessment.Query.IsValid": "This method has been removed. If you'd like to query Scope-specific information, please use the GetElementScope Query method.",
+    "BH.Engine.LifeCycleAssessment.Compute.EvaluateLifeCycleAssessmentScope": "Evaluation of scope-specific properties has been removed. Please try grouping your elements by type and evaluating them using the EvaluateEnvironmentalProductDeclaration Compute method.",
+    "BH.Engine.LifeCycleAssessment.Query.ProjectLifeCycleAssessmentResults": "The Life Cycle Assessment object has been removed. Please try grouping your elements by type and evaluating them using the EvaluateEnvironmentalProductDeclaration Compute method.",
+    "BH.Engine.Adapters.Revit.Query.Description(BH.oM.Diffing.PropertyDifference)": "Removed due to the introduction of the IPropertyDifference `Description` property. To view the description, explode the PropertyDifference object and get the `Description` property."
   },
   "MessageForNoUpgrade": {
-    
+    "BH.oM.Revit.Logging.StandardRevitLog": "The object has been modified in a way that automatic conversion is not possible. Please re-create the object."
   }
 }
