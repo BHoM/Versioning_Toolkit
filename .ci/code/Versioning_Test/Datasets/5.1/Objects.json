@@ -1103,7 +1103,6 @@
 { "_t" : "BH.oM.Base.NamedSignificantFigures", "Name" : "test", "SignificantFigures" : 42, "_bhomVersion" : "5.1" }
 { "_t" : "BH.oM.Base.NamedNumericTolerance", "Name" : "test", "Tolerance" : 42.420000000000002, "_bhomVersion" : "5.1" }
 { "_t" : "BH.oM.Base.HashFragment", "Hash" : "test", "_bhomVersion" : "5.1" }
-{ "Name" : "test", "test" : "test", "BHoM_Guid" : "d2c2809d-5074-4d96-9bbe-2de5d5c1d9f9", "_bhomVersion" : "5.1" }
 { "_t" : "BH.oM.Base.ComparisonInclusion", "Include" : true, "DisplayName" : "test", "_bhomVersion" : "5.1" }
 { "_t" : "BH.oM.Base.ComparisonFunctions", "PropertyFullNameModifier" : null, "PropertyFullNameFilter" : null, "CustomDataKeyFilter" : null, "PropertyDisplayNameModifier" : null, "_bhomVersion" : "5.1" }
 { "_t" : "BH.oM.Base.ComparisonConfig", "PropertyExceptions" : ["test"], "PropertiesToConsider" : ["test"], "CustomdataKeysExceptions" : ["test"], "CustomdataKeysToConsider" : ["test"], "TypeExceptions" : [{ "_t" : "System.Type", "Name" : "System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "_bhomVersion" : "5.1" }], "NamespaceExceptions" : ["test"], "MaxNesting" : 42, "MaxPropertyDifferences" : 42, "NumericTolerance" : 42.420000000000002, "PropertyNumericTolerances" : [], "SignificantFigures" : 42, "PropertySignificantFigures" : [], "_bhomVersion" : "5.1" }
