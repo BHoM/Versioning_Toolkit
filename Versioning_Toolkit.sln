@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31205.134
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHoMUpgrader30", "BHoMUpgrader30\BHoMUpgrader30.csproj", "{10D377C5-E17D-4135-A9AA-EB106833A94E}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHoMUpgrader50", "BHoMUpgrader50\BHoMUpgrader50.csproj", "{81DD6626-FFA8-482C-8C49-701038CD8ADE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHoMUpgrader51", "BHoMUpgrader51\BHoMUpgrader51.csproj", "{B8491E2B-336D-4105-97DC-9295E755935A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHoMUpgrader52", "BHoMUpgrader52\BHoMUpgrader52.csproj", "{41793733-46B7-4B49-AA2A-85C7C55A9927}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{B8491E2B-336D-4105-97DC-9295E755935A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8491E2B-336D-4105-97DC-9295E755935A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8491E2B-336D-4105-97DC-9295E755935A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41793733-46B7-4B49-AA2A-85C7C55A9927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41793733-46B7-4B49-AA2A-85C7C55A9927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41793733-46B7-4B49-AA2A-85C7C55A9927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41793733-46B7-4B49-AA2A-85C7C55A9927}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
