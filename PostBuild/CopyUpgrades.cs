@@ -67,7 +67,7 @@ namespace PostBuild
                 ReadVersioningFile(file, versioning);
 
             // Get versioning from attributes
-            Compute.LoadAllAssemblies(Query.BHoMFolder());
+            Compute.LoadAllAssemblies(Query.BHoMFolder(), "oM|_Engine|_Adapter");
             CollectMethodVersioning(versioning["Method"] as BsonDocument);
 
             // return upgrade document
@@ -243,7 +243,7 @@ namespace PostBuild
             {
                 foreach (PreviousVersionAttribute attribute in method.GetCustomAttributes<PreviousVersionAttribute>())
                 {
-                    if (attribute != null && attribute.FromVersion == version)
+                    if (attribute != null && attribute.FromVersion == version && toNewContent.All(x => x.Name != attribute.PreviousVersionAsText))
                         toNewContent.Add(new BsonElement(attribute.PreviousVersionAsText, BH.Engine.Serialiser.Convert.ToBson(method)));
                 }
             }
