@@ -38,11 +38,40 @@ namespace BH.Upgrader.v52
         public Converter() : base()
         {
             PreviousVersion = "5.1";
+
+            ToNewObject.Add("BH.oM.Structure.Loads.TributaryRegion", UpgradeTributaryRegion);
+
         }
 
 
         /***************************************************/
         /**** Private Methods                           ****/
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeTributaryRegion(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            newVersion["Regions"] = "[]";
+            if (newVersion.ContainsKey("Region"))
+            {
+                newVersion["Regions"] = new List<object> { newVersion["Region"] };
+                newVersion.Remove("Region");
+            }
+            else
+            {
+                newVersion["Regions"] = new List<object>();
+            }
+
+            if (!newVersion.ContainsKey("SupportingGuid"))
+                newVersion["SupportingGuid"] = Guid.Empty;
+
+            if (!newVersion.ContainsKey("Property"))
+                newVersion["Property"] = null;
+
+            return newVersion;
+        }
+
         /***************************************************/
 
     }
