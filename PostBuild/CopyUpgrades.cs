@@ -94,6 +94,10 @@ namespace PostBuild
                 { "ToNew", new Dictionary<string, object>() },
                 { "ToOld", new Dictionary<string, object>() }
             };
+            Dictionary<string, object> datasetUpgrades = new Dictionary<string, object> {
+                { "ToNew", new Dictionary<string, object>() },
+                { "ToOld", new Dictionary<string, object>() }
+            };
 
             return new BsonDocument(new Dictionary<string, object>
             {
@@ -101,6 +105,7 @@ namespace PostBuild
                 { "Type", typeUpgrades },
                 { "Method", methodUpgrades },
                 { "Property", propertyUpgrades },
+                { "Dataset", datasetUpgrades },
                 { "MessageForDeleted", new Dictionary<string, object>() },
                 { "MessageForNoUpgrade", new Dictionary<string, object>() }
             });
@@ -149,6 +154,9 @@ namespace PostBuild
 
             if (source.Contains("Property"))
                 CopySectionAccross(source["Property"] as BsonDocument, target["Property"] as BsonDocument);
+
+            if (source.Contains("Dataset"))
+                CopySectionAccross(source["Dataset"] as BsonDocument, target["Dataset"] as BsonDocument);
 
             if (source.Contains("MessageForDeleted"))
                 CopyDictionaryAccross(source["MessageForDeleted"] as BsonDocument, target["MessageForDeleted"] as BsonDocument);
