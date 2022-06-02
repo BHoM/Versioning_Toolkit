@@ -40,7 +40,9 @@ namespace BH.Upgrader.v52
             PreviousVersion = "5.1";
 
             ToNewObject.Add("BH.oM.Structure.Loads.TributaryRegion", UpgradeTributaryRegion);
-
+            ToNewObject.Add("BH.oM.Lighting.Results.Illuminance.Lux", UpgradeLux);
+            ToNewObject.Add("BH.oM.Lighting.Results.Mesh.MeshElementResult", UpgradeLightingMeshElementResult);
+            ToNewObject.Add("BH.oM.Lighting.Results.Mesh.MeshResult", UpgradeLightingMeshResult);
         }
 
 
@@ -68,6 +70,55 @@ namespace BH.Upgrader.v52
 
             if (!newVersion.ContainsKey("Property"))
                 newVersion["Property"] = null;
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeLightingMeshResult(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (newVersion.ContainsKey("TimeStep"))
+                newVersion.Remove("TimeStep");
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeLux(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = UpgradeLightingMeshElementResult(oldVersion);
+
+            if (oldVersion.ContainsKey("LuxLevel"))
+                newVersion["LuxLevel"] = new List<object> { oldVersion["LuxLevel"] };
+            else
+                newVersion["LuxLevel"] = new List<object>();
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeLightingMeshElementResult(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (!newVersion.ContainsKey("MeshFaceId"))
+                newVersion["MeshFaceId"] = null;
+
+            if (newVersion.ContainsKey("NodeID"))
+            {
+                newVersion["NodeId"] = newVersion["NodeID"];
+                newVersion.Remove("NodeID");
+            }
+            else
+                newVersion["NodeId"] = null;
+
+            if (newVersion.ContainsKey("TimeStep"))
+                newVersion.Remove("TimeStep");
 
             return newVersion;
         }
