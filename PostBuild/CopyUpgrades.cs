@@ -96,7 +96,8 @@ namespace PostBuild
             };
             Dictionary<string, object> datasetUpgrades = new Dictionary<string, object> {
                 { "ToNew", new Dictionary<string, object>() },
-                { "ToOld", new Dictionary<string, object>() }
+                { "ToOld", new Dictionary<string, object>() },
+                { "MessageForDeleted", new Dictionary<string, object>() }
             };
 
             return new BsonDocument(new Dictionary<string, object>
@@ -174,6 +175,9 @@ namespace PostBuild
 
             if (source.Contains("ToOld"))
                 CopyDictionaryAccross(source["ToOld"] as BsonDocument, target["ToOld"] as BsonDocument);
+
+            if (source.Contains("MessageForDeleted"))
+                CopyDictionaryAccross(source["MessageForDeleted"] as BsonDocument, target["MessageForDeleted"] as BsonDocument);
         }
 
         /***************************************************/
