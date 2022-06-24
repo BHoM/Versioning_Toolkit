@@ -47,7 +47,7 @@ namespace BH.Test.Versioning
         public static TestResult FromJsonDatasets()
         {
             string testFolder = @"C:\ProgramData\BHoM\Datasets\TestSets\Versioning";
-            List<string> versions = new List<string> { "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" };
+            List<string> versions = new List<string> { "5.2", "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" };
             string exceptions = "Grasshopper|Rhinoceros";
 
             // Test all the BHoM versions available
