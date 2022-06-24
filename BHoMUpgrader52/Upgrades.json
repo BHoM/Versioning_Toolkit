@@ -1,38 +1,392 @@
-﻿{
+{
   "Namespace": {
     "ToNew": {
+      
     },
     "ToOld": {
+      
     }
   },
   "Type": {
     "ToNew": {
-
+      
     },
     "ToOld": {
-
+      
     }
   },
   "Method": {
     "ToNew": {
-
+      "BH.Revit.Engine.Utility.Compute.WallElevations(System.Collections.Generic.List<Autodesk.Revit.DB.Wall>, Autodesk.Revit.DB.ViewFamilyType, System.Int32, System.Double, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Utility.Compute, Revit_Utility_Engine_2018, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "WallElevations",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Wall, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }], \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ViewFamilyType, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.View, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ViewDetailLevel, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Structure.Compute.TributaryAreas(System.Collections.Generic.List<BH.oM.Dimensional.IElement2D>, System.Collections.Generic.List<BH.oM.Dimensional.IElement1D>, System.Collections.Generic.List<BH.oM.Dimensional.IElement1D>, System.Collections.Generic.List<BH.oM.Dimensional.IElement2D>, System.Boolean, System.Boolean, System.Double, BH.oM.Structure.Calculations.TributaryAreaMethod, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Compute, StructuralEngineering_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "TributaryAreas",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\", \"_bhomVersion\" : \"5.2\" }], \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement1D\", \"_bhomVersion\" : \"5.2\" }], \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement1D\", \"_bhomVersion\" : \"5.2\" }], \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\", \"_bhomVersion\" : \"5.2\" }], \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Calculations.TributaryAreaMethod\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Results.Query.ResultItemValuePropertyGeneric(BH.oM.Analytical.Results.IResultItem, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Results.Query, Results_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "ResultValuePropertyItem",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Results.IResultItem\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Results.Query.ResultItemValueProperty(BH.oM.Analytical.Results.IResultItem, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Results.Query, Results_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "ResultValueProperty",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Results.IResult\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Results.ResultFilter\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Results.Query.ResultItemValueProperty(BH.oM.Analytical.Results.IResultCollection<BH.oM.Analytical.Results.IResultItem>, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Results.Query, Results_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "ResultValueProperty",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Results.IResult\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Results.ResultFilter\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Results.Query.ResultItemValueProperties(BH.oM.Analytical.Results.IResultItem)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Results.Query, Results_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "ResultValuePropertiesItem",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Results.IResultItem\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Geometry.Create.Vector(BH.oM.Geometry.Point, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Create, Geometry_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "Vector",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Structure.Query.IAverageThickness(BH.oM.Structure.SurfaceProperties.ISurfaceProperty)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "IVolumePerArea",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SurfaceProperties.ISurfaceProperty\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Structure.Query.AverageThickness(BH.oM.Structure.SurfaceProperties.CorrugatedDeck)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "VolumePerArea",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SurfaceProperties.CorrugatedDeck\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Structure.Query.AverageThickness(BH.oM.Structure.SurfaceProperties.SlabOnDeck)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "VolumePerArea",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SurfaceProperties.SlabOnDeck\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Structure.Query.AverageThickness(BH.oM.Structure.SurfaceProperties.Layered)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "VolumePerArea",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SurfaceProperties.Layered\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Structure.Query.AverageThickness(BH.oM.Structure.SurfaceProperties.LoadingPanelProperty)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "VolumePerArea",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SurfaceProperties.LoadingPanelProperty\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Structure.Query.AverageThickness(BH.oM.Structure.SurfaceProperties.Waffle)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "VolumePerArea",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SurfaceProperties.Waffle\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Structure.Query.AverageThickness(BH.oM.Structure.SurfaceProperties.Ribbed)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "VolumePerArea",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SurfaceProperties.Ribbed\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Structure.Query.AverageThickness(BH.oM.Structure.SurfaceProperties.ConstantThickness)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "VolumePerArea",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SurfaceProperties.ConstantThickness\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Environment.Query.IsContaining(System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>, BH.oM.Geometry.Point, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Query, Environment_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "IsContaining",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\", \"_bhomVersion\" : \"5.2\" }], \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Environment.Query.IsContaining(BH.oM.Environment.Elements.Panel, BH.oM.Geometry.Point, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Query, Environment_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "IsContaining",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Environment.Create.Opening(BH.oM.Geometry.Point, BH.oM.Environment.Configuration.OpeningOption, System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Create, Environment_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "Opening",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Configuration.OpeningOption\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\", \"_bhomVersion\" : \"5.2\" }], \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Adapters.TAS.Modify.Round(System.Single, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Data.Modify, Data_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "Round",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Adapters.TAS.Modify.Round(System.Double, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Data.Modify, Data_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "Round",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      },
+      "BH.Engine.Analytical.Query.Depth(BH.oM.Analytical.Elements.Graph, System.Guid)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Query, Analytical_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.2\" }",
+        "MethodName": "Depth",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.Graph\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.RelationDirection\", \"_bhomVersion\" : \"5.2\" }"
+        ],
+        "_bhomVersion": "5.2"
+      }
     },
     "ToOld": {
-
+      
     }
   },
   "Property": {
     "ToNew": {
-
+      
     },
     "ToOld": {
-
+      
+    }
+  },
+  "Dataset": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    },
+    "MessageForDeleted": {
+      
     }
   },
   "MessageForDeleted": {
-
+    "BH.Engine.BuildingEnvironment.Query.DaylightSpacePerimeter(System.Collections.Generic.List<System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>>)": "The BuildingEnvironments_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest BuildingEnvironments_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like BuildingEnvironments_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.BuildingEnvironment.Convert.ToTBD(System.String, System.String, System.Boolean, System.Boolean, System.Boolean)": "The BuildingEnvironments_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest BuildingEnvironments_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like BuildingEnvironments_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.BuildingEnvironment.Convert.ToMaterialRoughness(System.String)": "The BuildingEnvironments_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest BuildingEnvironments_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like BuildingEnvironments_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.BuildingEnvironment.Convert.ToGasType(System.String)": "The BuildingEnvironments_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest BuildingEnvironments_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like BuildingEnvironments_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.BuildingEnvironment.Compute.MapToLevel(System.Collections.Generic.List<BH.oM.Geometry.Polyline>, System.Collections.Generic.List<BH.oM.Geometry.Point>, System.Collections.Generic.List<System.String>, System.Collections.Generic.List<System.String>, System.Collections.Generic.List<System.Double>, System.Int32)": "The BuildingEnvironments_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest BuildingEnvironments_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like BuildingEnvironments_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.BuildingEnvironment.Compute.T3DFileUpdate(System.String, System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>, System.Collections.Generic.List<BH.oM.Environment.Elements.Opening>, System.Boolean)": "The BuildingEnvironments_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest BuildingEnvironments_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like BuildingEnvironments_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.BuildingEnvironment.Compute.T3DToTBDExport(System.String, System.String, System.Boolean, System.Boolean)": "The BuildingEnvironments_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest BuildingEnvironments_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like BuildingEnvironments_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.BuildingEnvironment.Compute.T3DFromGBXML(System.String, System.String, System.Boolean, System.Boolean)": "The BuildingEnvironments_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest BuildingEnvironments_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like BuildingEnvironments_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.BuildingEnvironment.Compute.TBDFileUpdate(System.String, System.Boolean)": "The BuildingEnvironments_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest BuildingEnvironments_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like BuildingEnvironments_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.BuildingEnvironment.Compute.T3DShadingCalculation(System.String, System.String, System.Boolean, System.Boolean)": "The BuildingEnvironments_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest BuildingEnvironments_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like BuildingEnvironments_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.BuildingEnvironment.Compute.TBDLoadSimulation(System.String, System.Boolean)": "The BuildingEnvironments_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest BuildingEnvironments_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like BuildingEnvironments_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.BuildingEnvironment.Compute.ViewFactor(BH.oM.Geometry.Point, System.Collections.Generic.List<BH.oM.Dimensional.IElement2D>, System.Int32, System.Int32)": "The BuildingEnvironments_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest BuildingEnvironments_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like BuildingEnvironments_Toolkit to be repromoted back to Beta.",
+    "BH.oM.MEP.Fixtures.Sprinkler": "The BuildingEnvironments_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest BuildingEnvironments_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like BuildingEnvironments_Toolkit to be repromoted back to Beta.",
+    "BH.oM.Environment.Enums.Language": "The BuildingEnvironments_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest BuildingEnvironments_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like BuildingEnvironments_Toolkit to be repromoted back to Beta.",
+    "BH.oM.Environment.SpaceCriteria.SprinklerType": "The BuildingEnvironments_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest BuildingEnvironments_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like BuildingEnvironments_Toolkit to be repromoted back to Beta.",
+    "BH.Adapter.DIALux.DIALuxAdapter(BH.oM.Adapter.FileSettings)": "The DIALux_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest DIALux_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like DIALux_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.GetSingleValueUpperLimit(TBD.Thermostat)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.GetNumberOfPeople(TBD.TBDDocument, TBD.zone)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.MinElevation(TBD.Perimeter)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.GetRGB(System.UInt32)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.BuildingElement(TBD.Building, BH.oM.Geometry.ICurve)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.BuildingElement(TBD.Building, System.String)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.Profiles(TBD.InternalGain)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.Profiles(TBD.Thermostat)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.UValue(TBD.buildingElement, System.Int32)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.GetSingleValueLowerLimit(TBD.Thermostat)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.ElementIsOpening(TBD.BuildingElementType)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.TBD3dVisualisation(System.String, System.Boolean)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.OpeningIsFrame(BH.oM.Environment.Elements.OpeningType)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.ConstructionThickness(TBD.Construction, System.Int32)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.GetZones(TBD.TBDDocument)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.GetHourlyValues(TBD.profile)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.MultiplyByFactor(System.Double[], System.Double)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.GValue(TBD.buildingElement, System.Int32)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Query.LTValue(TBD.buildingElement, System.Int32)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Modify.RemoveBrackets(System.String)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Modify.RemoveStringPart(System.String, System.String)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Modify.CleanString(System.String)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Modify.SetTag(BH.oM.Base.IBHoMObject, System.String)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Modify.FixBuildingElementType(BH.oM.Environment.Elements.OpeningType, TBD.buildingElement, TBD.zoneSurface)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Create.Panel(BH.oM.Geometry.ICurve, System.Double)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Create.TASSettings(System.Double, System.Double, System.Double, System.Double)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToDoubleList(System.Object)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToFloatList(System.Object)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTASPolygon(BH.oM.Geometry.Polyline, TBD.Polygon)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Geometry.Polyline, TBD.Perimeter)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.Polygon)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.Perimeter)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Geometry.Point, TBD.TasPoint)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.TasPoint)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Environment.SpaceCriteria.Thermostat, TBD.Thermostat)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.Thermostat)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Environment.Elements.Space, TBD.zone)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.zone, TBD.TBDDocument)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTASBuilding(BH.oM.Environment.Results.SimulationResult)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TSD.BuildingData, BH.oM.Environment.Results.ProfileResultUnit, BH.oM.Environment.Results.ProfileResultType, System.Int32, System.Int32)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Environment.Fragments.SizingMethod)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.SizingType)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Environment.SpaceCriteria.SimulationDayType, TBD.dayType)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTASString(BH.oM.Environment.SpaceCriteria.SimulationDayType)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.dayType)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTASZone(BH.oM.Environment.Results.SimulationResult)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TSD.ZoneData, BH.oM.Environment.Results.ProfileResultUnit, BH.oM.Environment.Results.ProfileResultType, System.Int32, System.Int32)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTASSurface(BH.oM.Environment.Results.SimulationResult)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TSD.SurfaceData, BH.oM.Environment.Results.ProfileResultUnit, BH.oM.Environment.Results.ProfileResultType, System.Int32, System.Int32)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTASSpaceType(BH.oM.Environment.Results.ProfileResultType)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTASSurfaceType(BH.oM.Environment.Results.ProfileResultType)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTASBuildingType(BH.oM.Environment.Results.ProfileResultType)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Environment.SpaceCriteria.Profile, TBD.profile)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.profile)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Environment.Elements.Opening, TBD.buildingElement, TBD.Construction)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Environment.Elements.Opening, TBD.Polygon)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTASOpening(TBD.Polygon, TBD.RoomSurface, BH.oM.Adapters.TAS.Settings.TASSettings)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Physical.Constructions.Layer, TBD.material)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTASType(BH.oM.Physical.Materials.Material)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTASProperties(TBD.material, TBD.Construction)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.material, TBD.Construction)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(System.Collections.Generic.List<BH.oM.Environment.SpaceCriteria.IGain>, TBD.InternalGain)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.InternalGain)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Environment.SpaceCriteria.EmitterType)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Environment.SpaceCriteria.Equipment, TBD.Emitter)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.EmitterTypes)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.Emitter)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Physical.Constructions.Construction, TBD.Construction)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Physical.Constructions.IConstruction, TBD.Construction)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.Construction)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Environment.Elements.OpeningType)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Environment.Elements.PanelType)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTBDSurfaceType(System.String)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTASBuildingElementType(BH.oM.Environment.Elements.Panel, System.Collections.Generic.List<System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>>)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTASOpeningType(TBD.BuildingElementType)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.BuildingElementType)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTASSurface(BH.oM.Environment.Elements.Panel)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Environment.Elements.Panel, TBD.buildingElement, TBD.Construction)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.buildingElement, TBD.zoneSurface, BH.oM.Adapters.TAS.Settings.TASSettings)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Environment.Elements.Building, TBD.Building)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.Building)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.ToTAS(BH.oM.Spatial.SettingOut.Level)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TAS3D.Floor)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTAS(TBD.BuildingStorey)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Convert.FromTASLevels(TBD.Building)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Compute.TBDSizing(System.String, System.Int32, System.Int32, System.Boolean, System.Boolean)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Engine.Adapters.TAS.Compute.TBDSizing(System.String, System.Boolean)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.oM.Adapters.TAS.Fragments.TASThermostatData": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.oM.Adapters.TAS.Fragments.TASSpaceData": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.oM.Adapters.TAS.Fragments.TASPanelData": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.oM.Adapters.TAS.Fragments.TASOpeningData": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.oM.Adapters.TAS.Fragments.TASInternalGainData": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.oM.Adapters.TAS.Fragments.TASBuilding": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.oM.Adapters.TAS.Fragments.TASDescription": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.oM.Adapters.TAS.Settings.TASSettings": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.oM.Adapters.TAS.TSDResultType": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Adapter.TAS.TasT3DAdapter()": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Adapter.TAS.TasTBDAdapter(BH.oM.Adapter.FileSettings, BH.oM.Adapters.TAS.Settings.TASSettings)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Adapter.TAS.TasTSDAdapter(BH.oM.Adapter.FileSettings, BH.oM.Adapters.TAS.TSDResultType, BH.oM.Environment.Results.SimulationResultType, BH.oM.Environment.Results.ProfileResultUnit, BH.oM.Environment.Results.ProfileResultType, System.Int32, System.Int32, BH.oM.Adapters.TAS.Settings.TASSettings)": "The TAS_Toolkit has been moved from Beta state to Alpha state and is not currently deployed via Beta installers. If you would like to experiment with the latest TAS_Toolkit capabilities, please download a daily Alpha. Please reach out to a member of the development team if you would like TAS_Toolkit to be repromoted back to Beta.",
+    "BH.Revit.Engine.Utility.Compute.WallElevation(Autodesk.Revit.DB.Wall, Autodesk.Revit.DB.ViewFamilyType, System.Int32, System.Double, System.String)": "This method has been removed in favour of the more powerful equivalent, WallElevations."
   },
   "MessageForNoUpgrade": {
-
+    
   }
 }
