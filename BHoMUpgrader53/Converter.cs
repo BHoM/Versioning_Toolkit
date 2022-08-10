@@ -49,7 +49,10 @@ namespace BH.Upgrader.v53
 
         public static Dictionary<string, object> UpgradeUIEnabledAttribute(Dictionary<string, object> oldVersion)
         {
-            return new Dictionary<string, object>(oldVersion);
+            var newVersion = new Dictionary<string, object>(oldVersion);
+            newVersion["AssemblyChanged"] = true;
+
+            return newVersion;
         }
 
         /***************************************************/
