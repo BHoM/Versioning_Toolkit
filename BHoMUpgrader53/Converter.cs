@@ -38,6 +38,8 @@ namespace BH.Upgrader.v53
         public Converter() : base()
         {
             PreviousVersion = "5.2";
+
+            ToNewObject.Add("BH.oM.Revit.Attributes.UIEnabledAttribute", UpgradeUIEnabledAttribute);
         }
 
 
@@ -45,5 +47,11 @@ namespace BH.Upgrader.v53
         /**** Private Methods                           ****/
         /***************************************************/
 
+        public static Dictionary<string, object> UpgradeUIEnabledAttribute(Dictionary<string, object> oldVersion)
+        {
+            return new Dictionary<string, object>(oldVersion);
+        }
+
+        /***************************************************/
     }
 }
