@@ -39,15 +39,46 @@ namespace BH.Upgrader.v53
         {
             PreviousVersion = "5.2";
 
-            ToNewObject.Add("BH.oM.Revit.Attributes.UIEnabledAttribute", UpgradeUIEnabledAttribute);
+            var revitTypeNames = new List<string>
+            {
+                "BH.oM.Revit.PinnedItemInfo",
+                "BH.oM.Revit.AddinManagementSettings",
+                "BH.oM.Revit.DockablePaneSettings",
+                "BH.oM.Revit.IApplicationServiceSettings",
+                "BH.oM.Revit.IRevitSettings",
+                "BH.oM.Revit.UIManagementSettings",
+                "BH.oM.Revit.Scenarios.ElementFilter",
+                "BH.oM.Revit.Scenarios.IScenario",
+                "BH.oM.Revit.Scenarios.IScenario1Element",
+                "BH.oM.Revit.Scenarios.IScenario2Elements",
+                "BH.oM.Revit.Scenarios.IScenario3Elements",
+                "BH.oM.Revit.Logging.BaseRevitLogItem",
+                "BH.oM.Revit.Logging.IRevitLog`1",
+                "BH.oM.Revit.Logging.IRevitLogItem",
+                "BH.oM.Revit.Logging.StandardRevitLog`1",
+                "BH.oM.Revit.Attributes.ComboBoxAttribute",
+                "BH.oM.Revit.Attributes.ManualTransactionAttribute",
+                "BH.oM.Revit.Attributes.TagsAttribute",
+                "BH.oM.Revit.Attributes.SplitButtonAttribute",
+                "BH.oM.Revit.Attributes.UIEnabledAttribute",
+                "BH.oM.Revit.Attributes.IconFileNameAttribute",
+                "BH.oM.Revit.Attributes.NameAttribute",
+                "BH.oM.Revit.Attributes.PanelNameAttribute",
+                "BH.oM.Revit.Attributes.TabNameAttribute",
+                "BH.oM.Revit.Attributes.ToolTipAttribute",
+                "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute",
+            };
+            foreach (string name in revitTypeNames)
+            {
+                ToNewObject.Add(name, CloneVersion);
+            }
         }
-
 
         /***************************************************/
         /**** Private Methods                           ****/
         /***************************************************/
 
-        public static Dictionary<string, object> UpgradeUIEnabledAttribute(Dictionary<string, object> oldVersion)
+        public static Dictionary<string, object> CloneVersion(Dictionary<string, object> oldVersion)
         {
             return new Dictionary<string, object>(oldVersion);
         }
