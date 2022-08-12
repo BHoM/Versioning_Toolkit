@@ -65,6 +65,8 @@ namespace BH.Upgrader.v53
                 "BH.oM.Revit.Scenarios.IScenario2Elements",
                 "BH.oM.Revit.Scenarios.IScenario3Elements",
                 "BH.oM.Revit.UIManagementSettings",
+                "BH.oM.Revit.Logging.StandardRevitLog",
+                "BH.oM.Revit.Logging.StandardRevitLog`1[[BH.oM.Revit.Logging.BaseRevitLogItem]]",
             };
             foreach (string name in revitTypeNames)
             {
@@ -78,7 +80,22 @@ namespace BH.Upgrader.v53
 
         public static Dictionary<string, object> CloneVersion(Dictionary<string, object> oldVersion)
         {
-            return new Dictionary<string, object>(oldVersion);
+            var newVersion = new Dictionary<string, object>();
+
+            foreach (KeyValuePair<string, object> kvp in oldVersion)
+            {
+                string key = kvp.Key;
+                object value = kvp.Value;
+                if (key == "_t")
+                {
+                    value = value.ToString().Replace("BuroHappold_Revit_oM", "Revit_UI_oM");
+                    value = value.ToString().Replace("BuroHappold_Revit_Engine", "Revit_UI_Engine");
+                    value = value.ToString().Replace("BuroHappold_Revit_UI", "Revit_UI");
+                }
+                newVersion[key] = value;
+            }
+
+            return newVersion;
         }
 
         /***************************************************/
