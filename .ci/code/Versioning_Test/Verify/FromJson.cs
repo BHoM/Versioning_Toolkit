@@ -44,10 +44,14 @@ namespace BH.Test.Versioning
         /**** Test Methods                ****/
         /*************************************/
 
-        public static TestResult FromJsonDatasets()
+        public static TestResult FromJsonDatasets(bool testAll = false)
         {
+            System.Threading.Thread.Sleep(5000);
             string testFolder = @"C:\ProgramData\BHoM\Datasets\TestSets\Versioning";
-            List<string> versions = new List<string> { "5.2", "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" };
+            List<string> versions = new List<string> { "5.2", };
+            if(testAll)
+                versions.AddRange(new List<string> { "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" });
+
             string exceptions = "Grasshopper|Rhinoceros";
 
             // Test all the BHoM versions available
