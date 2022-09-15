@@ -46,7 +46,6 @@ namespace BH.Test.Versioning
 
         public static TestResult FromJsonDatasets(bool testAll = false)
         {
-            System.Threading.Thread.Sleep(5000);
             string testFolder = @"C:\ProgramData\BHoM\Datasets\TestSets\Versioning";
             List<string> versions = new List<string> { "5.2", };
             if(testAll)
