@@ -38,11 +38,69 @@ namespace BH.Upgrader.v60
         public Converter() : base()
         {
             PreviousVersion = "5.3";
+
+            ToNewObject.Add("BH.oM.Adapters.Revit.RevitMaterialTakeOff", UpgradeRevitMaterialTakeoff);
         }
 
         /***************************************************/
         /**** Private Methods                           ****/
         /***************************************************/
+
+        public static Dictionary<string, object> UpgradeRevitMaterialTakeoff(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>();
+            newVersion["_t"] = "BH.oM.Physical.Materials.VolumetricMaterialTakeoff";
+
+            double totalVolume = 0;
+            object volumeObj;
+            if (oldVersion.TryGetValue("TotalVolume", out volumeObj) && volumeObj is double)
+                totalVolume = (double)volumeObj;
+
+            List<object> materials = new List<object>();
+            List<double> volumes = new List<double>();
+            object matCompObj;
+            if (oldVersion.TryGetValue("MaterialComposition", out matCompObj))
+            {
+                Dictionary<string, object> matComp = matCompObj as Dictionary<string, object>;
+                if (matComp != null)
+                {
+                    
+                    object materialsObj;
+                    if(matComp.TryGetValue("Materials", out materialsObj))
+                        materials = materialsObj as List<object>;
+
+                    List<double> ratios = null;
+                    object ratiosObj;
+
+                    if (matComp.TryGetValue("Ratios", out ratiosObj))
+                    {
+                        ratios = ratiosObj as List<double>;
+                        if (ratios == null)
+                        {
+                            List<object> list = ratiosObj as List<object>;
+                            if (list != null)
+                                ratios = list.Cast<double>().ToList();
+                        }
+                    }
+
+                    if (ratios != null)
+                    {
+                        foreach (double ratio in ratios)
+                        {
+                            volumes.Add(totalVolume * ratio);
+                        }
+                    }
+                }
+            }
+            //"BHoM_Guid", "CustomData", "Name", "Tags", "Fragments"
+            newVersion["Materials"] = materials;
+            newVersion["Volumes"] = volumes;
+            return newVersion;
+            //newVersion["Name"] = "";
+            //newVersion["BHoM_Guid"] = Guid.NewGuid();
+            //newVersion["CustomData"] = new Dictionary<string, object>();
+
+        }
 
         /***************************************************/
     }
