@@ -92,13 +92,10 @@ namespace BH.Upgrader.v60
                     }
                 }
             }
-            //"BHoM_Guid", "CustomData", "Name", "Tags", "Fragments"
+
             newVersion["Materials"] = materials;
             newVersion["Volumes"] = volumes;
             return newVersion;
-            //newVersion["Name"] = "";
-            //newVersion["BHoM_Guid"] = Guid.NewGuid();
-            //newVersion["CustomData"] = new Dictionary<string, object>();
 
         }
 
