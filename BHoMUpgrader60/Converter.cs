@@ -67,20 +67,16 @@ namespace BH.Upgrader.v60
                     
                     object materialsObj;
                     if(matComp.TryGetValue("Materials", out materialsObj))
-                        materials = materialsObj as List<object>;
+                        materials = (materialsObj as IEnumerable<object>)?.ToList();
 
                     List<double> ratios = null;
                     object ratiosObj;
 
                     if (matComp.TryGetValue("Ratios", out ratiosObj))
                     {
-                        ratios = ratiosObj as List<double>;
-                        if (ratios == null)
-                        {
-                            List<object> list = ratiosObj as List<object>;
-                            if (list != null)
-                                ratios = list.Cast<double>().ToList();
-                        }
+                        List<object> list = (ratiosObj as IEnumerable<object>)?.ToList();
+                        if (list != null)
+                            ratios = list.Cast<double>().ToList();
                     }
 
                     if (ratios != null)
