@@ -40,6 +40,8 @@ namespace BH.Upgrader.v60
             PreviousVersion = "5.3";
 
             ToNewObject.Add("BH.oM.Adapters.Revit.RevitMaterialTakeOff", UpgradeRevitMaterialTakeoff);
+            ToNewObject.Add("BH.oM.LadybugTools.ExternalComfortShelter", UpgradeShelter);
+            ToNewObject.Add("BH.oM.LadybugTools.ExternalComfortTypology", UpgradeTypology);
         }
 
         /***************************************************/
@@ -93,6 +95,42 @@ namespace BH.Upgrader.v60
             newVersion["Volumes"] = volumes;
             return newVersion;
 
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeShelter(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>();
+            newVersion["_t"] = "BH.oM.LadybugTools.Shelter";
+
+            newVersion["WindPorosity"] = oldVersion["Porosity"];
+            newVersion["RadiationPorosity"] = oldVersion["Porosity"];
+            newVersion["AzimuthRange"] = new List<double>() { 
+                (double)oldVersion["StartAzimuth"], 
+                (double)oldVersion["EndAzimuth"] 
+            };
+            newVersion["AltitudeRange"] = new List<double>() {
+                (double)oldVersion["StartAltitude"],
+                (double)oldVersion["EndAltitude"]
+            };
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeTypology(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>();
+            newVersion["_t"] = "BH.oM.LadybugTools.Typology";
+
+            newVersion["Name"] = oldVersion["Name"];
+            newVersion["Shelters"] = oldVersion["Shelters"];
+            newVersion["EvaporativeCoolingEffectiveness"] = oldVersion["EvaporativeCoolingEffectiveness"];
+            newVersion["WindSpeedAdjustment"] = 0;
+
+            return newVersion;
         }
 
         /***************************************************/
