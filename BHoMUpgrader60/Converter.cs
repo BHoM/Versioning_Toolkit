@@ -42,6 +42,7 @@ namespace BH.Upgrader.v60
             ToNewObject.Add("BH.oM.Adapters.Revit.RevitMaterialTakeOff", UpgradeRevitMaterialTakeoff);
             ToNewObject.Add("BH.oM.LadybugTools.ExternalComfortShelter", UpgradeShelter);
             ToNewObject.Add("BH.oM.LadybugTools.ExternalComfortTypology", UpgradeTypology);
+            ToNewObject.Add("BH.oM.XML.Bluebeam.Markup", UpdateBluebeamMarkdown);
         }
 
         /***************************************************/
@@ -129,6 +130,16 @@ namespace BH.Upgrader.v60
             newVersion["Shelters"] = oldVersion["Shelters"];
             newVersion["EvaporativeCoolingEffectiveness"] = oldVersion["EvaporativeCoolingEffectiveness"];
             newVersion["WindSpeedAdjustment"] = 0;
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        public static Dictionary<string, object> UpdateBluebeamMarkdown(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            newVersion["Depth"] = oldVersion["Depth"].ToString();
 
             return newVersion;
         }
