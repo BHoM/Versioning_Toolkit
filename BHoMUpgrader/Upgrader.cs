@@ -117,6 +117,11 @@ namespace BH.Upgrader.Base
                 else
                     result = UpgradeObject(document, converter);
             }
+            else if(document.Contains("k") && document.Contains("v"))
+            {
+                result = UpgradeObject(document, converter);
+            }
+            
                 
             return result;
         }
@@ -258,7 +263,12 @@ namespace BH.Upgrader.Base
         private BsonDocument UpgradeObject(BsonDocument document, Converter converter)
         {
             //Get the old type
-            string oldType = CleanTypeString(document["_t"].AsString);
+            string oldType = "";
+            try
+            {
+                oldType = CleanTypeString(document["_t"].AsString);
+            }
+            catch { }
 
             // Check if the object type is classified as deleted or without update
             CheckForNoUpgrade(converter, oldType, "object type");
