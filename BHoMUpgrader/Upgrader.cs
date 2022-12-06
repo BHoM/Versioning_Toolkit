@@ -121,8 +121,7 @@ namespace BH.Upgrader.Base
             {
                 result = UpgradeObject(document, converter);
             }
-            
-                
+
             return result;
         }
 
