@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CE83A564-40FD-4382-967F-BA7809379A34}</ProjectGuid>
+    <ProjectGuid>{C93EE8E5-FB50-4EA5-8D92-842937DC70EC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BHoMUpgrader60</RootNamespace>
-    <AssemblyName>BHoMUpgrader60</AssemblyName>
+    <RootNamespace>BHoMUpgrader61</RootNamespace>
+    <AssemblyName>BHoMUpgrader61</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,15 +24,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>Build\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -50,20 +49,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Upgrades.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="Upgrades.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BHoMUpgrader\BHoMUpgrader.csproj">
       <Project>{47629a75-8509-491a-82e5-517a2d8b945e}</Project>
       <Name>BHoMUpgrader</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PostBuild\PostBuild.csproj">
+      <Project>{4ec319a6-67c9-4627-9de6-046bb5bae401}</Project>
+      <Name>PostBuild</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y /I /E "$(TargetDir)*.dll" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader60
-xcopy /Y /I /E "$(TargetDir)BHoMUpgrader60.exe" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader60
-xcopy /Y /I /E "$(TargetDir)Upgrades.json" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader60</PostBuildEvent>
+    <PostBuildEvent>xcopy /Y /I /E "$(TargetDir)*.dll" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader61
+xcopy /Y /I /E "$(TargetDir)BHoMUpgrader61.exe" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader61
+call "$(TargetDir)PostBuild.exe" ..\..\..\ "C:\ProgramData\BHoM\Upgrades"</PostBuildEvent>
   </PropertyGroup>
 </Project>
