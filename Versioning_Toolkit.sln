@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHoMUpgrader53", "BHoMUpgra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHoMUpgrader60", "BHoMUpgrader60\BHoMUpgrader60.csproj", "{CE83A564-40FD-4382-967F-BA7809379A34}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHoMUpgrader61", "BHoMUpgrader61\BHoMUpgrader61.csproj", "{C93EE8E5-FB50-4EA5-8D92-842937DC70EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{CE83A564-40FD-4382-967F-BA7809379A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE83A564-40FD-4382-967F-BA7809379A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE83A564-40FD-4382-967F-BA7809379A34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C93EE8E5-FB50-4EA5-8D92-842937DC70EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C93EE8E5-FB50-4EA5-8D92-842937DC70EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C93EE8E5-FB50-4EA5-8D92-842937DC70EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C93EE8E5-FB50-4EA5-8D92-842937DC70EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
