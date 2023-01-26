@@ -24,6 +24,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -47,6 +48,13 @@ namespace PostBuild
                 throw new DirectoryNotFoundException("The source folder does not exists: " + sourceFolder);
             if (!Directory.Exists(targetFolder))
                 Directory.CreateDirectory(targetFolder);
+
+            try
+            {
+                Assembly.LoadFrom(@"C:\ProgramData\BHoM\Assemblies\RevitAPI.dll");
+                Assembly.LoadFrom(@"C:\ProgramData\BHoM\Assemblies\RevitAPIUI.dll");
+            }
+            catch { }
 
             // Create Upgrades file
             CopyUpgrades(sourceFolder, targetFolder);
