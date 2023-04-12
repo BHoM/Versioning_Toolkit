@@ -38,12 +38,95 @@ namespace BH.Upgrader.v62
         public Converter() : base()
         {
             PreviousVersion = "6.1";
+
+            ToNewObject.Add("BH.oM.Lighting.Elements.Luminaire", UpgradeLuminaire);
         }
 
         /***************************************************/
         /**** Private Methods                           ****/
         /***************************************************/
 
+        private static Dictionary<string, object> UpgradeLuminaire(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            if (newVersion.ContainsKey("Direction"))
+            {
+                if (newVersion["Direction"] is null)
+                {
+                    newVersion["Orientation"] = null;
+                    newVersion.Remove("Direction");
+                    return newVersion;
+                }
+
+                Dictionary<string, object> xVec = new Dictionary<string, object>() { ["X"] = 1, ["Y"] = 0, ["Z"] = 0 };
+                Dictionary<string, object> yVec = new Dictionary<string, object>() { ["X"] = 0, ["Y"] = 1, ["Z"] = 0 };
+                Dictionary<string, object> zVec = new Dictionary<string, object>() { ["X"] = 0, ["Y"] = 0, ["Z"] = 1 };
+
+                Dictionary<string, object> basis = new Dictionary<string, object>() { ["X"] = xVec, ["Y"] = yVec, ["Z"] = zVec };
+
+                Dictionary<string, object> orientation = newVersion["Direction"] as Dictionary<string, object>;
+                double dirX = (double)orientation["X"];
+                double dirY = (double)orientation["Y"];
+                double dirZ = (double)orientation["Z"];
+
+                if (dirX == 0 && dirY == 0)
+                {
+                    if (dirZ == 0)
+                    {
+                        basis = null;
+                    }
+                    else if (dirZ > 0)
+                    {
+                        basis["X"] = xVec;
+                        basis["Y"] = yVec;
+                        basis["Z"] = zVec;
+                    }
+                    else
+                    {
+                        basis["X"] = new Dictionary<string, object>() { ["X"] = -1, ["Y"] = 0, ["Z"] = 0 };
+                        basis["Y"] = yVec;
+                        basis["Z"] = new Dictionary<string, object>() { ["X"] = 0, ["Y"] = 0, ["Z"] = -1 };
+                    }
+                }
+                else
+                {
+                    basis["X"] = Normalise(CrossProduct(orientation, zVec));
+                    basis["Y"] = Normalise(CrossProduct(orientation, xVec));
+                    basis["Z"] = orientation;
+                }
+
+                newVersion["Orientation"] = basis;
+                newVersion.Remove("Direction");
+            }
+            return newVersion;
+        }
+
+        private static Dictionary<string, object> CrossProduct(Dictionary<string, object> a, Dictionary<string, object> b)
+        {
+            double aX = (double)a["X"];
+            double aY = (double)a["Y"];
+            double aZ = (double)a["Z"];
+
+            double bX = (double)b["X"];
+            double bY = (double)b["Y"];
+            double bZ = (double)b["Z"];
+
+            return new Dictionary<string, object> { ["X"] = aY * bZ - aZ * bY, ["Y"] = aZ * bX - aX * bZ, ["Z"] = aX * bY - aY * bX };
+        }
+
+        private static Dictionary<string, object> Normalise(Dictionary<string, object> a)
+        {
+            double x = (double)a["X"];
+            double y = (double)a["Y"];
+            double z = (double)a["Z"];
+            double d = Math.Sqrt(x * x + y * y + z * z);
+
+            if (d == 0)
+                return null;
+
+            return new Dictionary<string, object> { ["X"] = x / d, ["Y"] = y / d, ["Z"] = z / d };
+
+        }
     }
 }
 
