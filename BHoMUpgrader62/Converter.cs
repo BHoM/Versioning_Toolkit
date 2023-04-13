@@ -51,49 +51,55 @@ namespace BH.Upgrader.v62
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
             if (newVersion.ContainsKey("Direction"))
             {
-                if (newVersion["Direction"] is null)
+                if (newVersion["Direction"] == null)
                 {
                     newVersion["Orientation"] = null;
                     newVersion.Remove("Direction");
                     return newVersion;
                 }
 
-                Dictionary<string, object> xVec = new Dictionary<string, object>() { ["X"] = 1, ["Y"] = 0, ["Z"] = 0 };
-                Dictionary<string, object> yVec = new Dictionary<string, object>() { ["X"] = 0, ["Y"] = 1, ["Z"] = 0 };
-                Dictionary<string, object> zVec = new Dictionary<string, object>() { ["X"] = 0, ["Y"] = 0, ["Z"] = 1 };
+                Dictionary<string, object> basis = null;
 
-                Dictionary<string, object> basis = new Dictionary<string, object>() { ["X"] = xVec, ["Y"] = yVec, ["Z"] = zVec };
-
-                Dictionary<string, object> orientation = newVersion["Direction"] as Dictionary<string, object>;
-                double dirX = (double)orientation["X"];
-                double dirY = (double)orientation["Y"];
-                double dirZ = (double)orientation["Z"];
-
-                if (dirX == 0 && dirY == 0)
+                try
                 {
-                    if (dirZ == 0)
+                    Dictionary<string, object> xVec = new Dictionary<string, object>() { ["X"] = 1, ["Y"] = 0, ["Z"] = 0 };
+                    Dictionary<string, object> yVec = new Dictionary<string, object>() { ["X"] = 0, ["Y"] = 1, ["Z"] = 0 };
+                    Dictionary<string, object> zVec = new Dictionary<string, object>() { ["X"] = 0, ["Y"] = 0, ["Z"] = 1 };
+
+                    basis = new Dictionary<string, object>() { ["X"] = xVec, ["Y"] = yVec, ["Z"] = zVec };
+
+                    Dictionary<string, object> orientation = newVersion["Direction"] as Dictionary<string, object>;
+                    double dirX = (double)orientation["X"];
+                    double dirY = (double)orientation["Y"];
+                    double dirZ = (double)orientation["Z"];
+
+                    if (dirX == 0 && dirY == 0)
                     {
-                        basis = null;
-                    }
-                    else if (dirZ > 0)
-                    {
-                        basis["X"] = xVec;
-                        basis["Y"] = yVec;
-                        basis["Z"] = zVec;
+                        if (dirZ == 0)
+                        {
+                            basis = null;
+                        }
+                        else if (dirZ > 0)
+                        {
+                            basis["X"] = xVec;
+                            basis["Y"] = yVec;
+                            basis["Z"] = zVec;
+                        }
+                        else
+                        {
+                            basis["X"] = new Dictionary<string, object>() { ["X"] = -1, ["Y"] = 0, ["Z"] = 0 };
+                            basis["Y"] = yVec;
+                            basis["Z"] = new Dictionary<string, object>() { ["X"] = 0, ["Y"] = 0, ["Z"] = -1 };
+                        }
                     }
                     else
                     {
-                        basis["X"] = new Dictionary<string, object>() { ["X"] = -1, ["Y"] = 0, ["Z"] = 0 };
-                        basis["Y"] = yVec;
-                        basis["Z"] = new Dictionary<string, object>() { ["X"] = 0, ["Y"] = 0, ["Z"] = -1 };
+                        basis["X"] = Normalise(CrossProduct(orientation, zVec));
+                        basis["Y"] = Normalise(CrossProduct(orientation, xVec));
+                        basis["Z"] = orientation;
                     }
                 }
-                else
-                {
-                    basis["X"] = Normalise(CrossProduct(orientation, zVec));
-                    basis["Y"] = Normalise(CrossProduct(orientation, xVec));
-                    basis["Z"] = orientation;
-                }
+                catch { }
 
                 newVersion["Orientation"] = basis;
                 newVersion.Remove("Direction");
