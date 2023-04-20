@@ -199,6 +199,7 @@ namespace BH.Upgrader.v62
             ToNewObject.Add("BH.oM.DeepLearning.Models.Graph", UpgradeDeepLearningGraph);
             ToNewObject.Add("BH.oM.Forms.InputTree`1[[System.Object]]", UpgradeInputTree);
             ToNewObject.Add("BH.oM.Data.Collections.PointMatrix`1[[System.Object]]", UpgradePointMatrix);
+            ToNewObject.Add("BH.oM.Structure.FloorSystem.FloorDesign", UpgradeFloorDesing);
         }
 
         /***************************************************/
@@ -326,13 +327,26 @@ namespace BH.Upgrader.v62
                 newVersion["Modules"] = UpgradeGraph(newVersion["Modules"] as Dictionary<string, object>, "BH.oM.DeepLearning.IModule");
             }
             return newVersion;
-        }
+		}
 
         /***************************************************/
 
         private static Dictionary<string, object> UpgradeInputTree(Dictionary<string, object> oldVersion)
         {
             return UpgradeGraph(oldVersion, "System.Object");
+        }
+		
+        /***************************************************/
+		
+        private static void MoveToCustomData(Dictionary<string, object> newVersion, Dictionary<string, object> customData, string prop)
+        {
+            if (newVersion.ContainsKey(prop))
+            {
+                if (newVersion[prop] != null)
+                    customData[prop] = newVersion[prop];
+
+                newVersion.Remove(prop);
+            }
         }
 
         /***************************************************/
@@ -363,8 +377,8 @@ namespace BH.Upgrader.v62
 
             }
             return newVersion;
-        }
-
+		}
+		
         /***************************************************/
 
         private static Dictionary<string, object> UpgradePointMatrix(Dictionary<string, object> oldVersion)
@@ -413,7 +427,104 @@ namespace BH.Upgrader.v62
         }
 
         /***************************************************/
+		
+        private static Dictionary<string, object> UpgradeFloorDesing(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
 
+            if (!newVersion.ContainsKey("ColumnConfiguration"))
+                newVersion["ColumnConfiguration"] = null;
+
+            if (newVersion.ContainsKey("FloorConfiguration"))
+                newVersion["FloorConfiguration"] = UpgradeFloorConfiguration(newVersion["FloorConfiguration"] as Dictionary<string, object>);
+
+            Dictionary<string, object> customData;
+            if (newVersion.ContainsKey("CustomData"))
+                customData = newVersion["CustomData"] as Dictionary<string, object>;
+            else
+                customData = new Dictionary<string, object>();
+
+            MoveToCustomData(newVersion, customData, "Utilisation");
+            MoveToCustomData(newVersion, customData, "MinBaysX");
+            MoveToCustomData(newVersion, customData, "MinBaysY");
+            MoveToCustomData(newVersion, customData, "GlobalWarmingPotential");
+            MoveToCustomData(newVersion, customData, "LifeCycleAssessmentNotes");
+
+            newVersion["CustomData"] = customData;
+
+            return newVersion;
+        }
+
+        /***************************************************/
+		
+        private static Dictionary<string, object> UpgradeFloorConfiguration(Dictionary<string, object> oldVersion)
+        {
+            if(oldVersion == null)
+				return null;
+			
+            if (newVersion["_t"].ToString() == "BH.oM.Structure.FloorSystem.SteelInfillBeams" ||
+                newVersion["_t"].ToString() == "BH.oM.Structure.FloorSystem.TimberInfillBeams" ||
+                newVersion["_t"].ToString() == "BH.oM.Structure.FloorSystem.CompositeSteelInfillBeams")
+            {
+                bool primSet = newVersion.ContainsKey("PrimaryBeamTopLevel");
+                bool secSet = newVersion.ContainsKey("SecondaryBeamTopLevel");
+
+                if (!primSet || !secSet)
+                {
+                    double thickness = TotalThickness(newVersion["Slab"] as Dictionary<string, object>);
+
+                    if (!primSet)
+                        newVersion["PrimaryBeamTopLevel"] = thickness;
+
+                    if (!secSet)
+                        newVersion["SecondaryBeamTopLevel"] = thickness;
+                }
+            }
+
+            return newVersion;
+        }
+		
+        /***************************************************/
+
+        private static double TotalThickness(Dictionary<string, object> slab)
+        {
+            try
+            {
+                if (slab["_t"].ToString() == "BH.oM.Structure.SurfaceProperties.ConstantThickness")
+                {
+                    return (double)slab["Thickness"];
+                }
+                else if (slab["_t"].ToString() == "BH.oM.Structure.SurfaceProperties.SlabOnDeck")
+                {
+                    return (double)slab["DeckHeight"] + (double)slab["SlabThickness"];
+                }
+                else if (slab["_t"].ToString() == "BH.oM.Structure.SurfaceProperties.Layered")
+                {
+                    double thickness = 0;
+                    if (slab.ContainsKey("Layers"))
+                    {
+                        object[] layers = slab["Layers"] as object[];
+                        foreach (object layer in layers) 
+                        { 
+                            Dictionary<string,object> lay = layer as Dictionary<string,object>;
+                            if (lay != null && lay.ContainsKey("Thickness"))
+                            {
+                                thickness += (double)lay["Thickness"];
+                            }
+                        }
+                    }
+                    return thickness;
+                }
+            }
+            catch (Exception)
+            {
+
+                return double.NaN;
+            }
+            return double.NaN;
+        }
+
+        /***************************************************/
     }
 }
 
