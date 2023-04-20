@@ -20,6 +20,7 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using BH.Upgrader.Base;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -200,10 +201,118 @@ namespace BH.Upgrader.v62
             ToNewObject.Add("BH.oM.Forms.InputTree`1[[System.Object]]", UpgradeInputTree);
             ToNewObject.Add("BH.oM.Data.Collections.PointMatrix`1[[System.Object]]", UpgradePointMatrix);
             ToNewObject.Add("BH.oM.Structure.FloorSystem.FloorDesign", UpgradeFloorDesing);
+            ToNewObject.Add("BH.oM.LifeCycleAssessment.EnvironmentalMetric", UpdateEnvironmentalMetric);
         }
 
         /***************************************************/
         /**** Private Methods                           ****/
+        /***************************************************/
+
+        private static Dictionary<string, object> UpdateEnvironmentalMetric(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+            {
+                return null;
+            }
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>();
+            bool isBiogenicCarbon = false;
+            if (oldVersion.TryGetValue("Field", out object fieldObject))
+            {
+                string fieldString = fieldObject.ToString();
+                switch (fieldString)
+                {
+                    case "GlobalWarmingPotential":
+                        newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.GlobalWarmingPotentialMetrics";
+                        newVersion["BiogenicCarbon"] = double.NaN;
+                        break;
+                    case "BiogenicCarbon":
+                        newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.GlobalWarmingPotentialMetrics";
+                        isBiogenicCarbon = true;
+                        break;
+                    case "AcidificationPotential":
+                        newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.AcidificationPotentialMetrics";
+                        break;
+                    default:
+                        return null;
+                }
+            }
+
+            HashSet<string> allowedPhases = new HashSet<string>
+            {
+                "A1",
+                "A2",
+                "A3",
+                "A4",
+                "A5",
+                "A1toA3",
+                "B1",
+                "B2",
+                "B3",
+                "B4",
+                "B5",
+                "B6",
+                "B7",
+                "C1",
+                "C2",
+                "C3",
+                "C4",
+                "D"
+            };
+
+            string phase = null;
+
+            if (isBiogenicCarbon)
+            {
+                phase = "BiogenicCarbon";
+            }
+            else
+            {
+                object phaseObject;
+                List<string> phases = new List<string>();
+                if (oldVersion.TryGetValue("Phases", out phaseObject))
+                {
+
+                    if (phaseObject is IEnumerable<object> phasesEnumerable)
+                    {
+                        foreach (object ph in phasesEnumerable)
+                        {
+                            if (ph is string phaseString)
+                                phases.Add(phaseString);
+                        }
+                    }
+                    if (phases.Count == 1)
+                        phase = phases[0];
+                    else if (phases.Count == 3)
+                    {
+                        if (phases.Contains("A1") && phases.Contains("A2") && phases.Contains("A3"))
+                            phase = "A1toA3";
+                    }
+                }
+
+                if (phase == null || !allowedPhases.Contains(phase))
+                {
+                    string msg;
+                    if (phases.Count == 0)
+                        msg = "Unable to upgrade EnvironmentalMetrics with unset phases";
+                    else
+                        msg = $"Unable to upgrade EnvironmentalMetrics with phases set to {string.Join(",", phases)}.";
+                    return null;
+                }
+            }
+
+
+            //Initialise with NaN values
+            foreach (string p in allowedPhases)
+            {
+                newVersion[p] = double.NaN;
+            }
+
+            newVersion[phase] = oldVersion["Quantity"];
+
+            return newVersion;
+        }
+
         /***************************************************/
 
         private static Dictionary<string, object> UpgradeLuminaire(Dictionary<string, object> oldVersion)
