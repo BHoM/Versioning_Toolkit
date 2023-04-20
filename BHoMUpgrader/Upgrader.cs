@@ -375,7 +375,7 @@ namespace BH.Upgrader.Base
                 string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
                 foreach (string p in properties)
                 {
-                    if (newDoc.Contains(p) && document.Contains(p))
+                    if (!newDoc.Contains(p) && document.Contains(p))
                         newDoc[p] = document[p];
                 }
 
