@@ -40,6 +40,7 @@ namespace BH.Upgrader.v62
             PreviousVersion = "6.1";
 
             ToNewObject.Add("BH.oM.Lighting.Elements.Luminaire", UpgradeLuminaire);
+            ToNewObject.Add("BH.oM.Base.Attributes.InputAttribute", UpgradeInputAttribute);
         }
 
         /***************************************************/
@@ -132,6 +133,14 @@ namespace BH.Upgrader.v62
 
             return new Dictionary<string, object> { ["X"] = x / d, ["Y"] = y / d, ["Z"] = z / d };
 
+        }
+
+        private static Dictionary<string, object> UpgradeInputAttribute(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            newVersion.Add("Exposure", "Display");
+
+            return newVersion;
         }
     }
 }
