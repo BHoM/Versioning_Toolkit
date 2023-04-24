@@ -256,6 +256,16 @@ namespace BH.Upgrader.v62
                 }
                 catch { }
 
+                if (basis != null)
+                {
+                    foreach (object o in basis.Values)
+                    {
+                        if (o is Dictionary<string, object> vector)
+                            vector["_t"] = "BH.oM.Geometry.Vector";
+                    }
+                    basis["_t"] = "BH.oM.Geometry.Basis";
+                }
+
                 newVersion["Orientation"] = basis;
                 newVersion.Remove("Direction");
             }
