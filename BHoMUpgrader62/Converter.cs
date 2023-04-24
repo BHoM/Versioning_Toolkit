@@ -26,6 +26,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace BH.Upgrader.v62
 {
@@ -38,7 +39,7 @@ namespace BH.Upgrader.v62
         public Converter() : base()
         {
             PreviousVersion = "6.1";
-
+            
             ToNewObject.Add("BH.oM.Lighting.Elements.Luminaire", UpgradeLuminaire);
             ToNewObject.Add("BH.oM.Base.Attributes.InputAttribute", UpgradeInputAttribute);
             MessageForDeleted.Add("BH.Revit.Engine.Rebar.Query.UsedBarDiameters(System.Collections.Generic.List<Autodesk.Revit.DB.Structure.Rebar>)", "Revit Rebar project has been discontinued and is not available any more. Please contact the BHoM development team in case of any questions.");
@@ -195,6 +196,9 @@ namespace BH.Upgrader.v62
             MessageForDeleted.Add("BH.Revit.oM.Rebar.Modify", "Revit Rebar project has been discontinued and is not available any more. Please contact the BHoM development team in case of any questions.");
             MessageForDeleted.Add("BH.Revit.oM.Rebar.Create", "Revit Rebar project has been discontinued and is not available any more. Please contact the BHoM development team in case of any questions.");
             MessageForDeleted.Add("BH.Revit.oM.Rebar.Compute", "Revit Rebar project has been discontinued and is not available any more. Please contact the BHoM development team in case of any questions.");
+            ToNewObject.Add("BH.oM.DeepLearning.Models.Graph", UpgradeDeepLearningGraph);
+            ToNewObject.Add("BH.oM.Forms.InputTree`1[[System.Object]]", UpgradeInputTree);
+            ToNewObject.Add("BH.oM.Data.Collections.PointMatrix`1[[System.Object]]", UpgradePointMatrix);
         }
 
         /***************************************************/
@@ -272,6 +276,8 @@ namespace BH.Upgrader.v62
             return newVersion;
         }
 
+        /***************************************************/
+
         private static Dictionary<string, object> CrossProduct(Dictionary<string, object> a, Dictionary<string, object> b)
         {
             double aX = (double)a["X"];
@@ -284,6 +290,8 @@ namespace BH.Upgrader.v62
 
             return new Dictionary<string, object> { ["X"] = aY * bZ - aZ * bY, ["Y"] = aZ * bX - aX * bZ, ["Z"] = aX * bY - aY * bX };
         }
+
+        /***************************************************/
 
         private static Dictionary<string, object> Normalise(Dictionary<string, object> a)
         {
@@ -306,6 +314,106 @@ namespace BH.Upgrader.v62
 
             return newVersion;
         }
+		
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeDeepLearningGraph(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (newVersion.ContainsKey("Modules"))
+            {
+                newVersion["Modules"] = UpgradeGraph(newVersion["Modules"] as Dictionary<string, object>, "BH.oM.DeepLearning.IModule");
+            }
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeInputTree(Dictionary<string, object> oldVersion)
+        {
+            return UpgradeGraph(oldVersion, "System.Object");
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeGraph(Dictionary<string, object> oldVersion, string typeRestriction)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (!newVersion.ContainsKey("_t"))
+                newVersion["_t"] = $"BH.oM.Data.Collections.Tree`1[[{typeRestriction}]]";
+
+
+            if (newVersion.ContainsKey("Children"))
+            {
+                Dictionary<string, object> children = newVersion["Children"] as Dictionary<string, object>;
+                if(children != null) 
+                {
+                    Dictionary<string, object> newChildren = new Dictionary<string, object>();
+                    foreach (var item in children)
+                    {
+                        newChildren[item.Key] = UpgradeGraph(item.Value as Dictionary<string, object>, typeRestriction);
+                    }
+                    newVersion["Children"] = newChildren;
+                }
+
+            }
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradePointMatrix(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (newVersion.ContainsKey("Data"))
+            {
+                object[] data = newVersion["Data"] as object[];
+                if (data != null)
+                {
+                    object[] newData = new object[data.Length];
+
+                    for (int i = 0; i < data.Length; i++)
+                    {
+                        Dictionary<string,object> item = data[i] as Dictionary<string,object>;
+                        if (item != null)
+                        {
+                            object[] localData = item["v"] as object[];
+
+                            if (localData != null)
+                            {
+                                object[] newLocData = new object[localData.Length];
+                                for (int j = 0; j < localData.Length; j++)
+                                {
+                                    if (localData[j] is Dictionary<string, object> dic)
+                                    {
+                                        dic["_t"] = "BH.oM.Data.Collections.LocalData`1[[System.Object]]";
+                                        newLocData[j] = dic;
+                                    }
+                                }
+                                item["v"] = newLocData;
+                            }
+                            newData[i] = item;
+                        }
+                    }
+                    
+                    newVersion["Data"] = newData;
+                }
+
+            }
+            return newVersion;
+        }
+
+        /***************************************************/
+
     }
 }
 
