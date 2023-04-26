@@ -221,13 +221,13 @@ namespace BH.Upgrader.v62
 
                 try
                 {
-                    Dictionary<string, object> xVec = new Dictionary<string, object>() { ["X"] = 1, ["Y"] = 0, ["Z"] = 0 };
-                    Dictionary<string, object> yVec = new Dictionary<string, object>() { ["X"] = 0, ["Y"] = 1, ["Z"] = 0 };
-                    Dictionary<string, object> zVec = new Dictionary<string, object>() { ["X"] = 0, ["Y"] = 0, ["Z"] = 1 };
+                    Dictionary<string, object> xVec = new Dictionary<string, object>() { ["X"] = 1.0, ["Y"] = 0.0, ["Z"] = 0.0 };
+                    Dictionary<string, object> yVec = new Dictionary<string, object>() { ["X"] = 0.0, ["Y"] = 1.0, ["Z"] = 0.0};
+                    Dictionary<string, object> zVec = new Dictionary<string, object>() { ["X"] = 0.0, ["Y"] = 0.0, ["Z"] = 1.0 };
 
                     basis = new Dictionary<string, object>() { ["X"] = xVec, ["Y"] = yVec, ["Z"] = zVec };
 
-                    Dictionary<string, object> orientation = newVersion["Direction"] as Dictionary<string, object>;
+                    Dictionary<string, object> orientation = Normalise(newVersion["Direction"] as Dictionary<string, object>);
                     double dirX = (double)orientation["X"];
                     double dirY = (double)orientation["Y"];
                     double dirZ = (double)orientation["Z"];
@@ -246,9 +246,9 @@ namespace BH.Upgrader.v62
                         }
                         else
                         {
-                            basis["X"] = new Dictionary<string, object>() { ["X"] = -1, ["Y"] = 0, ["Z"] = 0 };
+                            basis["X"] = new Dictionary<string, object>() { ["X"] = -1.0, ["Y"] = 0.0, ["Z"] = 0.0 };
                             basis["Y"] = yVec;
-                            basis["Z"] = new Dictionary<string, object>() { ["X"] = 0, ["Y"] = 0, ["Z"] = -1 };
+                            basis["Z"] = new Dictionary<string, object>() { ["X"] = 0.0, ["Y"] = 0.0, ["Z"] = -1.0 };
                         }
                     }
                     else
