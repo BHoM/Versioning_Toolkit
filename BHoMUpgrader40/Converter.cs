@@ -61,6 +61,9 @@ namespace BH.Upgrader.v40
             ToNewObject.Add("BH.oM.MEP.System.SectionProperties.DuctSectionProperty", UpgradeDuctSectionProperty);
             ToNewObject.Add("BH.oM.MEP.System.SectionProperties.PipeSectionProperty", UpgradePipeSectionProperty);
             ToNewObject.Add("BH.oM.MEP.System.SectionProperties.WireSectionProperty", UpgradeWireSectionProperty);
+            ToNewObject.Add("BH.oM.MEP.SectionProperties.DuctSectionProperty", UpgradeDuctSectionProperty);
+            ToNewObject.Add("BH.oM.MEP.SectionProperties.PipeSectionProperty", UpgradePipeSectionProperty);
+            ToNewObject.Add("BH.oM.MEP.SectionProperties.WireSectionProperty", UpgradeWireSectionProperty);
         }
 
 
@@ -74,6 +77,7 @@ namespace BH.Upgrader.v40
                 return null;
 
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            newVersion["_t"] = "BH.oM.MEP.System.SectionProperties.WireSectionProperty";
 
             if (newVersion.ContainsKey("ConductiveMaterial"))
                 newVersion["ConductiveMaterial"] = ConvertIMEPMaterialToPhysicalMaterial(newVersion["ConductiveMaterial"] as Dictionary<string, object>);
@@ -92,6 +96,7 @@ namespace BH.Upgrader.v40
                 return null;
 
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            newVersion["_t"] = "BH.oM.MEP.System.SectionProperties.PipeSectionProperty";
 
             if (newVersion.ContainsKey("PipeMaterial"))
                 newVersion["PipeMaterial"] = ConvertIMEPMaterialToPhysicalMaterial(newVersion["PipeMaterial"] as Dictionary<string, object>);
@@ -110,8 +115,9 @@ namespace BH.Upgrader.v40
                 return null;
 
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            newVersion["_t"] = "BH.oM.MEP.System.SectionProperties.DuctSectionProperty";
 
-            if(newVersion.ContainsKey("DuctMaterial"))
+            if (newVersion.ContainsKey("DuctMaterial"))
                 newVersion["DuctMaterial"] = ConvertIMEPMaterialToPhysicalMaterial(newVersion["DuctMaterial"] as Dictionary<string, object>);
 
             if (newVersion.ContainsKey("InsulationMaterial"))
