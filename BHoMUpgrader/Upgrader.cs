@@ -393,15 +393,25 @@ namespace BH.Upgrader.Base
         {
             // Upgrade the property names
             Dictionary<string, BsonElement> propertiesToRename = new Dictionary<string, BsonElement>();
+            List<string> propertiesToRemove = new List<string>();
             foreach (BsonElement property in document)
             {
                 string propName = property.Name;
                 string key = oldType + "." + propName;
-                if (converter.ToNewProperty.ContainsKey(key))
+                if (converter.MessageForDeleted.ContainsKey(key))
+                {
+                    propertiesToRemove.Add(propName);
+                }
+                else if (converter.ToNewProperty.ContainsKey(key))
                 {
                     propName = converter.ToNewProperty[key].Split('.').Last();
                     propertiesToRename.Add(property.Name, new BsonElement(propName, property.Value));
                 }
+            }
+
+            foreach (string item in propertiesToRemove)
+            {
+                document.Remove(item);
             }
 
             foreach (var kvp in propertiesToRename)
