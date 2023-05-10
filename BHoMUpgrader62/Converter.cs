@@ -202,10 +202,90 @@ namespace BH.Upgrader.v62
             ToNewObject.Add("BH.oM.Data.Collections.PointMatrix`1[[System.Object]]", UpgradePointMatrix);
             ToNewObject.Add("BH.oM.Structure.FloorSystem.FloorDesign", UpgradeFloorDesing);
             ToNewObject.Add("BH.oM.LifeCycleAssessment.EnvironmentalMetric", UpdateEnvironmentalMetric);
+            ToNewObject.Add("BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration", UpdateEnvironmentalProductDeclaration);
         }
 
         /***************************************************/
         /**** Private Methods                           ****/
+        /***************************************************/
+
+        private static Dictionary<string, object> UpdateEnvironmentalProductDeclaration(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            double quntityTypeValue = 1;
+            if (newVersion.ContainsKey("QuantityTypeValue"))
+            {
+                if (newVersion["QuantityTypeValue"] is double val)
+                    quntityTypeValue = val;
+
+                if (quntityTypeValue != 1)
+                    return null;
+
+                newVersion.Remove("QuantityTypeValue");
+            }
+
+            if (newVersion.ContainsKey("EnvironmentalMetric"))
+            {
+                var metricsObj = newVersion["EnvironmentalMetric"];
+                IEnumerable<Dictionary<string, object>> metrics = (metricsObj as IEnumerable<object>)?.Cast<Dictionary<string, object>>();
+
+                if (metrics != null)
+                {
+                    List<Dictionary<string, object>> mergedMetrics = new List<Dictionary<string, object>>();
+                    foreach (var group in metrics.GroupBy(x => x["_t"]))
+                    {
+                        Dictionary<string, object> merged = MergeMetrics(group.ToList());
+                        if (merged != null)
+                            mergedMetrics.Add(merged);
+                        else
+                            mergedMetrics.AddRange(group);
+                    }
+                    metricsObj = mergedMetrics;
+                }
+                newVersion["EnvironmentalMetrics"] = metricsObj;
+
+                newVersion.Remove("EnvironmentalMetric");
+            }
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> MergeMetrics(List<Dictionary<string, object>> metrics)
+        {
+            if(metrics.Count == 0)
+                return null;
+
+            if (metrics.Count == 1)
+                return metrics.First();
+
+            Dictionary<string, object> baseMetric = metrics[0];
+
+            List<string> keys = baseMetric.Keys.ToList();
+
+
+            for (int i = 1; i < metrics.Count; i++)
+            {
+                foreach (string key in keys)
+                {
+                    if (baseMetric[key] is double baseVal)
+                    {
+                        if (metrics[i].TryGetValue(key, out object otherVal) && otherVal is double val)
+                        {
+                            if (double.IsNaN(baseVal))
+                                baseMetric[key] = val;
+                            else if (!double.IsNaN(val))
+                                return null;
+                        }
+                        else
+                            return null;
+                    }
+                }
+            }
+            return baseMetric;
+        }
+
         /***************************************************/
 
         private static Dictionary<string, object> UpdateEnvironmentalMetric(Dictionary<string, object> oldVersion)
