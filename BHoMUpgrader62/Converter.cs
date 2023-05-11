@@ -466,11 +466,13 @@ namespace BH.Upgrader.v62
                 newVersion["_t"].ToString() == "BH.oM.Structure.FloorSystem.TimberInfillBeams" ||
                 newVersion["_t"].ToString() == "BH.oM.Structure.FloorSystem.CompositeSteelInfillBeams")
             {
+
                 bool primSet = newVersion.ContainsKey("PrimaryBeamTopLevel");
                 bool secSet = newVersion.ContainsKey("SecondaryBeamTopLevel");
 
                 if (!primSet || !secSet)
                 {
+                    //Sets the beam top level to the thickness of the slab as that was previously assumed, but now needs to be set explicitly
                     double thickness = TotalThickness(newVersion["Slab"] as Dictionary<string, object>);
 
                     if (!primSet)
@@ -480,6 +482,19 @@ namespace BH.Upgrader.v62
                         newVersion["SecondaryBeamTopLevel"] = thickness;
                 }
             }
+
+            if (newVersion["_t"].ToString() == "BH.oM.Structure.FloorSystem.RCFlatPlate")
+            {
+                if (newVersion.ContainsKey("Reinforcement"))
+                { 
+                    Dictionary<string, object> slabReinforcement = new Dictionary<string, object>();
+                    slabReinforcement["_t"] = "BH.oM.Structure.FloorSystem.LayoutSlabReinforcement";
+                    slabReinforcement["Reinforcement"] = newVersion["Reinforcement"];
+                    newVersion["SlabReinforcement"] = slabReinforcement;
+                    newVersion.Remove("Reinforcement");
+                }
+            }
+
 
             return newVersion;
         }
