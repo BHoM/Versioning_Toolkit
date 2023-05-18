@@ -39,7 +39,7 @@ namespace BH.Upgrader.v62
         public Converter() : base()
         {
             PreviousVersion = "6.1";
-            
+
             ToNewObject.Add("BH.oM.Lighting.Elements.Luminaire", UpgradeLuminaire);
             ToNewObject.Add("BH.oM.Base.Attributes.InputAttribute", UpgradeInputAttribute);
             MessageForDeleted.Add("BH.Revit.Engine.Rebar.Query.UsedBarDiameters(System.Collections.Generic.List<Autodesk.Revit.DB.Structure.Rebar>)", "Revit Rebar project has been discontinued and is not available any more. Please contact the BHoM development team in case of any questions.");
@@ -223,7 +223,7 @@ namespace BH.Upgrader.v62
                 try
                 {
                     Dictionary<string, object> xVec = new Dictionary<string, object>() { ["X"] = 1.0, ["Y"] = 0.0, ["Z"] = 0.0 };
-                    Dictionary<string, object> yVec = new Dictionary<string, object>() { ["X"] = 0.0, ["Y"] = 1.0, ["Z"] = 0.0};
+                    Dictionary<string, object> yVec = new Dictionary<string, object>() { ["X"] = 0.0, ["Y"] = 1.0, ["Z"] = 0.0 };
                     Dictionary<string, object> zVec = new Dictionary<string, object>() { ["X"] = 0.0, ["Y"] = 0.0, ["Z"] = 1.0 };
 
                     basis = new Dictionary<string, object>() { ["X"] = xVec, ["Y"] = yVec, ["Z"] = zVec };
@@ -315,7 +315,7 @@ namespace BH.Upgrader.v62
 
             return newVersion;
         }
-		
+
         /***************************************************/
 
         private static Dictionary<string, object> UpgradeDeepLearningGraph(Dictionary<string, object> oldVersion)
@@ -327,26 +327,13 @@ namespace BH.Upgrader.v62
                 newVersion["Modules"] = UpgradeGraph(newVersion["Modules"] as Dictionary<string, object>, "BH.oM.DeepLearning.IModule");
             }
             return newVersion;
-		}
+        }
 
         /***************************************************/
 
         private static Dictionary<string, object> UpgradeInputTree(Dictionary<string, object> oldVersion)
         {
             return UpgradeGraph(oldVersion, "System.Object");
-        }
-		
-        /***************************************************/
-		
-        private static void MoveToCustomData(Dictionary<string, object> newVersion, Dictionary<string, object> customData, string prop)
-        {
-            if (newVersion.ContainsKey(prop))
-            {
-                if (newVersion[prop] != null)
-                    customData[prop] = newVersion[prop];
-
-                newVersion.Remove(prop);
-            }
         }
 
         /***************************************************/
@@ -365,7 +352,7 @@ namespace BH.Upgrader.v62
             if (newVersion.ContainsKey("Children"))
             {
                 Dictionary<string, object> children = newVersion["Children"] as Dictionary<string, object>;
-                if(children != null) 
+                if (children != null)
                 {
                     Dictionary<string, object> newChildren = new Dictionary<string, object>();
                     foreach (var item in children)
@@ -377,8 +364,8 @@ namespace BH.Upgrader.v62
 
             }
             return newVersion;
-		}
-		
+        }
+
         /***************************************************/
 
         private static Dictionary<string, object> UpgradePointMatrix(Dictionary<string, object> oldVersion)
@@ -397,7 +384,7 @@ namespace BH.Upgrader.v62
 
                     for (int i = 0; i < data.Length; i++)
                     {
-                        Dictionary<string,object> item = data[i] as Dictionary<string,object>;
+                        Dictionary<string, object> item = data[i] as Dictionary<string, object>;
                         if (item != null)
                         {
                             object[] localData = item["v"] as object[];
@@ -418,7 +405,7 @@ namespace BH.Upgrader.v62
                             newData[i] = item;
                         }
                     }
-                    
+
                     newVersion["Data"] = newData;
                 }
 
@@ -427,7 +414,7 @@ namespace BH.Upgrader.v62
         }
 
         /***************************************************/
-		
+
         private static Dictionary<string, object> UpgradeFloorDesing(Dictionary<string, object> oldVersion)
         {
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
@@ -456,12 +443,27 @@ namespace BH.Upgrader.v62
         }
 
         /***************************************************/
-		
+
+        private static void MoveToCustomData(Dictionary<string, object> newVersion, Dictionary<string, object> customData, string prop)
+        {
+            if (newVersion.ContainsKey(prop))
+            {
+                if (newVersion[prop] != null)
+                    customData[prop] = newVersion[prop];
+
+                newVersion.Remove(prop);
+            }
+        }
+
+        /***************************************************/
+
         private static Dictionary<string, object> UpgradeFloorConfiguration(Dictionary<string, object> oldVersion)
         {
-            if(oldVersion == null)
-				return null;
-			
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
             if (newVersion["_t"].ToString() == "BH.oM.Structure.FloorSystem.SteelInfillBeams" ||
                 newVersion["_t"].ToString() == "BH.oM.Structure.FloorSystem.TimberInfillBeams" ||
                 newVersion["_t"].ToString() == "BH.oM.Structure.FloorSystem.CompositeSteelInfillBeams")
@@ -486,7 +488,7 @@ namespace BH.Upgrader.v62
             if (newVersion["_t"].ToString() == "BH.oM.Structure.FloorSystem.RCFlatPlate")
             {
                 if (newVersion.ContainsKey("Reinforcement"))
-                { 
+                {
                     Dictionary<string, object> slabReinforcement = new Dictionary<string, object>();
                     slabReinforcement["_t"] = "BH.oM.Structure.FloorSystem.LayoutSlabReinforcement";
                     slabReinforcement["Reinforcement"] = newVersion["Reinforcement"];
@@ -498,7 +500,7 @@ namespace BH.Upgrader.v62
 
             return newVersion;
         }
-		
+
         /***************************************************/
 
         private static double TotalThickness(Dictionary<string, object> slab)
@@ -519,9 +521,9 @@ namespace BH.Upgrader.v62
                     if (slab.ContainsKey("Layers"))
                     {
                         object[] layers = slab["Layers"] as object[];
-                        foreach (object layer in layers) 
-                        { 
-                            Dictionary<string,object> lay = layer as Dictionary<string,object>;
+                        foreach (object layer in layers)
+                        {
+                            Dictionary<string, object> lay = layer as Dictionary<string, object>;
                             if (lay != null && lay.ContainsKey("Thickness"))
                             {
                                 thickness += (double)lay["Thickness"];
