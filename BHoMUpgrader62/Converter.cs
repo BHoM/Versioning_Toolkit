@@ -201,7 +201,7 @@ namespace BH.Upgrader.v62
             ToNewObject.Add("BH.oM.Forms.InputTree`1[[System.Object]]", UpgradeInputTree);
             ToNewObject.Add("BH.oM.Data.Collections.PointMatrix`1[[System.Object]]", UpgradePointMatrix);
             ToNewObject.Add("BH.oM.Structure.FloorSystem.FloorDesign", UpgradeFloorDesing);
-            ToNewObject.Add("BH.oM.LifeCycleAssessment.EnvironmentalMetric", UpdateEnvironmentalMetric);
+            //ToNewObject.Add("BH.oM.LifeCycleAssessment.EnvironmentalMetric", UpdateEnvironmentalMetric);
             ToNewObject.Add("BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration", UpdateEnvironmentalProductDeclaration);
         }
 
@@ -232,14 +232,20 @@ namespace BH.Upgrader.v62
 
                 if (metrics != null)
                 {
+                    metrics = metrics.Select(x => UpdateEnvironmentalMetric(x)).ToList();
+                    if (metrics.Any(x => x == null))
+                        return null;
+
                     List<Dictionary<string, object>> mergedMetrics = new List<Dictionary<string, object>>();
+
+
                     foreach (var group in metrics.GroupBy(x => x["_t"]))
                     {
                         Dictionary<string, object> merged = MergeMetrics(group.ToList());
                         if (merged != null)
                             mergedMetrics.Add(merged);
                         else
-                            mergedMetrics.AddRange(group);
+                            return null;
                     }
                     metricsObj = mergedMetrics;
                 }
@@ -296,22 +302,47 @@ namespace BH.Upgrader.v62
             }
 
             Dictionary<string, object> newVersion = new Dictionary<string, object>();
-            bool isBiogenicCarbon = false;
+            newVersion["Name"] = oldVersion["Name"];
+            newVersion["Tags"] = oldVersion["Tags"];
+            newVersion["Fragments"] = oldVersion["Fragments"];
+            newVersion["BHoM_Guid"] = oldVersion["BHoM_Guid"];
+            newVersion["CustomData"] = oldVersion["CustomData"];
+
+            double scaleFactor = 1.0;
+
             if (oldVersion.TryGetValue("Field", out object fieldObject))
             {
                 string fieldString = fieldObject.ToString();
                 switch (fieldString)
                 {
                     case "GlobalWarmingPotential":
-                        newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.GlobalWarmingPotentialMetrics";
-                        newVersion["BiogenicCarbon"] = double.NaN;
+                        newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.ClimateChangeTotalMetric";
                         break;
                     case "BiogenicCarbon":
-                        newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.GlobalWarmingPotentialMetrics";
-                        isBiogenicCarbon = true;
+                        newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.ClimateChangeBiogenicMetric";
                         break;
                     case "AcidificationPotential":
-                        newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.AcidificationPotentialMetrics";
+                        newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.AcidificationMetric";
+                        scaleFactor = 1.31;
+                        break;
+                    //case "EutrophicationPotential":
+                    //    newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.EutrophicationVersion1Metric";
+                    //    break;
+                    case "FreshWater":
+                        newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.WaterDeprivationMetric";
+                        break;
+                    case "OzoneDepletionPotential":
+                        newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.OzoneDepletionMetric";
+                        break;
+                    //case "PhotochemicalOzoneCreationPotential":
+                    //    newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.PhotochemicalOzoneCreationMetric";
+                    //    break;
+                    case "DepletionOfAbioticResourcesFossilFuels":
+                        newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.AbioticDepletionFossilResourcesMetric";
+                        scaleFactor = 1e6;
+                        break;
+                    case "DepletionOfAbioticResources":
+                        newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.AbioticDepletionMineralsAndMetalsMetric";
                         break;
                     default:
                         return null;
@@ -333,52 +364,64 @@ namespace BH.Upgrader.v62
                 "B5",
                 "B6",
                 "B7",
+                "B1toB7",
                 "C1",
                 "C2",
                 "C3",
                 "C4",
+                "C1toC4",
                 "D"
             };
 
             string phase = null;
 
-            if (isBiogenicCarbon)
+
+            object phaseObject;
+            List<string> phases = new List<string>();
+            if (oldVersion.TryGetValue("Phases", out phaseObject))
             {
-                phase = "BiogenicCarbon";
+
+                if (phaseObject is IEnumerable<object> phasesEnumerable)
+                {
+                    foreach (object ph in phasesEnumerable)
+                    {
+                        if (ph is string phaseString)
+                            phases.Add(phaseString);
+                    }
+                }
+                if (phases.Count == 1)
+                    phase = phases[0];
+                else if (phases.Count == 3)
+                {
+                    if (phases.Contains("A1") && phases.Contains("A2") && phases.Contains("A3"))
+                        phase = "A1toA3";
+                }
+                else if (phases.Count == 4)
+                {
+                    if (phases.Contains("C1") && phases.Contains("C2") && phases.Contains("C3") && phases.Contains("C4"))
+                        phase = "C1toC4";
+                }
+                else if (phases.Count == 7)
+                {
+                    if (phases.Contains("B1") &&
+                        phases.Contains("B2") &&
+                        phases.Contains("B3") &&
+                        phases.Contains("B4") &&
+                        phases.Contains("B5") &&
+                        phases.Contains("B6") &&
+                        phases.Contains("B7"))
+                        phase = "B1toB7";
+                }
             }
-            else
+
+            if (phase == null || !allowedPhases.Contains(phase))
             {
-                object phaseObject;
-                List<string> phases = new List<string>();
-                if (oldVersion.TryGetValue("Phases", out phaseObject))
-                {
-
-                    if (phaseObject is IEnumerable<object> phasesEnumerable)
-                    {
-                        foreach (object ph in phasesEnumerable)
-                        {
-                            if (ph is string phaseString)
-                                phases.Add(phaseString);
-                        }
-                    }
-                    if (phases.Count == 1)
-                        phase = phases[0];
-                    else if (phases.Count == 3)
-                    {
-                        if (phases.Contains("A1") && phases.Contains("A2") && phases.Contains("A3"))
-                            phase = "A1toA3";
-                    }
-                }
-
-                if (phase == null || !allowedPhases.Contains(phase))
-                {
-                    string msg;
-                    if (phases.Count == 0)
-                        msg = "Unable to upgrade EnvironmentalMetrics with unset phases";
-                    else
-                        msg = $"Unable to upgrade EnvironmentalMetrics with phases set to {string.Join(",", phases)}.";
-                    return null;
-                }
+                string msg;
+                if (phases.Count == 0)
+                    msg = "Unable to upgrade EnvironmentalMetrics with unset phases";
+                else
+                    msg = $"Unable to upgrade EnvironmentalMetrics with phases set to {string.Join(",", phases)}.";
+                return null;
             }
 
 
@@ -388,7 +431,7 @@ namespace BH.Upgrader.v62
                 newVersion[p] = double.NaN;
             }
 
-            newVersion[phase] = oldVersion["Quantity"];
+            newVersion[phase] = (double)oldVersion["Quantity"] * scaleFactor;
 
             return newVersion;
         }
