@@ -247,13 +247,39 @@ namespace BH.Upgrader.v62
                         else
                             return null;
                     }
-                    metricsObj = mergedMetrics;
+
+                    metricsObj = PopulateAllClimateChangeMetrics(mergedMetrics);
                 }
                 newVersion["EnvironmentalMetrics"] = metricsObj;
 
                 newVersion.Remove("EnvironmentalMetric");
             }
             return newVersion;
+        }
+
+        /***************************************************/
+
+        private static List<Dictionary<string, object>> PopulateAllClimateChangeMetrics(List<Dictionary<string, object>> mergedMetrics)
+        {
+            Dictionary<string, object> climateChangeTotNoBio = mergedMetrics.FirstOrDefault(x => x["_t"].ToString() == "BH.oM.LifeCycleAssessment.MaterialFragments.ClimateChangeTotalNoBiogenicMetric");
+            if (climateChangeTotNoBio == null)
+                return mergedMetrics;
+
+            Dictionary<string, object> climateChangeTot = new Dictionary<string, object>(climateChangeTotNoBio);
+            climateChangeTot["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.ClimateChangeTotalMetric";
+
+            Dictionary<string, object> climateChangeBio = mergedMetrics.FirstOrDefault(x => x["_t"].ToString() == "BH.oM.LifeCycleAssessment.MaterialFragments.ClimateChangeBiogenicMetric");
+
+            if (climateChangeBio != null)
+            {
+                foreach (string phase in AllowedPhases())
+                {
+                    climateChangeTot[phase] = (double)climateChangeTot[phase] + (double)climateChangeBio[phase];
+                }
+            }
+
+            mergedMetrics.Add(climateChangeTot);
+            return mergedMetrics;
         }
 
         /***************************************************/
@@ -316,10 +342,11 @@ namespace BH.Upgrader.v62
                 switch (fieldString)
                 {
                     case "GlobalWarmingPotential":
-                        newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.ClimateChangeTotalMetric";
+                        newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.ClimateChangeTotalNoBiogenicMetric";
                         break;
                     case "BiogenicCarbon":
                         newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.ClimateChangeBiogenicMetric";
+                        scaleFactor = -1;
                         break;
                     case "AcidificationPotential":
                         newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.AcidificationMetric";
@@ -349,29 +376,7 @@ namespace BH.Upgrader.v62
                 }
             }
 
-            HashSet<string> allowedPhases = new HashSet<string>
-            {
-                "A1",
-                "A2",
-                "A3",
-                "A4",
-                "A5",
-                "A1toA3",
-                "B1",
-                "B2",
-                "B3",
-                "B4",
-                "B5",
-                "B6",
-                "B7",
-                "B1toB7",
-                "C1",
-                "C2",
-                "C3",
-                "C4",
-                "C1toC4",
-                "D"
-            };
+            HashSet<string> allowedPhases = AllowedPhases();
 
             string phase = null;
 
@@ -434,6 +439,35 @@ namespace BH.Upgrader.v62
             newVersion[phase] = (double)oldVersion["Quantity"] * scaleFactor;
 
             return newVersion;
+        }
+
+        /***************************************************/
+
+        private static HashSet<string> AllowedPhases()
+        { 
+            return new HashSet<string>
+            {
+                "A1",
+                "A2",
+                "A3",
+                "A4",
+                "A5",
+                "A1toA3",
+                "B1",
+                "B2",
+                "B3",
+                "B4",
+                "B5",
+                "B6",
+                "B7",
+                "B1toB7",
+                "C1",
+                "C2",
+                "C3",
+                "C4",
+                "C1toC4",
+                "D"
+            };
         }
 
         /***************************************************/
