@@ -201,7 +201,6 @@ namespace BH.Upgrader.v62
             ToNewObject.Add("BH.oM.Forms.InputTree`1[[System.Object]]", UpgradeInputTree);
             ToNewObject.Add("BH.oM.Data.Collections.PointMatrix`1[[System.Object]]", UpgradePointMatrix);
             ToNewObject.Add("BH.oM.Structure.FloorSystem.FloorDesign", UpgradeFloorDesing);
-            //ToNewObject.Add("BH.oM.LifeCycleAssessment.EnvironmentalMetric", UpdateEnvironmentalMetric);
             ToNewObject.Add("BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration", UpdateEnvironmentalProductDeclaration);
         }
 
