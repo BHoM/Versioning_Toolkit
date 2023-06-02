@@ -219,8 +219,8 @@ namespace BH.Upgrader.v62
                 if (newVersion["QuantityTypeValue"] is double val)
                     quntityTypeValue = val;
 
-                if (quntityTypeValue != 1)
-                    return null;
+                //if (quntityTypeValue != 1)
+                //    return null;
 
                 newVersion.Remove("QuantityTypeValue");
             }
@@ -232,7 +232,7 @@ namespace BH.Upgrader.v62
 
                 if (metrics != null)
                 {
-                    metrics = metrics.Select(x => UpdateEnvironmentalMetric(x)).ToList();
+                    metrics = metrics.Select(x => UpdateEnvironmentalMetric(x, 1 / quntityTypeValue)).ToList();
                     if (metrics.Any(x => x == null))
                         return null;
 
@@ -320,7 +320,7 @@ namespace BH.Upgrader.v62
 
         /***************************************************/
 
-        private static Dictionary<string, object> UpdateEnvironmentalMetric(Dictionary<string, object> oldVersion)
+        private static Dictionary<string, object> UpdateEnvironmentalMetric(Dictionary<string, object> oldVersion, double scaleFactor = 1.0)
         {
             if (oldVersion == null)
             {
@@ -334,7 +334,6 @@ namespace BH.Upgrader.v62
             newVersion["BHoM_Guid"] = oldVersion["BHoM_Guid"];
             newVersion["CustomData"] = oldVersion["CustomData"];
 
-            double scaleFactor = 1.0;
 
             if (oldVersion.TryGetValue("Field", out object fieldObject))
             {
@@ -346,11 +345,11 @@ namespace BH.Upgrader.v62
                         break;
                     case "BiogenicCarbon":
                         newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.ClimateChangeBiogenicMetric";
-                        scaleFactor = -1;
+                        scaleFactor *= -1;
                         break;
                     case "AcidificationPotential":
                         newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.AcidificationMetric";
-                        scaleFactor = 1.31;
+                        scaleFactor *= 1.31;
                         break;
                     //case "EutrophicationPotential":
                     //    newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.EutrophicationVersion1Metric";
@@ -366,7 +365,7 @@ namespace BH.Upgrader.v62
                     //    break;
                     case "DepletionOfAbioticResourcesFossilFuels":
                         newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.AbioticDepletionFossilResourcesMetric";
-                        scaleFactor = 1e6;
+                        scaleFactor *= 1e6;
                         break;
                     case "DepletionOfAbioticResources":
                         newVersion["_t"] = "BH.oM.LifeCycleAssessment.MaterialFragments.AbioticDepletionMineralsAndMetalsMetric";
