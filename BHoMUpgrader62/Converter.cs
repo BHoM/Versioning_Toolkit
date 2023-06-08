@@ -40,6 +40,7 @@ namespace BH.Upgrader.v62
         {
             PreviousVersion = "6.1";
 
+            ToNewObject.Add("BH.oM.LadybugTools.SimulationResult", UpgradeSimulationResult);
             ToNewObject.Add("BH.oM.Lighting.Elements.Luminaire", UpgradeLuminaire);
             ToNewObject.Add("BH.oM.Base.Attributes.InputAttribute", UpgradeInputAttribute);
             MessageForDeleted.Add("BH.Revit.Engine.Rebar.Query.UsedBarDiameters(System.Collections.Generic.List<Autodesk.Revit.DB.Structure.Rebar>)", "Revit Rebar project has been discontinued and is not available any more. Please contact the BHoM development team in case of any questions.");
