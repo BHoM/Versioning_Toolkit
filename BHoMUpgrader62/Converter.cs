@@ -206,6 +206,19 @@ namespace BH.Upgrader.v62
         /**** Private Methods                           ****/
         /***************************************************/
 
+        private static Dictionary<string, object> UpgradeSimulationResult(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (newVersion.ContainsKey("GroundMaterial"))
+                newVersion["GroundMaterial"] = null;
+
+            if (newVersion.ContainsKey("ShadeMaterial"))
+                newVersion["ShadeMaterial"] = null;
+
+            return newVersion;
+        }
+
         private static Dictionary<string, object> UpgradeLuminaire(Dictionary<string, object> oldVersion)
         {
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
