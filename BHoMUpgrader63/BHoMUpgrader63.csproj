@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Upgrades.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BHoMUpgrader\BHoMUpgrader.csproj">
