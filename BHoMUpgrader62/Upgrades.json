@@ -1,38 +1,913 @@
-﻿{
+{
   "Namespace": {
     "ToNew": {
+      "BH.Engine.Adapters.RFEM": "BH.Engine.Adapters.RFEM5"
     },
     "ToOld": {
+      "BH.Engine.Adapters.RFEM5": "BH.Engine.Adapters.RFEM"
     }
   },
   "Type": {
     "ToNew": {
-
+      "BH.oM.Base.Attributes.InputClassificationAttribute": "BH.oM.Base.Attributes.ClassificationAttribute",
+      "BH.Adapter.RFEM.RFEMAdapter": "BH.Adapter.RFEM5.RFEM5Adapter",
+      "BH.oM.Adapters.RFEM.RFEMSettings": "BH.oM.Adapters.RFEM5.RFEM5Settings",
+      "BH.oM.Adapters.RFEM.RFEMId": "BH.oM.Adapters.RFEM5.RFEM5Id",
+      "BH.oM.XML.GBXML.RoundingSettings": "BH.oM.Adapters.XML.GBXML.RoundingSettings"
     },
     "ToOld": {
-
+      "BH.oM.Base.Attributes.ClassificationAttribute": "BH.oM.Base.Attributes.InputClassificationAttribute",
+      "BH.Adapter.RFEM5.RFEM5Adapter": "BH.Adapter.RFEM.RFEMAdapter",
+      "BH.oM.Adapters.RFEM5.RFEM5Settings": "BH.oM.Adapters.RFEM.RFEMSettings",
+      "BH.oM.Adapters.RFEM5.RFEM5Id": "BH.oM.Adapters.RFEM.RFEMId",
+      "BH.oM.Adapters.XML.GBXML.RoundingSettings": "BH.oM.XML.GBXML.RoundingSettings"
     }
   },
   "Method": {
     "ToNew": {
-
+      "BH.Engine.Structure.Buildings.Query.PopulateMinimumFloorDesign(System.Collections.Generic.IEnumerable<BH.oM.Structure.FloorSystem.FloorDesign>, BH.oM.Geometry.Polyline, System.Int32, System.Double, System.Double, System.Double, System.Double, System.Double, System.Int32, System.Int32, BH.oM.Structure.Elements.EdgeCondition, System.Double, System.String, System.Double, BH.oM.Structure.FloorSystem.PopulateOptions, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "PopulateMinimumFloorDesign",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.FloorDesign\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.EdgeCondition\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.PopulateOptions\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.Buildings.Query.IPopulate(BH.oM.Structure.FloorSystem.IFloorConfiguration, BH.oM.Geometry.CoordinateSystem.Cartesian, System.Double, System.Double, BH.oM.Structure.FloorSystem.PopulateOptions)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Populate",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.CoordinateSystem.Cartesian\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.PopulateOptions\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.IGeometricalSection\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.Buildings.Query.Populate(BH.oM.Structure.FloorSystem.RCFlatPlate, BH.oM.Geometry.CoordinateSystem.Cartesian, System.Double, System.Double, BH.oM.Structure.FloorSystem.PopulateOptions)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Populate",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.CoordinateSystem.Cartesian\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.PopulateOptions\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.IGeometricalSection\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.Buildings.Query.Populate(BH.oM.Structure.FloorSystem.CompositeSteelInfillBeams, BH.oM.Geometry.CoordinateSystem.Cartesian, System.Double, System.Double, BH.oM.Structure.FloorSystem.PopulateOptions)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Populate",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.CoordinateSystem.Cartesian\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.PopulateOptions\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.IGeometricalSection\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.Buildings.Query.Populate(BH.oM.Structure.FloorSystem.TimberInfillBeams, BH.oM.Geometry.CoordinateSystem.Cartesian, System.Double, System.Double, BH.oM.Structure.FloorSystem.PopulateOptions)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Populate",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.CoordinateSystem.Cartesian\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.PopulateOptions\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.IGeometricalSection\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.Buildings.Query.Populate(BH.oM.Structure.FloorSystem.SteelInfillBeams, BH.oM.Geometry.CoordinateSystem.Cartesian, System.Double, System.Double, BH.oM.Structure.FloorSystem.PopulateOptions)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Populate",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.CoordinateSystem.Cartesian\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.PopulateOptions\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.IGeometricalSection\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.Buildings.Query.Populate(BH.oM.Structure.FloorSystem.IFloorConfiguration, BH.oM.Geometry.Polyline, System.Int32, BH.oM.Structure.FloorSystem.PopulateOptions)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Populate",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.PopulateOptions\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.IGeometricalSection\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.Buildings.Query.MinimumFloorDesign(System.Collections.Generic.IEnumerable<BH.oM.Structure.FloorSystem.FloorDesign>, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Int32, System.Int32, BH.oM.Structure.Elements.EdgeCondition, System.Double, System.String, System.Double, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "MinimumFloorDesign",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.FloorDesign\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.EdgeCondition\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.FloorSystem.Query.IMass(BH.oM.Structure.FloorSystem.IFloorConfiguration, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Mass",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.FloorSystem.Query.Mass(BH.oM.Structure.FloorSystem.SteelInfillBeams, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Mass",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.FloorSystem.Query.Mass(BH.oM.Structure.FloorSystem.CompositeSteelInfillBeams, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Mass",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.FloorSystem.Query.Mass(BH.oM.Structure.FloorSystem.TimberInfillBeams, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Mass",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.FloorSystem.Query.Mass(BH.oM.Structure.FloorSystem.RCFlatPlate, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Mass",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.Buildings.Query.FilterFloorDesigns(System.Collections.Generic.IEnumerable<BH.oM.Structure.FloorSystem.FloorDesign>, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Int32, System.Int32, BH.oM.Structure.Elements.EdgeCondition, System.Double, System.String, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "FilterFloorDesigns",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.FloorDesign\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.EdgeCondition\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.FloorSystem.Query.IDepth(BH.oM.Structure.FloorSystem.IFloorConfiguration)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Depth",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.FloorSystem.Query.Depth(BH.oM.Structure.FloorSystem.RCFlatPlate)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Depth",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.FloorSystem.Query.Depth(BH.oM.Structure.FloorSystem.TimberInfillBeams)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Depth",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.FloorSystem.Query.Depth(BH.oM.Structure.FloorSystem.CompositeSteelInfillBeams)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Depth",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.FloorSystem.Query.Depth(BH.oM.Structure.FloorSystem.SteelInfillBeams)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Depth",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.FloorSystem.Create.Utilisation(System.String, System.Double, System.String, System.String, System.Collections.Generic.List<BH.oM.Structure.FloorSystem.Utilisation>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Create, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "Utilisation",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.Utilisation\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.FloorSystem.Create.FloorDesign(System.String, BH.oM.Structure.FloorSystem.IFloorConfiguration, System.Double, System.Double, System.Double, System.Double, System.Double, System.Int32, System.Int32, BH.oM.Structure.Elements.EdgeCondition, BH.oM.Structure.FloorSystem.Utilisation, System.String, System.String, System.Double, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Create, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "FloorDesign",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.ColumnData\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.EdgeCondition\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.FloorSystem.Create.FloorDesign(System.String, BH.oM.Structure.FloorSystem.IFloorConfiguration, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Int32, System.Int32, BH.oM.Structure.Elements.EdgeCondition, BH.oM.Structure.FloorSystem.Utilisation, System.String, System.String, System.Double, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Create, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "FloorDesign",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.IFloorConfiguration\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.ColumnData\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.EdgeCondition\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.Buildings.Compute.PopulateMinimumFloorDesign(System.String, BH.oM.Geometry.Polyline, System.Int32, System.Double, System.Double, System.Double, System.Double, System.Double, System.Int32, System.Int32, BH.oM.Structure.Elements.EdgeCondition, System.Double, System.String, System.Double, BH.oM.Structure.FloorSystem.PopulateOptions, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Compute, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "PopulateMinimumFloorDesign",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.EdgeCondition\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.PopulateOptions\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.Buildings.Compute.MinimumFloorDesign(System.String, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Int32, System.Int32, BH.oM.Structure.Elements.EdgeCondition, System.Double, System.String, System.Double, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Compute, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "MinimumFloorDesign",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.EdgeCondition\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.Buildings.Compute.FilterFloorDesigns(System.String, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Int32, System.Int32, BH.oM.Structure.Elements.EdgeCondition, System.Double, System.String, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Compute, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "FilterFloorDesigns",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.EdgeCondition\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Revit.Engine.Utility.Compute.SelectElementIdsFromList(Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Utility.Compute, Revit_Utility_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "SelectElementIdsFromList",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.BuiltInCategory, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Revit.Engine.Core.Modify.SetViewName(Autodesk.Revit.DB.View, System.String, Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Modify, Revit_Core_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "SetViewName",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.View, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Revit.Engine.Core.Create.View3D(Autodesk.Revit.DB.Document, System.String, Autodesk.Revit.DB.BoundingBoxXYZ, Autodesk.Revit.DB.ElementId, Autodesk.Revit.DB.ViewDetailLevel)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Create, Revit_Core_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "View3D",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.BoundingBoxXYZ, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ElementId, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ViewDetailLevel, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.TotalMaterialBreakdown(System.Collections.Generic.IEnumerable<BH.oM.LifeCycleAssessment.Results.MaterialResult>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "TotalMaterialBreakdown",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Results.MaterialResult\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.TotalMaterialBreakdown(System.Collections.Generic.IEnumerable<BH.oM.LifeCycleAssessment.Results.ElementResult>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "TotalMaterialBreakdown",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Results.IElementResult`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Results.MaterialResult\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.TotalFieldQuantity(System.Collections.Generic.List<BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "TotalFieldQuantity",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Results.IEnvironmentalResult\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.GetQuantityType(BH.oM.Dimensional.IElementM)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "QuantityTypes",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateReferenceValue(System.Double, BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField, System.Collections.Generic.List<BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases>, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "EnvironmentalResults",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalMetrics\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Configs.IEvaluationConfig\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateMaterialTakeoff(BH.oM.Physical.Materials.VolumetricMaterialTakeoff, System.Collections.Generic.List<BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases>, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "EnvironmentalResults",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Physical.Materials.GeneralMaterialTakeoff\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Physical.Materials.Material\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalMetrics\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Configs.IEvaluationConfig\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateEnvironmentalProductDeclaration(BH.oM.Dimensional.IElementM, System.Collections.Generic.List<BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases>, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "EnvironmentalResults",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Physical.Materials.Material\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalMetrics\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Configs.IEvaluationConfig\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateElement(BH.oM.Dimensional.IElementM, System.Collections.Generic.List<BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases>, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField, System.Boolean, System.Collections.Generic.List<BH.oM.Physical.Materials.Material>, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "EnvironmentalResults",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Physical.Materials.Material\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalMetrics\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Configs.IEvaluationConfig\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.GetElementScope(BH.oM.Dimensional.IElementM)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "ElementScope",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.GetElementMaterial(BH.oM.Dimensional.IElementM)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "ElementMaterialNames",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.GetElementEpd(BH.oM.Dimensional.IElementM)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "ElementEpds",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.GetElementEnvironmentalMetric(BH.oM.Dimensional.IElementM)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "ElementEnvironmentalMetrics",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.GetEnvironmentalMetric(BH.oM.Dimensional.IElementM)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "ElementEnvironmentalMetrics",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.ElementEmbodiedCarbon(BH.oM.Dimensional.IElementM, System.Collections.Generic.List<BH.oM.Physical.Materials.Material>, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "ElementEmbodiedCarbon",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElementM\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Physical.Materials.Material\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Compute.EvaluateProjectLifeCycleAssessment(BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment, System.Collections.Generic.List<BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases>, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Compute, LifeCycleAssessment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "EvaluateProjectLifeCycleAssessment",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.EnvironmentalMetrics\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Physical.Materials.Material\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LadybugTools.Query.GetTypology(BH.oM.LadybugTools.Typologies)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LadybugTools.Query, LadybugTools_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "GetTypology",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LadybugTools.Query.GetMaterial(BH.oM.LadybugTools.Materials)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LadybugTools.Query, LadybugTools_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "GetMaterial",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.LadybugTools.Compute.EPWtoCSV(System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LadybugTools.Compute, LadybugTools_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "EPWtoCSV",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.Create.ElogatedCircularVoidHollowCore(System.Double, System.Double, System.Double, System.Double, BH.oM.Structure.MaterialFragments.Concrete, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "ElogatedCircularVoidHollowCore",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.MaterialFragments.Concrete\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SurfaceProperties.PanelDirection\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Structure.Create.CircularVoidHollowCore(System.Double, System.Double, System.Double, BH.oM.Structure.MaterialFragments.Concrete, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "CircularVoidHollowCore",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.MaterialFragments.Concrete\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SurfaceProperties.PanelDirection\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.CFD.Compute.ExecuteComputeComfortSafety(System.String, System.String, System.Int32, System.Collections.Generic.List<BH.oM.CFD.Season>, BH.oM.CFD.WindCriteria, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.CFD.Compute, CFD_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "ExecuteComputeComfortSafety",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.Season\", \"_bhomVersion\" : \"6.2\" }], \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.WindCriteria\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Adapter.CarbonQueryDatabaseAdapter(System.String, System.String, System.Bool)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.CarbonQueryDatabase.CarbonQueryDatabaseAdapter, CarbonQueryDatabase_Adapter, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": ".ctor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      },
+      "BH.Engine.Base.Convert.ToText(System.Reflection.MethodBase, System.Boolean, System.String, System.String, System.String, System.Boolean, System.Boolean, System.Int32, System.Int32, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Convert, BHoM_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.2\" }",
+        "MethodName": "ToText",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodBase, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.2\" }"
+        ],
+        "_bhomVersion": "6.2"
+      }
     },
     "ToOld": {
-
+      
     }
   },
   "Property": {
     "ToNew": {
-
+      "BH.oM.CFD.Results.NodeVelocity.Wgradient": "BH.oM.CFD.Results.NodeVelocity.WGradient",
+      "BH.oM.Forms.WindowLayoutSettings.InputControlHeight": "BH.oM.Forms.WindowLayoutSettings.DefaultControlHeight",
+      "BH.oM.Structure.FloorSystem.PopulateOptions.atCenterLine": "BH.oM.Structure.FloorSystem.PopulateOptions.AtCenterLine",
+      "BH.oM.Structure.FloorSystem.PopulateOptions.includeSGirder": "BH.oM.Structure.FloorSystem.PopulateOptions.IncludeSGirder",
+      "BH.oM.Structure.FloorSystem.PopulateOptions.includeWGirder": "BH.oM.Structure.FloorSystem.PopulateOptions.IncludeWGirder",
+      "BH.oM.Structure.FloorSystem.PopulateOptions.includeNGirder": "BH.oM.Structure.FloorSystem.PopulateOptions.IncludeNGirder",
+      "BH.oM.Structure.FloorSystem.PopulateOptions.includeEGirder": "BH.oM.Structure.FloorSystem.PopulateOptions.IncludeEGirder"
     },
     "ToOld": {
-
+      "BH.oM.CFD.Results.NodeVelocity.WGradient": "BH.oM.CFD.Results.NodeVelocity.Wgradient",
+      "BH.oM.Forms.WindowLayoutSettings.DefaultControlHeight": "BH.oM.Forms.WindowLayoutSettings.InputControlHeight"
+    }
+  },
+  "Dataset": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    },
+    "MessageForDeleted": {
+      
     }
   },
   "MessageForDeleted": {
-    
+    "BH.Adapter.DataViz.DataVizAdapter.GetCollection(System.Type)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter.CreateCollection(System.String)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter.CreateDataCollection(System.String)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter.CreateFilterCollection()": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter.CreateViewCollection()": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter.ICreate(System.Collections.Generic.IEnumerable<BH.oM.Base.IBHoMObject>, BH.oM.Adapter.ActionConfig)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter.IRead(System.Type, System.Collections.IList, BH.oM.Adapter.ActionConfig)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter.Remove(BH.oM.Data.Requests.IRequest, BH.oM.Adapter.ActionConfig)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter.Push(System.Collections.Generic.IEnumerable<System.Object>, System.String, BH.oM.Adapter.PushType, BH.oM.Adapter.ActionConfig)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter.Pull(BH.oM.DataViz.Requests.SelectionRequest)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter.Pull(BH.oM.Data.Requests.FilterRequest)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter.Pull(BH.oM.Data.Requests.IRequest, BH.oM.Adapter.PullType, BH.oM.Adapter.ActionConfig)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter.RunCommand(BH.oM.Adapter.IExecuteCommand)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter.RunCommand(BH.oM.DataViz.Commands.Bake)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter.Execute(BH.oM.Adapter.IExecuteCommand, BH.oM.Adapter.ActionConfig)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter(System.String, System.String, System.Int32)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Adapter.DataViz.DataVizAdapter(System.String, System.Int32)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Commands.Bake": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.Arcs": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.Axis": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.Bars": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.Bubbles": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.Container": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.Glyphs": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.Legend": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.Lines": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.MultiVarLines": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.Texts": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.Title": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.AxisContainer": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.Pies": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.Stacks": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.Areas": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.Sunbursts": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Components.Cells": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Data.Dataset": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Data.HistogramTransform": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Data.SumTransform": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Data.HierarchyTransform": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Layouts.HorizontalLayout": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Layouts.VerticalLayout": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Layouts.GridLayout": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Layouts.MultiColumnsLayout": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Layouts.GridItem": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Layouts.FullFrameLayout": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Views.BarChart": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Views.ViewConfig": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Views.CustomView": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Views.BubbleChart": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Views.LineChart": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Views.ParallelCoordinatesChart": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Views.BubblePieChart": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Views.TextView": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Views.AreaChart": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Views.PieChart": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Views.SunburstChart": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Views.MatrixChart": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Filters.ValueFilter": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Filters.CustomFilter": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Filters.RangeFilter": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Domains.OrdinalDomain": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Domains.LinearDomain": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Misc.Padding": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.DataViz.Requests.SelectionRequest": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Arcs(BH.oM.DataViz.Data.Dataset, System.String, System.String, System.String, System.String, System.String, System.Double, System.String, System.String)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Arcs(BH.oM.DataViz.Data.Dataset, System.String, System.String, System.String, System.String, System.String)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Axis(BH.oM.DataViz.Data.Dataset, System.String, System.Boolean, System.String, BH.oM.DataViz.Domains.IDomain)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Bars(BH.oM.DataViz.Data.Dataset, System.String, System.String, System.String, System.Double, System.Boolean)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Bubbles(BH.oM.DataViz.Data.Dataset, System.String, System.String, System.String, System.String, System.Double)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Container(System.Collections.Generic.List<BH.oM.DataViz.Components.IComponent>, System.Double, System.Double, System.Double, System.Double, System.Double)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Glyphs(BH.oM.DataViz.Data.Dataset, System.Collections.Generic.List<BH.oM.DataViz.Components.IComponent>, System.Collections.Generic.List<System.String>, System.String, System.String, System.String, System.String)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Legend(System.Double, System.Double, System.Double, System.Double)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Legend(System.Collections.Generic.List<System.String>, System.Double, System.Double, System.Double, System.Double)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Legend(BH.oM.DataViz.Data.Dataset, System.String, System.Double, System.Double, System.Double, System.Double)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Lines(BH.oM.DataViz.Data.Dataset, System.String, System.String, System.String, System.String, System.String)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.MultiVarLines(BH.oM.DataViz.Data.Dataset, System.Collections.Generic.List<System.String>, System.String)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Texts(BH.oM.DataViz.Data.Dataset, System.String, System.String, System.String, System.String, System.Double, BH.oM.DataViz.Enums.TextAnchor, BH.oM.DataViz.Enums.TextBaseline, System.Double, System.Double)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Texts(BH.oM.DataViz.Data.Dataset, System.String, System.String, System.String, System.String, System.Double)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Title(System.String, System.Double, System.Double, System.Double)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Padding(System.Double, System.Double, System.Double, System.Double)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.CustomView(System.Collections.Generic.List<BH.oM.DataViz.Components.IComponent>, BH.oM.DataViz.Views.ViewConfig)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.HorizontalLayout(System.Collections.Generic.List<BH.oM.DataViz.Views.IView>)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.BarChart(BH.oM.DataViz.Components.Bars, BH.oM.DataViz.Views.ViewConfig, BH.oM.DataViz.Components.Title, BH.oM.DataViz.Components.Legend)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.BubbleChart(BH.oM.DataViz.Components.Bubbles, BH.oM.DataViz.Views.ViewConfig, BH.oM.DataViz.Components.Title, BH.oM.DataViz.Components.Legend)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.LineChart(BH.oM.DataViz.Components.Lines, BH.oM.DataViz.Views.ViewConfig, BH.oM.DataViz.Components.Title, BH.oM.DataViz.Components.Legend)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.ParallelCoordinatesChart(BH.oM.DataViz.Components.MultiVarLines, BH.oM.DataViz.Views.ViewConfig, BH.oM.DataViz.Components.Title, BH.oM.DataViz.Components.Legend)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Dataset(System.String, System.String, BH.oM.DataViz.Data.ITransform)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Dataset(System.String, System.String)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.AxisContainer(System.Collections.Generic.List<BH.oM.DataViz.Components.IComponent>, BH.oM.DataViz.Components.Axis, System.Double, System.Double)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.LinearDomain(System.Double, System.Double)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.OrdinalDomain(System.Collections.Generic.List<System.String>)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.ValueFilter(System.String, System.String, System.String, System.Collections.Generic.List<System.Object>)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.CustomFilter(System.String, System.String, System.String)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.SelectionRequest(System.String)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.RangeFilter(System.String, System.String, System.String, System.Double, System.Double)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.VerticalLayout(System.Collections.Generic.List<BH.oM.DataViz.Views.IView>)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.GridLayout(System.Collections.Generic.List<BH.oM.DataViz.Views.IView>, System.Int32)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.FullFrameLayout(BH.oM.DataViz.Views.IView, System.Int32, System.Boolean)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.HistogramTransform(System.String, System.Double, System.Boolean, System.Boolean)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.MultiColumnsLayout(System.Collections.Generic.List<BH.oM.DataViz.Views.IView>, System.Int32)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.TextView(System.String, System.Double, System.Double, BH.oM.DataViz.Enums.TextAnchor, BH.oM.DataViz.Misc.Padding)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.TextView(System.String, System.Double, System.Double, BH.oM.DataViz.Enums.TextAnchor)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.SumTransform(System.String, System.String, System.Double, System.Boolean, System.Boolean)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.GridItem(BH.oM.DataViz.Views.IView, System.Int32, System.Int32, System.Int32, System.Int32)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.BubblePieChart(BH.oM.DataViz.Components.Bubbles, System.Collections.Generic.List<System.String>, BH.oM.DataViz.Views.ViewConfig, BH.oM.DataViz.Components.Title, BH.oM.DataViz.Components.Legend)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.PieChart(BH.oM.DataViz.Components.Pies, BH.oM.DataViz.Views.ViewConfig, BH.oM.DataViz.Components.Title, BH.oM.DataViz.Components.Legend)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Pies(BH.oM.DataViz.Data.Dataset, System.String, System.String, System.String, System.String, System.Double, System.Double, System.Boolean)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Pies(BH.oM.DataViz.Components.Arcs, System.Double, System.Double, System.Double, System.Double, System.Double, System.String, System.Boolean)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Pies(BH.oM.DataViz.Components.Arcs, System.Double, System.Double, System.Double, System.Boolean)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.SunburstChart(BH.oM.DataViz.Components.Sunbursts, BH.oM.DataViz.Views.ViewConfig, BH.oM.DataViz.Components.Title, BH.oM.DataViz.Components.Legend)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.HierarchyTransform(System.String, System.String, System.String)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.HierarchyTransform(System.Collections.Generic.List<System.String>, System.String)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Sunbursts(BH.oM.DataViz.Data.Dataset, BH.oM.DataViz.Data.HierarchyTransform, System.Double, System.String, System.String, System.String, System.Double, System.Double)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.ViewConfig(System.Double, System.Double, BH.oM.DataViz.Misc.Padding)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.AreaChart(BH.oM.DataViz.Components.Areas, BH.oM.DataViz.Views.ViewConfig, BH.oM.DataViz.Components.Title, BH.oM.DataViz.Components.Legend)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Create.Areas(BH.oM.DataViz.Data.Dataset, System.String, System.String, System.String, System.String, System.String, System.Boolean)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Convert.ToMongoQuery(BH.oM.DataViz.Filters.CustomFilter)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Convert.ToMongoQuery(BH.oM.DataViz.Filters.RangeFilter)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Convert.ToMongoQuery(BH.oM.DataViz.Filters.ValueFilter)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Convert.ToMongoQuery(BH.oM.DataViz.Filters.IFilter)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Convert.IToMongoQuery(System.Collections.Generic.List<BH.oM.DataViz.Filters.IFilter>)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Convert.IToMongoQuery(BH.oM.DataViz.Filters.IFilter)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Compute.SaveData(System.Collections.Generic.IEnumerable<System.Object>, System.String, System.String)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Compute.SaveViews(System.Collections.Generic.Dictionary<System.String, System.Collections.Generic.IEnumerable<BH.oM.DataViz.Views.IView>>, System.String)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.Engine.DataViz.Compute.SavePage(System.String, System.String)": "This toolkit has been removed from the installer and now requires the user to manual compile code from source if you wish to utilise this functionality",
+    "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.CustomData": "Object no longer inheriting from BHoMObject, which means all base properties from the BHoMObject no longer exist and is seen as removed.",
+    "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.BHoM_Guid": "Object no longer inheriting from BHoMObject, which means all base properties from the BHoMObject no longer exist and is seen as removed.",
+    "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.Name": "Object no longer inheriting from BHoMObject, which means all base properties from the BHoMObject no longer exist and is seen as removed.",
+    "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.Fragments": "Object no longer inheriting from BHoMObject, which means all base properties from the BHoMObject no longer exist and is seen as removed.",
+    "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.Tags": "Object no longer inheriting from BHoMObject, which means all base properties from the BHoMObject no longer exist and is seen as removed.",
+    "BH.oM.LifeCycleAssessment.Fragments.EPDDimension": "Class has been deleted during a full refactoring of the EnvironmentalProductDeclaration class structure, rendering this fragment no longer usefull and hence deleted. Please raise an issue on https://github.com/BHoM/BHoM if you have any concerns with this deletion.",
+    "BH.oM.LifeCycleAssessment.Fragments.EnvironmentalProductDeclarationField": "Enum has been deleted during a full refactoring of the EnvironmentalProductDeclaration class structure, rendering this enum no longer usefull and hence deleted. Please raise an issue on https://github.com/BHoM/BHoM if you have any concerns with this deletion.",
+    "BH.oM.LifeCycleAssessment.Results.MaterialResult": "LifeCycleAssessment_oM and Toolkit has been fully refactored and restructured with a full new suite of result classes. The old classes do not fully map 1 to 1 with the new results, meaning no automatic upgrade is possible. Please raise an issue on https://github.com/BHoM/BHoM if you have any issues retreiving previously calculated result data.",
+    "BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult": "LifeCycleAssessment_oM and Toolkit has been fully refactored and restructured with a full new suite of result classes. The old classes do not fully map 1 to 1 with the new results, meaning no automatic upgrade is possible. Please raise an issue on https://github.com/BHoM/BHoM if you have any issues retreiving previously calculated result data.",
+    "BH.oM.LifeCycleAssessment.Results.ElementResult": "LifeCycleAssessment_oM and Toolkit has been fully refactored and restructured with a full new suite of result classes. The old classes do not fully map 1 to 1 with the new results, meaning no automatic upgrade is possible. Please raise an issue on https://github.com/BHoM/BHoM if you have any issues retreiving previously calculated result data.",
+    "BH.Engine.Base.Compute.RunExtensionMethod(System.Object, System.Reflection.MethodInfo, System.Object[])": "Method removed when refactoring the RunExtensionMethod framework to have all calls go through TryRunExtensionMethod. Method identified to not be used outside the backend core logic of RunExtensionMethod and hence removed. Please raise an issue on https://github.com/BHoM/BHoM_Engine if you have any issues with this method being deleted.",
+    "BH.Engine.Base.Compute.RunExtensionMethod(System.Object, System.Reflection.MethodInfo)": "Method removed when refactoring the RunExtensionMethod framework to have all calls go through TryRunExtensionMethod. Method identified to not be used outside the backend core logic of RunExtensionMethod and hence removed. Please raise an issue on https://github.com/BHoM/BHoM_Engine if you have any issues with this method being deleted.",
+    "BH.Engine.Serialiser.Compute.RegisterClassMap(System.Type)": "Method removed when removing the depending between the BHoM serialiser and the Mongo class maps. Method identified to not be used outside the backend core logic of the serialiser and hence removed. Please raise an issue on https://github.com/BHoM/BHoM_Engine if you have any issues with this method being deleted.",
+    "BH.Engine.Serialiser.Compute.RegisterClassMaps(System.Reflection.Assembly)": "Method removed when removing the depending between the BHoM serialiser and the Mongo class maps. Method identified to not be used outside the backend core logic of the serialiser and hence removed. Please raise an issue on https://github.com/BHoM/BHoM_Engine if you have any issues with this method being deleted.",
+    "BH.Engine.Adapters.CarbonQueryDatabase.Compute.CQDBearerToken(System.String, System.String)": "This method has been removed following a refactor to utilise API keys rather than usernames and passwords for security purposes. Please obtain an API key from the provider and plug that into the Adapter to use this toolkit.",
+    "BH.Engine.Forms.Compute.ButtonFilePathClick(System.Object, System.EventArgs)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Compute.ButtonFolderPathClick(System.Object, System.EventArgs)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Compute.ButtonCancelClick(System.Object, System.EventArgs)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Compute.ButtonOKClick(System.Object, System.EventArgs)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Compute.ShowAndCollectInputs(BH.oM.Forms.InputWindow)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Query.InputValues(BH.oM.Forms.InputWindow)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Query.IInputValues(System.Windows.Controls.Control)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Query.InputValues(System.Windows.Controls.CheckBox)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Query.InputValues(System.Windows.Controls.TextBox)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Query.InputValues(System.Windows.Controls.ComboBox)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Query.InputValues(System.Windows.Controls.TreeView)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Query.InputValues(BH.oM.Forms.PathButton)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Query.IsValidInput(BH.oM.Forms.InputWindow)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Query.IIsValidInput(System.Windows.Controls.Control)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Query.IsValidInput(System.Windows.Controls.Control)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Query.IsValidInput(System.Windows.Controls.TextBox)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Query.IsValidInputDouble(System.String, BH.UI.Forms.oM.FormattingRules)": "This method has been moved to Forms_UI project because it is UI-specific.",
+    "BH.Engine.Forms.Convert.ToWinForms(BH.oM.Forms.OutputTree<System.Object>, BH.oM.Forms.WindowLayoutSettings)": "This method has been removed because it was unused legacy.",
+    "BH.Engine.Forms.Convert.ToWinForms(BH.oM.Forms.OutputTable<System.Collections.Generic.List<System.Object>>, BH.oM.Forms.WindowLayoutSettings)": "This method has been removed because it was unused legacy.",
+    "BH.Engine.Forms.Convert.ToWinForms(BH.oM.Forms.OutputTable<System.Object>, BH.oM.Forms.WindowLayoutSettings)": "This method has been removed because it was unused legacy.",
+    "BH.Engine.Forms.Convert.ToWinForms(BH.oM.Forms.OutputValue<System.Object>, BH.oM.Forms.WindowLayoutSettings)": "This method has been removed because it was unused legacy.",
+    "BH.Engine.Forms.Convert.ToWinForms(System.Collections.Generic.List<BH.oM.Forms.IOutput>, BH.oM.Forms.WindowLayoutSettings)": "This method has been removed because it was unused legacy.",
+    "BH.Engine.Forms.Convert.ToWinForms(BH.oM.Forms.IControl, BH.oM.Forms.WindowLayoutSettings)": "This method has been removed because it was unused legacy.",
+    "BH.Engine.Forms.Convert.ToWinForms(BH.oM.Forms.OutputCollection, BH.oM.Forms.WindowLayoutSettings)": "This method has been removed because it was unused legacy.",
+    "BH.Engine.Forms.Convert.IToWinForms(BH.oM.Forms.IControl, BH.oM.Forms.WindowLayoutSettings)": "This method has been removed because it was unused legacy.",
+    "BH.oM.Forms.PathButton": "This object has been moved to Forms_UI project because it is UI-specific.",
+    "BH.oM.Forms.InputWindow": "This object has been moved to Forms_UI project because it is UI-specific.",
+    "BH.oM.Forms.WindowLayoutSettings.InputControlWidth": "This property has been removed because it became redundant after redesign of the class.",
+    "BH.oM.Forms.WindowLayoutSettings.Sizeable": "This property has been removed because it became redundant after redesign of the class.",
+    "BH.oM.Forms.IOutput": "This object has been removed because it was unused legacy.",
+    "BH.oM.Forms.OutputCollection": "This object has been removed because it was unused legacy.",
+    "BH.oM.Forms.OutputTable": "This object has been removed because it was unused legacy.",
+    "BH.oM.Forms.OutputTable`1": "This object has been removed because it was unused legacy.",
+    "BH.oM.Forms.OutputTable`1[[System.Object]]": "This object has been removed because it was unused legacy.",
+    "BH.oM.Forms.OutputTree": "This object has been removed because it was unused legacy.",
+    "BH.oM.Forms.OutputTree`1": "This object has been removed because it was unused legacy.",
+    "BH.oM.Forms.OutputTree`1[[System.Object]]": "This object has been removed because it was unused legacy.",
+    "BH.oM.Forms.OutputValue": "This object has been removed because it was unused legacy.",
+    "BH.oM.Forms.OutputValue`1": "This object has been removed because it was unused legacy.",
+    "BH.oM.Forms.OutputValue`1[[System.Object]]": "This object has been removed because it was unused legacy.",
+    "BH.Engine.LifeCycleAssessment.Objects.HelperMethods.GetEPDDensity(BH.oM.Dimensional.IElementM, BH.oM.Physical.Materials.MaterialComposition)": "Method removed during full refactoring of EPDs and evaluation framework. Please raise an issue on https://github.com/BHoM/LifeCycleAssessment_Toolkit if you have any issues.",
+    "BH.Engine.LifeCycleAssessment.Objects.HelperMethods.GetElementEpd(BH.oM.Dimensional.IElementM, BH.oM.Physical.Materials.MaterialComposition)": "Method removed during full refactoring of EPDs and evaluation framework. Please raise an issue on https://github.com/BHoM/LifeCycleAssessment_Toolkit if you have any issues.",
+    "BH.Engine.LifeCycleAssessment.Objects.HelperMethods.GetQuantityType(BH.oM.Dimensional.IElementM, BH.oM.Physical.Materials.MaterialComposition)": "Method removed during full refactoring of EPDs and evaluation framework. Please raise an issue on https://github.com/BHoM/LifeCycleAssessment_Toolkit if you have any issues.",
+    "BH.Engine.LifeCycleAssessment.Objects.HelperMethods.GetQuantityTypeValue(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.QuantityType, BH.oM.Physical.Materials.MaterialComposition)": "Method removed during full refactoring of EPDs and evaluation framework. Please raise an issue on https://github.com/BHoM/LifeCycleAssessment_Toolkit if you have any issues.",
+    "BH.Engine.LifeCycleAssessment.Objects.HelperMethods.GetEvaluationValue(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField, System.Collections.Generic.List<BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases>, BH.oM.LifeCycleAssessment.QuantityType, BH.oM.Physical.Materials.MaterialComposition, System.Boolean)": "Method removed during full refactoring of EPDs and evaluation framework. Please raise an issue on https://github.com/BHoM/LifeCycleAssessment_Toolkit if you have any issues.",
+    "BH.Engine.LifeCycleAssessment.Query.GetEnvironmentalMetric(BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration)": "Method removed during full refactoring of EPDs and evaluation framework. Please you the GetProperty or Explode to access the EnvironmentalMetrics from your EPD. Please raise an issue on https://github.com/BHoM/LifeCycleAssessment_Toolkit if you have any issues.",
+    "BH.Engine.LifeCycleAssessment.Query.GetEnvironmentalMetricValue(BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField)": "Method removed during full refactoring of EPDs and evaluation framework. Please raise an issue on https://github.com/BHoM/LifeCycleAssessment_Toolkit if you have any issues.",
+    "BH.Engine.LifeCycleAssessment.Query.GetEPDDensity(BH.oM.Dimensional.IElementM)": "Method removed during full refactoring of EPDs and evaluation framework. Please raise an issue on https://github.com/BHoM/LifeCycleAssessment_Toolkit if you have any issues.",
+    "BH.Engine.LifeCycleAssessment.Query.GetEPDDensity(BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration)": "Method removed during full refactoring of EPDs and evaluation framework. Please raise an issue on https://github.com/BHoM/LifeCycleAssessment_Toolkit if you have any issues.",
+    "BH.Engine.LifeCycleAssessment.Query.GetEPDPhases(BH.oM.Dimensional.IElementM)": "Method removed during full refactoring of EPDs and evaluation framework. Please raise an issue on https://github.com/BHoM/LifeCycleAssessment_Toolkit if you have any issues.",
+    "BH.Engine.LifeCycleAssessment.Query.GetEPDPhases(BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration)": "Method removed during full refactoring of EPDs and evaluation framework. Please raise an issue on https://github.com/BHoM/LifeCycleAssessment_Toolkit if you have any issues.",
+    "BH.Engine.LifeCycleAssessment.Query.GetQuantityTypeValue(BH.oM.Physical.Constructions.Construction, BH.oM.LifeCycleAssessment.QuantityType)": "QunatityTypeValue has been completely removed from EPDs in favour of all units in SI format.",
+    "BH.Engine.LifeCycleAssessment.Query.GetQuantityTypeValue(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.QuantityType)": "QunatityTypeValue has been completely removed from EPDs in favour of all units in SI format.",
+    "BH.Engine.LifeCycleAssessment.Query.GetQuantityTypeValue(BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration)": "QunatityTypeValue has been completely removed from EPDs in favour of all units in SI format.",
+    "BH.Engine.LifeCycleAssessment.Query.GetEvaluationValue(BH.oM.Physical.Constructions.Construction, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField, System.Collections.Generic.List<BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases>, BH.oM.LifeCycleAssessment.QuantityType, System.Boolean)": "Method removed during full refactoring of EPDs and evaluation framework. Please raise an issue on https://github.com/BHoM/LifeCycleAssessment_Toolkit if you have any issues.",
+    "BH.Engine.LifeCycleAssessment.Query.GetEvaluationValue(BH.oM.Dimensional.IElementM, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField, System.Collections.Generic.List<BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases>, BH.oM.LifeCycleAssessment.QuantityType, System.Boolean)": "Method removed during full refactoring of EPDs and evaluation framework. Please raise an issue on https://github.com/BHoM/LifeCycleAssessment_Toolkit if you have any issues.",
+    "BH.Engine.LifeCycleAssessment.Query.GetEvaluationValue(BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration, BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField, System.Collections.Generic.List<BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases>, System.Boolean)": "Method removed during full refactoring of EPDs and evaluation framework. Please raise an issue on https://github.com/BHoM/LifeCycleAssessment_Toolkit if you have any issues.",
+    "BH.Engine.LifeCycleAssessment.Query.GetEPDQuantityType(BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration)": "Method removed during full refactoring of EPDs and evaluation framework. Please raise an issue on https://github.com/BHoM/LifeCycleAssessment_Toolkit if you have any issues. QuantityType can be accesed via the GetProperty or Exploding the EPD.",
+    "BH.Engine.Adapters.RFEM.Query.GetSectionType(Dlubal.RFEM5.CrossSection)": "Method GetSectionType for RFEM5 has been tidied away into the Adapter. Functionality remains available during use of the RFEM5 adapter.",
+    "BH.Engine.Adapters.RFEM.Compute.GetIdListFromString(System.String)": "Method GetIdListFromString for RFEM5 has been tidied away into the Adapter. Functionality remains available during use of the RFEM5 adapter.",
+    "BH.Engine.Adapters.RFEM.Compute.GetSectionProfile(System.String, Dlubal.RFEM3.DB_CRSC_PROPERTY[])": "Method GetSectionProfile for RFEM5 has been tidied away into the Adapter. Functionality remains available during use of the RFEM5 adapter."
   },
   "MessageForNoUpgrade": {
-
+    "BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration": "Class has been restructured in a way that mean safe automatic upgrade is impossible. Please raise an issue on https://github.com/BHoM/BHoM if you have any issues and need assistance with upgrading an EPD to the new format",
+    "BH.oM.LifeCycleAssessment.EnvironmentalMetric": "Class has been restructured in a way that mean safe automatic upgrade is impossible. Please raise an issue on https://github.com/BHoM/BHoM if you have any issues and need assistance with upgrading an EPD to the new format"
   }
 }
