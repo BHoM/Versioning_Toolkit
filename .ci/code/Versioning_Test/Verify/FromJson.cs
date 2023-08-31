@@ -35,6 +35,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using BH.Engine.Library;
 
 namespace BH.Test.Versioning
 {
@@ -101,6 +102,13 @@ namespace BH.Test.Versioning
                 nbMethods = json.Count();
             }
 
+            //Test all datasets
+            string datasetsFile = Path.Combine(testFolder, "Datasets.txt");
+            if(File.Exists(datasetsFile))
+            {
+                results.Add(FromDataset(datasetsFile));
+            }
+
             // Returns a summary result 
             string version = Path.GetFileName(testFolder);
             int errorCount = results.Where(x => x.Status == TestStatus.Error).Count();
@@ -160,6 +168,53 @@ namespace BH.Test.Versioning
                     Message = message,
                     Information = Engine.Base.Query.CurrentEvents().Select(x => x.ToEventMessage()).ToList<ITestInformation>()
                 };
+        }
+
+        /*************************************/
+
+        public static TestResult FromDataset(string datasetVersioningFile)
+        {
+            if (string.IsNullOrEmpty(datasetVersioningFile) || !File.Exists(datasetVersioningFile))
+                return Engine.Test.Create.PassResult($"No dataset versioning file found for {datasetVersioningFile}.");
+
+            List<string> datasets = File.ReadAllLines(datasetVersioningFile).ToList();
+
+            List<TestResult> results = new List<TestResult>();
+
+            foreach(var dataset in datasets)
+            {
+                Engine.Base.Compute.ClearCurrentEvents();
+                var result = BH.Engine.Library.Query.ValidatePath(dataset);
+
+                bool failure = BH.Engine.Base.Query.CurrentEvents().Any(x => x.Message.Contains("is not a valid") && x.Message.Contains("no valid upgrade"));
+
+                if (failure)
+                {
+                    results.Add(new TestResult()
+                    {
+                        Description = dataset,
+                        Status = TestStatus.Error,
+                        Message = $"No valid dataset could be found for {dataset}.",
+                        Information = Engine.Base.Query.CurrentEvents().Select(x => x.ToEventMessage()).ToList<ITestInformation>(),
+                    })
+                    ;
+                }
+                else
+                    results.Add(Engine.Test.Create.PassResult($"No versioning errors for {dataset} found."));
+            }
+
+            int errorCount = results.Where(x => x.Status == TestStatus.Error).Count();
+            int warningCount = results.Where(x => x.Status == TestStatus.Warning).Count();
+
+            return new TestResult()
+            {
+                ID = $"VersioningFromDatasets",
+                Description = $"{datasets.Count} datasets tested.",
+                Message = $"{errorCount} errors and {warningCount} warnings reported.",
+                Status = results.MostSevereStatus(),
+                Information = results.Where(x => x.Status != TestStatus.Pass).ToList<ITestInformation>(),
+                UTCTime = DateTime.UtcNow,
+            };
         }
 
         /*************************************/
