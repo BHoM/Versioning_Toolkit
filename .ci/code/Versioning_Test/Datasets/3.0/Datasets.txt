@@ -1,0 +1,89 @@
+BuildingEnvironments\Gains\Equipment\CIBSEGuideA2019SensibleHeatEquipment
+BuildingEnvironments\Gains\Lighting\CIBSEGuideA2019SensibleHeatLighting
+BuildingEnvironments\Gains\People\CIBSEGuideA2019LatentHeatPeople
+BuildingEnvironments\Gains\People\CIBSEGuideA2019Occupancy
+BuildingEnvironments\Gains\People\CIBSEGuideA2019SensibleHeatPeople
+BuildingEnvironments\Gains\People\IBC2015Occupancy
+Gradients\Gradients
+Materials\MaterialsEurope\Concrete
+Materials\MaterialsEurope\Rebar
+Materials\MaterialsEurope\Steel(Grade)
+Materials\MaterialsEurope\Steel
+Materials\MaterialsUSA\Concrete
+Materials\MaterialsUSA\Steel
+Planning\Labels\IssueLabels
+SectionProperties\UK_SteelSections\CHS
+SectionProperties\UK_SteelSections\L
+SectionProperties\UK_SteelSections\Leq
+SectionProperties\UK_SteelSections\PFC
+SectionProperties\UK_SteelSections\RHS
+SectionProperties\UK_SteelSections\SHS
+SectionProperties\UK_SteelSections\TUB
+SectionProperties\UK_SteelSections\TUC
+SectionProperties\UK_SteelSections\UB
+SectionProperties\UK_SteelSections\UBP
+SectionProperties\UK_SteelSections\UC
+SectionProperties\US_SteelSections\HP
+SectionProperties\US_SteelSections\HSS
+SectionProperties\US_SteelSections\L
+SectionProperties\US_SteelSections\MT
+SectionProperties\US_SteelSections\PIPE
+SectionProperties\US_SteelSections\W
+SectionProperties\US_SteelSections\WT
+TestSets\Structure\Bar\01 - Straight planar bars
+TestSets\Structure\Bar\02 - Straight Vertical bars
+TestSets\Structure\Bar\03 - Straight rotating planar bars
+TestSets\Structure\Bar\04 - Straight rotating vertical bars
+TestSets\Structure\Bar\05 - Random Orientated bars
+TestSets\Structure\Bar\06 - Random Orientated rotating bars
+TestSets\Structure\Bar\07 - Small Frame
+TestSets\Structure\Bar\08 - FreeForm Frame
+TestSets\Structure\Bar\09 - Bars with releases
+TestSets\Structure\BarRelease\01 - Bar Releases
+TestSets\Structure\Constraint6DOF\01 - fix or free
+TestSets\Structure\Constraint6DOF\02 - fix or spring
+TestSets\Structure\FEMesh\01 - Property Test - Concrete - Constant Thickness
+TestSets\Structure\FEMesh\02 - Property Test - Concrete - Ribbed
+TestSets\Structure\FEMesh\03 - Property Test - Concrete - Waffle
+TestSets\Structure\FEMesh\04 - Property Test - Concrete - LoadingPanelProperty
+TestSets\Structure\FEMesh\05 - Property Test - Steel - ConstantThickness
+TestSets\Structure\FEMesh\06 - Node Test - Three Node Planar FEMesh
+TestSets\Structure\FEMesh\07 - Node Test - Four Node Planar FEMesh
+TestSets\Structure\FEMesh\08 - Planarity Test - Single Curvature FEMesh
+TestSets\Structure\FEMesh\09 - Planarity Test - Double Curvature FEMesh
+TestSets\Structure\IMaterialFragment\01 - Object Test - Steel
+TestSets\Structure\IMaterialFragment\02 - Object Test - Concrete
+TestSets\Structure\IMaterialFragment\03 - Object Test - Aluminium
+TestSets\Structure\IMaterialFragment\04 - Object Test - Timber
+TestSets\Structure\IMaterialFragment\05 - Zero Property Test - E
+TestSets\Structure\IMaterialFragment\06 - Zero Property Test - v
+TestSets\Structure\IMaterialFragment\07 - Unit Property Test - v
+TestSets\Structure\IMaterialFragment\08 - Zero Property Test - tC
+TestSets\Structure\IMaterialFragment\09 - Zero Property Test - Density
+TestSets\Structure\IMaterialFragment\10 - Zero Property Test - Damping Ratio
+TestSets\Structure\IMaterialFragment\11 - Unit Property Test - Damping ratio
+TestSets\Structure\IMaterialFragment\12 - Zero Property Test -  YieldStress
+TestSets\Structure\IMaterialFragment\13 - Zero Property Test -   UltimateStress
+TestSets\Structure\IMaterialFragment\14 - Equal Properties Test - YieldStress equals UltimateStress
+TestSets\Structure\IMaterialFragment\15 - Zero Property Test - CubeStrength
+TestSets\Structure\IMaterialFragment\16 - Zero Property Test - CylinderStrength
+TestSets\Structure\IMaterialFragment\17 - Equal Properties Test - Cylinder equals CubeStrength
+TestSets\Structure\ISectionProperty\01 - Steel Library Sections
+TestSets\Structure\ISectionProperty\02 - Steel Fabricated Sections
+TestSets\Structure\ISectionProperty\03 - Steel Freeform Sections
+TestSets\Structure\ISectionProperty\04 - Concrete Parametric Sections
+TestSets\Structure\ISectionProperty\05 - Concrete Freeform Sections
+TestSets\Structure\Node\01 - Constraint6DOF fix or free
+TestSets\Structure\Node\02 - Constraint6DOF fix or spring
+TestSets\Structure\Panel\01 - Property Test - Concrete - Slabs
+TestSets\Structure\Panel\02 - Property Test - Concrete - Walls
+TestSets\Structure\Panel\03 - Property Test - Steel - Slabs
+TestSets\Structure\Panel\04 - Property Test - Steel - Walls
+TestSets\Structure\Panel\05 - Property Test - LoadingPanel - Slabs
+TestSets\Structure\Panel\06 - Property Test -  LoadingPanel  - Walls
+TestSets\Structure\Panel\07 - Outline Tests - Slabs
+TestSets\Structure\Panel\08 - Outline Tests - Walls
+TestSets\Structure\Panel\09 - Outline Tests - Freeform
+TestSets\Structure\Panel\10 - Opening Tests - Slabs
+TestSets\Structure\Panel\11 - Opening Tests - Walls
+TestSets\Structure\Panel\12 - Opening Tests - FreeForm
