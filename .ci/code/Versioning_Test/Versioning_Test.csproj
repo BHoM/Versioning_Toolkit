@@ -42,7 +42,9 @@
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Library_Engine">
-      <HintPath>..\..\..\..\..\..\..\..\..\ProgramData\BHoM\Assemblies\Library_Engine.dll</HintPath>
+      <HintPath>$(ProgramData)\BHoM\Assemblies\Library_Engine.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Serialiser_Engine">
       <HintPath>C:\ProgramData\BHoM\Assemblies\Serialiser_Engine.dll</HintPath>
