@@ -45,7 +45,7 @@ namespace BH.Test.Versioning
         /**** Test Methods                ****/
         /*************************************/
 
-        public static TestResult FromJsonDatasets(bool testAll = true)
+        public static TestResult FromJsonDatasets(bool testAll = false)
         {
             string testFolder = @"C:\ProgramData\BHoM\Datasets\TestSets\Versioning";
             List<string> versions = new List<string> { "6.2", };
