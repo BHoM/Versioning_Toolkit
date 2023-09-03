@@ -183,6 +183,9 @@ namespace BH.Test.Versioning
 
             foreach(var dataset in datasets)
             {
+                if (string.IsNullOrEmpty(dataset))
+                    continue;
+
                 Engine.Base.Compute.ClearCurrentEvents();
                 var result = BH.Engine.Library.Query.ValidatePath(dataset);
 
