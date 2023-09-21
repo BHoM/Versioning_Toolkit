@@ -35,6 +35,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using BH.Engine.Library;
 
 namespace BH.Test.Versioning
 {
@@ -47,9 +48,9 @@ namespace BH.Test.Versioning
         public static TestResult FromJsonDatasets(bool testAll = false)
         {
             string testFolder = @"C:\ProgramData\BHoM\Datasets\TestSets\Versioning";
-            List<string> versions = new List<string> { "6.1", };
+            List<string> versions = new List<string> { "6.2", };
             if(testAll)
-                versions.AddRange(new List<string> { "6.0", "5.3", "5.2", "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" });
+                versions.AddRange(new List<string> { "6.1", "6.0", "5.3", "5.2", "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" });
 
             string exceptions = "Grasshopper|Rhinoceros";
 
@@ -101,6 +102,17 @@ namespace BH.Test.Versioning
                 nbMethods = json.Count();
             }
 
+            //Test all datasets
+            int nbDatasets = 0;
+            string datasetsFile = Path.Combine(testFolder, "Datasets.txt");
+            if(File.Exists(datasetsFile))
+            {
+                IEnumerable<string> datasets = File.ReadAllLines(datasetsFile);
+                results.AddRange(datasets.Select(x => FromDataset(x)));
+
+                nbDatasets = datasets.Count();
+            }
+
             // Returns a summary result 
             string version = Path.GetFileName(testFolder);
             int errorCount = results.Where(x => x.Status == TestStatus.Error).Count();
@@ -109,7 +121,7 @@ namespace BH.Test.Versioning
             return new TestResult()
             {
                 ID = $"VersioningFromJsonDatasets_{version}",
-                Description = $"Beta Version {Path.GetFileName(testFolder)}: {nbObjects} object types and {nbMethods} methods.",
+                Description = $"Beta Version {Path.GetFileName(testFolder)}: {nbObjects} object types, {nbMethods} methods, and {nbDatasets} datasets.",
                 Message = $"{errorCount} errors and {warningCount} warnings reported.",
                 Status = results.MostSevereStatus(),
                 Information = results.Where(x => x.Status != TestStatus.Pass).ToList<ITestInformation>(),
@@ -163,8 +175,33 @@ namespace BH.Test.Versioning
         }
 
         /*************************************/
+
+        public static TestResult FromDataset(string dataset)
+        {
+            List<TestResult> results = new List<TestResult>();
+
+            if (string.IsNullOrEmpty(dataset))
+                Engine.Test.Create.PassResult($"No versioning errors for {dataset} found.");
+
+            Engine.Base.Compute.ClearCurrentEvents();
+            var result = BH.Engine.Library.Query.ValidatePath(dataset);
+
+            bool failure = BH.Engine.Base.Query.CurrentEvents().Any(x => x.Message.Contains("is not a valid") && x.Message.Contains("no valid upgrade"));
+
+            if (failure)
+            {
+                return new TestResult()
+                {
+                    Description = dataset,
+                    Status = TestStatus.Error,
+                    Message = $"No valid dataset could be found for {dataset}.",
+                    Information = Engine.Base.Query.CurrentEvents().Select(x => x.ToEventMessage()).ToList<ITestInformation>(),
+                };
+            }
+            else
+                return Engine.Test.Create.PassResult($"No versioning errors for {dataset} found.");
+        }
+
+        /*************************************/
     }
 }
-
-
-
