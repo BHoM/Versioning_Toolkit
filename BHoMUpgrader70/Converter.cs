@@ -39,6 +39,41 @@ namespace BH.Upgrader.v70
         public Converter() : base()
         {
             PreviousVersion = "6.3";
+
+            ToNewObject.Add("BH.oM.Adaters.Lusas.LusasConfig", UpgradeLusasConfig);
+        }
+
+        /***************************************************/
+        /**** Private Methods                           ****/
+        /***************************************************/
+
+        public static Dictionary<string, object> UpgradeLusasConfig(Dictionary<string, object> old)
+        {
+            Dictionary<string, object> librarySettings = new Dictionary<string, object>();
+            if (old.ContainsKey("LibrarySettings"))
+            {
+                librarySettings["_t"] = "BH.oM.Adapters.Lusas.LibrarySettings";
+                librarySettings["LibrarySettings"] = old["LibrarySettings"];
+            }
+
+            return new Dictionary<string, object>
+        {
+            { "_t",  "BH.oM.Adapters.Lusas.LusasSettings" },
+            { "MergeTolerance", double.NaN },
+            { "LibrarySettings", librarySettings },
+            { "WrapNonBHoMObjects", false },
+            { "DefaultPushType", null},
+            { "CloneBeforePush", true},
+            { "DefaultPullType", null},
+            { "HandleDependencies", true },
+            { "UseAdapterId", true },
+            { "UsaHashComparerAsDefault", true },
+            { "ProcessInMemory", false },
+            { "OnlyUpdateChangedObjects", true },
+            { "CacheCRUDobjects", true },
+            { "CreateOnly_DistinctObjects", false },
+            { "CreateOnly_DistinctDependencies", true },
+        };
         }
     }
 }
