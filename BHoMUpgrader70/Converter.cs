@@ -40,40 +40,43 @@ namespace BH.Upgrader.v70
         {
             PreviousVersion = "6.3";
 
-            ToNewObject.Add("BH.oM.Adaters.Lusas.LusasConfig", UpgradeLusasConfig);
+            ToNewObject.Add("BH.oM.Adapters.Lusas.LusasConfig", UpgradeLusasConfig);
         }
 
         /***************************************************/
         /**** Private Methods                           ****/
         /***************************************************/
 
-        public static Dictionary<string, object> UpgradeLusasConfig(Dictionary<string, object> old)
+        public static Dictionary<string, object> UpgradeLusasConfig(Dictionary<string, object> oldVersion)
         {
-            Dictionary<string, object> librarySettings = new Dictionary<string, object>();
-            if (old.ContainsKey("LibrarySettings"))
-            {
-                librarySettings["_t"] = "BH.oM.Adapters.Lusas.LibrarySettings";
-                librarySettings["LibrarySettings"] = old["LibrarySettings"];
-            }
+            Dictionary<string, object> newVersion = new Dictionary<string, object>();
+            newVersion["_t"] = "BH.oM.Adapters.Lusas.LusasSettings";
 
-            return new Dictionary<string, object>
-        {
-            { "_t",  "BH.oM.Adapters.Lusas.LusasSettings" },
-            { "MergeTolerance", double.NaN },
-            { "LibrarySettings", librarySettings },
-            { "WrapNonBHoMObjects", false },
-            { "DefaultPushType", null},
-            { "CloneBeforePush", true},
-            { "DefaultPullType", null},
-            { "HandleDependencies", true },
-            { "UseAdapterId", true },
-            { "UsaHashComparerAsDefault", true },
-            { "ProcessInMemory", false },
-            { "OnlyUpdateChangedObjects", true },
-            { "CacheCRUDobjects", true },
-            { "CreateOnly_DistinctObjects", false },
-            { "CreateOnly_DistinctDependencies", true },
-        };
+            /*oldVersion.Remove("BHoM_Guid");
+            oldVersion.Remove("Name");
+            oldVersion.Remove("Fragments");
+            oldVersion.Remove("Tags");
+            oldVersion.Remove("CustomData");*/
+
+            newVersion["MergeTolerance"] = double.NaN;
+            newVersion["LibrarySettings"] = oldVersion["LibrarySettings"];
+            newVersion["WrapNonBHoMObjects"] = false;
+            newVersion["DefaultPushType"] = 0;
+            newVersion["CloneBeforePush"] = true;
+            newVersion["DefaultPullType"] = 0;
+            newVersion["HandleDependencies"] = true;
+            newVersion["UseAdapterId"] = true;
+            newVersion["UseHashComparerAsDefault"] = true;
+            newVersion["ProcessInMemory"] = false;
+            newVersion["OnlyUpdateChangedObjects"] = true;
+            newVersion["CacheCRUDobjects"] = true;
+            newVersion["CreateOnly_DistinctObjects"] = false;
+            newVersion["CreateOnly_DistinctDependencies"] = true;
+
+            if (newVersion.ContainsKey("BHoM_Guid"))
+                newVersion.Remove("BHoM_Guid");
+
+            return newVersion;
         }
     }
 }
