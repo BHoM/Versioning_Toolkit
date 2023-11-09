@@ -40,5 +40,20 @@ namespace BH.Upgrader.v70
         {
             PreviousVersion = "6.3";
         }
+
+        /***************************************************/
+        /**** Private Methods                           ****/
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeEnergyMaterial(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            if (newVersion.ContainsKey("Source"))
+            {
+                newVersion["Source"] = null;
+                newVersion.Remove("Source");
+                return newVersion;
+            }
+        }
     }
 }
