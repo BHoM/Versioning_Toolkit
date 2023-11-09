@@ -49,32 +49,8 @@ namespace BH.Upgrader.v70
 
         public static Dictionary<string, object> UpgradeLusasConfig(Dictionary<string, object> oldVersion)
         {
-            Dictionary<string, object> newVersion = new Dictionary<string, object>();
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
             newVersion["_t"] = "BH.oM.Adapters.Lusas.LusasSettings";
-
-            /*oldVersion.Remove("BHoM_Guid");
-            oldVersion.Remove("Name");
-            oldVersion.Remove("Fragments");
-            oldVersion.Remove("Tags");
-            oldVersion.Remove("CustomData");*/
-
-            newVersion["MergeTolerance"] = double.NaN;
-            newVersion["LibrarySettings"] = oldVersion["LibrarySettings"];
-            newVersion["WrapNonBHoMObjects"] = false;
-            newVersion["DefaultPushType"] = 0;
-            newVersion["CloneBeforePush"] = true;
-            newVersion["DefaultPullType"] = 0;
-            newVersion["HandleDependencies"] = true;
-            newVersion["UseAdapterId"] = true;
-            newVersion["UseHashComparerAsDefault"] = true;
-            newVersion["ProcessInMemory"] = false;
-            newVersion["OnlyUpdateChangedObjects"] = true;
-            newVersion["CacheCRUDobjects"] = true;
-            newVersion["CreateOnly_DistinctObjects"] = false;
-            newVersion["CreateOnly_DistinctDependencies"] = true;
-
-            if (newVersion.ContainsKey("BHoM_Guid"))
-                newVersion.Remove("BHoM_Guid");
 
             return newVersion;
         }
