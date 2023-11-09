@@ -45,15 +45,128 @@ namespace BH.Upgrader.v70
         /**** Private Methods                           ****/
         /***************************************************/
 
-        private static Dictionary<string, object> UpgradeEnergyMaterial(Dictionary<string, object> oldVersion)
+        private static Dictionary<string, object> UpgradeOpaqueMaterial(Dictionary<string, object> oldVersion)
         {
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            newVersion["_t"] = "BH.oM.LadybugTools.EnergyMaterial";
+
             if (newVersion.ContainsKey("Source"))
             {
                 newVersion["Source"] = null;
                 newVersion.Remove("Source");
-                return newVersion;
             }
+
+            return newVersion;
+        }
+
+        private static Dictionary<string, object> UpgradeShelter(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            List<double> numbers;
+
+            if (newVersion.TryGetValue("WindPorosity", out object wind))
+            {
+                numbers = Enumerable.Repeat((double)wind, 8760).ToList();
+                newVersion["WindPorosity"] = numbers;
+            }
+            if (newVersion.TryGetValue("RadiationPorosity", out object radiation))
+            {
+                numbers = Enumerable.Repeat((double)radiation, 8760).ToList();
+                newVersion["RadiationPorosity"] = numbers;
+            }
+
+            return newVersion;
+        }
+
+        private static Dictionary<string, object> UpgradeILadybugToolsMaterial(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            newVersion["_t"] = "BH.oM.LadybugTools.IEnergyMaterialOpaque";
+
+            if (newVersion.ContainsKey("Source"))
+            {
+                newVersion["Source"] = null;
+                newVersion.Remove("Source");
+            }
+
+            return newVersion;
+        }
+
+        private static Dictionary<string, object> UpgradeSimulationResult(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            Dictionary<string, object> Material;
+
+            if (oldVersion.TryGetValue("GroundMaterial", out object ground))
+            {
+                Material = ground as Dictionary<string, object>;
+                if (Material.ContainsKey("_t"))
+                {
+                    Material["_t"] = "BH.oM.LadybugTools.IEnergyMaterialOpaque";
+                    newVersion["GroundMaterial"] = Material;
+                }
+            }
+            if (oldVersion.TryGetValue("ShadeMaterial", out object shade))
+            {
+                Material = shade as Dictionary<string, object>;
+                if (Material.ContainsKey("_t"))
+                {
+                    Material["_t"] = "BH.oM.LadybugTools.IEnergyMaterialOpaque";
+                    newVersion["ShadeMaterial"] = Material;
+                }
+            }
+
+            return newVersion;
+        }
+
+
+        //already List<double>, but what about List<double?>?
+        private static Dictionary<string, object> UpgradeTypology(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            List<double> numbers;
+
+            return newVersion;
+        }
+
+        //So much stuff to version!
+        private static Dictionary<string, object> UpgradeExternalComfort(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            Dictionary<string, object> UTC;
+
+            if (newVersion.ContainsKey("UniversalThermalClimate"))
+            {
+                (newVersion["UniversalThermalClimate"] as Dictionary<string, object>)["_t"] = "BH.oM.LadybugTools.HourlyContinuousCollection";
+            }
+            if (newVersion.ContainsKey("DryBulbTemperature"))
+            {
+                (newVersion["DryBulbTemperature"] as Dictionary<string, object>)["_t"] = "BH.oM.LadybugTools.HourlyContinuousCollection";
+            }
+            if (newVersion.ContainsKey("RelativeHumidity"))
+            {
+                (newVersion["RelativeHumidity"] as Dictionary<string, object>)["_t"] = "BH.oM.LadybugTools.HourlyContinuousCollection";
+            }
+            if (newVersion.ContainsKey("WindSpeed"))
+            {
+                (newVersion["WindSpeed"] as Dictionary<string, object>)["_t"] = "BH.oM.LadybugTools.HourlyContinuousCollection";
+            }
+            if (newVersion.ContainsKey("MeanRadiantTemperature"))
+            {
+                (newVersion["MeanRadiantTemperature"] as Dictionary<string, object>)["_t"] = "BH.oM.LadybugTools.HourlyContinuousCollection";
+            }
+
+            /*if (oldVersion.TryGetValue("UniversalThermalClimate", out object obj))
+            {
+                UTC = obj as Dictionary<string, object>;
+                if (UTC.ContainsKey("_t"))
+                {
+                    UTC["_t"] = "BH.oM.LadybugTools.HourlyContinuousCollection";
+                }
+                newVersion["UniversalThermalClimate"] = UTC;
+            }*/
+
+            return newVersion;
         }
     }
 }
