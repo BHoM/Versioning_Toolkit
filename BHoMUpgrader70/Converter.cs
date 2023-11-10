@@ -108,17 +108,24 @@ namespace BH.Upgrader.v70
             Dictionary<string, object> newVersion = new Dictionary<string, object>();
 
             newVersion.Add("_t", "BH.oM.LadybugTools.HourlyContinuousCollection");
-            newVersion.Add("Type", customData["Type"]);
-            newVersion.Add("Header", customData["Header"]);
-            newVersion.Add("Values", customData["Values"] as List<double>);
+            if(customData.ContainsKey("Type"))
+                newVersion.Add("Type", customData["Type"]);
+            if(customData.ContainsKey("Header"))
+                newVersion.Add("Header", customData["Header"]);
+           if(customData.ContainsKey("Values"))
+                newVersion.Add("Values", customData["Values"] as List<double>);
+           
 
-            Dictionary<string, object> header = newVersion["Header"] as Dictionary<string, object>;
-            header.Add("_t", "BH.oM.LadybugTools.Header");
+            if(newVersion.ContainsKey("Header"))
+            {
+                Dictionary<string, object> header = newVersion["Header"] as Dictionary<string, object>;
+                header.Add("_t", "BH.oM.LadybugTools.Header");
 
-            (header["Datatype"] as Dictionary<string, object>).Add("_t", "BH.oM.LadybugTools.DataType");
-            (header["AnalysisPeriod"] as Dictionary<string, object>).Add("_t", "BH.oM.LadybugTools.AnalysisPeriod");
+                (header["Datatype"] as Dictionary<string, object>).Add("_t", "BH.oM.LadybugTools.DataType");
+                (header["AnalysisPeriod"] as Dictionary<string, object>).Add("_t", "BH.oM.LadybugTools.AnalysisPeriod");
 
-            newVersion["Header"] = header;
+                newVersion["Header"] = header;
+            }
             return newVersion;
         }
 
