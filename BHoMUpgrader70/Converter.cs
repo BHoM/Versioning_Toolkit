@@ -61,6 +61,7 @@ namespace BH.Upgrader.v70
                 numbers = Enumerable.Repeat((double)wind, 8760).ToList();
                 newVersion["WindPorosity"] = numbers;
             }
+
             if (newVersion.TryGetValue("RadiationPorosity", out object radiation))
             {
                 numbers = Enumerable.Repeat((double)radiation, 8760).ToList();
@@ -69,6 +70,8 @@ namespace BH.Upgrader.v70
 
             return newVersion;
         }
+
+        /***************************************************/
 
         private static Dictionary<string, object> UpgradeILadybugToolsMaterial(Dictionary<string, object> oldVersion)
         {
@@ -92,37 +95,39 @@ namespace BH.Upgrader.v70
 
             if (newVersion.ContainsKey("Source"))
             {
-                newVersion["Source"] = null;
                 newVersion.Remove("Source");
             }
 
             return newVersion;
         }
 
-        private static Dictionary<string, object> HourlyContinuousCollection(Dictionary<string, object> CustomData)
+        /***************************************************/
+
+        private static Dictionary<string, object> HourlyContinuousCollection(Dictionary<string, object> customData)
         {
             Dictionary<string, object> newVersion = new Dictionary<string, object>();
 
             newVersion.Add("_t", "BH.oM.LadybugTools.HourlyContinuousCollection");
-            newVersion.Add("Type", CustomData["Type"]);
-            newVersion.Add("Header", CustomData["Header"]);
-            newVersion.Add("Values", CustomData["Values"]);
+            newVersion.Add("Type", customData["Type"]);
+            newVersion.Add("Header", customData["Header"]);
+            newVersion.Add("Values", customData["Values"]);
 
-            Dictionary<string, object> Header = newVersion["Header"] as Dictionary<string, object>;
-            Header.Add("_t", "BH.oM.LadybugTools.Header");
+            Dictionary<string, object> header = newVersion["Header"] as Dictionary<string, object>;
+            header.Add("_t", "BH.oM.LadybugTools.Header");
 
-            (Header["Datatype"] as Dictionary<string, object>).Add("_t", "BH.oM.LadybugTools.DataType");
-            (Header["AnalysisPeriod"] as Dictionary<string, object>).Add("_t", "BH.oM.LadybugTools.AnalysisPeriod");
+            (header["Datatype"] as Dictionary<string, object>).Add("_t", "BH.oM.LadybugTools.DataType");
+            (header["AnalysisPeriod"] as Dictionary<string, object>).Add("_t", "BH.oM.LadybugTools.AnalysisPeriod");
 
-            newVersion["Header"] = Header;
+            newVersion["Header"] = header;
             return newVersion;
         }
 
-        //So much stuff to version!
+        /***************************************************/
+
         private static Dictionary<string, object> UpgradeExternalComfort(Dictionary<string, object> oldVersion)
         {
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
-            Dictionary<string, object> CustomData;
+            Dictionary<string, object> customData;
             List<string> keys = new List<string>()
             {
                 "UniversalThermalClimate",
@@ -134,13 +139,13 @@ namespace BH.Upgrader.v70
 
             if (oldVersion.ContainsKey("CustomData"))
             {
-                CustomData = oldVersion["CustomData"] as Dictionary<string, object>;
+                customData = oldVersion["CustomData"] as Dictionary<string, object>;
                 (newVersion["CustomData"] as Dictionary<string, object>).Clear();
                 foreach (string key in keys)
                 {
-                    if (CustomData.ContainsKey(key))
+                    if (customData.ContainsKey(key))
                     {
-                        newVersion.Add(key, HourlyContinuousCollection(CustomData[key] as Dictionary<string, object>));
+                        newVersion.Add(key, HourlyContinuousCollection(customData[key] as Dictionary<string, object>));
                     }
                 }
             }
@@ -148,10 +153,12 @@ namespace BH.Upgrader.v70
             return newVersion;
         }
 
+        /***************************************************/
+
         private static Dictionary<string, object> UpgradeSimulationResult(Dictionary<string, object> oldVersion)
         {
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
-            Dictionary<string, object> CustomData;
+            Dictionary<string, object> customData;
             List<string> keys = new List<string>()
             {
                 "ShadedDownTemperature",
@@ -170,13 +177,13 @@ namespace BH.Upgrader.v70
 
             if (oldVersion.ContainsKey("CustomData"))
             {
-                CustomData = oldVersion["CustomData"] as Dictionary<string, object>;
+                customData = oldVersion["CustomData"] as Dictionary<string, object>;
                 (newVersion["CustomData"] as Dictionary<string, object>).Clear();
                 foreach (string key in keys)
                 {
-                    if (CustomData.ContainsKey(key))
+                    if (customData.ContainsKey(key))
                     {
-                        newVersion.Add(key, HourlyContinuousCollection(CustomData[key] as Dictionary<string, object>));
+                        newVersion.Add(key, HourlyContinuousCollection(customData[key] as Dictionary<string, object>));
                     }
                 }
             }
