@@ -39,6 +39,126 @@ namespace BH.Upgrader.v70
         public Converter() : base()
         {
             PreviousVersion = "6.3";
+            ToNewObject.Add("BH.oM.LadybugTools.OpaqueMaterial", UpgradeILadybugToolsMaterial);
+            ToNewObject.Add("BH.oM.LadybugTools.OpaqueVegetationMaterial", UpgradeILadybugToolsMaterial);
+            ToNewObject.Add("BH.oM.LadybugTools.ILadybugToolsMaterial", UpgradeILadybugToolsMaterial);
+            ToNewObject.Add("BH.oM.LadybugTools.Shelter", UpgradeShelter);
+            ToNewObject.Add("BH.oM.LadybugTools.ExternalComfort", UpgradeExternalComfort);
+            ToNewObject.Add("BH.oM.LadybugTools.SimulationResult", UpgradeSimulationResult);
+        }
+
+        /***************************************************/
+        /**** Private Methods                           ****/
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeShelter(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            List<double> numbers;
+
+            if (newVersion.TryGetValue("WindPorosity", out object wind))
+            {
+                numbers = Enumerable.Repeat((double)wind, 8760).ToList();
+                newVersion["WindPorosity"] = numbers;
+            }
+
+            if (newVersion.TryGetValue("RadiationPorosity", out object radiation))
+            {
+                numbers = Enumerable.Repeat((double)radiation, 8760).ToList();
+                newVersion["RadiationPorosity"] = numbers;
+            }
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeILadybugToolsMaterial(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (oldVersion.ContainsKey("_t"))
+            {
+                if ((string)oldVersion["_t"] == "BH.oM.LadybugTools.OpaqueMaterial")
+                {
+                    newVersion["_t"] = "BH.oM.LadybugTools.EnergyMaterial";
+                }
+                if ((string)oldVersion["_t"] == "BH.oM.LadybugTools.OpaqueVegetationMaterial")
+                {
+                    newVersion["_t"] = "BH.oM.LadybugTools.EnergyMaterialVegetation";
+                }
+                if ((string)oldVersion["_t"] == "BH.oM.LadybugTools.ILadybugToolsMaterial")
+                {
+                    newVersion["_t"] = "BH.oM.LadybugTools.IEnergyMaterialOpaque";
+                }
+            }
+
+            if (newVersion.ContainsKey("Source"))
+            {
+                newVersion.Remove("Source");
+            }
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeExternalComfort(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            List<string> keys = new List<string>()
+            {
+                "UniversalThermalClimateIndex",
+                "DryBulbTemperature",
+                "RelativeHumidity",
+                "WindSpeed",
+                "MeanRadiantTemperature",
+            };
+
+            foreach (string key in keys)
+            {
+                newVersion.Remove(key);
+            }
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> UpgradeSimulationResult(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            List<string> keys = new List<string>()
+            {
+                "ShadedDownTemperature",
+                "ShadedUpTemperature",
+                "ShadedRadiantTemperature",
+                "ShadedLongwaveMeanRadiantTemperatureDelta",
+                "ShadedShortwaveMeanRadiantTemperatureDelta",
+                "ShadedMeanRadiantTemperature",
+                "UnshadedDownTemperature",
+                "UnshadedUpTemperature",
+                "UnshadedRadiantTemperature",
+                "UnshadedLongwaveMeanRadiantTemperatureDelta",
+                "UnshadedShortwaveMeanRadiantTemperatureDelta",
+                "UnshadedMeanRadiantTemperature"
+            };
+
+            foreach (string key in keys)
+            {
+                newVersion.Remove(key);
+            }
+
+            if (oldVersion.ContainsKey("GroundMaterial"))
+            {
+                newVersion["GroundMaterial"] = UpgradeILadybugToolsMaterial(oldVersion["GroundMaterial"] as Dictionary<string, object>);
+            }
+            if (oldVersion.ContainsKey("ShadeMaterial"))
+            {
+                newVersion["ShadeMaterial"] = UpgradeILadybugToolsMaterial(oldVersion["ShadeMaterial"] as Dictionary<string, object>);
+            }
+
+            return newVersion;
         }
     }
 }
