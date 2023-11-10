@@ -110,7 +110,7 @@ namespace BH.Upgrader.v70
             newVersion.Add("_t", "BH.oM.LadybugTools.HourlyContinuousCollection");
             newVersion.Add("Type", customData["Type"]);
             newVersion.Add("Header", customData["Header"]);
-            newVersion.Add("Values", customData["Values"]);
+            newVersion.Add("Values", customData["Values"] as List<double>);
 
             Dictionary<string, object> header = newVersion["Header"] as Dictionary<string, object>;
             header.Add("_t", "BH.oM.LadybugTools.Header");
