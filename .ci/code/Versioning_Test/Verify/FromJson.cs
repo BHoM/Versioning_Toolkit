@@ -113,6 +113,17 @@ namespace BH.Test.Versioning
                 nbDatasets = datasets.Count();
             }
 
+            //Test all Adapters
+            int nbAdapters = 0;
+            string adaptersFile = Path.Combine(testFolder, "Adapters.json");
+            if(File.Exists(adaptersFile))
+            {
+                IEnumerable<string> adapters = File.ReadAllLines(adaptersFile);
+                results.AddRange(adapters.Select(x => FromJsonItem(x, false))); //False - not a method, even though is a constructor - but doesn't need the method helpers implemented in the FromJsonItem method
+
+                nbAdapters = adapters.Count();
+            }
+
             // Returns a summary result 
             string version = Path.GetFileName(testFolder);
             int errorCount = results.Where(x => x.Status == TestStatus.Error).Count();
@@ -121,7 +132,7 @@ namespace BH.Test.Versioning
             return new TestResult()
             {
                 ID = $"VersioningFromJsonDatasets_{version}",
-                Description = $"Beta Version {Path.GetFileName(testFolder)}: {nbObjects} object types, {nbMethods} methods, and {nbDatasets} datasets.",
+                Description = $"Beta Version {Path.GetFileName(testFolder)}: {nbObjects} object types, {nbMethods} methods, {nbDatasets} datasets, and {nbAdapters} adapters.",
                 Message = $"{errorCount} errors and {warningCount} warnings reported.",
                 Status = results.MostSevereStatus(),
                 Information = results.Where(x => x.Status != TestStatus.Pass).ToList<ITestInformation>(),
