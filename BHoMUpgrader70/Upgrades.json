@@ -1,38 +1,441 @@
-﻿{
+{
   "Namespace": {
     "ToNew": {
+      "BH.oM.IES.Settings": "BH.oM.Environment.IES"
     },
     "ToOld": {
+      "BH.oM.Environment.IES": "BH.oM.IES.Settings"
     }
   },
   "Type": {
     "ToNew": {
-
+      "BH.oM.IES.Settings.SettingsIES": "BH.oM.Environment.IES.PullConfigIES",
+      "BH.oM.LadybugTools.OpaqueMaterial": "BH.oM.LadybugTools.EnergyMaterial",
+      "BH.oM.LadybugTools.OpaqueVegetationMaterial": "BH.oM.LadybugTools.EnergyMaterialVegetation",
+      "BH.oM.LadybugTools.ILadybugToolsMaterial": "BH.oM.LadybugTools.IEnergyMaterialOpaque"
     },
     "ToOld": {
-
+      "BH.oM.Environment.IES.PullConfigIES": "BH.oM.IES.Settings.SettingsIES",
+      "BH.oM.LadybugTools.EnergyMaterial": "BH.oM.LadybugTools.OpaqueMaterial",
+      "BH.oM.LadybugTools.EnergyMaterialVegetation": "BH.oM.LadybugTools.OpaqueVegetationMaterial",
+      "BH.oM.LadybugTools.IEnergyMaterialOpaque": "BH.oM.LadybugTools.ILadybugToolsMaterial"
     }
   },
   "Method": {
     "ToNew": {
-
+      "BH.Adapter.XML.XMLAdapter(BH.oM.Adapter.FileSettings)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.XML.XMLAdapter, XML_Adapter, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": ".ctor",
+        "Parameters": [
+          
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Engine.Structure.Buildings.Query.SystemDescription(BH.oM.Structure.FloorSystem.IFloorConfiguration, BH.oM.Structure.FloorSystem.UnitSystem)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Buildings.Query, StructuralEngineering_Engine, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "SystemDescription",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.FloorDesign\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.FloorSystem.UnitSystem\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.Query.LinkedToElement(Autodesk.Revit.DB.Element)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Query, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "ConnectedElement",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.ParameterConnectResultMessageFactory.UnableToSetMandatoryParameter(BH.Revit.oM.Schematic.SchematicConnectivitySettings)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.ParameterConnectResultMessageFactory, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "UnableToSetMandatoryParameter",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.ConnectivityLogMessageFactory.LinkElements(Autodesk.Revit.DB.Element, Autodesk.Revit.DB.Element, System.Collections.Generic.List<System.String>, System.Collections.Generic.List<System.String>, BH.Revit.oM.Schematic.EquipmentAssemblyItem)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.ConnectivityLogMessageFactory, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "LinkElements",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.Compute.UpdateAllSymbols(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.View>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "UpdateSymbolsInViews",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.View, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }], \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.Compute.UpdateActiveViewSymbols(Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "UpdateSymbolsInActiveView",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.Compute.UpdateElementsFromSymbols(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "UpdateConnectedElements",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }], \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.Compute.UnlinkSymbolsFromElement(System.Collections.Generic.List<Autodesk.Revit.DB.Element>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "UnlinkSymbols",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }], \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.Compute.UnlinkElementFromSymbols(Autodesk.Revit.DB.Element, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "UnlinkConnectedSymbols",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.Compute.LinkFromSelection(Autodesk.Revit.UI.UIDocument, Autodesk.Revit.DB.Element)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "LinkWithElement",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.UI.UIDocument, RevitAPIUI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.Compute.LinkElements(Autodesk.Revit.DB.Element, Autodesk.Revit.DB.Element, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "LinkSymbolWithElement",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Schematic.EquipmentAssemblyItem, Revit_Schematic_oM_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.Compute.SymbolFromElements(Autodesk.Revit.UI.UIDocument, BH.Revit.oM.Schematic.EquipmentAssemblyItem, Autodesk.Revit.DB.XYZ, Autodesk.Revit.DB.XYZ, System.Collections.Generic.List<Autodesk.Revit.DB.Element>, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "CreateSymbolsInLine",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.UI.UIDocument, RevitAPIUI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Schematic.EquipmentAssemblyItem, Revit_Schematic_oM_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.XYZ, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.XYZ, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.Compute.SymbolPlaceholder(Autodesk.Revit.DB.Document, BH.Revit.oM.Schematic.EquipmentAssemblyItem, Autodesk.Revit.DB.XYZ, Autodesk.Revit.DB.XYZ, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "CreateEmptySymbols",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.UI.UIDocument, RevitAPIUI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Schematic.EquipmentAssemblyItem, Revit_Schematic_oM_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.XYZ, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.XYZ, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.Compute.SelectedSymbolPlaceholder(Autodesk.Revit.DB.Document, Autodesk.Revit.DB.XYZ, Autodesk.Revit.DB.XYZ, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "CreateEmptySymbols",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.UI.UIDocument, RevitAPIUI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.XYZ, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.XYZ, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.Compute.SymbolFromList(Autodesk.Revit.UI.UIDocument, Autodesk.Revit.DB.XYZ, Autodesk.Revit.DB.XYZ)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "CreateAndLinkSymbolsFromList",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.UI.UIDocument, RevitAPIUI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.XYZ, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.XYZ, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.Compute.SymbolFromSelection(Autodesk.Revit.UI.UIDocument, Autodesk.Revit.DB.XYZ, Autodesk.Revit.DB.XYZ)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "CreateAndLinkSymbols",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.UI.UIDocument, RevitAPIUI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.XYZ, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.XYZ, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.Compute.CheckAllSymbols(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.View>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "CheckSymbolsInViews",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.View, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }], \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.Schematic.Compute.CheckActiveViewSymbols(Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "CheckSymbolsInActiveView",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.ModelManagement.Query.ElementsInRegion(Autodesk.Revit.DB.FilledRegion, System.Collections.Generic.IList<Autodesk.Revit.DB.Element>, Autodesk.Revit.DB.Level, Autodesk.Revit.DB.Level, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Compute, Revit_ModelManagement_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "SelectElementsInRegion",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FilledRegion, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IList`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }], \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Level, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Level, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.ModelManagement.Query.VisibleElementsInRegion(Autodesk.Revit.DB.FilledRegion, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Compute, Revit_ModelManagement_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "SelectVisibleElementsInRegion",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FilledRegion, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.ModelManagement.Query.ElementsInElement(Autodesk.Revit.DB.Element, System.Collections.Generic.List<Autodesk.Revit.DB.Element>, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Compute, Revit_ModelManagement_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "SelectElementsInElement",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }], \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Revit.Engine.ModelManagement.Compute.SelectItemsFromList(Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Compute, Revit_ModelManagement_Engine_2020, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "SelectElementsFromList",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Engine.Python.Query.VirtualEnvironmentExists(System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Python.Query, Python_Engine, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "VirtualEnvironmentExists",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Python.Enums.PythonVersion\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Engine.Python.Compute.BasePythonEnvironment(System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Python.Compute, Python_Engine, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "BasePythonEnvironment",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Adapter.MidasCivil.MidasCivilAdapter(System.String, System.Boolean, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.MidasCivil.MidasCivilAdapter, MidasCivil_Adapter, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": ".ctor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.MidasCivil.MidasCivilSettings\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Engine.Adapters.Lusas.Create.LusasConfig(BH.oM.Adapters.Lusas.LibrarySettings)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Lusas.Create, Lusas_Engine, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "LusasSettings",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Lusas.LibrarySettings\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Adapter.Lusas.LusasV200Adapter(System.String, BH.oM.Adapters.Lusas.LusasConfig, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.Lusas.LusasV200Adapter, LusasV200_Adapter, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": ".ctor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Lusas.LusasSettings\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Adapter.Lusas.LusasV19Adapter(System.String, BH.oM.Adapters.Lusas.LusasConfig, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.Lusas.LusasV19Adapter, LusasV19_Adapter, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": ".ctor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Lusas.LusasSettings\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Adapter.Lusas.LusasV191Adapter(System.String, BH.oM.Adapters.Lusas.LusasConfig, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.Lusas.LusasV191Adapter, LusasV191_Adapter, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": ".ctor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Lusas.LusasSettings\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Adapter.Lusas.LusasV18Adapter(System.String, BH.oM.Adapters.Lusas.LusasConfig, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.Lusas.LusasV18Adapter, LusasV18_Adapter, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": ".ctor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Lusas.LusasSettings\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Adapter.Lusas.LusasV17Adapter(System.String, BH.oM.Adapters.Lusas.LusasConfig, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.Lusas.LusasV17Adapter, LusasV17_Adapter, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": ".ctor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Lusas.LusasSettings\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Engine.LadybugTools.Compute.SimulationId(System.String, BH.oM.LadybugTools.ILadybugToolsMaterial, BH.oM.LadybugTools.ILadybugToolsMaterial)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LadybugTools.Compute, LadybugTools_Engine, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": "SimulationID",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LadybugTools.IEnergyMaterialOpaque\", \"_bhomVersion\" : \"7.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LadybugTools.IEnergyMaterialOpaque\", \"_bhomVersion\" : \"7.0\" }"
+        ],
+        "_bhomVersion": "7.0"
+      },
+      "BH.Adapter.IES.IESAdapter(BH.oM.Adapter.FileSettings, BH.oM.IES.Settings.SettingsIES)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.IES.IESAdapter, IES_Adapter, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"7.0\" }",
+        "MethodName": ".ctor",
+        "Parameters": [
+          
+        ],
+        "_bhomVersion": "7.0"
+      }
     },
     "ToOld": {
-
+      
     }
   },
   "Property": {
     "ToNew": {
-
+      "BH.oM.LadybugTools.Typology.WindSpeedMultiplier": "BH.oM.LadybugTools.Typology.TargetWindSpeed",
+      "BH.oM.LadybugTools.SimulationResult.Identifier": "BH.oM.LadybugTools.SimulationResult.Name"
     },
     "ToOld": {
-
+      "BH.oM.LadybugTools.Typology.TargetWindSpeed": "BH.oM.LadybugTools.Typology.WindSpeedMultiplier",
+      "BH.oM.LadybugTools.SimulationResult.Name": "BH.oM.LadybugTools.SimulationResult.Identifier"
+    }
+  },
+  "Dataset": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    },
+    "MessageForDeleted": {
+      
     }
   },
   "MessageForDeleted": {
-    
+    "BH.oM.IES.Settings.SettingsIES.PlanarTolerance": "The SettingsIES object has been split into separate Pull and Push Configs. We cannot upgrade all the properties from the old SettingsIES object to either of the new objects, so we are upgrading to a Pull Config. If however you need the PlanarTolerance property, this is available on the Push Config.",
+    "BH.oM.IES.Settings.SettingsIES.DecimalPlaces": "The SettingsIES object has been split into separate Pull and Push Configs. We cannot upgrade all the properties from the old SettingsIES object to either of the new objects, so we are upgrading to a Pull Config. If however you need the DecimalPlaces property, this is available on the Push Config.",
+    "BH.oM.IES.Settings.SettingsIES.BHoM_Guid": "The SettingsIES object has been split into separate Pull and Push Configs. We cannot upgrade all the properties from the old SettingsIES object to either of the new objects, so we are upgrading to a Pull Config.",
+    "BH.oM.IES.Settings.SettingsIES.Name": "The SettingsIES object has been split into separate Pull and Push Configs. We cannot upgrade all the properties from the old SettingsIES object to either of the new objects, so we are upgrading to a Pull Config.",
+    "BH.oM.IES.Settings.SettingsIES.Fragments": "The SettingsIES object has been split into separate Pull and Push Configs. We cannot upgrade all the properties from the old SettingsIES object to either of the new objects, so we are upgrading to a Pull Config.",
+    "BH.oM.IES.Settings.SettingsIES.Tags": "The SettingsIES object has been split into separate Pull and Push Configs. We cannot upgrade all the properties from the old SettingsIES object to either of the new objects, so we are upgrading to a Pull Config.",
+    "BH.oM.IES.Settings.SettingsIES.CustomData": "The SettingsIES object has been split into separate Pull and Push Configs. We cannot upgrade all the properties from the old SettingsIES object to either of the new objects, so we are upgrading to a Pull Config.",
+    "BH.Engine.LadybugTools.Convert.FromHoneybeeSurface(System.Object)": "This method has been removed as part of the removal of the dependency from Rhino in the LadybugTools_Toolkit.",
+    "BH.Engine.LadybugTools.Create.Typology(System.Collections.Generic.List<BH.oM.LadybugTools.Shelter>, System.String, System.Double, System.Double, System.Double)": "This method only did validation for creating the object, which has been moved to methods that take a Typology as an input.",
+    "BH.Engine.LadybugTools.Convert.SnakeCaseToPascalCase(System.String)": "This method and other case conversion methods in the LBT Toolkit have been replaced by a single method that can do case conversions when given a case type.",
+    "BH.Engine.LadybugTools.Convert.PascalCaseToSnakeCase(System.String)": "This method and other case conversion methods in the LBT Toolkit have been replaced by a single method that can do case conversions when given a case type.",
+    "BH.Engine.LadybugTools.Compute.EPWtoCustomObject(System.String)": "Due to inclusion of EPW as an object, this method is no longer required and has been removed.",
+    "BH.Engine.LadybugTools.Query.GetMaterial(System.String)": "All methods that involve serialisation of Ladybug Python objects have been converted into adapter Execute Commands, to access, use a LadybugToolsAdapter with the Execute method.",
+    "BH.Engine.LadybugTools.Query.GetTypology(System.String)": "All methods that involve serialisation of Ladybug Python objects have been converted into adapter Execute Commands, to access, use a LadybugToolsAdapter with the Execute method.",
+    "BH.Engine.LadybugTools.Compute.ExternalComfort(BH.oM.LadybugTools.SimulationResult, BH.oM.LadybugTools.Typology)": "All methods that involve serialisation of Ladybug Python objects have been converted into adapter Execute Commands, to access, use a LadybugToolsAdapter with the Execute method.",
+    "BH.Engine.LadybugTools.Compute.SimulationResult(System.String, BH.oM.LadybugTools.ILadybugToolsMaterial, BH.oM.LadybugTools.ILadybugToolsMaterial)": "All methods that involve serialisation of Ladybug Python objects have been converted into adapter Execute Commands, to access, use a LadybugToolsAdapter with the Execute method.",
+    "BH.oM.Adapters.Lusas.LusasConfig": "This object has been replaced by the LusasSettings object. For further information, please see the pull request associated with the change: https://github.com/BHoM/Lusas_Toolkit/pull/374.",
+    "BH.Revit.Engine.ModelManagement.Compute.SelectElementIdsFromList(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.BuiltInCategory>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ModelManagement.Create.LineStyle(Autodesk.Revit.UI.UIDocument, System.String, Autodesk.Revit.DB.Color, System.Int32)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.UI.Revit.Windows.Converter.ModelSelectionHeightConverter.Convert(System.Object, System.Type, System.Object, System.Globalization.CultureInfo)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Engine.Revit.Query.IsHiddenInLogView(System.Reflection.PropertyInfo)": "This method has been removed and replaced with two separate functions 'IsHiddenInGrouping' and 'IsHiddenInGrid' to allow for greater flexibility in controlling log item visibility.",
+    "BH.oM.Revit.Attributes.UIEnabledAttribute": "This attribute has been removed as a part of the legacy code clean-up.",
+    "BH.Revit.Engine.Schematic.Query.LookupParameterObject(Autodesk.Revit.DB.Parameter, System.Boolean)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Schematic.Query.SymbolsLinkedToElement(Autodesk.Revit.DB.Element)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Schematic.ConnectivityLogMessageFactory.UpdateElementFailedParameterResetFailed(Autodesk.Revit.DB.Element, BH.Revit.oM.Schematic.Enum.SchematicElementType, System.Collections.Generic.List<System.String>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Schematic.ConnectivityLogMessageFactory.UpdateElementFailedParametersReset(Autodesk.Revit.DB.Element, BH.Revit.oM.Schematic.Enum.SchematicElementType, System.Collections.Generic.List<System.String>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Schematic.ConnectivityLogMessageFactory.LinkedSymbolPlacementFailed(Autodesk.Revit.DB.Element, System.Collections.Generic.List<System.String>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Schematic.ParameterConnectResultMessageFactory.NullParameter(Autodesk.Revit.DB.Parameter)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Schematic.ParameterConnectResultMessageFactory.UnableToConnectUniqueIDs()": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Schematic.Compute.SymbolFromElements(Autodesk.Revit.UI.UIDocument, Autodesk.Revit.DB.XYZ, Autodesk.Revit.DB.XYZ)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Schematic.ConnectivityLogMessageFactory.SymbolPlaceholderPlacedWithMissingParameters(Autodesk.Revit.DB.FamilyInstance, BH.Revit.oM.Schematic.EquipmentAssemblyItem, System.Collections.Generic.List<System.String>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Schematic.ConnectivityLogMessageFactory.SymbolPlaceholderPlaced(Autodesk.Revit.DB.FamilyInstance, BH.Revit.oM.Schematic.EquipmentAssemblyItem, System.Collections.Generic.List<System.String>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Schematic.ConnectivityLogMessageFactory.CreateElements(Autodesk.Revit.DB.Element, Autodesk.Revit.DB.Element, System.Collections.Generic.List<System.String>, System.Collections.Generic.List<System.String>, BH.Revit.oM.Schematic.EquipmentAssemblyItem)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it."
   },
   "MessageForNoUpgrade": {
-
+    
   }
 }

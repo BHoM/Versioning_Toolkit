@@ -1,6 +1,6 @@
 /*
  * This file is part of the Buildings and Habitats object Model (BHoM)
- * Copyright (c) 2015 - 2023, the respective contributors. All rights reserved.
+ * Copyright (c) 2015 - 2024, the respective contributors. All rights reserved.
  *
  * Each contributor holds copyright over their respective contributions.
  * The project versioning (Git) records all such contribution source information.
@@ -48,9 +48,9 @@ namespace BH.Test.Versioning
         public static TestResult FromJsonDatasets(bool testAll = false)
         {
             string testFolder = @"C:\ProgramData\BHoM\Datasets\TestSets\Versioning";
-            List<string> versions = new List<string> { "6.3", };
+            List<string> versions = new List<string> { "7.0", };
             if(testAll)
-                versions.AddRange(new List<string> { "6.2", "6.1", "6.0", "5.3", "5.2", "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" });
+                versions.AddRange(new List<string> { "6.3", "6.2", "6.1", "6.0", "5.3", "5.2", "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" });
 
             string exceptions = "Grasshopper|Rhinoceros";
 
@@ -113,6 +113,17 @@ namespace BH.Test.Versioning
                 nbDatasets = datasets.Count();
             }
 
+            //Test all Adapters
+            int nbAdapters = 0;
+            string adaptersFile = Path.Combine(testFolder, "Adapters.json");
+            if(File.Exists(adaptersFile))
+            {
+                IEnumerable<string> adapters = File.ReadAllLines(adaptersFile);
+                results.AddRange(adapters.Select(x => FromJsonItem(x, false))); //False - not a method, even though is a constructor - but doesn't need the method helpers implemented in the FromJsonItem method
+
+                nbAdapters = adapters.Count();
+            }
+
             // Returns a summary result 
             string version = Path.GetFileName(testFolder);
             int errorCount = results.Where(x => x.Status == TestStatus.Error).Count();
@@ -121,7 +132,7 @@ namespace BH.Test.Versioning
             return new TestResult()
             {
                 ID = $"VersioningFromJsonDatasets_{version}",
-                Description = $"Beta Version {Path.GetFileName(testFolder)}: {nbObjects} object types, {nbMethods} methods, and {nbDatasets} datasets.",
+                Description = $"Beta Version {Path.GetFileName(testFolder)}: {nbObjects} object types, {nbMethods} methods, {nbDatasets} datasets, and {nbAdapters} adapters.",
                 Message = $"{errorCount} errors and {warningCount} warnings reported.",
                 Status = results.MostSevereStatus(),
                 Information = results.Where(x => x.Status != TestStatus.Pass).ToList<ITestInformation>(),
