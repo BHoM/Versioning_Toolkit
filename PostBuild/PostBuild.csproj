@@ -74,4 +74,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "$(ProgramData)\BHoM\Developer\Versioning"
+xcopy /Y /I /E "$(TargetDir)PostBuild.exe" C:\ProgramData\BHoM\Developer\Versioning
+xcopy /Y /I /E "$(TargetDir)*.dll" C:\ProgramData\BHoM\Developer\Versioning
+</PostBuildEvent>
+  </PropertyGroup>
 </Project>
