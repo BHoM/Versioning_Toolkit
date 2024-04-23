@@ -105,21 +105,24 @@ namespace BH.Upgrader.Base
             if (document == null)
                 return null;
 
+            //Clone to ensure able to compare with original document
+            //Without this, the input document is changed as same reference
+            BsonDocument newDoc = new BsonDocument(document);   
             Console.WriteLine("document received: " + document.ToJson());
 
             BsonDocument result = null;
-            if (document.Contains("_t"))
+            if (newDoc.Contains("_t"))
             {
                 if (document["_t"] == "System.Reflection.MethodBase")
-                    result = UpgradeMethod(document, converter);
+                    result = UpgradeMethod(newDoc, converter);
                 else if (document["_t"] == "System.Type")
-                    result = UpgradeType(document, converter);
+                    result = UpgradeType(newDoc, converter);
                 else
-                    result = UpgradeObject(document, converter);
+                    result = UpgradeObject(newDoc, converter);
             }
-            else if(document.Contains("k") && document.Contains("v"))
+            else if(newDoc.Contains("k") && newDoc.Contains("v"))
             {
-                result = UpgradeObject(document, converter);
+                result = UpgradeObject(newDoc, converter);
             }
 
             return result;
