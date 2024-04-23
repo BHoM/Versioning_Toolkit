@@ -207,7 +207,7 @@ namespace BH.Upgrader.Base
 
             // Then check if the type can be upgraded
             bool modified = false;
-            string typeFromDic = GetTypeFromDic(converter.ToNewType, type, !document.Contains("GenericArguments"));
+            string typeFromDic = GetTypeFromDic(converter.ToNewType, type, true, !document.Contains("GenericArguments"));
             if (typeFromDic != null)
             {
                 document["Name"] = typeFromDic;
