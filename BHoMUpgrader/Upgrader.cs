@@ -213,7 +213,7 @@ namespace BH.Upgrader.Base
                 document["Name"] = typeFromDic;
                 modified = true;
             }
-                
+
             if (document.Contains("GenericArguments"))
             {
                 BsonArray newGenerics = new BsonArray();
@@ -227,7 +227,7 @@ namespace BH.Upgrader.Base
                         {
                             modified = true;
                             newGenerics.Add(newGeneric);
-                        }  
+                        }
                         else
                             newGenerics.Add(generic);
                     }
@@ -439,7 +439,7 @@ namespace BH.Upgrader.Base
 
         /***************************************************/
 
-        private static string GetTypeFromDic(Dictionary<string, string> dic, string type, bool acceptPartialNamespace = true, bool checkGenerics = false)
+        private static string GetTypeFromDic(Dictionary<string, string> dic, string type, bool acceptPartialNamespace = true, bool checkRecursiveGenerics = false)
         {
             if (type.Contains(","))
                 type = CleanTypeString(type);
@@ -447,7 +447,7 @@ namespace BH.Upgrader.Base
             if (dic.ContainsKey(type))
                 return dic[type];
 
-            if (checkGenerics && type.Contains("[["))
+            if (checkRecursiveGenerics && type.Contains("[["))
             {
                 // Split out generic parts to be able to check for upgrades directly for each type
                 int startIndex = type.IndexOf("[[");
@@ -459,15 +459,16 @@ namespace BH.Upgrader.Base
                     .Split(new string[] { "],[" }, StringSplitOptions.RemoveEmptyEntries)
                     .ToList();
 
-                bool upgraded = false;
                 //Call this method again, only for the first part. Check generics set to false, as this string now should not contain any generic arguments
-                string upgrFirst = GetTypeFromDic(dic, firstPart, acceptPartialNamespace, false);
+                bool upgraded = false;
 
+                string upgrFirst = GetTypeFromDic(dic, firstPart, acceptPartialNamespace, false);
                 if (upgrFirst != null)
                 {
                     firstPart = upgrFirst;
                     upgraded = true;
                 }
+
                 //Loop through and make sure all inner arguments are upgraded as well
                 for (int i = 0; i < generics.Count; i++)
                 {
@@ -482,16 +483,30 @@ namespace BH.Upgrader.Base
                 if (upgraded)
                     return firstPart + "[[" + generics.Aggregate((a, b) => a + "],[" + b) + "]]";
             }
-            else if (acceptPartialNamespace)
+            else
             {
-                int index = type.LastIndexOf('.');
-                while (index > 0)
+                if (type.Contains("`")) 
                 {
-                    string ns = type.Substring(0, index);
-                    if (dic.ContainsKey(ns))
-                        return dic[ns] + type.Substring(index);
-                    else
-                        index = ns.LastIndexOf('.');
+                    int index = type.IndexOf("`");
+                    string typeNoGenericIndicator = type.Substring(0, index);
+                    if (dic.ContainsKey(typeNoGenericIndicator))
+                    {
+                        typeNoGenericIndicator = dic[typeNoGenericIndicator];
+                        return typeNoGenericIndicator + type.Substring(index);
+                    }
+                }
+
+                if (acceptPartialNamespace)
+                {
+                    int index = type.LastIndexOf('.');
+                    while (index > 0)
+                    {
+                        string ns = type.Substring(0, index);
+                        if (dic.ContainsKey(ns))
+                            return dic[ns] + type.Substring(index);
+                        else
+                            index = ns.LastIndexOf('.');
+                    }
                 }
             }
 
