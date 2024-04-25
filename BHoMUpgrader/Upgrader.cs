@@ -207,13 +207,13 @@ namespace BH.Upgrader.Base
 
             // Then check if the type can be upgraded
             bool modified = false;
-            string typeFromDic = GetTypeFromDic(converter.ToNewType, type);
+            string typeFromDic = GetTypeFromDic(converter.ToNewType, type, true, !document.Contains("GenericArguments"));
             if (typeFromDic != null)
             {
                 document["Name"] = typeFromDic;
                 modified = true;
             }
-                
+
             if (document.Contains("GenericArguments"))
             {
                 BsonArray newGenerics = new BsonArray();
@@ -227,7 +227,7 @@ namespace BH.Upgrader.Base
                         {
                             modified = true;
                             newGenerics.Add(newGeneric);
-                        }  
+                        }
                         else
                             newGenerics.Add(generic);
                     }
@@ -424,7 +424,7 @@ namespace BH.Upgrader.Base
             }
 
             //Try to find new type
-            string newType = GetTypeFromDic(converter.ToNewType, oldType);
+            string newType = GetTypeFromDic(converter.ToNewType, oldType, true, true);
             if (newType != null)
             {
                 document["_t"] = newType;
@@ -439,23 +439,74 @@ namespace BH.Upgrader.Base
 
         /***************************************************/
 
-        private static string GetTypeFromDic(Dictionary<string, string> dic, string type, bool acceptPartialNamespace = true)
+        private static string GetTypeFromDic(Dictionary<string, string> dic, string type, bool acceptPartialNamespace = true, bool checkRecursiveGenerics = false)
         {
             if (type.Contains(","))
                 type = CleanTypeString(type);
 
             if (dic.ContainsKey(type))
                 return dic[type];
-            else if (acceptPartialNamespace)
+
+            if (checkRecursiveGenerics && type.Contains("[["))
             {
-                int index = type.LastIndexOf('.');
-                while (index > 0)
+                // Split out generic parts to be able to check for upgrades directly for each type
+                int startIndex = type.IndexOf("[[");
+                int endIndex = type.LastIndexOf("]]");
+                string firstPart = type.Substring(0, startIndex);
+
+                // We need something that can deal with recursive generics as well
+                List<string> generics = type.Substring(startIndex + 2, endIndex - startIndex - 2)
+                    .Split(new string[] { "],[" }, StringSplitOptions.RemoveEmptyEntries)
+                    .ToList();
+
+                //Call this method again, only for the first part. Check generics set to false, as this string now should not contain any generic arguments
+                bool upgraded = false;
+
+                string upgrFirst = GetTypeFromDic(dic, firstPart, acceptPartialNamespace, false);
+                if (upgrFirst != null)
                 {
-                    string ns = type.Substring(0, index);
-                    if (dic.ContainsKey(ns))
-                        return dic[ns] + type.Substring(index);
-                    else
-                        index = ns.LastIndexOf('.');
+                    firstPart = upgrFirst;
+                    upgraded = true;
+                }
+
+                //Loop through and make sure all inner arguments are upgraded as well
+                for (int i = 0; i < generics.Count; i++)
+                {
+                    string upgradedGeneric = GetTypeFromDic(dic, generics[i], acceptPartialNamespace, false);
+                    if (upgradedGeneric != null)
+                    {
+                        generics[i] = upgradedGeneric;
+                        upgraded = true;
+                    }
+                }
+                //If any part upgraded, return it
+                if (upgraded)
+                    return firstPart + "[[" + generics.Aggregate((a, b) => a + "],[" + b) + "]]";
+            }
+            else
+            {
+                if (type.Contains("`")) 
+                {
+                    int index = type.IndexOf("`");
+                    string typeNoGenericIndicator = type.Substring(0, index);
+                    if (dic.ContainsKey(typeNoGenericIndicator))
+                    {
+                        typeNoGenericIndicator = dic[typeNoGenericIndicator];
+                        return typeNoGenericIndicator + type.Substring(index);
+                    }
+                }
+
+                if (acceptPartialNamespace)
+                {
+                    int index = type.LastIndexOf('.');
+                    while (index > 0)
+                    {
+                        string ns = type.Substring(0, index);
+                        if (dic.ContainsKey(ns))
+                            return dic[ns] + type.Substring(index);
+                        else
+                            index = ns.LastIndexOf('.');
+                    }
                 }
             }
 
