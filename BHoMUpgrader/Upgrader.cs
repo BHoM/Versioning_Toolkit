@@ -42,7 +42,7 @@ namespace BH.Upgrader.Base
         /**** Public Properties                         ****/
         /***************************************************/
 
-        public virtual bool LogToConsole { get; set; } = true;
+        public bool LogToConsole { get; set; } = true;
 
         /***************************************************/
         /**** Public Methods                            ****/
