@@ -42,7 +42,7 @@ namespace BH.Upgrader.Base
         /**** Public Properties                         ****/
         /***************************************************/
 
-        public virtual bool LogToConsole { get; set; } = false;
+        public virtual bool LogToConsole { get; set; } = true;
 
         /***************************************************/
         /**** Public Methods                            ****/
@@ -50,7 +50,6 @@ namespace BH.Upgrader.Base
 
         public void ProcessingLoop(string pipeName, Converter converter)
         {
-            LogToConsole = true;
             // Make sure all assemblies are loaded
             AssemblyName[] assemblies = Assembly.GetEntryAssembly().GetReferencedAssemblies();
             foreach (AssemblyName assembly in assemblies)
