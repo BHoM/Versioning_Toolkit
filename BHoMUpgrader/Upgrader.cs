@@ -39,6 +39,12 @@ namespace BH.Upgrader.Base
     public class Upgrader
     {
         /***************************************************/
+        /**** Public Properties                         ****/
+        /***************************************************/
+
+        public bool LogToConsole { get; set; } = true;
+
+        /***************************************************/
         /**** Public Methods                            ****/
         /***************************************************/
 
@@ -49,9 +55,9 @@ namespace BH.Upgrader.Base
             foreach (AssemblyName assembly in assemblies)
             {
                 Assembly.Load(assembly);
-                Console.WriteLine("Assembly Loaded: " + assembly.Name);
+                WriteToLog("Assembly Loaded: " + assembly.Name);
             }
-            Console.WriteLine("");
+            WriteToLog("");
 
             NamedPipeClientStream pipe = null;
 
@@ -73,7 +79,7 @@ namespace BH.Upgrader.Base
                     {
                         BsonDocument doc = ReadDocument(reader);
                         if (doc != null)
-                            Console.WriteLine("document received: " + doc.ToJson());
+                            WriteToLog("document received: " + doc.ToJson());
                         newDoc = Upgrade(doc, converter);
                     }
                     catch (NoUpdateException e)
@@ -107,8 +113,8 @@ namespace BH.Upgrader.Base
 
             //Clone to ensure able to compare with original document
             //Without this, the input document is changed as same reference
-            BsonDocument newDoc = new BsonDocument(document);   
-            Console.WriteLine("document received: " + document.ToJson());
+            BsonDocument newDoc = new BsonDocument(document);
+            WriteToLog("document received: " + document.ToJson());
 
             BsonDocument result = null;
             if (newDoc.Contains("_t"))
@@ -371,7 +377,7 @@ namespace BH.Upgrader.Base
                 if (b == null)
                     return null;
 
-                Console.WriteLine("object updated: " + b.GetType().FullName);
+                WriteToLog("object updated: " + b.GetType().FullName);
                 BsonDocument newDoc = new BsonDocument(b);
 
                 // Copy over BHoM properties
@@ -428,7 +434,7 @@ namespace BH.Upgrader.Base
             if (newType != null)
             {
                 document["_t"] = newType;
-                Console.WriteLine("type upgraded from " + oldType + " to " + newType);
+                WriteToLog("type upgraded from " + oldType + " to " + newType);
                 return document;
             }
             else if (propertiesToRename.Count > 0)
@@ -658,6 +664,14 @@ namespace BH.Upgrader.Base
             {
                 return null;
             }
+        }
+
+        /***************************************************/
+
+        private void WriteToLog(string message)
+        { 
+            if(LogToConsole)
+                Console.WriteLine(message);
         }
 
         /***************************************************/
