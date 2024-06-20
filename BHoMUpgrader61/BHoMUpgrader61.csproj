@@ -63,6 +63,11 @@
   <PropertyGroup>
     <PostBuildEvent>xcopy /Y /I /E "$(TargetDir)*.dll" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader61
 xcopy /Y /I /E "$(TargetDir)BHoMUpgrader61.exe" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader61
-xcopy /Y /I /E "$(TargetDir)Upgrades.json" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader61</PostBuildEvent>
+xcopy /Y /I /E "$(TargetDir)Upgrades.json" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader61
+rename "$(TargetDir)BHoMUpgrader61.exe" "BHoMUpgrader61.dll"
+xcopy /Y /I /E "$(TargetDir)BHoMUpgrader61.dll" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader61</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>del "$(TargetDir)BHoMUpgrader61.dll"</PreBuildEvent>
   </PropertyGroup>
 </Project>

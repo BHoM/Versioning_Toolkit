@@ -70,7 +70,7 @@ namespace BH.Upgrader.Base
 
         public Converter()
         {
-            string folder = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            string folder = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);
             LoadUpgrades(Path.Combine(folder, "Upgrades.json"));
         }
 
