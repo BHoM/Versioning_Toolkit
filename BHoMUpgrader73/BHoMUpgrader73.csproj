@@ -59,13 +59,14 @@
     <ProjectReference Include="..\PostBuild\PostBuild.csproj">
       <Project>{4ec319a6-67c9-4627-9de6-046bb5bae401}</Project>
       <Name>PostBuild</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy /Y /I /E "$(TargetDir)*.dll" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader73
 xcopy /Y /I /E "$(TargetDir)BHoMUpgrader73.exe" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader73
-call "$(TargetDir)PostBuild.exe" ..\..\..\ "C:\ProgramData\BHoM\Upgrades"
+call "$(SolutionDir)PostBuild\Build\PostBuild.exe" ..\..\..\ "C:\ProgramData\BHoM\Upgrades"
 rename "$(TargetDir)BHoMUpgrader73.exe" "BHoMUpgrader73.dll"
 xcopy /Y /I /E "$(TargetDir)BHoMUpgrader73.dll" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader73</PostBuildEvent>
   </PropertyGroup>
