@@ -55,24 +55,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Upgrades.json" />
+    <None Include="Upgrades.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BHoMUpgrader\BHoMUpgrader.csproj">
       <Project>{47629a75-8509-491a-82e5-517a2d8b945e}</Project>
       <Name>BHoMUpgrader</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PostBuild\PostBuild.csproj">
-      <Project>{4ec319a6-67c9-4627-9de6-046bb5bae401}</Project>
-      <Name>PostBuild</Name>
-      <Private>False</Private>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy /Y /I /E "$(TargetDir)*.dll" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader73
 xcopy /Y /I /E "$(TargetDir)BHoMUpgrader73.exe" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader73
-call "$(SolutionDir)PostBuild\Build\PostBuild.exe" ..\..\..\ "C:\ProgramData\BHoM\Upgrades"
+xcopy /Y /I /E "$(TargetDir)Upgrades.json" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader73
 rename "$(TargetDir)BHoMUpgrader73.exe" "BHoMUpgrader73.dll"
 xcopy /Y /I /E "$(TargetDir)BHoMUpgrader73.dll" C:\ProgramData\BHoM\Upgrades\BHoMUpgrader73</PostBuildEvent>
   </PropertyGroup>
