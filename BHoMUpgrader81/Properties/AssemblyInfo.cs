@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BHoMUpgrader80")]
+[assembly: AssemblyTitle("BHoMUpgrader81")]
 [assembly: AssemblyDescription("https://github.com/BHoM/Versioning_Toolkit")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BHoMUpgrader80")]
+[assembly: AssemblyProduct("BHoMUpgrader81")]
 [assembly: AssemblyCopyright("Copyright © https://github.com/BHoM")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
