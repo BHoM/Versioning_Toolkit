@@ -1,0 +1,254 @@
+BuildingEnvironments\Acoustics\ASHRAEHandbook2019NoiseandVibrationControlTable1
+BuildingEnvironments\Gains\Equipment\CIBSEGuideA2016Table62EquipmentGains
+BuildingEnvironments\Gains\Equipment\TITLE242019EquipmentPowerDensity
+BuildingEnvironments\Gains\Lighting\ASHRAE9012010LightingGains
+BuildingEnvironments\Gains\Lighting\ASHRAE9012016LightingPowerDensityAllowances
+BuildingEnvironments\Gains\Lighting\CIBSEGuideA2016Table62LightingGains
+BuildingEnvironments\Gains\Lighting\TITLE242019LightingPowerDensity
+BuildingEnvironments\Gains\Lighting\VirginiaEnergyConservationCode2015LightingPowerDensity
+BuildingEnvironments\Gains\People\ASHRAE2017FundamentalsHumanActivity
+BuildingEnvironments\Gains\People\CIBSEGuideA2015Table63PeopleActivityGains
+BuildingEnvironments\Gains\People\CIBSEGuideA2016Table62PeopleGains
+BuildingEnvironments\Gains\People\CIBSETM592017PeopleGains
+BuildingEnvironments\Gains\People\TITLE242019OccupancySensibleandLatentGains
+BuildingEnvironments\Infiltration\CIBSEGuideA2015InfiltrationRateTables\Dwellings
+BuildingEnvironments\Infiltration\CIBSEGuideA2015InfiltrationRateTables\Factories
+BuildingEnvironments\Infiltration\CIBSEGuideA2015InfiltrationRateTables\Hospitals
+BuildingEnvironments\Infiltration\CIBSEGuideA2015InfiltrationRateTables\Hotels
+BuildingEnvironments\Infiltration\CIBSEGuideA2015InfiltrationRateTables\Office type 1
+BuildingEnvironments\Infiltration\CIBSEGuideA2015InfiltrationRateTables\Office type 2
+BuildingEnvironments\Infiltration\CIBSEGuideA2015InfiltrationRateTables\Office type 3
+BuildingEnvironments\Infiltration\CIBSEGuideA2015InfiltrationRateTables\Office type 4
+BuildingEnvironments\Infiltration\CIBSEGuideA2015InfiltrationRateTables\Schools
+BuildingEnvironments\Materials\Acoustic_Materials
+BuildingEnvironments\Materials\ASHRAEFundamentals2017DuctRoughnessFactors
+BuildingEnvironments\Materials\Boards
+BuildingEnvironments\Materials\Brick_Materials
+BuildingEnvironments\Materials\Concrete_Blocks
+BuildingEnvironments\Materials\Concrete_Materials
+BuildingEnvironments\Materials\Finish_Materials
+BuildingEnvironments\Materials\Insualtion_Materials
+BuildingEnvironments\Materials\Stone_Materials
+BuildingEnvironments\Materials\Transparent_Materials
+BuildingEnvironments\Materials\Wooden_Boards
+BuildingEnvironments\Materials\Wood_Materials
+BuildingEnvironments\Occupancy\ASHRAE6212016Occupancy
+BuildingEnvironments\Occupancy\BSRIA2011Table3OccupancyDensities
+BuildingEnvironments\Occupancy\CIBSEGuideA2016Table62Occupancy
+BuildingEnvironments\Occupancy\IBC2018Table10045Occupancy
+BuildingEnvironments\Occupancy\VirginiaMechanicalCode2015Occupancy
+BuildingEnvironments\Ventilation\ASHRAE6212013Ventilation
+BuildingEnvironments\Ventilation\ASHRAE6212016Ventilation
+BuildingEnvironments\Ventilation\TITLE242019Ventilation
+BuildingEnvironments\Ventilation\VirginiaMechanicalCode2015Ventilation
+CableNetDesign\Cables\Pfeifer Full Locked Coil
+CFD\Leeds Weibull
+CFD\London Weibull
+Constructions\BuildingEnvironments\GenericConstructions
+EmbodiedCarbonBenchmarking\CarbonLeadershipForum\CarbonLeadershipForum_Benchmark
+EmbodiedCarbonBenchmarking\DatabaseOfEmbodiedCarbonOutputs\deQoProgramBenchmarkData
+EmbodiedCarbonBenchmarking\DatabaseOfEmbodiedCarbonOutputs\deQoStructuresBenchmarkData
+Facades\FrameEdgeProperties
+Facades\GlazingConstructions
+Facades\Mullions(Kawneer)
+Graphics\Gradients\Gradients
+HealthyMaterials\QuartzElementHealthData
+LifeCycleAssessment\Boverket
+LifeCycleAssessment\Quartz
+LifeCycleAssessment\Boverket\Boverket_Conservative
+LifeCycleAssessment\Boverket\Boverket_Typical
+LifeCycleAssessment\EC3\BuroHappold_EC3_Concrete_LW_2501-3000
+LifeCycleAssessment\EC3\BuroHappold_EC3_Concrete_LW_3001-4000
+LifeCycleAssessment\EC3\BuroHappold_EC3_Concrete_LW_4001-5000
+LifeCycleAssessment\EC3\BuroHappold_EC3_Concrete_NW_0-2500
+LifeCycleAssessment\EC3\BuroHappold_EC3_Concrete_NW_2501-3000
+LifeCycleAssessment\EC3\BuroHappold_EC3_Concrete_NW_3001-4000
+LifeCycleAssessment\EC3\BuroHappold_EC3_Concrete_NW_4001-5000
+LifeCycleAssessment\EC3\BuroHappold_EC3_Concrete_NW_5001-6000
+LifeCycleAssessment\EC3\BuroHappold_EC3_Concrete_NW_6001-8000
+LifeCycleAssessment\EC3\BuroHappold_EC3_Steel
+LifeCycleAssessment\EC3\BuroHappold_EC3_Timber
+LifeCycleAssessment\EPiC\EPiC_Concrete
+LifeCycleAssessment\EPiC\EPiC_Glass
+LifeCycleAssessment\EPiC\EPiC_Insulation
+LifeCycleAssessment\EPiC\EPiC_Masonry
+LifeCycleAssessment\EPiC\EPiC_Metals
+LifeCycleAssessment\EPiC\EPiC_Miscellaneous
+LifeCycleAssessment\EPiC\EPiC_Plastics
+LifeCycleAssessment\EPiC\EPiC_Timber
+LifeCycleAssessment\FacadeEUGeneric\Boarding Epds
+LifeCycleAssessment\FacadeEUGeneric\Concrete Epds
+LifeCycleAssessment\FacadeEUGeneric\Curtain wall Epds
+LifeCycleAssessment\FacadeEUGeneric\Door system Epds
+LifeCycleAssessment\FacadeEUGeneric\Glass Epds
+LifeCycleAssessment\FacadeEUGeneric\Insulation Epds
+LifeCycleAssessment\FacadeEUGeneric\Masonry Epds
+LifeCycleAssessment\FacadeEUGeneric\Membrane Epds
+LifeCycleAssessment\FacadeEUGeneric\Metal Epds
+LifeCycleAssessment\FacadeEUGeneric\Sealant Epds
+LifeCycleAssessment\FacadeEUGeneric\Stone Epds
+LifeCycleAssessment\FacadeEUGeneric\Thermal break Epds
+LifeCycleAssessment\FacadeEUGeneric\Timber Epds
+LifeCycleAssessment\FacadeUSGeneric\Aluminum Extrusion EPDs
+LifeCycleAssessment\FacadeUSGeneric\Cladding EPDs
+LifeCycleAssessment\FacadeUSGeneric\IGU EPDs
+LifeCycleAssessment\FacadeUSGeneric\Insulation EPDs
+LifeCycleAssessment\FacadeUSGeneric\Roofing EPDs
+LifeCycleAssessment\FacadeUSGeneric\Sheathing EPDs
+LifeCycleAssessment\ICE\InventoryOfCarbonAndEnergy_Aggregates
+LifeCycleAssessment\ICE\InventoryOfCarbonAndEnergy_Aluminium
+LifeCycleAssessment\ICE\InventoryOfCarbonAndEnergy_Asphalt
+LifeCycleAssessment\ICE\InventoryOfCarbonAndEnergy_Bitumen
+LifeCycleAssessment\ICE\InventoryOfCarbonAndEnergy_CementMortar
+LifeCycleAssessment\ICE\InventoryOfCarbonAndEnergy_ClayBricks
+LifeCycleAssessment\ICE\InventoryOfCarbonAndEnergy_Concrete
+LifeCycleAssessment\ICE\InventoryOfCarbonAndEnergy_Glass
+LifeCycleAssessment\ICE\InventoryOfCarbonAndEnergy_Steel
+LifeCycleAssessment\ICE\InventoryOfCarbonAndEnergy_Timber
+LifeCycleAssessment\MEP\MEPEnvironmentalProductDeclarations
+LifeCycleAssessment\National Highways\Bulk_Materials
+LifeCycleAssessment\National Highways\Business_and_employee_transport
+LifeCycleAssessment\National Highways\Civils_Structures_&_Retaining_Walls
+LifeCycleAssessment\National Highways\Drainage
+LifeCycleAssessment\National Highways\Earthworks
+LifeCycleAssessment\National Highways\Fencing_Barriers_&_Road_Restraint_Systems
+LifeCycleAssessment\National Highways\Fuel_Energy_&_Water
+LifeCycleAssessment\National Highways\Road_Pavements
+LifeCycleAssessment\National Highways\Street_Furniture_&_Electrical_Equipment
+LifeCycleAssessment\National Highways\Transport_factors
+LifeCycleAssessment\National Highways\Waste
+LifeCycleAssessment\Oekobaudat\Oekobaudat_Materials_Brick
+LifeCycleAssessment\Oekobaudat\Oekobaudat_Materials_Concrete
+LifeCycleAssessment\Oekobaudat\Oekobaudat_Materials_Glass
+LifeCycleAssessment\Oekobaudat\Oekobaudat_Materials_Insulation_Foam
+LifeCycleAssessment\Oekobaudat\Oekobaudat_Materials_Insulation_General
+LifeCycleAssessment\Oekobaudat\Oekobaudat_Materials_Masonry
+LifeCycleAssessment\Oekobaudat\Oekobaudat_Materials_Steel
+LifeCycleAssessment\Oekobaudat\Oekobaudat_Materials_Wood
+MEP\PlumbingFixtureFlow_LEED
+MEP\PlumbingFixtureUsage_LEED
+Planning\Labels\IssueLabels
+Revit\FamilyMaps\BHoM Default FamilyMaps
+Revit\ParameterMaps\BHoM Default ParameterMaps
+Revit\ParameterMaps\BuroHappold Default ParameterMaps
+Structure\DesignData\Economic Concrete Frame Elements to Eurocode 2
+Structure\DesignData\Timber\Beams\Timber Structural Elements - Beams
+Structure\DesignData\Timber\Columns\Timber Structural Elements - Columns
+Structure\DesignData\Timber\Connections\Timber Structural Elements - Connections
+Structure\DesignData\Timber\Floors\Timber Structural Elements - Floor Boarding
+Structure\DesignData\Timber\Floors\Timber Structural Elements - Joist Floors
+Structure\DesignData\Timber\Floors\Timber Structural Elements - Non Joist Floors
+Structure\DesignData\Timber\Roofs\Timber Structural Elements - Joist Roofs
+Structure\DesignData\Timber\Roofs\Timber Structural Elements - Non Joist Roofs
+Structure\DesignData\Timber\Roofs\Timber Structural Elements - Roof Boarding
+Structure\DesignData\Timber\Walls\Timber Structural Elements - Joist Walls
+Structure\DesignData\Timber\Walls\Timber Structural Elements - Non Joist Walls
+Structure\FloorDesign\LOD-100-US\CLT On Glulam
+Structure\FloorDesign\LOD-100-US\CLT On Steel
+Structure\FloorDesign\LOD-100-US\Composite Steel
+Structure\FloorDesign\LOD-100-US\Non Composite Steel
+Structure\FloorDesign\LOD-100-US\RC Flat Plate
+Structure\Materials\MaterialsEurope\Concrete
+Structure\Materials\MaterialsEurope\Glulam
+Structure\Materials\MaterialsEurope\Rebar
+Structure\Materials\MaterialsEurope\SawnTimber
+Structure\Materials\MaterialsEurope\Steel(Grade)
+Structure\Materials\MaterialsEurope\Steel
+Structure\Materials\MaterialsEurope\Stora Enso LVL
+Structure\Materials\MaterialsUSA\Concrete
+Structure\Materials\MaterialsUSA\Steel
+Structure\SectionProperties\EU_SteelSections\CHS
+Structure\SectionProperties\EU_SteelSections\HE+
+Structure\SectionProperties\EU_SteelSections\HE
+Structure\SectionProperties\EU_SteelSections\IPE+
+Structure\SectionProperties\EU_SteelSections\IPE
+Structure\SectionProperties\EU_SteelSections\L-eq
+Structure\SectionProperties\EU_SteelSections\L
+Structure\SectionProperties\EU_SteelSections\RHS
+Structure\SectionProperties\EU_SteelSections\SHS
+Structure\SectionProperties\EU_SteelSections\UPE
+Structure\SectionProperties\UK_SteelSections\CHS
+Structure\SectionProperties\UK_SteelSections\L
+Structure\SectionProperties\UK_SteelSections\Leq
+Structure\SectionProperties\UK_SteelSections\PFC
+Structure\SectionProperties\UK_SteelSections\RHS
+Structure\SectionProperties\UK_SteelSections\SHS
+Structure\SectionProperties\UK_SteelSections\TUB
+Structure\SectionProperties\UK_SteelSections\TUC
+Structure\SectionProperties\UK_SteelSections\UB
+Structure\SectionProperties\UK_SteelSections\UBP
+Structure\SectionProperties\UK_SteelSections\UC
+Structure\SectionProperties\US_SteelSections\HP
+Structure\SectionProperties\US_SteelSections\HSS
+Structure\SectionProperties\US_SteelSections\L
+Structure\SectionProperties\US_SteelSections\MT
+Structure\SectionProperties\US_SteelSections\PIPE
+Structure\SectionProperties\US_SteelSections\W
+Structure\SectionProperties\US_SteelSections\WT
+Structure\SurfaceProperties\Europe\Richard Lees Decking Corrugated Decks
+Structure\SurfaceProperties\Europe\SMD Corrugated Decks
+TestSets\Structure\Bar\01 - Straight planar bars
+TestSets\Structure\Bar\02 - Straight Vertical bars
+TestSets\Structure\Bar\03 - Straight rotating planar bars
+TestSets\Structure\Bar\04 - Straight rotating vertical bars
+TestSets\Structure\Bar\05 - Random Orientated bars
+TestSets\Structure\Bar\06 - Random Orientated rotating bars
+TestSets\Structure\Bar\07 - Small Frame
+TestSets\Structure\Bar\08 - FreeForm Frame
+TestSets\Structure\Bar\09 - Bars with releases
+TestSets\Structure\BarRelease\01 - Bar Releases
+TestSets\Structure\Constraint6DOF\01 - fix or free
+TestSets\Structure\Constraint6DOF\02 - fix or spring
+TestSets\Structure\FEMesh\01 - Property Test - Concrete - Constant Thickness
+TestSets\Structure\FEMesh\02 - Property Test - Concrete - Ribbed
+TestSets\Structure\FEMesh\03 - Property Test - Concrete - Waffle
+TestSets\Structure\FEMesh\04 - Property Test - Concrete - LoadingPanelProperty
+TestSets\Structure\FEMesh\05 - Property Test - Steel - ConstantThickness
+TestSets\Structure\FEMesh\06 - Node Test - Three Node Planar FEMesh
+TestSets\Structure\FEMesh\07 - Node Test - Four Node Planar FEMesh
+TestSets\Structure\FEMesh\08 - Planarity Test - Single Curvature FEMesh
+TestSets\Structure\FEMesh\09 - Planarity Test - Double Curvature FEMesh
+TestSets\Structure\IMaterialFragment\01 - Object Test - Steel
+TestSets\Structure\IMaterialFragment\02 - Object Test - Concrete
+TestSets\Structure\IMaterialFragment\03 - Object Test - Aluminium
+TestSets\Structure\IMaterialFragment\04 - Object Test - Timber
+TestSets\Structure\IMaterialFragment\05 - Zero Property Test - E
+TestSets\Structure\IMaterialFragment\06 - Zero Property Test - v
+TestSets\Structure\IMaterialFragment\07 - Unit Property Test - v
+TestSets\Structure\IMaterialFragment\08 - Zero Property Test - tC
+TestSets\Structure\IMaterialFragment\09 - Zero Property Test - Density
+TestSets\Structure\IMaterialFragment\10 - Zero Property Test - Damping Ratio
+TestSets\Structure\IMaterialFragment\11 - Unit Property Test - Damping ratio
+TestSets\Structure\IMaterialFragment\12 - Zero Property Test -  YieldStress
+TestSets\Structure\IMaterialFragment\13 - Zero Property Test -   UltimateStress
+TestSets\Structure\IMaterialFragment\14 - Equal Properties Test - YieldStress equals UltimateStress
+TestSets\Structure\IMaterialFragment\15 - Zero Property Test - CubeStrength
+TestSets\Structure\IMaterialFragment\16 - Zero Property Test - CylinderStrength
+TestSets\Structure\IMaterialFragment\17 - Equal Properties Test - Cylinder equals CubeStrength
+TestSets\Structure\ISectionProperty\01 - Steel Library Sections
+TestSets\Structure\ISectionProperty\02 - Steel Fabricated Sections
+TestSets\Structure\ISectionProperty\03 - Steel Freeform Sections
+TestSets\Structure\ISectionProperty\04 - Concrete Parametric Sections
+TestSets\Structure\ISectionProperty\05 - Concrete Freeform Sections
+TestSets\Structure\Loadcase\01 - Test All Natures
+TestSets\Structure\LoadCombination\01 - Simple combinations
+TestSets\Structure\LoadCombination\02 - Zero Factor combinations
+TestSets\Structure\LoadCombination\03 - Abnormal Factor combinations
+TestSets\Structure\Node\01 - Constraint6DOF fix or free
+TestSets\Structure\Node\02 - Constraint6DOF fix or spring
+TestSets\Structure\Panel\01 - Property Test - Concrete - Slabs
+TestSets\Structure\Panel\02 - Property Test - Concrete - Walls
+TestSets\Structure\Panel\03 - Property Test - Steel - Slabs
+TestSets\Structure\Panel\04 - Property Test - Steel - Walls
+TestSets\Structure\Panel\05 - Property Test - LoadingPanel - Slabs
+TestSets\Structure\Panel\06 - Property Test -  LoadingPanel  - Walls
+TestSets\Structure\Panel\07 - Outline Tests - Slabs
+TestSets\Structure\Panel\08 - Outline Tests - Walls
+TestSets\Structure\Panel\09 - Outline Tests - Freeform
+TestSets\Structure\Panel\10 - Opening Tests - Slabs
+TestSets\Structure\Panel\11 - Opening Tests - Walls
+TestSets\Structure\Panel\12 - Opening Tests - FreeForm
+TestSets\Structure\RigidLink\01 - Simple Single Secondary Node Links
+TestSets\Structure\RigidLink\02 - Complex Single Secondary Node Links
+TestSets\Structure\RigidLink\03 - Simple Multi Secondary Node Links
+TestSets\Structure\RigidLink\04 - Complex Multi Secondary Node Links
