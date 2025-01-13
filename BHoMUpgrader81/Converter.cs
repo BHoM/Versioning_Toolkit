@@ -1,6 +1,6 @@
 ﻿/*
  * This file is part of the Buildings and Habitats object Model (BHoM)
- * Copyright (c) 2015 - 2024, the respective contributors. All rights reserved.
+ * Copyright (c) 2015 - 2025, the respective contributors. All rights reserved.
  *
  * Each contributor holds copyright over their respective contributions.
  * The project versioning (Git) records all such contribution source information.
@@ -39,11 +39,41 @@ namespace BH.Upgrader.v81
         public Converter() : base()
         {
             PreviousVersion = "8.0";
+            ToNewObject.Add("BH.oM.LadybugTools.SolarPanelTiltOptimisationCommand", UpgradeSolarTiltCommand);
         }
 
         /***************************************************/
         /**** Private Methods                           ****/
         /***************************************************/
+
+        private static Dictionary<string, object> UpgradeSolarTiltCommand(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            if (oldVersion.ContainsKey("_t"))
+                newVersion["_t"] = "BH.oM.LadybugTools.SolarRadiationPlotCommand";
+
+            if (oldVersion.ContainsKey("Azimuths"))
+            {
+                newVersion.TryGetValue("Azimuths", out object azimuths);
+                newVersion.Remove("Azimuths");
+                newVersion.Add("Directions", (int)azimuths);
+            }
+
+            if (oldVersion.ContainsKey("Altitudes"))
+            {
+                newVersion.TryGetValue("Altitudes", out object altitudes);
+                newVersion.Remove("Altitudes");
+                newVersion.Add("Tilts", (int)altitudes);
+            }
+
+            if (oldVersion.ContainsKey("GroundReflectance"))
+                newVersion.Remove("GroundReflectance");
+
+            if (oldVersion.ContainsKey("Isotropic"))
+                newVersion.Remove("Isotropic");
+            
+            return newVersion;
+        }
     }
 }
 
