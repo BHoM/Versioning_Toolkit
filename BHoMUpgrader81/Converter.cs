@@ -293,10 +293,29 @@ namespace BH.Upgrader.v81
                     { "SimulationResult", new Dictionary<string, object>()
                         {
                             { "_t", "BH.oM.LadybugTools.SimulationResult" },
+                            { "EpwFile", newVersion["EPWFile"] },
+                            { "name", "" },
                             { "GroundMaterial", gm },
                             { "ShadeMaterial", sm },
+                            { "ShadedDownTemperature", null },
+                            { "ShadedUpTemperature", null },
+                            { "ShadedRadiantTemperature", null },
+                            { "ShadedLongwaveMeanRadiantTemperatureDelta", null },
+                            { "ShadedShortwaveMeanRadiantTemperatureDelta", null },
+                            { "ShadedMeanRadiantTemperature", null },
+                            { "UnshadedDownTemperature", null },
+                            { "UnshadedUpTemperature", null },
+                            { "UnshadedRadiantTemperature", null },
+                            { "UnshadedLongwaveMeanRadiantTemperatureDelta", null },
+                            { "UnshadedShortwaveMeanRadiantTemperatureDelta", null },
+                            { "UnshadedMeanRadiantTemperature", null }
                         }
-                    }
+                    },
+                    { "DryBulbTemperature", null },
+                    { "RelativeHumidity", null },
+                    { "WindSpeed", null },
+                    { "MeanRadiantTemperature", null },
+                    { "UniversalThermalClimateIndex", null }
                 };
                 newVersion.Remove("GroundMaterial");
                 newVersion.Remove("ShadeMaterial");
