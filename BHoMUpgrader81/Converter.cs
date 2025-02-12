@@ -42,6 +42,7 @@ namespace BH.Upgrader.v81
         {
             PreviousVersion = "8.0";
             ToNewObject.Add("BH.oM.LadybugTools.SolarPanelTiltOptimisationCommand", UpgradeSolarTiltCommand);
+            ToNewObject.Add("BH.oM.LadybugTools.UTCIHeatPlotCommand", UpgradeUTCIHeatPlotCommand);
             ToNewObject.Add("BH.Revit.oM.UI.Filters.ParameterFilterRule", UpgradeParameterFilterRule);
             ToNewObject.Add("BH.Revit.oM.UI.Filters.ParameterFilterSet", UpgradeParameterFilterSet);
             ToNewObject.Add("BH.Revit.oM.UI.Filters.ParameterItem", UpgradeParameterItem);
@@ -275,5 +276,36 @@ namespace BH.Upgrader.v81
         }
 
         /***************************************************/
+        private static Dictionary<string, object> UpgradeUTCIHeatPlotCommand(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (oldVersion.ContainsKey("GroundMaterial") && oldVersion.ContainsKey("ShadeMaterial") && oldVersion.ContainsKey("Typology"))
+            {
+                newVersion.TryGetValue("GroundMaterial", out object gm);
+                newVersion.TryGetValue("ShadeMaterial", out object sm);
+                newVersion.TryGetValue("Typology", out object typ);
+
+                Dictionary<string, object> externalComfort = new Dictionary<string, object>()
+                {
+                    { "_t", "BH.oM.LadybugTools.ExternalComfort" },
+                    { "Typology", typ },
+                    { "SimulationResult", new Dictionary<string, object>()
+                        {
+                            { "_t", "BH.oM.LadybugTools.SimulationResult" },
+                            { "GroundMaterial", gm },
+                            { "ShadeMaterial", sm },
+                        }
+                    }
+                };
+                newVersion.Remove("GroundMaterial");
+                newVersion.Remove("ShadeMaterial");
+                newVersion.Remove("Typology");
+
+                newVersion.Add("ExternalComfort", externalComfort);
+            }
+
+            return newVersion;
+        }
     }
 }
