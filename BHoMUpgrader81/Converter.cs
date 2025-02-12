@@ -294,7 +294,7 @@ namespace BH.Upgrader.v81
                         {
                             { "_t", "BH.oM.LadybugTools.SimulationResult" },
                             { "EpwFile", newVersion["EPWFile"] },
-                            { "name", "" },
+                            { "Name", "" },
                             { "GroundMaterial", gm },
                             { "ShadeMaterial", sm },
                             { "ShadedDownTemperature", null },
@@ -323,6 +323,9 @@ namespace BH.Upgrader.v81
 
                 newVersion.Add("ExternalComfort", externalComfort);
             }
+
+            if (newVersion.ContainsKey("WindSpeedMultiplier"))
+                newVersion.Remove("WindSpeedMultiplier");
 
             return newVersion;
         }
