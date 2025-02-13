@@ -191,7 +191,7 @@ namespace BH.Upgrader.v81
         private static Dictionary<string, object> UpgradeSelectFromListViewSettings(Dictionary<string, object> oldVersion)
         {
             Dictionary<string, object> newVersion = new Dictionary<string, object>();
-            newVersion["_t"] = "BH.Revit.oM.UI.Filtering.ElementFiltering";
+            newVersion["_t"] = "BH.Revit.oM.UI.Filtering.ElementFilterSelection";
 
             if (oldVersion.ContainsKey("FilteringSettings"))
             {
