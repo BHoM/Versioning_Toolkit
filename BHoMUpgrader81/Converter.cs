@@ -206,7 +206,7 @@ namespace BH.Upgrader.v81
                             documentSelection.Add((int)documentItem["LinkInstanceId"]);
                         }
 
-                        newVersion["DocumentSelection"] = documentSelection;
+                        newVersion["DocumentIds"] = documentSelection;
                     }
 
                     if (filteringSettings.ContainsKey("Categories"))
@@ -217,7 +217,7 @@ namespace BH.Upgrader.v81
                             categorySelection.Add((int)categoryItem["Id"]);
                         }
 
-                        newVersion["CategorySelection"] = categorySelection;
+                        newVersion["CategoryIds"] = categorySelection;
                     }
                 }
             }
