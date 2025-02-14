@@ -150,7 +150,6 @@ namespace BH.Upgrader.v81
 
             if (oldVersion.ContainsKey("FilterRules"))
             {
-
                 foreach (Dictionary<string, object> filterRule in (dynamic)oldVersion["FilterRules"])
                 {
                     conditions.Add(filterRule);
@@ -252,12 +251,17 @@ namespace BH.Upgrader.v81
 
             if (oldVersion.ContainsKey("CategoryNames"))
             {
-                List<string> categoryNames = oldVersion["CategoryNames"] as List<string>;
-                if (categoryNames != null)
+                HashSet<string> categoryNames = new HashSet<string>();
+                foreach (string categoryName in (dynamic)oldVersion["CategoryNames"])
+                {
+                    categoryNames.Add(categoryName);
+                }
+
+                if (categoryNames.Count != 0)
                 {
                     Dictionary<string, object> categoryCondition = new Dictionary<string, object>();
                     categoryCondition["_t"] = "BH.Revit.oM.UI.Filtering.Conditions.CategoryNameCondition";
-                    categoryCondition["CategoryNames"] = new HashSet<string>(categoryNames);
+                    categoryCondition["CategoryNames"] = categoryNames;
                     prefilters.Add(categoryCondition);
                 }
             }
