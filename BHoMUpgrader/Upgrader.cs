@@ -378,12 +378,15 @@ namespace BH.Upgrader.Base
                 WriteToLog("object updated: " + b.GetType().FullName);
                 BsonDocument newDoc = new BsonDocument(b);
 
-                // Copy over BHoM properties
-                string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
-                foreach (string p in properties)
+                // Copy over BHoM properties if the old object was a BHoMObject (assumption around BHoM_Guid made here)
+                if (document.Contains("BHoM_Guid"))
                 {
-                    if (!newDoc.Contains(p) && document.Contains(p))
-                        newDoc[p] = document[p];
+                    string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
+                    foreach (string p in properties)
+                    {
+                        if (!newDoc.Contains(p) && document.Contains(p))
+                            newDoc[p] = document[p];
+                    }
                 }
 
                 return newDoc;
