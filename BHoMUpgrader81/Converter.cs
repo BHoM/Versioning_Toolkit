@@ -43,6 +43,7 @@ namespace BH.Upgrader.v81
             PreviousVersion = "8.0";
             ToNewObject.Add("BH.oM.LadybugTools.SolarPanelTiltOptimisationCommand", UpgradeSolarTiltCommand);
             ToNewObject.Add("BH.oM.LadybugTools.UTCIHeatPlotCommand", UpgradeUTCIHeatPlotCommand);
+            ToNewObject.Add("BH.oM.LadybugTools.SimulationResult", UpgradeSimulationResult);
             ToNewObject.Add("BH.Revit.oM.UI.Filters.ParameterFilterRule", UpgradeParameterFilterRule);
             ToNewObject.Add("BH.Revit.oM.UI.Filters.ParameterFilterSet", UpgradeParameterFilterSet);
             ToNewObject.Add("BH.Revit.oM.UI.Filters.ParameterItem", UpgradeParameterItem);
@@ -286,15 +287,21 @@ namespace BH.Upgrader.v81
                 newVersion.TryGetValue("GroundMaterial", out object gm);
                 newVersion.TryGetValue("ShadeMaterial", out object sm);
                 newVersion.TryGetValue("Typology", out object typ);
+                newVersion.TryGetValue("WindSpeedMultiplier", out object wsm);
 
                 Dictionary<string, object> externalComfort = new Dictionary<string, object>()
                 {
                     { "_t", "BH.oM.LadybugTools.ExternalComfort" },
-                    { "Typology", typ },
+                    { "Typology", UpgradeTypology(typ as Dictionary<string, object>, wsm) },
                     { "SimulationResult", new Dictionary<string, object>()
                         {
                             { "_t", "BH.oM.LadybugTools.SimulationResult" },
-                            { "EpwFile", newVersion["EPWFile"] },
+                            { "EpwFile", new Dictionary<string, object>() 
+                            { 
+                                { "_t", "BH.oM.Adapter.FileSettings" },
+                                { "FileName", System.IO.Path.GetFileName((string)newVersion["EPWFile"]) },
+                                { "Directory", System.IO.Path.GetDirectoryName((string)newVersion["EPWFile"]) }}  
+                            },
                             { "Name", "" },
                             { "GroundMaterial", gm },
                             { "ShadeMaterial", sm },
@@ -321,12 +328,42 @@ namespace BH.Upgrader.v81
                 newVersion.Remove("GroundMaterial");
                 newVersion.Remove("ShadeMaterial");
                 newVersion.Remove("Typology");
+                newVersion.Remove("WindSpeedMultiplier");
 
                 newVersion.Add("ExternalComfort", externalComfort);
             }
 
             if (newVersion.ContainsKey("WindSpeedMultiplier"))
                 newVersion.Remove("WindSpeedMultiplier");
+
+            return newVersion;
+        }
+
+        private static Dictionary<string, object> UpgradeTypology(Dictionary<string, object> oldVersion, object windSpeedMultiplier)
+        {
+            //this object has had a property added to it, which was loaned from UTCIHeatPlotCommand, which is why there is a cusom upgrader
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            if (!newVersion.ContainsKey("WindSpeedMultiplier"))
+                newVersion.Add("WindSpeedMultiplier", windSpeedMultiplier);
+
+            return newVersion;
+        }
+
+        private static Dictionary<string, object> UpgradeSimulationResult(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (newVersion.ContainsKey("EpwFile"))
+            {
+                string epwFile = (string)newVersion["EpwFile"];
+                Dictionary<string, object> newEpwFile = new Dictionary<string, object>()
+                {
+                    { "_t", "BH.oM.Adapter.FileSettings" },
+                    { "FileName", System.IO.Path.GetFileName(epwFile) },
+                    { "Directory", System.IO.Path.GetDirectoryName(epwFile) }
+                };
+                newVersion["EpwFile"] = newEpwFile;
+            }
 
             return newVersion;
         }
