@@ -276,6 +276,7 @@ namespace BH.Upgrader.v81
         }
 
         /***************************************************/
+        
         private static Dictionary<string, object> UpgradeUTCIHeatPlotCommand(Dictionary<string, object> oldVersion)
         {
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
