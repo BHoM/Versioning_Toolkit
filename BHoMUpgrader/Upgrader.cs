@@ -279,17 +279,21 @@ namespace BH.Upgrader.Base
             // Check if the object type is classified as deleted or without update
             CheckForNoUpgrade(converter, oldType, "object type");
 
-            // Upgrade porperties
-            BsonDocument withNewProperties = UpgradeObjectProperties(document, converter);
-            BsonDocument newDoc = withNewProperties ?? document;
+            BsonDocument newDoc = document;
 
             //Check if there are any full object upgraders available
+            bool upgradedExplicitly = false;
             if (converter.ToNewObject.ContainsKey(oldType))
             {
                 //If so, use them to upgrade the object
                 newDoc = UpgradeObjectExplicit(newDoc, converter, oldType) ?? newDoc;
+                upgradedExplicitly = true;
             }
-            else
+
+            // Upgrade properties
+            newDoc = UpgradeObjectProperties(newDoc, converter) ?? newDoc;
+
+            if(!upgradedExplicitly)
             {
                 //If not, try upgrading the names of the types and properties
                 newDoc = UpgradeObjectTypeAndPropertyNames(newDoc, converter, oldType) ?? newDoc;
