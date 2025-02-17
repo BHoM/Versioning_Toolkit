@@ -28,7 +28,7 @@ using System.Threading.Tasks;
 
 namespace BH.Upgrader.Base
 {
-    class NoUpdateException : Exception
+    public class NoUpdateException : Exception
     {
         public NoUpdateException(string message) : base(message) {}
     }
