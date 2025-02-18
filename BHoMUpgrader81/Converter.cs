@@ -26,7 +26,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
-using BH.Upgrader.Base;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
@@ -42,8 +41,8 @@ namespace BH.Upgrader.v81
         {
             PreviousVersion = "8.0";
             ToNewObject.Add("BH.oM.LadybugTools.SolarPanelTiltOptimisationCommand", UpgradeSolarTiltCommand);
-            ToNewObject.Add("BH.oM.LadybugTools.UTCIHeatPlotCommand", UpgradeUTCIHeatPlotCommand);
             ToNewObject.Add("BH.oM.LadybugTools.SimulationResult", UpgradeSimulationResult);
+            ToNewObject.Add("BH.oM.LadybugTools.UTCIHeatPlotCommand", UpgradeUTCIHeatPlotCommand);
             ToNewObject.Add("BH.Revit.oM.UI.Filters.ParameterFilterRule", UpgradeParameterFilterRule);
             ToNewObject.Add("BH.Revit.oM.UI.Filters.ParameterFilterSet", UpgradeParameterFilterSet);
             ToNewObject.Add("BH.Revit.oM.UI.Filters.ParameterItem", UpgradeParameterItem);
@@ -134,7 +133,8 @@ namespace BH.Upgrader.v81
                 case "LessOrEqual":
                     return ("LessThanOrEqualTo", false);
                 default:
-                    throw new NoUpdateException("Versioning failed due to an unknown enum value.");
+                    return ("", false);
+                    //throw new NoUpdateException("Versioning failed due to an unknown enum value.");
             }
         }
 
@@ -289,34 +289,32 @@ namespace BH.Upgrader.v81
                 newVersion.TryGetValue("Typology", out object typ);
                 newVersion.TryGetValue("WindSpeedMultiplier", out object wsm);
 
+                string epwFileName = (string)(oldVersion["EPWFile"] as Dictionary<string, object>)["Directory"] + "/"
+                    + (string)(oldVersion["EPWFile"] as Dictionary<string, object>)["FileName"];
+
                 Dictionary<string, object> externalComfort = new Dictionary<string, object>()
                 {
                     { "_t", "BH.oM.LadybugTools.ExternalComfort" },
                     { "Typology", UpgradeTypology(typ as Dictionary<string, object>, wsm) },
                     { "SimulationResult", new Dictionary<string, object>()
                         {
-                            { "_t", "BH.oM.LadybugTools.SimulationResult" },
-                            { "EpwFile", new Dictionary<string, object>() 
-                            { 
-                                { "_t", "BH.oM.Adapter.FileSettings" },
-                                { "FileName", System.IO.Path.GetFileName((string)newVersion["EPWFile"]) },
-                                { "Directory", System.IO.Path.GetDirectoryName((string)newVersion["EPWFile"]) }}  
-                            },
-                            { "Name", "" },
-                            { "GroundMaterial", gm },
-                            { "ShadeMaterial", sm },
-                            { "ShadedDownTemperature", null },
-                            { "ShadedUpTemperature", null },
-                            { "ShadedRadiantTemperature", null },
-                            { "ShadedLongwaveMeanRadiantTemperatureDelta", null },
-                            { "ShadedShortwaveMeanRadiantTemperatureDelta", null },
-                            { "ShadedMeanRadiantTemperature", null },
-                            { "UnshadedDownTemperature", null },
-                            { "UnshadedUpTemperature", null },
-                            { "UnshadedRadiantTemperature", null },
-                            { "UnshadedLongwaveMeanRadiantTemperatureDelta", null },
-                            { "UnshadedShortwaveMeanRadiantTemperatureDelta", null },
-                            { "UnshadedMeanRadiantTemperature", null }
+                        { "_t", "BH.oM.LadybugTools.SimulationResult" },
+                        { "EpwFile", epwFileName },
+                        { "Name", "" },
+                        { "GroundMaterial", gm },
+                        { "ShadeMaterial", sm },
+                        { "ShadedDownTemperature", null },
+                        { "ShadedUpTemperature", null },
+                        { "ShadedRadiantTemperature", null },
+                        { "ShadedLongwaveMeanRadiantTemperatureDelta", null },
+                        { "ShadedShortwaveMeanRadiantTemperatureDelta", null },
+                        { "ShadedMeanRadiantTemperature", null },
+                        { "UnshadedDownTemperature", null },
+                        { "UnshadedUpTemperature", null },
+                        { "UnshadedRadiantTemperature", null },
+                        { "UnshadedLongwaveMeanRadiantTemperatureDelta", null },
+                        { "UnshadedShortwaveMeanRadiantTemperatureDelta", null },
+                        { "UnshadedMeanRadiantTemperature", null }
                         }
                     },
                     { "DryBulbTemperature", null },
@@ -328,7 +326,6 @@ namespace BH.Upgrader.v81
                 newVersion.Remove("GroundMaterial");
                 newVersion.Remove("ShadeMaterial");
                 newVersion.Remove("Typology");
-                newVersion.Remove("WindSpeedMultiplier");
 
                 newVersion.Add("ExternalComfort", externalComfort);
             }
@@ -355,14 +352,27 @@ namespace BH.Upgrader.v81
 
             if (newVersion.ContainsKey("EpwFile"))
             {
-                string epwFile = (string)newVersion["EpwFile"];
+                string epwFile = (string)oldVersion["EpwFile"];
+                string fileName = epwFile.Split('\\', '/').LastOrDefault();
+                string filePath = "";
+
+                if (fileName == epwFile)
+                {
+                    filePath = fileName;
+                    fileName = "";
+                }
+
+                if (!string.IsNullOrEmpty(fileName))
+                    filePath = epwFile.Substring(0, epwFile.LastIndexOf(fileName) - 1);
+
                 Dictionary<string, object> newEpwFile = new Dictionary<string, object>()
                 {
                     { "_t", "BH.oM.Adapter.FileSettings" },
-                    { "FileName", System.IO.Path.GetFileName(epwFile) },
-                    { "Directory", System.IO.Path.GetDirectoryName(epwFile) }
+                    { "FileName", fileName },
+                    { "Directory", filePath }
                 };
-                newVersion["EpwFile"] = newEpwFile;
+                newVersion.Remove("EpwFile");
+                newVersion.Add("EpwFile", newEpwFile);
             }
 
             return newVersion;
