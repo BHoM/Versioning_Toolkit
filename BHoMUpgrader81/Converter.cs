@@ -42,6 +42,8 @@ namespace BH.Upgrader.v81
         {
             PreviousVersion = "8.0";
             ToNewObject.Add("BH.oM.LadybugTools.SolarPanelTiltOptimisationCommand", UpgradeSolarTiltCommand);
+            ToNewObject.Add("BH.oM.LadybugTools.SimulationResult", UpgradeSimulationResult);
+            ToNewObject.Add("BH.oM.LadybugTools.UTCIHeatPlotCommand", UpgradeUTCIHeatPlotCommand);
             ToNewObject.Add("BH.Revit.oM.UI.Filters.ParameterFilterRule", UpgradeParameterFilterRule);
             ToNewObject.Add("BH.Revit.oM.UI.Filters.ParameterFilterSet", UpgradeParameterFilterSet);
             ToNewObject.Add("BH.Revit.oM.UI.Filters.ParameterItem", UpgradeParameterItem);
@@ -275,5 +277,103 @@ namespace BH.Upgrader.v81
         }
 
         /***************************************************/
+        
+        private static Dictionary<string, object> UpgradeUTCIHeatPlotCommand(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (newVersion.TryGetValue("GroundMaterial", out object gm) && newVersion.TryGetValue("ShadeMaterial", out object sm) && newVersion.TryGetValue("Typology", out object typ))
+            {
+                
+                newVersion.TryGetValue("WindSpeedMultiplier", out object wsm);
+
+                string epwFileName = (string)(oldVersion["EPWFile"] as Dictionary<string, object>)["Directory"] + "/"
+                    + (string)(oldVersion["EPWFile"] as Dictionary<string, object>)["FileName"];
+
+                Dictionary<string, object> externalComfort = new Dictionary<string, object>()
+                {
+                    { "_t", "BH.oM.LadybugTools.ExternalComfort" },
+                    { "Typology", UpgradeTypology(typ as Dictionary<string, object>, wsm) },
+                    { "SimulationResult", new Dictionary<string, object>()
+                        {
+                        { "_t", "BH.oM.LadybugTools.SimulationResult" },
+                        { "EpwFile", epwFileName },
+                        { "Name", "" },
+                        { "GroundMaterial", gm },
+                        { "ShadeMaterial", sm },
+                        { "ShadedDownTemperature", null },
+                        { "ShadedUpTemperature", null },
+                        { "ShadedRadiantTemperature", null },
+                        { "ShadedLongwaveMeanRadiantTemperatureDelta", null },
+                        { "ShadedShortwaveMeanRadiantTemperatureDelta", null },
+                        { "ShadedMeanRadiantTemperature", null },
+                        { "UnshadedDownTemperature", null },
+                        { "UnshadedUpTemperature", null },
+                        { "UnshadedRadiantTemperature", null },
+                        { "UnshadedLongwaveMeanRadiantTemperatureDelta", null },
+                        { "UnshadedShortwaveMeanRadiantTemperatureDelta", null },
+                        { "UnshadedMeanRadiantTemperature", null }
+                        }
+                    },
+                    { "DryBulbTemperature", null },
+                    { "RelativeHumidity", null },
+                    { "WindSpeed", null },
+                    { "MeanRadiantTemperature", null },
+                    { "UniversalThermalClimateIndex", null }
+                };
+                newVersion.Remove("GroundMaterial");
+                newVersion.Remove("ShadeMaterial");
+                newVersion.Remove("Typology");
+
+                newVersion.Add("ExternalComfort", externalComfort);
+            }
+
+            if (newVersion.ContainsKey("WindSpeedMultiplier"))
+                newVersion.Remove("WindSpeedMultiplier");
+
+            return newVersion;
+        }
+
+        private static Dictionary<string, object> UpgradeTypology(Dictionary<string, object> oldVersion, object windSpeedMultiplier)
+        {
+            //this object has had a property added to it, which was loaned from UTCIHeatPlotCommand, which is why there is a cusom upgrader
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            if (!newVersion.ContainsKey("WindSpeedMultiplier"))
+                newVersion.Add("WindSpeedMultiplier", windSpeedMultiplier);
+
+            return newVersion;
+        }
+
+        private static Dictionary<string, object> UpgradeSimulationResult(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (newVersion.ContainsKey("EpwFile"))
+            {
+                string epwFile = (string)oldVersion["EpwFile"];
+                string fileName = epwFile.Split('\\', '/').LastOrDefault();
+                string filePath = "";
+
+                if (fileName == epwFile)
+                {
+                    filePath = fileName;
+                    fileName = "";
+                }
+
+                if (!string.IsNullOrEmpty(fileName))
+                    filePath = epwFile.Substring(0, epwFile.LastIndexOf(fileName) - 1);
+
+                Dictionary<string, object> newEpwFile = new Dictionary<string, object>()
+                {
+                    { "_t", "BH.oM.Adapter.FileSettings" },
+                    { "FileName", fileName },
+                    { "Directory", filePath }
+                };
+                newVersion.Remove("EpwFile");
+                newVersion.Add("EpwFile", newEpwFile);
+            }
+
+            return newVersion;
+        }
     }
 }
