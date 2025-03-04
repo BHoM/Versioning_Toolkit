@@ -135,7 +135,6 @@ namespace BH.Upgrader.v81
                     return ("LessThanOrEqualTo", false);
                 default:
                     throw new NoUpdateException("Versioning failed due to an unknown enum value.");
-                    //throw new NoUpdateException("Versioning failed due to an unknown enum value.");
             }
         }
 
