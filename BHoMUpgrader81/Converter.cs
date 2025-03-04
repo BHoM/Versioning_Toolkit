@@ -133,7 +133,7 @@ namespace BH.Upgrader.v81
                 case "LessOrEqual":
                     return ("LessThanOrEqualTo", false);
                 default:
-                    return ("", false);
+                    throw new NoUpdateException("Versioning failed due to an unknown enum value.");
                     //throw new NoUpdateException("Versioning failed due to an unknown enum value.");
             }
         }
@@ -282,11 +282,9 @@ namespace BH.Upgrader.v81
         {
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
 
-            if (oldVersion.ContainsKey("GroundMaterial") && oldVersion.ContainsKey("ShadeMaterial") && oldVersion.ContainsKey("Typology"))
+            if (newVersion.TryGetValue("GroundMaterial", out object gm) && newVersion.TryGetValue("ShadeMaterial", out object sm) && newVersion.TryGetValue("Typology", out object typ))
             {
-                newVersion.TryGetValue("GroundMaterial", out object gm);
-                newVersion.TryGetValue("ShadeMaterial", out object sm);
-                newVersion.TryGetValue("Typology", out object typ);
+                
                 newVersion.TryGetValue("WindSpeedMultiplier", out object wsm);
 
                 string epwFileName = (string)(oldVersion["EPWFile"] as Dictionary<string, object>)["Directory"] + "/"
