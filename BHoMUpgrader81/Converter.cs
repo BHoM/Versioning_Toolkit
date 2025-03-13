@@ -49,6 +49,7 @@ namespace BH.Upgrader.v81
             ToNewObject.Add("BH.Revit.oM.UI.Filters.ParameterItem", UpgradeParameterItem);
             ToNewObject.Add("BH.Revit.oM.UI.SelectFromListViewSettings", UpgradeSelectFromListViewSettings);
             ToNewObject.Add("BH.Revit.oM.ModelQA.Extraction.BaseExtractFromDocument", UpgradeBaseExtractFromDocument);
+            ToNewObject.Add("BH.Revit.oM.ElementRelationships.ElementParameter", UpgradeElementParameter);
         }
 
         /***************************************************/
@@ -277,7 +278,19 @@ namespace BH.Upgrader.v81
         }
 
         /***************************************************/
-        
+
+        private static Dictionary<string, object> UpgradeElementParameter(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>();
+            newVersion["_t"] = "BH.oM.Adapters.Revit.Parameters.ParameterValueSource";
+            newVersion["ParameterName"] = oldVersion["Name"];
+            newVersion["FromType"] = oldVersion["FromElementType"];
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
         private static Dictionary<string, object> UpgradeUTCIHeatPlotCommand(Dictionary<string, object> oldVersion)
         {
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
