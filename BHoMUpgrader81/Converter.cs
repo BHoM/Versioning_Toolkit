@@ -177,7 +177,7 @@ namespace BH.Upgrader.v81
         private static Dictionary<string, object> UpgradeParameterItem(Dictionary<string, object> oldVersion)
         {
             Dictionary<string, object> newVersion = new Dictionary<string, object>();
-            newVersion["_t"] = "BH.oM.Adapters.Revit.Parameters.ParameterValueSource";
+            newVersion["_t"] = "BH.Revit.oM.UI.Filtering.UIFilteringValueSource";
 
             if (oldVersion.ContainsKey("Name"))
                 newVersion["ParameterName"] = oldVersion["Name"];
