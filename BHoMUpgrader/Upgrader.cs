@@ -1,6 +1,6 @@
 /*
  * This file is part of the Buildings and Habitats object Model (BHoM)
- * Copyright (c) 2015 - 2024, the respective contributors. All rights reserved.
+ * Copyright (c) 2015 - 2025, the respective contributors. All rights reserved.
  *
  * Each contributor holds copyright over their respective contributions.
  * The project versioning (Git) records all such contribution source information.
@@ -279,17 +279,21 @@ namespace BH.Upgrader.Base
             // Check if the object type is classified as deleted or without update
             CheckForNoUpgrade(converter, oldType, "object type");
 
-            // Upgrade porperties
-            BsonDocument withNewProperties = UpgradeObjectProperties(document, converter);
-            BsonDocument newDoc = withNewProperties ?? document;
+            BsonDocument newDoc = document;
 
             //Check if there are any full object upgraders available
+            bool upgradedExplicitly = false;
             if (converter.ToNewObject.ContainsKey(oldType))
             {
                 //If so, use them to upgrade the object
                 newDoc = UpgradeObjectExplicit(newDoc, converter, oldType) ?? newDoc;
+                upgradedExplicitly = true;
             }
-            else
+
+            // Upgrade properties
+            newDoc = UpgradeObjectProperties(newDoc, converter) ?? newDoc;
+
+            if(!upgradedExplicitly)
             {
                 //If not, try upgrading the names of the types and properties
                 newDoc = UpgradeObjectTypeAndPropertyNames(newDoc, converter, oldType) ?? newDoc;
@@ -378,12 +382,15 @@ namespace BH.Upgrader.Base
                 WriteToLog("object updated: " + b.GetType().FullName);
                 BsonDocument newDoc = new BsonDocument(b);
 
-                // Copy over BHoM properties
-                string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
-                foreach (string p in properties)
+                // Copy over BHoM properties if the old object was a BHoMObject (assumption around BHoM_Guid made here)
+                if (document.Contains("BHoM_Guid"))
                 {
-                    if (!newDoc.Contains(p) && document.Contains(p))
-                        newDoc[p] = document[p];
+                    string[] properties = new string[] { "BHoM_Guid", "CustomData", "Name", "Tags", "Fragments" };
+                    foreach (string p in properties)
+                    {
+                        if (!newDoc.Contains(p) && document.Contains(p))
+                            newDoc[p] = document[p];
+                    }
                 }
 
                 return newDoc;
