@@ -1,38 +1,371 @@
-﻿{
+{
   "Namespace": {
     "ToNew": {
+      
     },
     "ToOld": {
+      
     }
   },
   "Type": {
     "ToNew": {
-
+      "BH.Revit.oM.ElementRelationships.ElementProperty": "BH.oM.Verification.Conditions.PropertyValueSource",
+      "BH.Revit.oM.ElementRelationships.IValueSource": "BH.oM.Verification.Conditions.IValueSource",
+      "BH.Revit.oM.ElementRelationships.ElementPoint": "BH.Revit.oM.ElementRelationships.PointLocation",
+      "BH.Revit.UI.Schematic.ParameterMapItem": "BH.Revit.oM.Schematic.ParameterMapItem",
+      "BH.Revit.oM.UI.Filters.NumberValue": "BH.Revit.oM.UI.Filtering.NumberValue",
+      "BH.Revit.oM.ModelQA.Filtering.ParameterValueSource": "BH.oM.Adapters.Revit.Parameters.ParameterValueSource",
+      "BH.Revit.oM.UI.SelectFromListViewSettings": "BH.Revit.oM.UI.Filtering.ElementFilterSelection"
     },
     "ToOld": {
-
+      "BH.oM.Verification.Conditions.PropertyValueSource": "BH.Revit.oM.ElementRelationships.ElementProperty",
+      "BH.oM.Verification.Conditions.IValueSource": "BH.Revit.oM.ElementRelationships.IValueSource",
+      "BH.Revit.oM.ElementRelationships.PointLocation": "BH.Revit.oM.ElementRelationships.ElementPoint",
+      "BH.Revit.oM.Schematic.ParameterMapItem": "BH.Revit.UI.Schematic.ParameterMapItem",
+      "BH.Revit.oM.UI.Filtering.NumberValue": "BH.Revit.oM.UI.Filters.NumberValue",
+      "BH.oM.Adapters.Revit.Parameters.ParameterValueSource": "BH.Revit.oM.ModelQA.Filtering.ParameterValueSource",
+      "BH.Revit.oM.UI.Filtering.ElementFilterSelection": "BH.Revit.oM.UI.SelectFromListViewSettings"
     }
   },
   "Method": {
     "ToNew": {
-
+      "BH.Engine.Verification.Query.ValueFromSource(System.Object, BH.oM.Verification.Conditions.IValueCondition, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Verification.Query, Verification_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "ValueFromSource",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Verification.Conditions.IValueCondition\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Engine.Verification.Query.IValueFromSource(System.Object, BH.oM.Verification.Conditions.IValueSource, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Verification.Query, Verification_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "ValueFromSource",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Verification.Conditions.IValueSource\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Engine.Verification.Query.ValueFromSource(System.Object, BH.oM.Verification.Conditions.PropertyValueSource, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Verification.Query, Verification_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "ValueFromSource",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Verification.Conditions.IValueSource\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Engine.UI.Create.OutputAccessor(System.Type, System.Type)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.UI.Compute, UI_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "OutputAccessor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Engine.UI.Compute.LogUsage(System.String, System.String, System.Guid, System.String, System.Object, System.Collections.Generic.List<BH.oM.Base.Debugging.Event>, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.UI.Compute, UI_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "LogUsage",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.Debugging.Event\", \"_bhomVersion\" : \"8.1\" }], \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Engine.UI.Create.InputAccessor(System.Type, System.Type)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.UI.Compute, UI_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "InputAccessor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Revit.Engine.UI.Query.ElementLabel(Autodesk.Revit.DB.Element, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.UI.Query, Revit_UI_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "Label",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Revit.Engine.Schematic.Query.GetAllDocuments(Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.UI.Query, Revit_UI_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "AllDocuments",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Revit.Engine.Tagging.Query.ExistingTagsFromContext(System.Collections.Generic.List<Autodesk.Revit.DB.ElementId>, BH.Revit.oM.Tagging.IModelData, System.Collections.Generic.Dictionary<Autodesk.Revit.DB.ElementId, System.Double>, System.Collections.Generic.Dictionary<Autodesk.Revit.DB.ElementId, System.Double>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Tagging.Query, Revit_Tagging_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "ExistingTagsFromContext",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ElementId, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }], \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.IModelData\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ElementId, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }, { \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }], \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ElementId, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }, { \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }], \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ElementId, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }, { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Tagging.ITagHost\", \"_bhomVersion\" : \"8.1\" }], \"_bhomVersion\" : \"8.1\" }], \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Revit.Engine.Tagging.Query.ExternalCurveLoop(Autodesk.Revit.DB.PlanarFace)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Tagging.Query, Revit_Tagging_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "ExternalCurveLoop",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Face, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Revit.Engine.Schematic.Query.ValueAsObject(Autodesk.Revit.DB.Parameter, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Query, Revit_Schematic_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "ValueAsObject",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Parameter, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Schematic.Enum.DesiredUnit\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Revit.Engine.MechanicalPlumbing.Compute.PlaceCollarFireAccessory(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.Element>, System.Collections.Generic.List<Autodesk.Revit.DB.RevitLinkInstance>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.MechanicalPlumbing.Compute, Revit_MechanicalPlumbing_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "PlaceCollarFireAccessory",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }], \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Revit.Engine.MechanicalPlumbing.Compute.PlaceDamperFireAccessory(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.Element>, System.Collections.Generic.List<Autodesk.Revit.DB.RevitLinkInstance>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.MechanicalPlumbing.Compute, Revit_MechanicalPlumbing_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "PlaceDamperFireAccessory",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }], \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Revit.Engine.Documentation.Compute.CreateWorksetViews(System.Collections.Generic.List<Autodesk.Revit.DB.Workset>, Autodesk.Revit.DB.ViewFamilyType, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Compute, Revit_Documentation_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "CreateWorksetViews",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Workset, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }], \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Engine.Humans.Create.pairOfEyes(BH.oM.Geometry.Point, BH.oM.Geometry.Vector)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Humans.Create, Humans_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "PairOfEyes",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Engine.Adapters.HTTP.Create.HTTPAdapterConfig(System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.HTTP.Create, HTTP_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "HTTPConfig",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Engine.Graphics.Create.Marker(BH.oM.Graphics.Components.IMarker, BH.oM.Geometry.Point, BH.oM.Geometry.Vector)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Graphics.Query, Graphics_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "Marker",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Graphics.Components.IMarker\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Engine.Graphics.Create.Marker(BH.oM.Graphics.Components.BasicArrowMarker, BH.oM.Geometry.Point, BH.oM.Geometry.Vector)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Graphics.Query, Graphics_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "Marker",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Graphics.Components.BasicArrowMarker\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Engine.Graphics.Create.IMarker(BH.oM.Graphics.Components.IMarker, BH.oM.Geometry.Point, BH.oM.Geometry.Vector)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Graphics.Query, Graphics_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "IMarker",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Graphics.Components.IMarker\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Engine.Geometry.Create.PointGrid(BH.oM.Geometry.Point, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, System.Int32, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Compute, Geometry_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "PointGrid",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Engine.Data.Modify.Peek(BH.oM.Data.Collections.PriorityQueue<System.IComparable<System.Object>>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Data.Query, Data_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "Peek",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Data.Collections.PriorityQueue`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.IComparable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }], \"_bhomVersion\" : \"8.1\" }], \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      },
+      "BH.Engine.Reflection.Query.UnqualifiedName(System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.1\" }",
+        "MethodName": "UnqualifiedName",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.1\" }"
+        ],
+        "_bhomVersion": "8.1"
+      }
     },
     "ToOld": {
-
+      
     }
   },
   "Property": {
     "ToNew": {
-
+      
     },
     "ToOld": {
-
+      
+    }
+  },
+  "Dataset": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    },
+    "MessageForDeleted": {
+      
     }
   },
   "MessageForDeleted": {
-
+    "BH.Engine.LadybugTools.Create.Location(System.String, System.String, System.String, System.Double, System.Double, System.Double, System.Double, System.String, System.String)": "The Location class was removed. Please refer to the BH.oM.Environment.Climate.Location object instead.",
+    "BH.oM.LadybugTools.EPW": "This class was provided to allow EPW objects to be pulled from python workflows, but this functionality duplicated functionality in Environment_Engine, for future work involving EPWs please use BH.oM.Environment.Climate.WeatherFile with BH.Engine.Environment.Compute.ImportEPW",
+    "BH.oM.LadybugTools.Location": "This class was required for the EPW class, which now that it is removed, has no use anymore. Please refer to the BH.oM.Environment.Climate.Location object instead.",
+    "BH.Revit.oM.ElementRelationships.ElementLocation": "This object has been removed as a part of the major refactor and should not be needed any more.",
+    "BH.Revit.oM.ElementRelationships.ElementValueSource": "This object has been removed as a part of the major refactor and should not be needed any more.",
+    "BH.Engine.Tagging.Query.IntersectionCount(BH.oM.Tagging.ProvisionalTag, BH.oM.Data.Collections.DomainTree<BH.oM.Tagging.ContextElement>, BH.oM.Tagging.Settings.GlobalTagSettings, System.Boolean, System.Collections.Generic.List<BH.oM.Tagging.ContextElement>)": "This method has been removed as a part of the legacy code clean-up. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.Convert.FromSI(System.Double, Autodesk.Revit.DB.UnitType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.Convert.ToSI(System.Double, Autodesk.Revit.DB.UnitType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.Create.ProjectParameter(Autodesk.Revit.DB.Document, System.String, Autodesk.Revit.DB.ParameterType, Autodesk.Revit.DB.BuiltInParameterGroup, System.Boolean, System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Category>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.Create.SharedParameter(Autodesk.Revit.DB.Document, System.String, Autodesk.Revit.DB.ParameterType, System.String, System.Boolean, System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.Category>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.Query.BHoMUnitType(Autodesk.Revit.DB.UnitType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.Query.FromSIMultiplier(Autodesk.Revit.DB.UnitType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.Query.GetDataType(Autodesk.Revit.DB.Definition)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.Query.GetUnitTypeId(Autodesk.Revit.DB.FormatOptions)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.Query.GetUnitTypeId(Autodesk.Revit.DB.Parameter)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.Query.Label(Autodesk.Revit.DB.ParameterType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.Query.SpecName(Autodesk.Revit.DB.UnitType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.Query.ToSIMultiplier(Autodesk.Revit.DB.UnitType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.Query.UnitName(Autodesk.Revit.DB.DisplayUnitType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.SpecTypeId": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.UnitTypeId": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Core.Query.IPasses(Autodesk.Revit.DB.Parameter, BH.oM.Adapters.Revit.Requests.IParameterValueRequest)": "This method has been removed because the input object is not supported any more. Please contact the developers if you need further support.",
+    "BH.Revit.Engine.Core.Query.Passes(Autodesk.Revit.DB.Element, BH.oM.Adapters.Revit.Requests.IParameterValueRequest, BH.oM.Adapters.Revit.Enums.Discipline, BH.oM.Adapters.Revit.Settings.RevitSettings)": "This method has been removed because the input object is not supported any more. Please contact the developers if you need further support.",
+    "BH.Revit.Engine.Core.Query.Passes(Autodesk.Revit.DB.Parameter, BH.oM.Adapters.Revit.Requests.FilterByParameterBool)": "This method has been removed because the input object is not supported any more. Please contact the developers if you need further support.",
+    "BH.Revit.Engine.Core.Query.Passes(Autodesk.Revit.DB.Parameter, BH.oM.Adapters.Revit.Requests.FilterByParameterInteger)": "This method has been removed because the input object is not supported any more. Please contact the developers if you need further support.",
+    "BH.Revit.Engine.Core.Query.Passes(Autodesk.Revit.DB.Parameter, BH.oM.Adapters.Revit.Requests.FilterByParameterNumber)": "This method has been removed because the input object is not supported any more. Please contact the developers if you need further support.",
+    "BH.Revit.Engine.Core.Query.Passes(Autodesk.Revit.DB.Parameter, BH.oM.Adapters.Revit.Requests.FilterByParameterText)": "This method has been removed because the input object is not supported any more. Please contact the developers if you need further support.",
+    "BH.Revit.Engine.Core.Query.Passes(Autodesk.Revit.DB.Parameter, BH.oM.Adapters.Revit.Requests.FilterByParameterElementId)": "This method has been removed because the input object is not supported any more. Please contact the developers if you need further support.",
+    "BH.UI.Revit.Query.AppliesTo(BH.Revit.oM.UI.Scenarios.IScenario3Elements, Autodesk.Revit.DB.Element, Autodesk.Revit.DB.Element, Autodesk.Revit.DB.Element)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.UI.Revit.Query.AppliesTo(BH.Revit.oM.UI.Scenarios.IScenario2Elements, Autodesk.Revit.DB.Element, Autodesk.Revit.DB.Element)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.UI.Revit.Query.AppliesTo(BH.Revit.oM.UI.Scenarios.IScenario1Element, Autodesk.Revit.DB.Element)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.UI.Revit.Query.FilterMethod(BH.Revit.oM.UI.Scenarios.IScenario3Elements)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.UI.Revit.Query.FilterMethod(BH.Revit.oM.UI.Scenarios.IScenario2Elements)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.UI.Revit.Query.FilterMethod(BH.Revit.oM.UI.Scenarios.IScenario1Element)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.UI.Revit.Filtering.FilterComputer.Evaluate(Autodesk.Revit.DB.Element, BH.oM.Data.Requests.IRequest)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Modify.RoundNumericValue(System.Double, Autodesk.Revit.DB.UnitType, Autodesk.Revit.DB.Document)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Query.Accuracy(Autodesk.Revit.DB.UnitType, Autodesk.Revit.DB.Document)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Query.AllSpecs(Autodesk.Revit.DB.DisplayUnitType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Query.CanConvert(Autodesk.Revit.DB.DisplayUnitType, Autodesk.Revit.DB.DisplayUnitType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Query.FormattingRules(Autodesk.Revit.DB.DisplayUnitType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Query.IsImperialLength(Autodesk.Revit.DB.DisplayUnitType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Query.IsValidNumberInput(System.String, Autodesk.Revit.DB.DisplayUnitType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Query.IsValidUnit(Autodesk.Revit.DB.DisplayUnitType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Query.Label(Autodesk.Revit.DB.UnitType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Query.Label(Autodesk.Revit.DB.DisplayUnitType, System.Boolean)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Query.NumberInputAsString(System.Double, Autodesk.Revit.DB.DisplayUnitType, Autodesk.Revit.DB.Document)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Query.UnitFromSpec(Autodesk.Revit.DB.UnitType, Autodesk.Revit.DB.Document)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Query.UnitMultiplier(Autodesk.Revit.DB.DisplayUnitType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Query.UnitMultiplier(Autodesk.Revit.DB.UnitType, Autodesk.Revit.DB.Document)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Compute.StartSuppressingEvents(System.Boolean, System.Boolean, System.Boolean)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Compute.StopSuppressingEvents(System.Boolean, System.Boolean, System.Boolean)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.UI.Query.IsValid(BH.Revit.oM.UI.Filters.ParameterFilterRule)": "This method has been removed because the input object is not supported any more. Please contact the developers if you need further support.",
+    "BH.Revit.Engine.UI.Query.FiltersDescription(BH.Revit.oM.UI.Scenarios.IScenario, System.String[])": "This method has been removed because the input object is not supported any more. Please contact the developers if you need further support.",
+    "BH.Revit.Engine.UI.Query.IsValid(BH.Revit.oM.UI.Scenarios.IScenario)": "This method has been removed because the input object is not supported any more. Please contact the developers if you need further support.",
+    "BH.Revit.oM.UI.Filters.CategoryItem": "This object has been removed as a part of the major refactor and should not be needed any more.",
+    "BH.Revit.oM.UI.Filters.DocumentItem": "This object has been removed as a part of the major refactor and should not be needed any more.",
+    "BH.Revit.oM.UI.Filters.SchemaItem": "This object has been removed as a part of the major refactor and should not be needed any more.",
+    "BH.Revit.oM.UI.CategoryFilteringSettings": "This object has been removed as a part of the major refactor and should not be needed any more.",
+    "BH.Revit.oM.UI.FilteringSettings": "This object has been removed as a part of the major refactor and should not be needed any more.",
+    "BH.Revit.oM.UI.ParameterFilteringSettings": "This object has been removed as a part of the major refactor and should not be needed any more.",
+    "BH.Revit.oM.UI.SchemaFilteringSettings": "This object has been removed as a part of the major refactor and should not be needed any more.",
+    "BH.Revit.oM.UI.Scenarios.ElementFilter": "This object has been removed as a part of the major refactor and should not be needed any more."
   },
   "MessageForNoUpgrade": {
-
+    "BH.oM.Adapters.Revit.Requests.FilterByParameterBool": "This object has been replaced with ConditionRequest combined with ValueCondition and ParameterValueSource, automated versioning was not possible. Please align your script using Create.FilterByParameterValue or create the ConditionRequest manually.",
+    "BH.oM.Adapters.Revit.Requests.FilterByParameterElementId": "This object has been replaced with ConditionRequest combined with ValueCondition and ParameterValueSource, automated versioning was not possible. Please align your script using Create.FilterByParameterElementId or create the ConditionRequest manually.",
+    "BH.oM.Adapters.Revit.Requests.FilterByParameterInteger": "This object has been replaced with ConditionRequest combined with ValueCondition and ParameterValueSource, automated versioning was not possible. Please align your script using Create.FilterByParameterValue or create the ConditionRequest manually.",
+    "BH.oM.Adapters.Revit.Requests.FilterByParameterNumber": "This object has been replaced with ConditionRequest combined with ValueCondition and ParameterValueSource, automated versioning was not possible. Please align your script using Create.FilterByParameterValue or create the ConditionRequest manually.",
+    "BH.oM.Adapters.Revit.Requests.FilterByParameterText": "This object has been replaced with ConditionRequest combined with ValueCondition and ParameterValueSource, automated versioning was not possible. Please align your script using Create.FilterByParameterValue or create the ConditionRequest manually.",
+    "BH.Engine.Adapters.Revit.Query.FilterDescription(BH.oM.Adapters.Revit.Requests.FilterByParameterBool)": "This method is not versioned because the input object is not supported any more. Please use an overload of FilterDescription method taking ConditionRequest to restore your workflow or contact the developers for further support.",
+    "BH.Engine.Adapters.Revit.Query.FilterDescription(BH.oM.Adapters.Revit.Requests.FilterByParameterElementId)": "This method is not versioned because the input object is not supported any more. Please use an overload of FilterDescription method taking ConditionRequest to restore your workflow or contact the developers for further support.",
+    "BH.Engine.Adapters.Revit.Query.FilterDescription(BH.oM.Adapters.Revit.Requests.FilterByParameterExistence)": "This method is not versioned because the input object is not supported any more. Please use an overload of FilterDescription method taking ConditionRequest to restore your workflow or contact the developers for further support.",
+    "BH.Engine.Adapters.Revit.Query.FilterDescription(BH.oM.Adapters.Revit.Requests.FilterByParameterInteger)": "This method is not versioned because the input object is not supported any more. Please use an overload of FilterDescription method taking ConditionRequest to restore your workflow or contact the developers for further support.",
+    "BH.Engine.Adapters.Revit.Query.FilterDescription(BH.oM.Adapters.Revit.Requests.FilterByParameterNumber)": "This method is not versioned because the input object is not supported any more. Please use an overload of FilterDescription method taking ConditionRequest to restore your workflow or contact the developers for further support.",
+    "BH.Engine.Adapters.Revit.Query.FilterDescription(BH.oM.Adapters.Revit.Requests.FilterByParameterText)": "This method is not versioned because the input object is not supported any more. Please use an overload of FilterDescription method taking ConditionRequest to restore your workflow or contact the developers for further support.",
+    "BH.Revit.Engine.Core.Query.ElementIds(BH.oM.Adapters.Revit.Requests.IParameterRequest, Autodesk.Revit.DB.Document, BH.oM.Adapters.Revit.Enums.Discipline, BH.oM.Adapters.Revit.Settings.RevitSettings, System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.ElementId>)": "This method is not versioned because the input object is not supported any more. Please use an overload of ElementIds method taking ConditionRequest to restore your workflow or contact the developers for further support.",
+    "BH.Revit.Engine.Core.Query.IElementIdsByParameter(Autodesk.Revit.DB.Document, BH.oM.Adapters.Revit.Requests.IParameterRequest, BH.oM.Adapters.Revit.Enums.Discipline, BH.oM.Adapters.Revit.Settings.RevitSettings, System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.ElementId>)": "This method is not versioned because the input object is not supported any more. Please use an overload of ElementIdsByCondition method to restore your workflow or contact the developers for further support."
   }
 }
