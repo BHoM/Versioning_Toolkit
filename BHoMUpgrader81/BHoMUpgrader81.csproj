@@ -55,7 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Upgrades.json" />
+    <None Include="Upgrades.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BHoMUpgrader\BHoMUpgrader.csproj">
