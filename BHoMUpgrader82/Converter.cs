@@ -52,6 +52,11 @@ namespace BH.Upgrader.v82
         {
             Dictionary<string, object> newVersion = new Dictionary<string, object>();
             newVersion["_t"] = "BH.oM.Security.Elements.CameraDevice";
+            newVersion["EyePosition"] = oldVersion["EyePosition"];
+            newVersion["TargetPosition"] = oldVersion["TargetPosition"];
+            newVersion["Mounting"] = oldVersion["Mounting"];
+            newVersion["Type"] = oldVersion["Type"];
+            newVersion["Megapixels"] = oldVersion["Megapixels"];
 
             if (oldVersion.ContainsKey("HorizontalFieldOfView"))
             {
@@ -66,7 +71,7 @@ namespace BH.Upgrader.v82
                         distance = DistanceBetweenPoints(ptA, ptB);
                 }
 
-                double angle = Math.Asin((hfov - distance * Math.PI) / (2 * distance)) * 2 + Math.PI;
+                double angle = Math.Asin(hfov / (2 * distance)) * 2;
                 newVersion["Angle"] = angle;
             }
 
