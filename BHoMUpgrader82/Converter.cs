@@ -71,7 +71,7 @@ namespace BH.Upgrader.v82
                         distance = DistanceBetweenPoints(ptA, ptB);
                 }
 
-                double angle = Math.Asin(hfov / (2 * distance)) * 2;
+                double angle = 2 * Math.Atan(hfov / 2 / distance);
                 newVersion["Angle"] = angle;
             }
 
