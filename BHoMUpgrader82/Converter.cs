@@ -20,15 +20,7 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using BH.Upgrader.Base;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace BH.Upgrader.v82
 {
@@ -42,6 +34,7 @@ namespace BH.Upgrader.v82
         {
             PreviousVersion = "8.1";
             ToNewObject.Add("BH.oM.Security.Elements.CameraDevice", UpgradeCameraDevice);
+            ToNewObject.Add("BH.oM.Adapters.Revit.Parameters.RevitParameter", UpgradeRevitParameter);
         }
 
         /***************************************************/
@@ -94,6 +87,22 @@ namespace BH.Upgrader.v82
                 Math.Pow(y2 - y1, 2) +
                 Math.Pow(z2 - z1, 2)
             );
+        }
+
+        /***************************************************/
+		
+        private static Dictionary<string, object> UpgradeRevitParameter(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            if (newVersion.ContainsKey("UnitType"))
+            {
+                newVersion["Quantity"] = newVersion["UnitType"];
+                newVersion.Remove("UnitType");
+            }
+
+            newVersion["Unit"] = "";
+
+            return newVersion;
         }
 
         /***************************************************/
