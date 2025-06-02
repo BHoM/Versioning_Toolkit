@@ -41,12 +41,60 @@ namespace BH.Upgrader.v82
         public Converter() : base()
         {
             PreviousVersion = "8.1";
+            ToNewObject.Add("BH.oM.Security.Elements.CameraDevice", UpgradeCameraDevice);
         }
 
         /***************************************************/
         /**** Private Methods                           ****/
         /***************************************************/
 
+        private static Dictionary<string, object> UpgradeCameraDevice(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>();
+            newVersion["_t"] = "BH.oM.Security.Elements.CameraDevice";
+            newVersion["EyePosition"] = oldVersion["EyePosition"];
+            newVersion["TargetPosition"] = oldVersion["TargetPosition"];
+            newVersion["Mounting"] = oldVersion["Mounting"];
+            newVersion["Type"] = oldVersion["Type"];
+            newVersion["Megapixels"] = oldVersion["Megapixels"];
+
+            if (oldVersion.ContainsKey("HorizontalFieldOfView"))
+            {
+                double hfov = (double)oldVersion["HorizontalFieldOfView"];
+                double distance = double.NaN;
+
+                if (oldVersion.ContainsKey("EyePosition") && oldVersion.ContainsKey("TargetPosition"))
+                {
+                    var ptA = oldVersion["EyePosition"] as Dictionary<string, object>;
+                    var ptB = oldVersion["TargetPosition"] as Dictionary<string, object>;
+                    if (ptA != null && ptB != null)
+                        distance = DistanceBetweenPoints(ptA, ptB);
+                }
+
+                double angle = 2 * Math.Atan(hfov / 2 / distance);
+                newVersion["Angle"] = angle;
+            }
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        private static double DistanceBetweenPoints(Dictionary<string, object> pt1, Dictionary<string, object> pt2)
+        {
+            double x1 = Convert.ToDouble(pt1["X"]);
+            double y1 = Convert.ToDouble(pt1["Y"]);
+            double z1 = Convert.ToDouble(pt1["Z"]);
+            double x2 = Convert.ToDouble(pt2["X"]);
+            double y2 = Convert.ToDouble(pt2["Y"]);
+            double z2 = Convert.ToDouble(pt2["Z"]);
+
+            return Math.Sqrt(
+                Math.Pow(x2 - x1, 2) +
+                Math.Pow(y2 - y1, 2) +
+                Math.Pow(z2 - z1, 2)
+            );
+        }
 
         /***************************************************/
     }
