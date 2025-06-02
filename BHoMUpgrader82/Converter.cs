@@ -99,8 +99,19 @@ namespace BH.Upgrader.v82
                 newVersion["Quantity"] = newVersion["UnitType"];
                 newVersion.Remove("UnitType");
             }
+            else
+                newVersion["Quantity"] = "";
 
             newVersion["Unit"] = "";
+
+            if (!newVersion.ContainsKey("Name"))
+                newVersion["Name"] = "";
+
+            if (!newVersion.ContainsKey("Value"))
+                newVersion["Value"] = null;
+
+            if (!newVersion.ContainsKey("IsReadOnly"))
+                newVersion["IsReadOnly"] = false;
 
             return newVersion;
         }
