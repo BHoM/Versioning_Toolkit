@@ -20,6 +20,7 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using System;
 using System.Collections.Generic;
 
 namespace BH.Upgrader.v82
@@ -58,8 +59,8 @@ namespace BH.Upgrader.v82
 
                 if (oldVersion.ContainsKey("EyePosition") && oldVersion.ContainsKey("TargetPosition"))
                 {
-                    var ptA = oldVersion["EyePosition"] as Dictionary<string, object>;
-                    var ptB = oldVersion["TargetPosition"] as Dictionary<string, object>;
+                    Dictionary<string, object> ptA = oldVersion["EyePosition"] as Dictionary<string, object>;
+                    Dictionary<string, object> ptB = oldVersion["TargetPosition"] as Dictionary<string, object>;
                     if (ptA != null && ptB != null)
                         distance = DistanceBetweenPoints(ptA, ptB);
                 }
@@ -90,7 +91,7 @@ namespace BH.Upgrader.v82
         }
 
         /***************************************************/
-		
+
         private static Dictionary<string, object> UpgradeRevitParameter(Dictionary<string, object> oldVersion)
         {
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
