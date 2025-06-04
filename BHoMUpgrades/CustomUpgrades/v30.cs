@@ -20,48 +20,44 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using System;
+using BH.oM.Versioning;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PostBuild
+namespace BH.Upgraders
 {
-    partial class Program
+    [Upgrader(3, 0)]
+    public static class v30
     {
-        static void Main(string[] args)
+        /***************************************************/
+        /**** Public Methods                            ****/
+        /***************************************************/
+
+        [VersioningTarget("BH.oM.Versioning.OldVersion")]
+        [VersioningTarget("BH.oM.Versioning.NewVersion")]
+        public static Dictionary<string, object> UpgradeOldVersion(Dictionary<string, object> version)
         {
-            // Get programs arguments
-            if (args.Length < 2)
+            if (version == null)
+                return null;
+
+            double A = 0;
+            if (version.ContainsKey("A")) 
+                A = (double)version["A"];
+
+            double B = 0;
+            if (version.ContainsKey("B"))
+                B = (double)version["B"];
+
+            return new Dictionary<string, object>
             {
-                Console.Write("UI PostBuild reqires at least 2 arguments: the source folder and the target folder where the files will be copied.");
-                return;
-            }
-            string sourceFolder = args[0];
-            string targetFile = args[1];
-
-            Console.WriteLine($"Source folder: {Path.GetFullPath(sourceFolder)}");
-
-            //Make sure the source and target folders exists
-            if (!Directory.Exists(sourceFolder))
-                throw new DirectoryNotFoundException("The source folder does not exists: " + sourceFolder);
-
-            try
-            {
-                Assembly.LoadFrom(@"C:\ProgramData\BHoM\Assemblies\RevitAPI.dll");
-                Assembly.LoadFrom(@"C:\ProgramData\BHoM\Assemblies\RevitAPIUI.dll");
-            }
-            catch { }
-
-            // Create Upgrades file
-            CopyUpgrades(sourceFolder, targetFile);
+                { "_t",  "BH.oM.Versioning.NewVersion" },
+                { "AplusB", A + B },
+                { "AminusB", A - B }
+            };
         }
+
+        /***************************************************/
     }
 }
-
 
 
 

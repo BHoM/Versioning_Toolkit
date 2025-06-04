@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the Buildings and Habitats object Model (BHoM)
  * Copyright (c) 2015 - 2025, the respective contributors. All rights reserved.
  *
@@ -20,49 +20,26 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using BH.oM.Versioning;
 using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
-namespace PostBuild
+namespace BH.Upgraders
 {
-    partial class Program
+    [Upgrader(7, 3)]
+    public static class v73
     {
-        static void Main(string[] args)
-        {
-            // Get programs arguments
-            if (args.Length < 2)
-            {
-                Console.Write("UI PostBuild reqires at least 2 arguments: the source folder and the target folder where the files will be copied.");
-                return;
-            }
-            string sourceFolder = args[0];
-            string targetFile = args[1];
+        /***************************************************/
+        /**** Public Methods                            ****/
+        /***************************************************/
 
-            Console.WriteLine($"Source folder: {Path.GetFullPath(sourceFolder)}");
 
-            //Make sure the source and target folders exists
-            if (!Directory.Exists(sourceFolder))
-                throw new DirectoryNotFoundException("The source folder does not exists: " + sourceFolder);
-
-            try
-            {
-                Assembly.LoadFrom(@"C:\ProgramData\BHoM\Assemblies\RevitAPI.dll");
-                Assembly.LoadFrom(@"C:\ProgramData\BHoM\Assemblies\RevitAPIUI.dll");
-            }
-            catch { }
-
-            // Create Upgrades file
-            CopyUpgrades(sourceFolder, targetFile);
-        }
+        /***************************************************/
     }
 }
-
-
-
-
 
