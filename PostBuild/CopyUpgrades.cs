@@ -40,10 +40,10 @@ namespace PostBuild
         /**** Private Methods                           ****/
         /***************************************************/
 
-        private static void CopyUpgrades(string sourceFolder, string targetFolder)
+        private static void CopyUpgrades(string sourceFolder, string targetFile)
         {
             BsonDocument content = CollectUpgrades(sourceFolder);
-            CreateUpgradeFile(targetFolder, content);
+            CreateUpgradeFile(targetFile, content);
         }
 
 
@@ -196,37 +196,21 @@ namespace PostBuild
 
         /***************************************************/
 
-        private static void CreateUpgradeFile(string targetFolder, BsonDocument content)
+        private static void CreateUpgradeFile(string targetFile, BsonDocument content)
         {
+            string targetFolder = Path.GetDirectoryName(targetFile);
             if (!Directory.Exists(targetFolder))
-            {
-                Console.WriteLine("Target folder for upgrades doesn't exist: " + targetFolder);
-                return;
-            }
-                
-
-            IEnumerable<string> upgraderFolders = Directory.GetDirectories(targetFolder).Where(x => x.Contains(@"BHoMUpgrader"));
-            if (upgraderFolders.Count() == 0)
-            {
-                Console.WriteLine("Upgrades folder doesn't contain upgrader: " + targetFolder);
-                return;
-            }
-
-            string upgraderFolder = upgraderFolders.OrderBy(x => x).Last();
-
-            // Get target file
-            string upgraderFile = Path.Combine(upgraderFolder, "Upgrades.json");
-
-            // target file exists -> copy content accross 
+                Directory.CreateDirectory(targetFolder);
+        
             // (only adds what is not in content already given how CopySectionAccross works)
-            if (File.Exists(upgraderFile))
-                ReadVersioningFile(upgraderFile, content);
+            if (File.Exists(targetFile))
+                ReadVersioningFile(targetFile, content);
             
             // Save the content
             string json = FormatJson(content.ToJson());
-            File.WriteAllText(upgraderFile, json);
+            File.WriteAllText(targetFile, json);
 
-            Console.WriteLine("Adding versioning file to " + upgraderFolder);
+            Console.WriteLine("Adding versioning to " + targetFile);
         }
 
         /***************************************************/
@@ -245,13 +229,20 @@ namespace PostBuild
                 {
                     if (attribute != null && attribute.FromVersion == version)
                     {
-                        // Remove the existing element with same name if it exists
-                        int indexOfExisting = toNewContent.IndexOfName(attribute.PreviousVersionAsText);
-                        if (indexOfExisting != -1)
-                            toNewContent.RemoveAt(indexOfExisting);
+                        try
+                        {
+                            // Remove the existing element with same name if it exists
+                            int indexOfExisting = toNewContent.IndexOfName(attribute.PreviousVersionAsText);
+                            if (indexOfExisting != -1)
+                                toNewContent.RemoveAt(indexOfExisting);
 
-                        // Add new element
-                        toNewContent.Add(new BsonElement(attribute.PreviousVersionAsText, BH.Engine.Serialiser.Convert.ToBson(method)));
+                            // Add new element
+                            toNewContent.Add(new BsonElement(attribute.PreviousVersionAsText, BH.Engine.Serialiser.Convert.ToBson(method)));
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("Error when collecting method versioning: " + e.Message);
+                        }
                     }
                 }
             }
