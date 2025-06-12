@@ -21,8 +21,8 @@
  */
 
 using BH.oM.Versioning;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 
 namespace BH.Upgraders
 {
@@ -111,9 +111,17 @@ namespace BH.Upgraders
         }
 
         /***************************************************/
+
+        [VersioningTarget("BH.oM.Verification.Results.RequirementResult")]
+        public static Dictionary<string, object> UpgradeRequirementResult(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            newVersion["Events"] = null;
+
+            return newVersion;
+        }
+
+        /***************************************************/
     }
 }
-
-
-
-
