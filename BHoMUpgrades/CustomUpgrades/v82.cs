@@ -112,6 +112,71 @@ namespace BH.Upgraders
 
         /***************************************************/
 
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.WaterDeprivationMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.PhotochemicalOzoneCreationTRACIMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.PhotochemicalOzoneCreationMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.PhotochemicalOzoneCreationCMLMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.OzoneDepletionMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.EutrophicationTRACIMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.EutrophicationTerrestrialMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.EutrophicationCMLMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.EutrophicationAquaticMarineMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.EutrophicationAquaticFreshwaterMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.ClimateChangeTotalNoBiogenicMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.ClimateChangeTotalMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.ClimateChangeLandUseMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.ClimateChangeFossilMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.ClimateChangeBiogenicMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.AcidificationMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.AbioticDepletionMineralsAndMetalsMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.MaterialFragments.AbioticDepletionFossilResourcesMetric")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.WaterDeprivationMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.PhotochemicalOzoneCreationTRACIMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.PhotochemicalOzoneCreationMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.PhotochemicalOzoneCreationCMLMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.OzoneDepletionMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.EutrophicationTRACIMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.EutrophicationTerrestrialMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.EutrophicationCMLMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.EutrophicationAquaticMarineMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.EutrophicationAquaticFreshwaterMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.ClimateChangeTotalNoBiogenicMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.ClimateChangeTotalMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.ClimateChangeLandUseMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.ClimateChangeFossilMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.ClimateChangeBiogenicMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.AcidificationMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.AbioticDepletionMineralsAndMetalsMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.AbioticDepletionFossilResourcesMaterialResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.WaterDeprivationElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.PhotochemicalOzoneCreationTRACIElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.PhotochemicalOzoneCreationElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.PhotochemicalOzoneCreationCMLElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.OzoneDepletionElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.EutrophicationTRACIElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.EutrophicationTerrestrialElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.EutrophicationCMLElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.EutrophicationAquaticMarineElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.EutrophicationAquaticFreshwaterElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.ClimateChangeTotalNoBiogenicElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.ClimateChangeTotalElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.ClimateChangeLandUseElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.ClimateChangeFossilElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.ClimateChangeBiogenicElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.AcidificationElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.AbioticDepletionMineralsAndMetalsElementResult")]
+        [VersioningTarget("BH.oM.LifeCycleAssessment.Results.AbioticDepletionFossilResourcesElementResult")]
+        public static Dictionary<string, object> UpgradeMetricAndResult(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+            if(newVersion.ContainsKey("MetricType"))
+                newVersion.Remove("MetricType");
+			
+            return newVersion;
+        }
+
+        /***************************************************/
+
         [VersioningTarget("BH.oM.Verification.Results.RequirementResult")]
         public static Dictionary<string, object> UpgradeRequirementResult(Dictionary<string, object> oldVersion)
         {
