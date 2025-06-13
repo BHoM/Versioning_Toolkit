@@ -21,8 +21,8 @@
  */
 
 using BH.oM.Versioning;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 
 namespace BH.Upgraders
 {
@@ -171,6 +171,16 @@ namespace BH.Upgraders
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
             if(newVersion.ContainsKey("MetricType"))
                 newVersion.Remove("MetricType");
+			
+            return newVersion;
+        }
+
+        [VersioningTarget("BH.oM.Verification.Results.RequirementResult")]
+        public static Dictionary<string, object> UpgradeRequirementResult(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            newVersion["Events"] = null;
 
             return newVersion;
         }
@@ -178,7 +188,3 @@ namespace BH.Upgraders
         /***************************************************/
     }
 }
-
-
-
-
