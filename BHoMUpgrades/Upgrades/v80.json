@@ -1,0 +1,260 @@
+{
+  "Namespace": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    }
+  },
+  "Type": {
+    "ToNew": {
+      "BH.Revit.oM.Tagging.BaseRevitTagSettings": "BH.Revit.oM.Tagging.Settings.BaseRevitTagSettings",
+      "BH.Revit.oM.Tagging.MEPAreaTagSettings": "BH.Revit.oM.Tagging.Settings.MEPAreaTagSettings",
+      "BH.Revit.oM.Tagging.MEPCurveTagSettings": "BH.Revit.oM.Tagging.Settings.MEPCurveTagSettings",
+      "BH.Revit.oM.Tagging.MEPGlobalTagSettings": "BH.Revit.oM.Tagging.Settings.MEPGlobalTagSettings",
+      "BH.Revit.oM.Tagging.MEPPointTagSettings": "BH.Revit.oM.Tagging.Settings.MEPPointTagSettings",
+      "BH.Revit.oM.Tagging.RevitAreaTagSettings": "BH.Revit.oM.Tagging.Settings.RevitAreaTagSettings",
+      "BH.Revit.oM.Tagging.RevitCurveTagSettings": "BH.Revit.oM.Tagging.Settings.RevitCurveTagSettings",
+      "BH.Revit.oM.Tagging.RevitGlobalTagSettings": "BH.Revit.oM.Tagging.Settings.RevitGlobalTagSettings",
+      "BH.Revit.oM.Tagging.RevitPointTagSettings": "BH.Revit.oM.Tagging.Settings.RevitPointTagSettings",
+      "BH.Revit.oM.Tagging.RevitTagSettings": "BH.Revit.oM.Tagging.Settings.RevitTagSettings",
+      "BH.Revit.oM.Tagging.StructureGlobalTagSettings": "BH.Revit.oM.Tagging.Settings.StructureGlobalTagSettings",
+      "BH.Revit.oM.Tagging.StructureTagSettings": "BH.Revit.oM.Tagging.Settings.StructureTagSettings",
+      "BH.oM.Tagging.AreaTagSettings": "BH.oM.Tagging.Settings.AreaTagSettings",
+      "BH.oM.Tagging.BaseTagSettings": "BH.oM.Tagging.Settings.BaseTagSettings",
+      "BH.oM.Tagging.CurveTagSettings": "BH.oM.Tagging.Settings.CurveTagSettings",
+      "BH.oM.Tagging.GlobalTagSettings": "BH.oM.Tagging.Settings.GlobalTagSettings",
+      "BH.oM.Tagging.PointTagSettings": "BH.oM.Tagging.Settings.PointTagSettings",
+      "BH.oM.Tagging.ScoreWeightings": "BH.oM.Tagging.Settings.ScoreWeightings",
+      "BH.oM.Tagging.SimulatedAnnealingSettings": "BH.oM.Tagging.Settings.SimulatedAnnealingSettings",
+      "BH.oM.Tagging.TagSettings": "BH.oM.Tagging.Settings.TagSettings",
+      "BH.oM.Tagging.AreaTagQualityPreset": "BH.oM.Tagging.Settings.AreaTagQualityPreset",
+      "BH.oM.Tagging.CurveTagQualityPreset": "BH.oM.Tagging.Settings.CurveTagQualityPreset",
+      "BH.oM.Tagging.OrthogonalTagQualityPreset": "BH.oM.Tagging.Settings.OrthogonalTagQualityPreset",
+      "BH.oM.Tagging.PointTagQualityPreset": "BH.oM.Tagging.Settings.PointTagQualityPreset",
+      "BH.oM.Tagging.TagLayoutQualityPreset": "BH.oM.Tagging.Settings.TagLayoutQualityPreset"
+    },
+    "ToOld": {
+      "BH.Revit.oM.Tagging.Settings.BaseRevitTagSettings": "BH.Revit.oM.Tagging.BaseRevitTagSettings",
+      "BH.Revit.oM.Tagging.Settings.MEPAreaTagSettings": "BH.Revit.oM.Tagging.MEPAreaTagSettings",
+      "BH.Revit.oM.Tagging.Settings.MEPCurveTagSettings": "BH.Revit.oM.Tagging.MEPCurveTagSettings",
+      "BH.Revit.oM.Tagging.Settings.MEPGlobalTagSettings": "BH.Revit.oM.Tagging.MEPGlobalTagSettings",
+      "BH.Revit.oM.Tagging.Settings.MEPPointTagSettings": "BH.Revit.oM.Tagging.MEPPointTagSettings",
+      "BH.Revit.oM.Tagging.Settings.RevitAreaTagSettings": "BH.Revit.oM.Tagging.RevitAreaTagSettings",
+      "BH.Revit.oM.Tagging.Settings.RevitCurveTagSettings": "BH.Revit.oM.Tagging.RevitCurveTagSettings",
+      "BH.Revit.oM.Tagging.Settings.RevitGlobalTagSettings": "BH.Revit.oM.Tagging.RevitGlobalTagSettings",
+      "BH.Revit.oM.Tagging.Settings.RevitPointTagSettings": "BH.Revit.oM.Tagging.RevitPointTagSettings",
+      "BH.Revit.oM.Tagging.Settings.RevitTagSettings": "BH.Revit.oM.Tagging.RevitTagSettings",
+      "BH.Revit.oM.Tagging.Settings.StructureGlobalTagSettings": "BH.Revit.oM.Tagging.StructureGlobalTagSettings",
+      "BH.Revit.oM.Tagging.Settings.StructureTagSettings": "BH.Revit.oM.Tagging.StructureTagSettings",
+      "BH.oM.Tagging.Settings.AreaTagSettings": "BH.oM.Tagging.AreaTagSettings",
+      "BH.oM.Tagging.Settings.BaseTagSettings": "BH.oM.Tagging.BaseTagSettings",
+      "BH.oM.Tagging.Settings.CurveTagSettings": "BH.oM.Tagging.CurveTagSettings",
+      "BH.oM.Tagging.Settings.GlobalTagSettings": "BH.oM.Tagging.GlobalTagSettings",
+      "BH.oM.Tagging.Settings.PointTagSettings": "BH.oM.Tagging.PointTagSettings",
+      "BH.oM.Tagging.Settings.ScoreWeightings": "BH.oM.Tagging.ScoreWeightings",
+      "BH.oM.Tagging.Settings.SimulatedAnnealingSettings": "BH.oM.Tagging.SimulatedAnnealingSettings",
+      "BH.oM.Tagging.Settings.TagSettings": "BH.oM.Tagging.TagSettings",
+      "BH.oM.Tagging.Settings.AreaTagQualityPreset": "BH.oM.Tagging.AreaTagQualityPreset",
+      "BH.oM.Tagging.Settings.CurveTagQualityPreset": "BH.oM.Tagging.CurveTagQualityPreset",
+      "BH.oM.Tagging.Settings.OrthogonalTagQualityPreset": "BH.oM.Tagging.OrthogonalTagQualityPreset",
+      "BH.oM.Tagging.Settings.PointTagQualityPreset": "BH.oM.Tagging.PointTagQualityPreset",
+      "BH.oM.Tagging.Settings.TagLayoutQualityPreset": "BH.oM.Tagging.TagLayoutQualityPreset"
+    }
+  },
+  "Method": {
+    "ToNew": {
+      "BH.Engine.Forms.Modify.RoundNumericValue(System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.0\" }",
+        "MethodName": "Round",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }"
+        ],
+        "_bhomVersion": "8.0"
+      },
+      "BH.Engine.Python.Query.DirectoryBaseEnvironment()": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Python.Query, Python_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.0\" }",
+        "MethodName": "DirectoryBaseEnvironment",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Python.Enums.PythonVersion\", \"_bhomVersion\" : \"8.0\" }"
+        ],
+        "_bhomVersion": "8.0"
+      },
+      "BH.Engine.Python.Compute.RemoveBaseEnvironment()": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Python.Compute, Python_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.0\" }",
+        "MethodName": "RemoveBaseVersion",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Python.Enums.PythonVersion\", \"_bhomVersion\" : \"8.0\" }"
+        ],
+        "_bhomVersion": "8.0"
+      },
+      "BH.Engine.Python.Compute.DownloadPython(BH.oM.Python.Enums.PythonVersion, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Python.Compute, Python_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.0\" }",
+        "MethodName": "DownloadPythonVersion",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Python.Enums.PythonVersion\", \"_bhomVersion\" : \"8.0\" }"
+        ],
+        "_bhomVersion": "8.0"
+      },
+      "BH.Engine.Python.Compute.BasePythonEnvironment(System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Python.Compute, Python_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.0\" }",
+        "MethodName": "BasePythonEnvironment",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Python.Enums.PythonVersion\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }"
+        ],
+        "_bhomVersion": "8.0"
+      },
+      "BH.Engine.Geometry.Modify.IOffset(BH.oM.Geometry.ICurve, System.Double, BH.oM.Geometry.Vector, System.Boolean, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Modify, Geometry_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.0\" }",
+        "MethodName": "IOffset",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }"
+        ],
+        "_bhomVersion": "8.0"
+      },
+      "BH.Engine.Geometry.Modify.Offset(BH.oM.Geometry.PolyCurve, System.Double, BH.oM.Geometry.Vector, System.Boolean, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Modify, Geometry_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.0\" }",
+        "MethodName": "Offset",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.PolyCurve\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }"
+        ],
+        "_bhomVersion": "8.0"
+      },
+      "BH.Engine.Geometry.Modify.Offset(BH.oM.Geometry.Polyline, System.Double, BH.oM.Geometry.Vector, System.Boolean, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Modify, Geometry_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.0\" }",
+        "MethodName": "Offset",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }"
+        ],
+        "_bhomVersion": "8.0"
+      },
+      "BH.Engine.Geometry.Modify.Offset(BH.oM.Geometry.Circle, System.Double, BH.oM.Geometry.Vector, System.Boolean, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Modify, Geometry_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.0\" }",
+        "MethodName": "Offset",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Circle\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }"
+        ],
+        "_bhomVersion": "8.0"
+      },
+      "BH.Engine.Geometry.Modify.Offset(BH.oM.Geometry.Arc, System.Double, BH.oM.Geometry.Vector, System.Boolean, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Modify, Geometry_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.0\" }",
+        "MethodName": "Offset",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Arc\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }"
+        ],
+        "_bhomVersion": "8.0"
+      },
+      "BH.Engine.Geometry.Modify.Offset(BH.oM.Geometry.Line, System.Double, BH.oM.Geometry.Vector, System.Boolean, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Modify, Geometry_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.0\" }",
+        "MethodName": "Offset",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Line\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }"
+        ],
+        "_bhomVersion": "8.0"
+      },
+      "BH.Engine.Base.Query.ExtensionMethodHierarchy(System.Collections.Generic.IEnumerable<System.Reflection.MethodInfo>, System.Type)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.0\" }",
+        "MethodName": "ExtensionMethodHierarchy",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }], \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }], \"_bhomVersion\" : \"8.0\" }"
+        ],
+        "_bhomVersion": "8.0"
+      },
+      "BH.Engine.Base.Query.RoundWithTolerance(System.Int32, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.0\" }",
+        "MethodName": "RoundToFloor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }"
+        ],
+        "_bhomVersion": "8.0"
+      },
+      "BH.Engine.Base.Query.RoundWithTolerance(System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.0\" }",
+        "MethodName": "RoundToFloor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.0\" }"
+        ],
+        "_bhomVersion": "8.0"
+      }
+    },
+    "ToOld": {
+      
+    }
+  },
+  "Property": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    }
+  },
+  "Dataset": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    },
+    "MessageForDeleted": {
+      
+    }
+  },
+  "MessageForDeleted": {
+    "BH.Engine.Python.Compute.DownloadGetPip(System.String)": "The DownloadGetPip method was removed due to an update to how base python environments are installed, and the functionality within this method is now covered by BasePythonEnvironment."
+  },
+  "MessageForNoUpgrade": {
+    
+  }
+}

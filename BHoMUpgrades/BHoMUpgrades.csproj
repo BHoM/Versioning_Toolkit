@@ -1,0 +1,105 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
+    <Description>https://github.com/BHoM/Versioning_Toolkit</Description>
+    <Version>5.0.0</Version>
+    <Copyright>Copyright © https://github.com/BHoM</Copyright>
+    <RootNamespace>BH.oM.Base</RootNamespace>
+    <FileVersion>8.2.0.0</FileVersion>
+    <BaseOutputPath>..\Build</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <OutputPath>..\Build\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+	<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="MongoDB.Bson" Version="2.18.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PostBuild\PostBuild.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Versioning_oM">
+      <HintPath>$(ProgramData)\BHoM\Assemblies\Versioning_oM.dll</HintPath>
+	  <Private>false</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Upgrades\v31.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v32.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v33.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v40.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v41.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v42.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v43.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v50.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v51.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v52.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v53.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v60.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v61.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v62.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v63.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v70.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v71.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v72.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v73.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v80.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v81.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Upgrades\v30.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot;  &quot;C:\ProgramData\BHoM\Upgrades\BHoMUpgrades\&quot; /Y&#xD;&#xA;xcopy /Y /I /S /E &quot;$(TargetDir)Upgrades&quot; &quot;C:\ProgramData\BHoM\Upgrades\BHoMUpgrades\Upgrades&quot;&#xD;&#xA;call &quot;$(SolutionDir)PostBuild\Build\PostBuild.exe&quot; ..\..\ &quot;C:\ProgramData\BHoM\Upgrades\BHoMUpgrades\Upgrades\v82.json&quot;&#xD;&#xA;" />
+  </Target>
+
+</Project>

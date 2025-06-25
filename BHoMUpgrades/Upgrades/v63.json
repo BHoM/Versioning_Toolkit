@@ -1,0 +1,1412 @@
+{
+  "Namespace": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    }
+  },
+  "Type": {
+    "ToNew": {
+      "BH.Revit.oM.Utility.ColumnElevationSide": "BH.Revit.oM.Documentation.ColumnElevationSide",
+      "BH.Revit.oM.Utility.Logging.FamilyUpdateLogItem": "BH.Revit.oM.ModelManagement.Logging.FamilyUpdateLogItem",
+      "BH.Revit.oM.Utility.Logging.ParameterChangeLogItem": "BH.Revit.oM.ModelManagement.Logging.ParameterChangeLogItem",
+      "BH.Revit.oM.Security.LockConfiguration": "BH.Revit.oM.SecurityICT.LockConfiguration",
+      "BH.Revit.oM.Security.LockItem": "BH.Revit.oM.SecurityICT.LockItem",
+      "BH.Revit.oM.Security.ParameterItem": "BH.Revit.oM.SecurityICT.ParameterItem",
+      "BH.Revit.oM.Security.SecuritySettings": "BH.Revit.oM.SecurityICT.SecuritySettings",
+      "BH.Revit.oM.Security.CuboidFace": "BH.Revit.oM.SecurityICT.CuboidFace",
+      "BH.Revit.oM.Security.DoorSide": "BH.Revit.oM.SecurityICT.DoorSide",
+      "BH.Revit.oM.SecurityICT.FaceVertices": "BH.Revit.oM.Security.FaceVertices",
+      "BH.Revit.oM.SecurityICT.LateralPosition": "BH.Revit.oM.Security.LateralPosition",
+      "BH.Revit.oM.Security.Logging.CameraVisionLogItem": "BH.Revit.oM.SecurityICT.Logging.CameraVisionLogItem",
+      "BH.Revit.oM.ICT.Logging.ChangeDataCircuitLogItem": "BH.Revit.oM.SecurityICT.Logging.ChangeDataCircuitLogItem",
+      "BH.Revit.oM.ICT.Logging.CreateDataCircuitLogItem": "BH.Revit.oM.SecurityICT.Logging.CreateDataCircuitLogItem",
+      "BH.Revit.oM.Security.Logging.LockAssembleLogItem": "BH.Revit.oM.SecurityICT.Logging.LockAssembleLogItem",
+      "BH.Revit.oM.ICT.Logging.RemoveDataCircuitLogItem": "BH.Revit.oM.SecurityICT.Logging.RemoveDataCircuitLogItem",
+      "BH.Revit.oM.ICT.Logging.ResequenceDataCircuitsLogItem": "BH.Revit.oM.SecurityICT.Logging.ResequenceDataCircuitsLogItem",
+      "BH.Revit.oM.ICT.Logging.TransferDataCircuitsLogItem": "BH.Revit.oM.SecurityICT.Logging.TransferDataCircuitsLogItem",
+      "BH.oM.Structure.FloorSystem.DropHead": "BH.oM.Structure.FloorSystem.Drophead",
+      "BH.oM.Structure.FloorSystem.RCFlatPlate": "BH.oM.Structure.FloorSystem.RCFlatSlab",
+      "BH.oM.Structure.FloorSystem.RCVoidedFlatPlate": "BH.oM.Structure.FloorSystem.RCVoidedFlatSlab"
+    },
+    "ToOld": {
+      "BH.Revit.oM.Documentation.ColumnElevationSide": "BH.Revit.oM.Utility.ColumnElevationSide",
+      "BH.Revit.oM.ModelManagement.Logging.FamilyUpdateLogItem": "BH.Revit.oM.Utility.Logging.FamilyUpdateLogItem",
+      "BH.Revit.oM.ModelManagement.Logging.ParameterChangeLogItem": "BH.Revit.oM.Utility.Logging.ParameterChangeLogItem",
+      "BH.Revit.oM.SecurityICT.LockConfiguration": "BH.Revit.oM.Security.LockConfiguration",
+      "BH.Revit.oM.SecurityICT.LockItem": "BH.Revit.oM.Security.LockItem",
+      "BH.Revit.oM.SecurityICT.ParameterItem": "BH.Revit.oM.Security.ParameterItem",
+      "BH.Revit.oM.SecurityICT.SecuritySettings": "BH.Revit.oM.Security.SecuritySettings",
+      "BH.Revit.oM.SecurityICT.CuboidFace": "BH.Revit.oM.Security.CuboidFace",
+      "BH.Revit.oM.SecurityICT.DoorSide": "BH.Revit.oM.Security.DoorSide",
+      "BH.Revit.oM.SecurityICT.FaceVertices": "BH.Revit.oM.Security.FaceVertices",
+      "BH.Revit.oM.SecurityICT.LateralPosition": "BH.Revit.oM.Security.LateralPosition",
+      "BH.Revit.oM.SecurityICT.Logging.CameraVisionLogItem": "BH.Revit.oM.Security.Logging.CameraVisionLogItem",
+      "BH.Revit.oM.SecurityICT.Logging.ChangeDataCircuitLogItem": "BH.Revit.oM.ICT.Logging.ChangeDataCircuitLogItem",
+      "BH.Revit.oM.SecurityICT.Logging.CreateDataCircuitLogItem": "BH.Revit.oM.ICT.Logging.CreateDataCircuitLogItem",
+      "BH.Revit.oM.SecurityICT.Logging.LockAssembleLogItem": "BH.Revit.oM.Security.Logging.LockAssembleLogItem",
+      "BH.Revit.oM.SecurityICT.Logging.RemoveDataCircuitLogItem": "BH.Revit.oM.ICT.Logging.RemoveDataCircuitLogItem",
+      "BH.Revit.oM.SecurityICT.Logging.ResequenceDataCircuitsLogItem": "BH.Revit.oM.ICT.Logging.ResequenceDataCircuitsLogItem",
+      "BH.Revit.oM.SecurityICT.Logging.TransferDataCircuitsLogItem": "BH.Revit.oM.ICT.Logging.TransferDataCircuitsLogItem",
+      "BH.oM.Structure.FloorSystem.Drophead": "BH.oM.Structure.FloorSystem.DropHead",
+      "BH.oM.Structure.FloorSystem.RCFlatSlab": "BH.oM.Structure.FloorSystem.RCFlatPlate",
+      "BH.oM.Structure.FloorSystem.RCVoidedFlatSlab": "BH.oM.Structure.FloorSystem.RCVoidedFlatPlate"
+    }
+  },
+  "Method": {
+    "ToNew": {
+      "BH.Engine.Revit.Query.PanelName(System.Reflection.MethodInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ToolName",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Revit.Query.Tags(System.Reflection.MethodInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ButtonGroup",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Modify.DisallowJoins(System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Structure.Modify, Revit_Structure_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "DisallowJoins",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Modify.CutOpeningsWithGenericModels(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.Element>, System.Collections.Generic.List<Autodesk.Revit.DB.Element>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Structure.Modify, Revit_Structure_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "CutOpeningsWithGenericModels",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Modify.AllowJoins(System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Structure.Modify, Revit_Structure_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "AllowJoins",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.UnjoinNotJoined(Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Structure.Compute, Revit_Structure_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "UnjoinNotJoined",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.SwitchJoinToMaster(System.Collections.Generic.List<Autodesk.Revit.DB.Element>, System.Collections.Generic.List<Autodesk.Revit.DB.Element>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Structure.Compute, Revit_Structure_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "SwitchJoinToMaster",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.SwitchJoinToMaster(System.Collections.Generic.List<Autodesk.Revit.DB.Element>, Autodesk.Revit.DB.Category)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Structure.Compute, Revit_Structure_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "SwitchJoinToMaster",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Category, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.JoinElements(System.Collections.Generic.List<Autodesk.Revit.DB.Element>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Structure.Compute, Revit_Structure_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "JoinElements",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Security.Query.Settings()": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Query, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "Settings",
+        "Parameters": [
+          
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Security.Query.RectangularFaceVertex(Autodesk.Revit.DB.PlanarFace, BH.Revit.oM.Security.FaceVertices)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Query, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "RectangularFaceVertex",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.PlanarFace, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.SecurityICT.FaceVertices, Revit_Security_oM_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.ICT.Query.LastCircuitNumber(Autodesk.Revit.DB.FamilyInstance)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Query, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "LastCircuitNumber",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Security.Query.IsMissingParameters(Autodesk.Revit.DB.Element, System.Collections.Generic.List<System.String>, System.Collections.Generic.List`1&)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Query, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "IsMissingParameters",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]&, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.ICT.Query.HasValidConnector(Autodesk.Revit.DB.FamilyInstance, Autodesk.Revit.DB.Electrical.ElectricalSystemType, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Query, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "HasValidConnector",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Electrical.ElectricalSystemType, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Security.Query.CuboidFace(Autodesk.Revit.DB.Element, BH.Revit.oM.Security.CuboidFace)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Query, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "CuboidFace",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.SecurityICT.CuboidFace, Revit_Security_oM_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Security.Modify.UpdateHostedDevice(Autodesk.Revit.DB.FamilyInstance, Autodesk.Revit.DB.FamilyInstance, System.String, System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Modify, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "UpdateHostedDevice",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Security.Modify.UpdateHostedDevice(Autodesk.Revit.DB.FamilyInstance, Autodesk.Revit.DB.Element, System.Double, System.Double, System.Double, System.String, System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Modify, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "UpdateHostedDevice",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.ICT.Modify.TransferDataCircuits(Autodesk.Revit.DB.FamilyInstance, Autodesk.Revit.DB.FamilyInstance, System.String, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Modify, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "TransferDataCircuits",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.ICT.Modify.ResequenceDataCircuits(System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>, System.String, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Modify, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ResequenceDataCircuits",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.ICT.Modify.RemovePanelCircuits(System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>, System.String, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Modify, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "RemovePanelCircuits",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.ICT.Modify.RemoveDataCircuits(System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>, System.String, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Modify, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "RemoveDataCircuits",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.ICT.Modify.RemoveCircuitType(Autodesk.Revit.DB.FamilyInstance, Autodesk.Revit.DB.Electrical.ElectricalSystemType)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Modify, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "RemoveCircuitType",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Electrical.ElectricalSystemType, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Security.Modify.RehostDoorHostedDevice(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Modify, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "RehostDoorHostedDevice",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Security.Modify.ConnectParameters(Autodesk.Revit.DB.Element, Autodesk.Revit.DB.Element, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Modify, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ConnectParameters",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]&, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]&, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.ICT.Modify.ChangeDataPanel(System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>, Autodesk.Revit.DB.FamilyInstance, System.String, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Modify, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ChangeDataPanel",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Security.Create.CameraViews(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.Element>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Create, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "CameraViews",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Security.Create.DoorHostedDevice(Autodesk.Revit.UI.UIDocument, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Create, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "DoorHostedDevice",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.UI.UIDocument, RevitAPIUI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Security.Compute.SecuritySettings(Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Compute, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "SecuritySettings",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Security.Compute.LockAssemble(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Compute, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "LockAssemble",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.ICT.Compute.CreateDataCircuit(System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>, Autodesk.Revit.DB.FamilyInstance, System.String, System.String, System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Compute, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "CreateDataCircuit",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Security.Compute.CameraFieldOfView(System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>, Autodesk.Revit.DB.FilledRegionType, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.SecurityICT.Compute, Revit_Security_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "CameraFieldOfView",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Schematic.Compute.SymbolPlaceholder(Autodesk.Revit.DB.Document, Autodesk.Revit.DB.XYZ, Autodesk.Revit.DB.XYZ, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "SelectedSymbolPlaceholder",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.XYZ, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.XYZ, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Query.ElementsInRegion(Autodesk.Revit.DB.FilledRegion, System.Collections.Generic.IList<Autodesk.Revit.DB.Element>, Autodesk.Revit.DB.Level, Autodesk.Revit.DB.Level, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Query, Revit_ModelManagement_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ElementsInRegion",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FilledRegion, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IList`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Level, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Level, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Query.VisibleElementsInRegion(Autodesk.Revit.DB.FilledRegion, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Query, Revit_ModelManagement_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "VisibleElementsInRegion",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FilledRegion, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Query.ElementsInElement(Autodesk.Revit.DB.Element, System.Collections.Generic.List<Autodesk.Revit.DB.Element>, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Query, Revit_ModelManagement_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ElementsInElement",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Modify.TransferParameterValues(System.Collections.Generic.IList<Autodesk.Revit.DB.Element>, Autodesk.Revit.DB.Document, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Modify, Revit_ModelManagement_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "TransferParameterValues",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IList`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Modify.SectionBoxReduce(Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Modify, Revit_ModelManagement_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ShrinkSectionBox",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Modify.SectionBoxEnlarge(Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Modify, Revit_ModelManagement_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "InflateSectionBox",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Create.LineStyle(Autodesk.Revit.UI.UIDocument, System.String, Autodesk.Revit.DB.Color, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Create, Revit_ModelManagement_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "LineStyle",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.UI.UIDocument, RevitAPIUI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Color, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.UpgradeFamilies(System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Compute, Revit_ModelManagement_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "UpgradeFamilies",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.SelectItemsFromList(Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Compute, Revit_ModelManagement_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "SelectItemsFromList",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.SelectElementIdsFromList(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.BuiltInCategory>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Compute, Revit_ModelManagement_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "SelectElementIdsFromList",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.BuiltInCategory, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.RequestUserToSync(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.Element>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Compute, Revit_ModelManagement_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "RequestUserToSync",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.RemoveUnusedViewFilters(Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Compute, Revit_ModelManagement_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "RemoveUnusedViewFilters",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.RemoveUnusedLineStyles(Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Compute, Revit_ModelManagement_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "RemoveUnusedLineStyles",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.RemoveUnusedLinePatterns(Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Compute, Revit_ModelManagement_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "RemoveUnusedLinePatterns",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.LoadAllFamilies(Autodesk.Revit.DB.Document, System.String, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Compute, Revit_ModelManagement_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "LoadAllFamilies",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Query.ViewDirectionAlongWalls(System.Collections.Generic.List<Autodesk.Revit.DB.Wall>, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Query, Revit_Documentation_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ViewDirectionAlongWalls",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Wall, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Query.ViewDirectionAlongFraming(System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Query, Revit_Documentation_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ViewDirectionAlongFraming",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Query.ViewDirectionAlongColumns(System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>, BH.Revit.oM.Utility.ColumnElevationSide, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Query, Revit_Documentation_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ViewDirectionAlongColumns",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Documentation.ColumnElevationSide, Revit_Documentation_oM_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Query.CropRegionBoundary(Autodesk.Revit.DB.View)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Query, Revit_Documentation_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "CropRegionBoundary",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.View, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Modify.PrettifyDimensions(System.Collections.Generic.List<Autodesk.Revit.DB.Dimension>, Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Modify, Revit_Documentation_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "PrettifyDimensions",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Dimension, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Modify.OverrideCropViewBoundaries(System.Collections.Generic.List<Autodesk.Revit.DB.Viewport>, Autodesk.Revit.DB.LinePatternElement)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Modify, Revit_Documentation_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "OverrideCropViewBoundaries",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Viewport, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.LinePatternElement, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Modify.AlignSection(Autodesk.Revit.DB.Element, Autodesk.Revit.UI.UIDocument)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Modify, Revit_Documentation_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "AlignSection",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.UI.UIDocument, RevitAPIUI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Create.DimensionGrids(Autodesk.Revit.DB.Document, Autodesk.Revit.DB.XYZ, Autodesk.Revit.DB.XYZ)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Create, Revit_Documentation_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "DimensionGrids",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.XYZ, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.XYZ, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.WallElevations(System.Collections.Generic.List<Autodesk.Revit.DB.Wall>, System.Boolean, Autodesk.Revit.DB.ViewFamilyType, Autodesk.Revit.DB.View, Autodesk.Revit.DB.ViewDetailLevel, System.Int32, System.Double, System.Double, System.Double, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Compute, Revit_Documentation_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "WallElevations",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Wall, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ViewFamilyType, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.View, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ViewDetailLevel, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.ResetGraphicOverrides(System.Collections.Generic.List<Autodesk.Revit.DB.Element>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Compute, Revit_Documentation_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ResetGraphicOverrides",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.ResetGraphicOverrides(Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Compute, Revit_Documentation_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ResetGraphicOverrides",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.FramingElevations(System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>, System.Boolean, Autodesk.Revit.DB.ViewFamilyType, Autodesk.Revit.DB.View, Autodesk.Revit.DB.ViewDetailLevel, System.Int32, System.Double, System.Double, System.Double, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Compute, Revit_Documentation_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FramingElevations",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ViewFamilyType, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.View, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ViewDetailLevel, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.ColumnElevations(System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>, BH.Revit.oM.Utility.ColumnElevationSide, System.Boolean, Autodesk.Revit.DB.ViewFamilyType, Autodesk.Revit.DB.View, Autodesk.Revit.DB.ViewDetailLevel, System.Int32, System.Double, System.Double, System.Double, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Compute, Revit_Documentation_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ColumnElevations",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Documentation.ColumnElevationSide, Revit_Documentation_oM_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ViewFamilyType, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.View, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ViewDetailLevel, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Utility.Compute.ApplyViewFilters(System.Collections.Generic.List<Autodesk.Revit.DB.ParameterFilterElement>, System.Boolean, System.Collections.Generic.List<Autodesk.Revit.DB.View>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Compute, Revit_Documentation_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ApplyViewFilters",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ParameterFilterElement, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.View, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Revit.Engine.Core.Query.MullionElementProperty(Autodesk.Revit.DB.FamilyInstance, BH.oM.Adapters.Revit.Settings.RevitSettings, System.Collections.Generic.Dictionary<System.String, System.Collections.Generic.List<BH.oM.Base.IBHoMObject>>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Query, Revit_Core_Engine_2018, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "MullionElementProperty",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Mullion, RevitAPI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Settings.RevitSettings\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }, { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Python.Compute.IsValidEnvironmentName(System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Python.Query, Python_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "IsValidEnvironmentName",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Python.Compute.DownloadPython(BH.oM.Python.Enums.PythonVersion)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Python.Compute, Python_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "DownloadPython",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Python.Enums.PythonVersion\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Python.Compute.InstallBasePythonEnvironment(System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Python.Compute, Python_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "BasePythonEnvironment",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Climate.Compute.SpecificHeatCapacityWater(System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "SpecificHeatCapacityWater",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Climate.Compute.SaturatedVapourPressureWater(System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "SaturatedVapourPressureWater",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.DensityWetBulbTemperature(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromWetBulbTemperature",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.EnthalpyWetBulbTemperature(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromWetBulbTemperature",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.DewPointWetBulbTemperature(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromWetBulbTemperature",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.HumidityRatioWetBulbTemperature(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromWetBulbTemperature",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.RelativeHumidityWetBulbTemperature(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromWetBulbTemperature",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.SpecificVolumeWetBulbTemperature(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromWetBulbTemperature",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.DensityRelativeHumidity(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromRelativeHumidity",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.EnthalpyRelativeHumidity(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromRelativeHumidity",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.DewPointRelativeHumidity(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromRelativeHumidity",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.HumidityRatioRelativeHumidity(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromRelativeHumidity",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.SpecificVolumeRelativeHumidity(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromRelativeHumidity",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.WetBulbTemperatureRelativeHumidity(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromRelativeHumidity",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.DensityHumidityRatio(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromHumidityRatio",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.EnthalpyHumidityRatio(System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromHumidityRatio",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.DewPointHumidityRatio(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromHumidityRatio",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.RelativeHumidityHumidityRatio(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromHumidityRatio",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.SpecificVolumeHumidityRatio(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromHumidityRatio",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Psychrometrics.Compute.WetBulbHumidityRatio(System.Double, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "FromHumidityRatio",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Climate.Compute.DensityWater(System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Psychrometrics.Compute, Psychrometrics_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "DensityWater",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.LadybugTools.Compute.InstallPythonEnv_LBT(System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LadybugTools.Compute, LadybugTools_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "InstallPythonEnv_LBT",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Geometry.Query.SingedAngle(BH.oM.Geometry.Line, BH.oM.Geometry.Line, BH.oM.Geometry.Vector)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "SignedAngle",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Line\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Line\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.UI.Forms.Engine.Query.AllowedFileExtensions(System.Reflection.ParameterInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Forms.Query, Forms_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "AllowedFileExtensions",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.ParameterInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Forms.Modify.InvertColor(System.Windows.Media.Color)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Forms.Modify, Forms_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "InvertColour",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Windows.Media.Color, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Forms.Convert.ToMediaColor(System.Drawing.Color)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Forms.Convert, Forms_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ToMediaColour",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Drawing.Color, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Forms.Convert.ToSolidColorBrush(System.Drawing.Color)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Forms.Convert, Forms_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ToSolidColourBrush",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Drawing.Color, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Forms.Convert.ToDrawingColor(System.Windows.Media.SolidColorBrush)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Forms.Convert, Forms_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ToDrawingColour",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Windows.Media.SolidColorBrush, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Environment.Modify.SetWallPanels(System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Modify, Environment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "SetWallPanels",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Environment.Modify.SetRoofPanels(System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Modify, Environment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "SetRoofPanels",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Environment.Modify.SetFloorPanels(System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Modify, Environment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "SetFloorPanels",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Environment.Modify.AddOpening(BH.oM.Environment.Elements.Panel, BH.oM.Environment.Elements.Opening)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Modify, Environment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "AddOpenings",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Opening\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Environment.Create.Panels(System.Collections.Generic.List<BH.oM.Geometry.ISurface>, System.String, System.Double, BH.oM.Environment.Elements.PanelType)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Create, Environment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "Panels",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ISurface\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Environment.Create.Panels(BH.oM.Geometry.BoundaryRepresentation, System.String, System.Double, BH.oM.Environment.Elements.PanelType)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Create, Environment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "Panels",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.BoundaryRepresentation\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Environment.Compute.AssignSpaceTypeByPoint(System.Collections.Generic.List<BH.oM.Environment.Elements.Space>, System.Collections.Generic.List<BH.oM.Geometry.Point>, System.String, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Compute, Environment_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "AssignSpaceTypeByPoint",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Space\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"6.3\" }], \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.SpaceType\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.CFD.Compute.InstallPythonEnv_CFD(System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.CFD.Compute, CFD_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "InstallPythonEnv_CFD",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      },
+      "BH.Engine.Base.Compute.ParseEnum(System.Type, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Compute, BHoM_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.3\" }",
+        "MethodName": "ParseEnum",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.3\" }"
+        ],
+        "_bhomVersion": "6.3"
+      }
+    },
+    "ToOld": {
+      
+    }
+  },
+  "Property": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    }
+  },
+  "Dataset": {
+    "ToNew": {
+      "LifeCycleAssessment\\QuartzElementData": "LifeCycleAssessment\\Quartz",
+      "LifeCycleAssessment\\EmbodiedCarbonInConstructionCalculator\\EC3_Concrete_LW_2501-3000": "LifeCycleAssessment\\EC3\\BuroHappold_EC3_Concrete_LW_2501-3000",
+      "LifeCycleAssessment\\EmbodiedCarbonInConstructionCalculator\\EC3_Concrete_LW_3001-4000": "LifeCycleAssessment\\EC3\\BuroHappold_EC3_Concrete_LW_3001-4000",
+      "LifeCycleAssessment\\EmbodiedCarbonInConstructionCalculator\\EC3_Concrete_LW_4001-5000": "LifeCycleAssessment\\EC3\\BuroHappold_EC3_Concrete_LW_4001-5000",
+      "LifeCycleAssessment\\EmbodiedCarbonInConstructionCalculator\\EC3_Concrete_NW_0-2500": "LifeCycleAssessment\\EC3\\BuroHappold_EC3_Concrete_NW_0-2500",
+      "LifeCycleAssessment\\EmbodiedCarbonInConstructionCalculator\\EC3_Concrete_NW_2501-3000": "LifeCycleAssessment\\EC3\\BuroHappold_EC3_Concrete_NW_2501-3000",
+      "LifeCycleAssessment\\EmbodiedCarbonInConstructionCalculator\\EC3_Concrete_NW_3001-4000": "LifeCycleAssessment\\EC3\\BuroHappold_EC3_Concrete_NW_3001-4000",
+      "LifeCycleAssessment\\EmbodiedCarbonInConstructionCalculator\\EC3_Concrete_NW_4001-5000": "LifeCycleAssessment\\EC3\\BuroHappold_EC3_Concrete_NW_4001-5000",
+      "LifeCycleAssessment\\EmbodiedCarbonInConstructionCalculator\\EC3_Concrete_NW_5001-6000": "LifeCycleAssessment\\EC3\\BuroHappold_EC3_Concrete_NW_5001-6000",
+      "LifeCycleAssessment\\EmbodiedCarbonInConstructionCalculator\\EC3_Concrete_NW_6001-8000": "LifeCycleAssessment\\EC3\\BuroHappold_EC3_Concrete_NW_6001-8000",
+      "LifeCycleAssessment\\EmbodiedCarbonInConstructionCalculator\\EC3_Steel": "LifeCycleAssessment\\EC3\\BuroHappold_EC3_Steel",
+      "LifeCycleAssessment\\EmbodiedCarbonInConstructionCalculator\\EC3_Timber": "LifeCycleAssessment\\EC3\\BuroHappold_EC3_Timber",
+      "LifeCycleAssessment\\InventoryOfCarbonAndEnergy\\InventoryOfCarbonAndEnergy_Aggregates": "LifeCycleAssessment\\ICE\\InventoryOfCarbonAndEnergy_Aggregates",
+      "LifeCycleAssessment\\InventoryOfCarbonAndEnergy\\InventoryOfCarbonAndEnergy_Aluminum": "LifeCycleAssessment\\ICE\\InventoryOfCarbonAndEnergy_Aluminium",
+      "LifeCycleAssessment\\InventoryOfCarbonAndEnergy\\InventoryOfCarbonAndEnergy_Asphalt": "LifeCycleAssessment\\ICE\\InventoryOfCarbonAndEnergy_Asphalt",
+      "LifeCycleAssessment\\InventoryOfCarbonAndEnergy\\InventoryOfCarbonAndEnergy_Bitumen": "LifeCycleAssessment\\ICE\\InventoryOfCarbonAndEnergy_Bitumen",
+      "LifeCycleAssessment\\InventoryOfCarbonAndEnergy\\InventoryOfCarbonAndEnergy_CementMortar": "LifeCycleAssessment\\ICE\\InventoryOfCarbonAndEnergy_CementMortar",
+      "LifeCycleAssessment\\InventoryOfCarbonAndEnergy\\InventoryOfCarbonAndEnergy_ClayBricks": "LifeCycleAssessment\\ICE\\InventoryOfCarbonAndEnergy_ClayBricks",
+      "LifeCycleAssessment\\InventoryOfCarbonAndEnergy\\InventoryOfCarbonAndEnergy_Concrete": "LifeCycleAssessment\\ICE\\InventoryOfCarbonAndEnergy_Concrete",
+      "LifeCycleAssessment\\InventoryOfCarbonAndEnergy\\InventoryOfCarbonAndEnergy_Glass": "LifeCycleAssessment\\ICE\\InventoryOfCarbonAndEnergy_Glass",
+      "LifeCycleAssessment\\InventoryOfCarbonAndEnergy\\InventoryOfCarbonAndEnergy_Steel": "LifeCycleAssessment\\ICE\\InventoryOfCarbonAndEnergy_Steel",
+      "LifeCycleAssessment\\InventoryOfCarbonAndEnergy\\InventoryOfCarbonAndEnergy_TimberExcludingStorage": "LifeCycleAssessment\\ICE\\InventoryOfCarbonAndEnergy_Timber",
+      "LifeCycleAssessment\\InventoryOfCarbonAndEnergy\\InventoryOfCarbonAndEnergy_TimberIncludingStorage": "LifeCycleAssessment\\ICE\\InventoryOfCarbonAndEnergy_Timber",
+      "LifeCycleAssessment\\Ökobaudat_DE\\Materials\\Ökobaudat_Materials_Brick": "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_Materials_Brick",
+      "LifeCycleAssessment\\Ökobaudat_DE\\Materials\\Ökobaudat_Materials_Concrete": "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_Materials_Concrete",
+      "LifeCycleAssessment\\Ökobaudat_DE\\Materials\\Ökobaudat_Materials_Glass": "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_Materials_Glass",
+      "LifeCycleAssessment\\Ökobaudat_DE\\Materials\\Ökobaudat_Materials_Insulation_Foam": "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_Materials_Insulation_Foam",
+      "LifeCycleAssessment\\Ökobaudat_DE\\Materials\\Ökobaudat_Materials_Insulation_General": "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_Materials_Insulation_General",
+      "LifeCycleAssessment\\Ökobaudat_DE\\Materials\\Ökobaudat_Materials_Masonry": "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_Materials_Masonry",
+      "LifeCycleAssessment\\Ökobaudat_DE\\Materials\\Ökobaudat_Materials_Steel": "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_Materials_Steel",
+      "LifeCycleAssessment\\Ökobaudat_DE\\Materials\\Ökobaudat_Materials_Wood": "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_Materials_Wood",
+      "FrameEdgeProperties\\Mullions": "Facades\\Mullions(Kawneer)",
+      "LifeCycleAssessment\\ICE\\InventoryOfCarbonAndEnergy_TimberExcludingStorage": "LifeCycleAssessment\\ICE\\InventoryOfCarbonAndEnergy_Timber",
+      "LifeCycleAssessment\\ICE\\InventoryOfCarbonAndEnergy_TimberIncludingStorage": "LifeCycleAssessment\\ICE\\InventoryOfCarbonAndEnergy_Timber",
+      "FrameEdgeProperties\\Mullions(Kawneer)": "Facades\\Mullions(Kawneer)",
+      "LifeCycleAssessment\\FacadeGeneric\\Aluminum Extrusion EPDs": "LifeCycleAssessment\\FacadeUSGeneric\\Aluminum Extrusion EPDs",
+      "LifeCycleAssessment\\FacadeGeneric\\IGU EPDs": "LifeCycleAssessment\\FacadeUSGeneric\\IGU EPDs",
+      "LifeCycleAssessment\\FacadeGeneric\\Insulation EPDs": "LifeCycleAssessment\\FacadeUSGeneric\\Insulation EPDs",
+      "LifeCycleAssessment\\FacadeGeneric\\Sheathing EPDs": "LifeCycleAssessment\\FacadeUSGeneric\\Sheathing EPDs"
+    },
+    "ToOld": {
+      
+    },
+    "MessageForDeleted": {
+      "TestSets\\Environment\\Full model - non-complex roof": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bars\\01 - Straight planar bars": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bars\\02 - Straight Vertical bars": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bars\\03 - Straight rotating planar bars": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bars\\04 - Straight rotating vertical bars": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bars\\05 - Random Orientated bars": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bars\\06 - Random Orientated rotating bars": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bars\\07 - Small Frame": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bars\\08 - FreeForm Frame": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panels\\01 - Property Test - Concrete - Slabs": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panels\\02 - Property Test - Concrete - Walls": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panels\\03 - Property Test - Steel - Slabs": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panels\\04 - Property Test - Steel - Walls": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panels\\05 - Property Test - LoadingPanel - Slabs": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panels\\06 - Property Test -  LoadingPanel  - Walls": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panels\\07 - Outline Tests - Slabs": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panels\\08 - Outline Tests - Walls": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panels\\09 - Outline Tests - Freeform": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panels\\10 - Opening Tests - Slabs": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panels\\11 - Opening Tests - Walls": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panels\\12 - Opening Tests - FreeForm": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\SectionProperties\\01 - Steel Library Sections": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\SectionProperties\\02 - Steel Fabricated Sections": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\SectionProperties\\03 - Steel Freeform Sections": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\SectionProperties\\04 - Concrete Parametric Sections": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\SectionProperties\\05 - Concrete Freeform Sections": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "BuildingEnvironments\\Gains\\Equipment\\CIBSEGuideA2019SensibleHeatEquipment": "Dataset has been deleted and cannot be found.",
+      "BuildingEnvironments\\Gains\\Lighting\\CIBSEGuideA2019SensibleHeatLighting": "Dataset has been deleted and cannot be found.",
+      "BuildingEnvironments\\Gains\\People\\CIBSEGuideA2019LatentHeatPeople": "Dataset has been deleted and cannot be found.",
+      "BuildingEnvironments\\Gains\\People\\CIBSEGuideA2019Occupancy": "Dataset has been deleted and cannot be found.",
+      "BuildingEnvironments\\Gains\\People\\CIBSEGuideA2019SensibleHeatPeople": "Dataset has been deleted and cannot be found.",
+      "BuildingEnvironments\\Gains\\People\\IBC2015Occupancy": "Dataset has been deleted and cannot be found.",
+      "TestSets\\Structure\\Node\\01 - Constraint6DOF fix or free": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Node\\02 - Constraint6DOF fix or spring": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panel\\01 - Property Test - Concrete - Slabs": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panel\\02 - Property Test - Concrete - Walls": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panel\\03 - Property Test - Steel - Slabs": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panel\\04 - Property Test - Steel - Walls": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panel\\05 - Property Test - LoadingPanel - Slabs": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panel\\06 - Property Test -  LoadingPanel  - Walls": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panel\\07 - Outline Tests - Slabs": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panel\\08 - Outline Tests - Walls": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panel\\09 - Outline Tests - Freeform": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panel\\10 - Opening Tests - Slabs": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panel\\11 - Opening Tests - Walls": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Panel\\12 - Opening Tests - FreeForm": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bar\\01 - Straight planar bars": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bar\\02 - Straight Vertical bars": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bar\\03 - Straight rotating planar bars": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bar\\04 - Straight rotating vertical bars": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bar\\05 - Random Orientated bars": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bar\\06 - Random Orientated rotating bars": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bar\\07 - Small Frame": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bar\\08 - FreeForm Frame": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Bar\\09 - Bars with releases": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\BarRelease\\01 - Bar Releases": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Constraint6DOF\\01 - fix or free": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\Constraint6DOF\\02 - fix or spring": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\FEMesh\\01 - Property Test - Concrete - Constant Thickness": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\FEMesh\\02 - Property Test - Concrete - Ribbed": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\FEMesh\\03 - Property Test - Concrete - Waffle": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\FEMesh\\04 - Property Test - Concrete - LoadingPanelProperty": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\FEMesh\\05 - Property Test - Steel - ConstantThickness": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\FEMesh\\06 - Node Test - Three Node Planar FEMesh": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\FEMesh\\07 - Node Test - Four Node Planar FEMesh": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\FEMesh\\08 - Planarity Test - Single Curvature FEMesh": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\FEMesh\\09 - Planarity Test - Double Curvature FEMesh": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\01 - Object Test - Steel": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\02 - Object Test - Concrete": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\03 - Object Test - Aluminium": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\04 - Object Test - Timber": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\05 - Zero Property Test - E": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\06 - Zero Property Test - v": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\07 - Unit Property Test - v": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\08 - Zero Property Test - tC": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\09 - Zero Property Test - Density": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\10 - Zero Property Test - Damping Ratio": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\11 - Unit Property Test - Damping ratio": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\12 - Zero Property Test -  YieldStress": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\13 - Zero Property Test -   UltimateStress": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\14 - Equal Properties Test - YieldStress equals UltimateStress": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\15 - Zero Property Test - CubeStrength": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\16 - Zero Property Test - CylinderStrength": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\IMaterialFragment\\17 - Equal Properties Test - Cylinder equals CubeStrength": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\ISectionProperty\\01 - Steel Library Sections": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\ISectionProperty\\02 - Steel Fabricated Sections": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\ISectionProperty\\03 - Steel Freeform Sections": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\ISectionProperty\\04 - Concrete Parametric Sections": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "TestSets\\Structure\\ISectionProperty\\05 - Concrete Freeform Sections": "Dataset was moved to Test_Toolkit. Please build from Test_Toolkit to obtain dataset.",
+      "BuildingEnvironments\\Infiltration\\CIBSEGuideA2015InfiltrationRateTables": "Dataset was split out into several sub-datasets per dwelling type. Please select an appropriate dwelling type and access the specific CIBSE Guide A 2015 Infiltration Rates from there.",
+      "Climate\\AirQuality\\AirQualityLimits": "Dataset was removed with no further updates available.",
+      "LifeCycleAssessment\\EPARefrigerantData": "Dataset was moved to the Refigerant Impact Tool - see https://refigerantimpact.org for more information.",
+      "Water\\LEEDFixtureUsageDataSet": "Dataset was removed with no further updates available.",
+      "Water\\LEEDPlumbingFixtureFlowDataset": "Dataset was removed with no further updates available.",
+      "LifeCycleAssessment\\Ökobaudat_DE\\Ökobaudat": "Dataset was removed with no further updates available.",
+      "LifeCycleAssessment\\Ökobaudat_DE\\MEP\\Ökobaudat_MEP_Electrical": "Dataset was removed for MEP data with no further updates available.",
+      "LifeCycleAssessment\\Ökobaudat_DE\\MEP\\Ökobaudat_MEP_Lighting": "Dataset was removed for MEP data with no further updates available.",
+      "LifeCycleAssessment\\Ökobaudat_DE\\MEP\\Ökobaudat_MEP_Machinery": "Dataset was removed for MEP data with no further updates available.",
+      "LifeCycleAssessment\\Ökobaudat_DE\\MEP\\Ökobaudat_MEP_Machinery_Pumps": "Dataset was removed for MEP data with no further updates available.",
+      "LifeCycleAssessment\\Ökobaudat_DE\\MEP\\Ökobaudat_MEP_Pipes": "Dataset was removed for MEP data with no further updates available.",
+      "LifeCycleAssessment\\Ökobaudat_DE\\MEP\\Ökobaudat_MEP_Plumbing": "Dataset was removed for MEP data with no further updates available.",
+      "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_Equipment_Airside": "Dataset was removed with no further updates available.",
+      "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_Equipment_Electrical": "Dataset was removed with no further updates available.",
+      "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_Equipment_Mechanical": "Dataset was removed with no further updates available.",
+      "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_Fixture_Electrical": "Dataset was removed with no further updates available.",
+      "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_Fixture_Plumbing": "Dataset was removed with no further updates available.",
+      "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_Refrigerants": "Dataset was removed with no further updates available.",
+      "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_System_Dampers": "Dataset was removed with no further updates available.",
+      "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_System_Electrical": "Dataset was removed with no further updates available.",
+      "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_System_Mechanical": "Dataset was removed with no further updates available.",
+      "LifeCycleAssessment\\Oekobaudat\\Oekobaudat_System_MEP": "Dataset was removed with no further updates available."
+    }
+  },
+  "MessageForDeleted": {
+    "BH.Engine.Base.Modify.ISetGeometry(BH.oM.Base.IBHoMObject, BH.oM.Geometry.IGeometry)": "This method has been removed as it was providing noise to component searches, and regularly provided inaccurate results. Please raise an issue at https://github.com/BHoM/BHoM_Engine if you feel this method should be reinstated.",
+    "BH.Engine.Environment.Modify.SplitPanelByGeometry(BH.oM.Environment.Elements.Panel, System.Collections.Generic.List<BH.oM.Geometry.Polyline>)": "Method has been removed due to lack of use and confusing UX",
+    "BH.Revit.Engine.Utility.Modify.PrettifyDimension(Autodesk.Revit.DB.Dimension, Autodesk.Revit.DB.Document)": "Method deleted because same effect can be achieved with other same named button.",
+    "BH.Revit.Engine.Electrical.Objects.ParameterConnectResultMessageFactory.Success()": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.Engine.Electrical.Objects.ParameterConnectResultMessageFactory.UnequalUnitType(BH.Revit.UI.Schematic.ParameterMapItem)": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.Engine.Electrical.Objects.ParameterConnectResultMessageFactory.UnableToConnectUniqueIDs()": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.Engine.Electrical.Compute.ConnectParameterMaps(BH.Revit.oM.Electrical.ConnectionItem)": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.Engine.Electrical.Compute.PlaceElectricalFixture(System.Boolean, System.Boolean)": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.Engine.Electrical.Compute.ConnectElements(System.Collections.Generic.List<BH.Revit.oM.Electrical.ConnectionItem>)": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.Engine.Electrical.Compute.Connect(BH.Revit.oM.Electrical.ConnectionItem)": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.Engine.Electrical.Compute.Connect(System.Boolean)": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.Engine.Electrical.Objects.ParameterConnectResultMessageFactory.NullInputs()": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.Engine.Electrical.Query.ElectricalFixtureCoordinationSettings()": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.Engine.Electrical.Query.GetCoordinationScenario(System.String)": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.Engine.Electrical.Query.GetElectricalAssemblyItem(BH.Revit.oM.Electrical.ConnectionItem)": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.Engine.Electrical.Compute.ElectricalFixtureCoordinationSettingsWindow()": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.oM.Electrical.Logging.ParameterConnectResult": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.oM.Electrical.Settings.ParameterMapItem": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.oM.Electrical.Settings.NameParameter": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.oM.Electrical.Settings.EquipmentDesignation": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.oM.Electrical.Settings.ElectricalFixtureCoordinationSettings": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.oM.Electrical.Settings.ElectricalAssemblyItem": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.oM.Electrical.ConnectionItem": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.oM.Electrical.CoordinationScenario": "The IsolatorPlacement_Tool has been removed from installers and is not currently deployed.  If you would like to experiment with the latest IsolatorPlacement_Tool capabilities, please use the latest alpha installer.  Please reach out to a member of the development team if you would like IsolatorPlacement_Tool to be redeployed.",
+    "BH.Revit.Engine.Utility.Compute.MarkIntersections(Autodesk.Revit.UI.UIDocument)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Utility.Compute.MarkIntersections(Autodesk.Revit.UI.UIDocument, System.Collections.Generic.List<Autodesk.Revit.DB.ViewDrafting>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Utility.Compute.MarkIntersectionsOnAllOpenViews(Autodesk.Revit.UI.UIDocument)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Utility.Modify.PropagateExtents(System.Collections.Generic.List<Autodesk.Revit.DB.DatumPlane>, System.Collections.Generic.List<Autodesk.Revit.DB.View>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.Utility.Compute.UtilitySettings(Autodesk.Revit.DB.Document)": "This method has been removed as a part of the legacy code cleanup. Please use the new Room Data Sheets feature or contact the developers if you still need it.",
+    "BH.Revit.Engine.Utility.Create.SpaceViews(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.Mechanical.Space>)": "This method has been removed as a part of the legacy code cleanup. Please use the new Room Data Sheets feature or contact the developers if you still need it.",
+    "BH.Revit.Engine.Utility.Query.SpaceViewsSettings()": "This method has been removed as a part of the legacy code cleanup. Please use the new Room Data Sheets feature or contact the developers if you still need it.",
+    "BH.Revit.oM.Utility.SpaceViewsSettings": "This object has been removed as a part of the legacy code cleanup. Please use the new Room Data Sheets feature or contact the developers if you still need it.",
+    "BH.Revit.Engine.Utility.Query.ElementsInElementByCategory(Autodesk.Revit.DB.Element, System.Collections.Generic.List<Autodesk.Revit.DB.Category>, System.String, System.String)": "Method deleted because same effect can be achieved with ElementsInElement query.",
+    "BH.Revit.Engine.Utility.Query.ElementsInRegionByCategory(Autodesk.Revit.DB.FilledRegion, System.Collections.Generic.List<Autodesk.Revit.DB.Category>, Autodesk.Revit.DB.Level, Autodesk.Revit.DB.Level, System.String, System.String)": "Method deleted because same effect can be achieved with ElementsInRegion query.",
+    "BH.Revit.Engine.Utility.Modify.TransferParameterValues(Autodesk.Revit.DB.Category, Autodesk.Revit.DB.Document, System.String, System.String)": "Method deleted because same effect can be achieved with other same named button.",
+    "BH.Engine.Python.Compute.InstallBasePythonEnvironment(System.Boolean)": "This method has been replaced. Please use the BasePythonEnvironment method instead.",
+    "BH.Engine.Python.Compute.InstallReferencedVirtualenv(System.String, System.String, System.String, System.Boolean)": "This method has been removed.",
+    "BH.Engine.Python.Compute.InstallVirtualenv(System.String, BH.oM.Python.Enums.PythonVersion, System.String, System.Boolean)": "This method has been removed.",
+    "BH.Engine.Python.Compute.LoggingHeader(System.String)": "This method has been removed.",
+    "BH.Engine.Python.Compute.RemoveVirtualenv(System.String, System.Boolean)": "This method has been removed.",
+    "BH.Engine.Python.Query.CodeDirectory()": "This method has been removed.",
+    "BH.Engine.Python.Query.EnvironmentExists(BH.oM.Python.PythonEnvironment)": "This method has been removed.",
+    "BH.Engine.Python.Query.ExtensionsDirectory()": "This method has been removed.",
+    "BH.Engine.Python.Query.EnvironmentsDirectory()": "This method has been removed.",
+    "BH.Engine.Python.Query.ToString(BH.oM.Python.PythonEnvironment)": "This method has been removed.",
+    "BH.Engine.Python.Query.VirtualEnv(System.String)": "This method has been removed.",
+    "BH.Engine.Python.Query.VirtualEnvPythonExePath(System.String)": "This method has been removed.",
+    "BH.Engine.Python.Query.VirtualEnvDirectory(System.String)": "This method has been removed.",
+    "BH.Engine.Python.Compute.RunCommandAsync(System.String, System.Boolean, System.String)": "This method has been removed.",
+    "BH.Engine.Python.Compute.RunCommandBool(System.String, System.Boolean, System.String, System.Double)": "This method has been removed.",
+    "BH.Engine.Python.Compute.RunPythonScript(BH.oM.Python.PythonEnvironment, System.String, System.Collections.Generic.List<System.String>)": "This method has been removed.",
+    "BH.Engine.Python.Compute.Invoke(Python.Runtime.PyObject, System.String, System.Collections.Generic.Dictionary<System.String, System.Object>)": "This method has been removed.",
+    "BH.Engine.Python.Compute.Invoke(Python.Runtime.PyObject, System.String, System.Collections.Generic.IEnumerable<System.Object>, System.Collections.Generic.Dictionary<System.String, System.Object>)": "This method has been removed.",
+    "BH.Revit.Engine.Core.Query.FrameEdgeProperty(Autodesk.Revit.DB.FamilyInstance, BH.oM.Adapters.Revit.Settings.RevitSettings, System.Collections.Generic.Dictionary<System.String, System.Collections.Generic.List<BH.oM.Base.IBHoMObject>>)": "FrameEdgeProperty extraction mechanism had changed and this method became obsolete.",
+    "BH.UI.Revit.Query.DisciplineIconImage(System.Reflection.MethodInfo)": "This method has been removed as a part of method reflection refactoring.",
+    "BH.UI.Revit.Query.DisciplineIconImage(System.String)": "This method has been removed as a part of method reflection refactoring.",
+    "BH.UI.Revit.Query.IsBHoMRevitCompliant(System.Reflection.MethodInfo)": "This method has been removed as a part of method reflection refactoring.",
+    "BH.UI.Revit.Query.OtherTaggedMethods(System.Reflection.MethodInfo)": "This method has been removed as a part of method reflection refactoring.",
+    "BH.Engine.Revit.Query.TabName(System.Reflection.MethodInfo)": "This method has been removed together with TabNameAttribute.",
+    "BH.Engine.Revit.Query.DisciplineName(System.Reflection.MethodInfo)": "This method has been removed as a part of method reflection refactoring.",
+    "BH.Engine.Revit.Query.IsDisabled(System.Reflection.MethodInfo)": "This method has been removed as a part of method reflection refactoring.",
+    "BH.Engine.Revit.Query.IsForceEnabled(System.Reflection.MethodInfo)": "This method has been removed as a part of method reflection refactoring.",
+    "BH.oM.Revit.Attributes.TabNameAttribute": "This attribute has been deleted as a part of redesign of the Revit method reflection mechanism.",
+    "BH.oM.Revit.Attributes.TagsAttribute": "This attribute has been deleted as a part of redesign of the Revit method reflection mechanism.",
+    "BH.Engine.Adapters.XML.Create.DocumentBuilder(System.Collections.Generic.List<BH.oM.Base.IBHoMObject>)": "The GBXML Document Builder has been retired in favour of allowing objects to be pushed to XML in a manner that is aligned with other BHoM adapters. Please plug your BHoM objects directly into the Push component to continue your workflow. Ensure the XML Schema is set to GBXML in your configuration settings. Please reach out to the development team via https://github.com/BHoM/XML_Toolkit/issues if you encounter any issues with this.",
+    "BH.Engine.Adapters.XML.Create.DocumentBuilder(System.Collections.Generic.List<BH.oM.Environment.Elements.Building>, System.Collections.Generic.List<System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>>, System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>, System.Collections.Generic.List<BH.oM.Spatial.SettingOut.Level>, System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>)": "The GBXML Document Builder has been retired in favour of allowing objects to be pushed to XML in a manner that is aligned with other BHoM adapters. Please plug your BHoM objects directly into the Push component to continue your workflow. Ensure the XML Schema is set to GBXML in your configuration settings. Please reach out to the development team via https://github.com/BHoM/XML_Toolkit/issues if you encounter any issues with this.",
+    "BH.oM.Adapters.XML.GBXMLDocumentBuilder": "The GBXML Document Builder has been retired in favour of allowing objects to be pushed to XML in a manner that is aligned with other BHoM adapters. Please plug your BHoM objects directly into the Push component to continue your workflow. Ensure the XML Schema is set to GBXML in your configuration settings. Please reach out to the development team via https://github.com/BHoM/XML_Toolkit/issues if you encounter any issues with this."
+  },
+  "MessageForNoUpgrade": {
+    "BH.oM.Revit.Attributes.PanelNameAttribute": "Automatic upgrade of this attribute is not possible, but it should not affect the code base negatively. If it does, please raise an issue on https://github.com/BuroHappoldEngineering/Revit_UI to get assistance."
+  }
+}

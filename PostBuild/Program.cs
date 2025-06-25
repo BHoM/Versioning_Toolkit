@@ -41,13 +41,13 @@ namespace PostBuild
                 return;
             }
             string sourceFolder = args[0];
-            string targetFolder = args[1];
+            string targetFile = args[1];
+
+            Console.WriteLine($"Source folder: {Path.GetFullPath(sourceFolder)}");
 
             //Make sure the source and target folders exists
             if (!Directory.Exists(sourceFolder))
                 throw new DirectoryNotFoundException("The source folder does not exists: " + sourceFolder);
-            if (!Directory.Exists(targetFolder))
-                Directory.CreateDirectory(targetFolder);
 
             try
             {
@@ -57,7 +57,7 @@ namespace PostBuild
             catch { }
 
             // Create Upgrades file
-            CopyUpgrades(sourceFolder, targetFolder);
+            CopyUpgrades(sourceFolder, targetFile);
         }
     }
 }

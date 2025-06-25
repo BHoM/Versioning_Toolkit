@@ -1,0 +1,644 @@
+{
+  "Namespace": {
+    "ToNew": {
+      "BH.Engine.CFD.Compute.InstallCFDPythonEnvironment": "BH.Engine.CFD.Compute.InstallPythonEnv_CFD",
+      "BH.oM.Ladybug.ExternalComfortMaterial": "BH.oM.LadybugTools.ExternalComfortMaterial",
+      "BH.oM.Ladybug.ExternalComfortTypology": "BH.oM.LadybugTools.ExternalComfortTypology"
+    },
+    "ToOld": {
+      "BH.Engine.CFD.Compute.InstallPythonEnv_CFD": "BH.Engine.CFD.Compute.InstallCFDPythonEnvironment",
+      "BH.oM.LadybugTools.ExternalComfortMaterial": "BH.oM.Ladybug.ExternalComfortMaterial",
+      "BH.oM.LadybugTools.ExternalComfortTypology": "BH.oM.Ladybug.ExternalComfortTypology"
+    }
+  },
+  "Type": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    }
+  },
+  "Method": {
+    "ToNew": {
+      "BH.Engine.Structure.Loads.Query.DisplayLoadTakeDownGraphQA(BH.oM.Analytical.Elements.Graph, BH.oM.Structure.Loads.LTDPropertyDisplay, System.String, BH.oM.Graphics.Colours.GradientOptions, BH.oM.Structure.Loads.GraphObjectsDisplaySettings, BH.oM.Structure.Loads.GraphTextDisplaySettings, BH.oM.Structure.Loads.GraphArrowRelationDisplaySettings)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Loads.Query, StructuralEngineering_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "DisplayLoadTakeDownGraphQA",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.Graph\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.LTDPropertyDisplay\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Graphics.Colours.GradientOptions\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.GraphObjectsDisplaySettings\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.GraphTextDisplaySettings\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.GraphArrowRelationDisplaySettings\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Structure.Loads.Query.DisplayLoadTakeDownGraph(BH.oM.Analytical.Elements.Graph, System.Collections.Generic.List<BH.oM.Structure.Loads.LoadTakedownResult>, System.Collections.Generic.List<System.String>, BH.oM.Graphics.Colours.GradientOptions, BH.oM.Structure.Loads.GraphObjectsDisplaySettings, BH.oM.Structure.Loads.GraphTextDisplaySettings, BH.oM.Structure.Loads.GraphArrowRelationDisplaySettings)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Loads.Query, StructuralEngineering_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "DisplayLoadTakeDownGraph",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.Graph\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.LoadTakedownResult\", \"_bhomVersion\" : \"5.3\" }], \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }], \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Graphics.Colours.GradientOptions\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.GraphObjectsDisplaySettings\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.GraphTextDisplaySettings\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.GraphArrowRelationDisplaySettings\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Structure.Compute.LoadedRegions(BH.oM.Structure.Loads.TributaryRegion, System.Collections.Generic.IEnumerable<BH.oM.Structure.Loads.ILoadTakeDownLoad>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Compute, StructuralEngineering_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "LoadedLocations",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.TributaryRegion\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.ILoadTakeDownLoad\", \"_bhomVersion\" : \"5.3\" }], \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Structure.Compute.LoadPathGraph(System.Collections.Generic.List<BH.oM.Dimensional.IElement1D>, System.Collections.Generic.List<BH.oM.Dimensional.IElement2D>, System.Collections.Generic.List<BH.oM.Structure.Loads.TributaryRegion>, System.Collections.Generic.List<BH.oM.Structure.Loads.LoadedRegion>, BH.oM.Structure.Loads.Loadcase, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Compute, StructuralEngineering_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "LoadPathGraph",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement1D\", \"_bhomVersion\" : \"5.3\" }], \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\", \"_bhomVersion\" : \"5.3\" }], \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement1D\", \"_bhomVersion\" : \"5.3\" }], \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.TributaryRegion\", \"_bhomVersion\" : \"5.3\" }], \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.ILoadedLocation`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.IGeometry\", \"_bhomVersion\" : \"5.3\" }], \"_bhomVersion\" : \"5.3\" }], \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.Loadcase\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.UserInfoString(System.Reflection.Assembly)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "UserInfoString",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.Assembly, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.UserInfoString(System.Reflection.MethodInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "UserInfoString",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.ToolTipImageFileName(System.Reflection.MethodInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "ToolTipImageFileName",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.ToolTip(System.Reflection.MethodInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "ToolTip",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.IsRevitType(System.Type)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "IsRevitType",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.IsForceEnabled(System.Reflection.MethodInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "IsForceEnabled",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.IsDisabled(System.Reflection.MethodInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "IsDisabled",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.InfoString(System.Reflection.MethodInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "InfoString",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.IconFileName(System.Reflection.MethodInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "IconFileName",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.TabName(System.Reflection.MethodInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "TabName",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.MessageLog(System.Collections.Generic.List<BH.oM.Base.Debugging.Event>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "MessageLog",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.Debugging.Event\", \"_bhomVersion\" : \"5.3\" }], \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.PanelName(System.Reflection.MethodInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "PanelName",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.Tags(System.Reflection.MethodInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "Tags",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.IsValid(BH.oM.Revit.Scenarios.IScenario)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "IsValid",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Revit.Scenarios.IScenario\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.IsManualTransaction(System.Reflection.MethodInfo)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "IsManualTransaction",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.FiltersDescription(BH.oM.Revit.Scenarios.IScenario, System.String[])": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "FiltersDescription",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Revit.Scenarios.IScenario\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.ButtonName(System.Reflection.MethodInfo, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "ButtonName",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Query.IActionDescription(BH.oM.Revit.Scenarios.IScenario)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Query, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "IActionDescription",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Revit.Scenarios.IScenario\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Modify.ResizeIcon(System.Windows.Media.Imaging.BitmapImage, System.Int32, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Modify, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "ResizeIcon",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Windows.Media.Imaging.BitmapImage, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Modify.AdjustTextToWidth(System.String, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Modify, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "AdjustTextToWidth",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Convert.TableFromRevitLog(BH.oM.Revit.Logging.IRevitLog<BH.oM.Revit.Logging.IRevitLogItem>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Convert, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "TableFromRevitLog",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Revit.Logging.IRevitLog`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Revit.Logging.IRevitLogItem\", \"_bhomVersion\" : \"5.3\" }], \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Revit.Compute.CastCollections(System.Object, System.Type)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Revit.Compute, Revit_UI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "CastCollections",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Python.Query.CodeDirectory(BH.oM.Python.PythonEnvironment)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Python.Query, Python_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "CodeDirectory",
+        "Parameters": [
+          
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Python.Compute.RunCommandStdout(System.String, System.Boolean, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Python.Compute, Python_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "RunCommandStdout",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Python.Compute.RunCommandBool(System.String, System.Boolean, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Python.Compute, Python_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "RunCommandBool",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Python.Compute.DownloadPython()": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Python.Compute, Python_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "DownloadPython",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Python.Enums.PythonVersion\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.MachineLearning.Base.Compute.InstallMachineLearningToolkit(System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.MachineLearning.Compute, MachineLearning_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "InstallPythonEnv_ML",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.LadybugTools.Compute.ExternalComfortTypology(System.String, BH.oM.LadybugTools.ExternalComfortMaterial, BH.oM.LadybugTools.ExternalComfortMaterial, BH.oM.LadybugTools.ExternalComfortTypology)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LadybugTools.Compute, LadybugTools_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "ExternalComfortTypology",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.LadybugTools.Compute.InstallLadybugToolsPythonEnvironment(System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LadybugTools.Compute, LadybugTools_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "InstallPythonEnv_LBT",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.LadybugTools.Compute.ExternalComfort(System.String, BH.oM.LadybugTools.ExternalComfortMaterial, BH.oM.LadybugTools.ExternalComfortMaterial)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LadybugTools.Compute, LadybugTools_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "ExternalComfort",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LadybugTools.ExternalComfortMaterial\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LadybugTools.ExternalComfortMaterial\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LadybugTools.ExternalComfortTypology\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Excel.Query.Explode(System.Collections.Generic.List<System.Object>, System.Boolean, System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Excel.Query, ExcelUI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "Explode",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }], \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Excel.Compute.ParseEnum(System.Type, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Excel.Compute, ExcelUI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "ParseEnum",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Excel.Compute.ParseEnum(System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Excel.Compute, ExcelUI_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "ParseEnum",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Environment.Modify.SetShadePanels(System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Environment.Modify, Environment_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "SetShadePanels",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\", \"_bhomVersion\" : \"5.3\" }], \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.PanelType\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Geometry.Offset.Compute.Offset(BH.oM.Geometry.Polyline, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Offset.Compute, Clipper_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "Offset",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.CFD.Convert.FromSessionObjectToCSE(System.Collections.Generic.List<BH.oM.CFD.Season>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.CFD.Convert, CFD_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "FromSessionObjectToCSE",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.Season\", \"_bhomVersion\" : \"5.3\" }], \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.WindCriteria\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.CFD.Compute.InstallCFDPythonEnvironment(System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.CFD.Compute, CFD_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "InstallPythonEnv_CFD",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.CFD.Compute.ExecuteComputeComfortSafety(System.String, System.String, System.Int32, System.Collections.Generic.List<BH.oM.CFD.Season>, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.CFD.Compute, CFD_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "ExecuteComputeComfortSafety",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.Season\", \"_bhomVersion\" : \"5.3\" }], \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.CFD.WindCriteria\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      },
+      "BH.Engine.Architecture.Modify.CleanRoom(BH.oM.Architecture.Elements.Room, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Modify, Analytical_Engine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"5.3\" }",
+        "MethodName": "CleanRegion",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.IRegion\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"5.3\" }"
+        ],
+        "_bhomVersion": "5.3"
+      }
+    },
+    "ToOld": {
+      
+    }
+  },
+  "Property": {
+    "ToNew": {
+      "BH.oM.Structure.Loads.LoadedRegion.Region": "BH.oM.Structure.Loads.LoadedRegion.Location"
+    },
+    "ToOld": {
+      "BH.oM.Structure.Loads.LoadedRegion.Location": "BH.oM.Structure.Loads.LoadedRegion.Region"
+    }
+  },
+  "Dataset": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    },
+    "MessageForDeleted": {
+      
+    }
+  },
+  "MessageForDeleted": {
+    "BH.Engine.Forms.Convert.ToWPF(BH.oM.Forms.InputCollection, BH.oM.Forms.WindowLayoutSettings)": "This method was moved to the Forms_UI project. Please use BH.UI.Forms.Convert.ToWPF instead.",
+    "BH.Engine.Forms.Convert.IToWPF(BH.oM.Forms.IControl, BH.oM.Forms.WindowLayoutSettings)": "This method was moved to the Forms_UI project. Please use BH.UI.Forms.Convert.IToWPF instead.",
+    "BH.Engine.Forms.Convert.ToWPF(BH.oM.Forms.InputBoolean, BH.oM.Forms.WindowLayoutSettings)": "This method was moved to the Forms_UI project. Please use BH.UI.Forms.Convert.ToWPF instead.",
+    "BH.Engine.Forms.Convert.ToWPF(BH.oM.Forms.InputString, BH.oM.Forms.WindowLayoutSettings)": "This method was moved to the Forms_UI project. Please use BH.UI.Forms.Convert.ToWPF instead.",
+    "BH.Engine.Forms.Convert.ToWPF(BH.oM.Forms.InputDouble, BH.oM.Forms.WindowLayoutSettings)": "This method was moved to the Forms_UI project. Please use BH.UI.Forms.Convert.ToWPF instead.",
+    "BH.Engine.Forms.Convert.ToWPF(BH.oM.Forms.InputInteger, BH.oM.Forms.WindowLayoutSettings)": "This method was moved to the Forms_UI project. Please use BH.UI.Forms.Convert.ToWPF instead.",
+    "BH.Engine.Forms.Convert.ToWPF(BH.oM.Forms.InputFilePath, BH.oM.Forms.WindowLayoutSettings)": "This method was moved to the Forms_UI project. Please use BH.UI.Forms.Convert.ToWPF instead.",
+    "BH.Engine.Forms.Convert.ToWPF(BH.oM.Forms.InputFolderPath, BH.oM.Forms.WindowLayoutSettings)": "This method was moved to the Forms_UI project. Please use BH.UI.Forms.Convert.ToWPF instead.",
+    "BH.Engine.Forms.Convert.ToWPF(BH.oM.Forms.InputDropDown, BH.oM.Forms.WindowLayoutSettings)": "This method was moved to the Forms_UI project. Please use BH.UI.Forms.Convert.ToWPF instead.",
+    "BH.Engine.Forms.Convert.ToWPF(BH.oM.Forms.InputTree<System.Object>, BH.oM.Forms.WindowLayoutSettings)": "This method was moved to the Forms_UI project. Please use BH.UI.Forms.Convert.ToWPF instead.",
+    "BH.Engine.LadybugTools.Compute.ExternalComfortPossible()": "Method removed. If further assistance is needed, please raise an issue on https://github.com/BHoM/LadybugTools_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Audio.Compute.PlayAudio(BH.oM.MachineLearning.Tensor, System.Int32, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Audio.Compute.RecogniseSpeech(System.String, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Audio.Compute.SynthesiseSpeech(System.String, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Base.Compute.Invoke(System.String, System.String, System.Collections.Generic.Dictionary<System.String, System.Object>)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Base.Compute.Invoke(System.String, System.String, System.Object[])": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Base.Compute.InvokeNumpy(System.String, System.Collections.Generic.IEnumerable<System.Object>, System.Collections.Generic.Dictionary<System.String, System.Object>)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Base.Compute.InvokeNumpy(System.String, System.Object[])": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Charts.Compute.PlotDiurnal(System.Collections.Generic.List<System.Double>, System.String, System.String, System.Collections.Generic.List<System.Int32>, System.String, System.String, System.String, System.String, System.Boolean, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Charts.Compute.PlotFrequency(System.Collections.Generic.List<System.Double>, System.String, System.String, System.String, System.Collections.Generic.List<System.Double>, System.Int32, System.String, System.String, System.Boolean, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Charts.Compute.PlotHeatmap(System.Collections.Generic.List<System.Double>, System.String, System.String, System.String, System.Collections.Generic.List<System.Double>, System.String, System.String, System.Boolean, System.Boolean, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Charts.Compute.PlotImage(BH.oM.MachineLearning.Tensor, System.Int32, System.Int32, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Charts.Compute.PlotImage(BH.oM.MachineLearning.Vision.Image, System.Int32, System.Int32, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Charts.Compute.PlotUTCI(System.Collections.Generic.List<System.Double>, System.String, System.Boolean, System.String, System.String, System.Boolean, System.Boolean, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Convert.FromDType(System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Convert.IToPython(System.Object)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Convert.ToDType(System.Type)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Convert.ToList(BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Convert.ToPython(BH.oM.MachineLearning.LinearRegression)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Convert.ToPython(System.Collections.Generic.IEnumerable<System.Object>, System.Type)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Convert.ToPython(System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<System.Object>>, System.Type)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Convert.ToPython(BH.oM.MachineLearning.LogisticRegression)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Convert.ToPython(BH.oM.MachineLearning.MinMaxScaler)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Convert.ToPython(BH.oM.MachineLearning.PolynomialFeatures)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Convert.ToPython(BH.oM.MachineLearning.StandardScaler)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Convert.ToPython(BH.oM.MachineLearning.SupportVectorRegression)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Convert.ToPython(BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Create.Tensor(System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<System.Object>>, System.Type)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Create.Tensor(System.Collections.Generic.IEnumerable<System.Object>, System.Type)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Datasets.Compute.LoadCsv(System.String, System.String, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Modify.AsType(BH.oM.MachineLearning.Tensor, System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Modify.AsType(BH.oM.MachineLearning.Tensor, System.Type)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Preprocessing.Compute.Infer(BH.oM.MachineLearning.MinMaxScaler, BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Preprocessing.Compute.Infer(BH.oM.MachineLearning.PolynomialFeatures, BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Preprocessing.Compute.Infer(BH.oM.MachineLearning.StandardScaler, BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Preprocessing.Compute.InferInverse(BH.oM.MachineLearning.MinMaxScaler, BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Preprocessing.Compute.InferInverse(BH.oM.MachineLearning.StandardScaler, BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Preprocessing.Compute.MinMaxScaler(BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Preprocessing.Compute.PolynomialFeatures(System.Int32, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Preprocessing.Compute.StandardScaler(BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Query.DType(BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Query.GetAttribute(BH.oM.MachineLearning.Tensor, System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Query.Import(System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Query.Shape(BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Query.Size(BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Structured.Compute.Coefficients(BH.oM.MachineLearning.IRegressionModel)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Structured.Compute.Infer(BH.oM.MachineLearning.LinearRegression, BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Structured.Compute.Infer(BH.oM.MachineLearning.LogisticRegression, BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Structured.Compute.Infer(BH.oM.MachineLearning.SupportVectorRegression, BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Structured.Compute.LinearRegression(BH.oM.MachineLearning.Tensor, BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Structured.Compute.LogisticRegression(BH.oM.MachineLearning.Tensor, BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Structured.Compute.Score(BH.oM.MachineLearning.IRegressionModel, BH.oM.MachineLearning.Tensor, BH.oM.MachineLearning.Tensor)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Structured.Compute.SupportVectorRegression(BH.oM.MachineLearning.Tensor, BH.oM.MachineLearning.Tensor, System.String, System.Int32, System.Double)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Text.Compute.Answer(System.String, System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Text.Compute.SentimentAnalysis(System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Text.Compute.Summarise(System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Vision.Compute.DetectObjects(System.String, System.Boolean, System.Double)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Vision.Compute.DrawDetection(System.String, Python.Runtime.PyObject, System.Double)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Vision.Compute.FindContours(BH.oM.MachineLearning.Tensor, System.Int32)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Vision.Compute.RecogniseObject(System.String, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.MachineLearning.Vision.Compute.SegmentImage(System.String, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.oM.MachineLearning.IRegressionModel": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.oM.MachineLearning.IScaler": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.oM.MachineLearning.ITransformer": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.oM.MachineLearning.LinearRegression": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.oM.MachineLearning.LogisticRegression": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.oM.MachineLearning.MinMaxScaler": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.oM.MachineLearning.PolynomialFeatures": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.oM.MachineLearning.StandardScaler": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.oM.MachineLearning.SupportVectorRegression": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.oM.MachineLearning.Tensor": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.oM.MachineLearning.Vision.DetectionResults": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.oM.MachineLearning.Vision.Image": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/MachineLearning_Toolkit/issues.",
+    "BH.Engine.Python.Compute.DownloadFile(System.String, System.String, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Compute.RunCommand(System.String, System.Boolean, System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Compute.Init(System.Object, System.Collections.Generic.Dictionary<System.String, System.Object>)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Compute.InstallPython(System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Compute.InstallPythonEnvironment(BH.oM.Python.PythonEnvironment, System.Boolean, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Compute.InstallPythonEnvironment(System.Boolean, System.Boolean, System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Compute.InstallPythonPackages(BH.oM.Python.PythonEnvironment, System.Collections.Generic.List<BH.oM.Python.PythonPackage>, System.Boolean, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Compute.PipInstall(System.String, System.String, System.Boolean, System.String, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Compute.InstallPythonToolkit(System.Boolean, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Compute.InstallPip()": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Compute.JupyterLab(System.Int32, System.String, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Compute.Invoke(Python.Runtime.PyObject, System.String, System.Collections.Generic.IEnumerable<System.Object>, System.Collections.Generic.Dictionary<System.String, System.Object>)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Compute.PythonRequirementsTxt(BH.oM.Python.PythonEnvironment, System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Compute.PythonRequirementsTxt(System.Collections.Generic.List<BH.oM.Python.PythonPackage>, System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Compute.RemoveEnvironment(BH.oM.Python.PythonEnvironment, System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Compute.SetPythonHome()": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.FromPython(Python.Runtime.PyDict)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.FromPython(Python.Runtime.PyFloat)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.FromPython(Python.Runtime.PyInt)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.FromPython(Python.Runtime.PyIter)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.FromPython(Python.Runtime.PyList)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.FromPython(Python.Runtime.PyLong)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.FromPython(Python.Runtime.PyObject)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.FromPython(Python.Runtime.PyString)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.FromPython(Python.Runtime.PyTuple)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.GetString(BH.oM.Python.PythonEnvironment)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.GetString(BH.oM.Python.PythonPackage)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.IFromPython(Python.Runtime.PyObject)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.IToPyTuple(System.Object)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.IToPython(System.Object)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPyTuple(System.Collections.Generic.IEnumerable<System.Object>)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPyTuple(System.Collections.Generic.List<System.Object>)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPyTuple(System.Object[])": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPython(System.Boolean)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPython(System.Collections.Generic.Dictionary<System.String, System.Object>)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPython(System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<System.Object>>)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPython(System.Collections.Generic.IEnumerable<System.Object>)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPython(System.Collections.Generic.List<System.Object>)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPython(System.Double)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPython(System.Int32)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPython(System.Int64)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPython(System.Object[])": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPython(System.Object[][])": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPython(System.Single)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPython(System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPython(System.ValueTuple<System.Int32, System.Int32, System.Int32>)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPython(System.ValueTuple<System.Int32, System.Int32>)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Convert.ToPython(System.ValueTuple<System.Int32>)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Create.PythonEnvironment(System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Create.PythonEnvironment(System.String, BH.oM.Python.Enums.PythonVersion, System.Collections.Generic.List<BH.oM.Python.PythonPackage>)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Create.PythonPackage(System.String, System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.DoPackagesMatch(System.Collections.Generic.List<BH.oM.Python.PythonPackage>, System.Collections.Generic.List<BH.oM.Python.PythonPackage>)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.EmbeddedPythonHome()": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.EnvironmentDirectory(BH.oM.Python.PythonEnvironment)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.CodesDirectory()": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.Import(System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.InstalledPackages(BH.oM.Python.PythonEnvironment)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.IsInstalled(BH.oM.Python.PythonEnvironment)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.IsInstalled(BH.oM.Python.PythonEnvironment, BH.oM.Python.PythonPackage)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.IsPythonInstalled()": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.IsPipInstalled()": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.IsModuleInstalled(System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.LoadPythonEnvironment(System.String)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.RootDirectory()": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.PackageInList(System.Collections.Generic.List<BH.oM.Python.PythonPackage>, BH.oM.Python.PythonPackage)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.PythonExecutable(BH.oM.Python.PythonEnvironment)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.Engine.Python.Query.Version(BH.oM.Python.PythonEnvironment)": "This method was originally included in BHoM to enable the use of Python.NET. This workflow has been removed in favour of use of Python virtual environments managed via BHoM in order to simplify the passing of data between the two languages. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues.",
+    "BH.oM.Python.PythonPackage": "This object was originally included as part of an older means of managing Python environments via BHoM. This workflow has been removed as part of a new Python virtual environments management strategy. If further assistance is needed, please raise an issue on https://github.com/BHoM/Python_Toolkit/issues."
+  },
+  "MessageForNoUpgrade": {
+    
+  }
+}

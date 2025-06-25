@@ -1,0 +1,628 @@
+{
+  "Namespace": {
+    "ToNew": {
+      "BH.Revit.oM.Mechanical.Enumerators": "BH.Revit.oM.Mechanical.Enums"
+    },
+    "ToOld": {
+      "BH.Revit.oM.Mechanical.Enums": "BH.Revit.oM.Mechanical.Enumerators"
+    }
+  },
+  "Type": {
+    "ToNew": {
+      "BH.oM.Adapters.Robot.ContourLoad": "BH.oM.Structure.Loads.ContourLoad",
+      "BH.oM.Adapters.Robot.GeometricalLineLoad": "BH.oM.Structure.Loads.GeometricalLineLoad",
+      "BH.oM.Structure.Trusses.Truss2DSettings": "BH.oM.Structure.Generative.Truss2DInputs"
+    },
+    "ToOld": {
+      "BH.oM.Structure.Generative.Truss2DInputs": "BH.oM.Structure.Trusses.Truss2DSettings"
+    }
+  },
+  "Method": {
+    "ToNew": {
+      "BH.Engine.Structure.Elements.Create.PanelOutlines(System.Collections.Generic.List<System.Collections.Generic.List<BH.oM.Geometry.Point>>, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Elements.Compute, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "PanelOutlines",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Elements.Create.PanelOutlines(System.Collections.Generic.List<BH.oM.Geometry.Point>, System.Collections.Generic.List<BH.oM.Geometry.Point>, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Elements.Compute, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "PanelOutlines",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Elements.Create.PanelOutlines(System.Collections.Generic.List<BH.oM.Geometry.Point>, BH.oM.Geometry.Vector)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Elements.Compute, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "PanelOutlines",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Bridges.Modify.SetSectionProperty(BH.oM.Structure.Bridges.Ladder, BH.oM.Structure.SectionProperties.ISectionProperty, BH.oM.Structure.SectionProperties.ISectionProperty, BH.oM.Structure.SectionProperties.ISectionProperty, BH.oM.Structure.SectionProperties.ISectionProperty, BH.oM.Structure.SurfaceProperties.ISurfaceProperty)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Bridges.Modify, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "SetProperties",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Bridges.Ladder\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.ISectionProperty\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.ISectionProperty\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.ISectionProperty\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.ISectionProperty\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SurfaceProperties.ISurfaceProperty\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Bridges.Modify.SetSectionProperty(BH.oM.Structure.Trusses.Truss, BH.oM.Structure.SectionProperties.ISectionProperty, BH.oM.Structure.SectionProperties.ISectionProperty, BH.oM.Structure.SectionProperties.ISectionProperty, BH.oM.Structure.SectionProperties.ISectionProperty, BH.oM.Structure.SectionProperties.ISectionProperty, BH.oM.Structure.SurfaceProperties.ISurfaceProperty)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Bridges.Modify, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "SetProperties",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Trusses.Truss\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.ISectionProperty\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.ISectionProperty\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.ISectionProperty\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.ISectionProperty\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.ISectionProperty\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SurfaceProperties.ISurfaceProperty\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Bridges.Create.Ladder(BH.oM.Geometry.Polyline, System.Double, System.Double, System.Double, System.Int32, BH.oM.Geometry.Vector)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Bridges.Create, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "Ladder",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Bridges.Create.Ladder(BH.oM.Geometry.Point, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, System.Double, System.Int32, BH.oM.Geometry.Vector)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Bridges.Create, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "Ladder",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Bridges.Create.CrossMembers(System.Collections.Generic.List<BH.oM.Geometry.Point>, BH.oM.Geometry.Plane)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Bridges.Compute, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "CrossMembers",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Plane\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Bridges.Create.CrossMembers(System.Collections.Generic.List<BH.oM.Geometry.Point>, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Bridges.Compute, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "CrossMembers",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Trusses.Create.Pratt(BH.oM.Geometry.ICurve, BH.oM.Geometry.ICurve, System.Int32, BH.oM.Structure.Trusses.Truss2DSettings)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Generative.Create, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "Truss2D",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.TrussType\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Generative.Truss2DInputs\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Trusses.Create.Truss2D(BH.oM.Geometry.ICurve, BH.oM.Geometry.ICurve, System.Int32, BH.oM.Structure.Elements.TrussType, BH.oM.Structure.Trusses.Truss2DSettings)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Generative.Create, StructuralEngineering_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "Truss2D",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.TrussType\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Point\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Generative.Truss2DInputs\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Query.Normal(BH.oM.Structure.Elements.Panel)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Spatial.Query, Spatial_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "Normal",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Dimensional.IElement2D\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Serialiser.Query.ParametersWithConstraints(System.Reflection.MethodBase)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Reflection.Query, Reflection_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "ParametersWithConstraints",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Reflection.MethodBase, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Serialiser.Query.GenericTypeConstraint(System.Type)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Reflection.Query, Reflection_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "GenericTypeConstraint",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Serialiser.Create.MethodBase(System.Type, System.String, System.Collections.Generic.List<System.Type>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Reflection.Create, Reflection_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "MethodBase",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Serialiser.Create.MethodBase(System.Type, System.String, System.Collections.Generic.List<System.String>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Reflection.Create, Reflection_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "MethodBase",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Geometry.Query.ExternalEdges(BH.oM.Geometry.Mesh)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "ExternalEdges",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Mesh\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Geometry.Query.Normal(BH.oM.Geometry.Mesh, BH.oM.Geometry.Face, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "Normal",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Face\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Mesh\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Query.IsVertical(BH.oM.Geometry.Line)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "IsVertical",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Line\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Geometry.Modify.Project(BH.oM.Geometry.Plane, BH.oM.Geometry.Plane, BH.oM.Geometry.Vector)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Modify, Geometry_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "ProjectAlong",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Plane\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Plane\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Forms.Compute.FilePathSelectionDialog(System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Forms.Compute, Forms_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "FilePathOpenDialog",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Query.Geometry(BH.oM.Structure.SectionProperties.SteelSection)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "Geometry",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.IGeometricalSection\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Query.DescriptionOrName(BH.oM.Structure.SurfaceProperties.ISurfaceProperty)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "DescriptionOrName",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.IProperty\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Query.DescriptionOrName(BH.oM.Structure.SectionProperties.ISectionProperty)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "DescriptionOrName",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.IProperty\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Query.MassPerMetre(BH.oM.Structure.SectionProperties.ISectionProperty)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Query, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "IMassPerMetre",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SectionProperties.ISectionProperty\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Create.PointForce(BH.oM.Structure.Loads.Loadcase, System.Collections.Generic.IEnumerable<BH.oM.Structure.Elements.Node>, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, BH.oM.Structure.Loads.LoadAxis, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "PointLoad",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.Loadcase\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.Node\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.LoadAxis\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Create.PointForce(BH.oM.Structure.Loads.Loadcase, BH.oM.Base.BHoMGroup<BH.oM.Structure.Elements.Node>, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, BH.oM.Structure.Loads.LoadAxis, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "PointLoad",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.Loadcase\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.BHoMGroup`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.Node\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.LoadAxis\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Adapters.Robot.Create.GeometricalLineLoad(BH.oM.Geometry.Line, BH.oM.Structure.Loads.Loadcase, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, BH.oM.Geometry.Vector, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "GeometricalLineLoad",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Line\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.Loadcase\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Adapters.Robot.Create.GeometricalLineLoad(BH.oM.Geometry.Line, BH.oM.Structure.Loads.Loadcase, BH.oM.Geometry.Vector, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "GeometricalLineLoad",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Line\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.Loadcase\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Adapters.Robot.Create.ContourLoad(BH.oM.Geometry.Polyline, BH.oM.Geometry.Vector, BH.oM.Structure.Loads.Loadcase, BH.oM.Structure.Loads.LoadAxis, System.Boolean, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "ContourLoad",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.Loadcase\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.LoadAxis\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Create.AreaUniformalyDistributedLoad(BH.oM.Structure.Loads.Loadcase, BH.oM.Geometry.Vector, BH.oM.Base.BHoMGroup<BH.oM.Structure.Elements.IAreaElement>, BH.oM.Structure.Loads.LoadAxis, System.Boolean, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "AreaUniformlyDistributedLoad",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.Loadcase\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.BHoMGroup`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.IAreaElement\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.LoadAxis\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Create.AreaUniformalyDistributedLoad(BH.oM.Structure.Loads.Loadcase, BH.oM.Geometry.Vector, System.Collections.Generic.IEnumerable<BH.oM.Structure.Elements.IAreaElement>, BH.oM.Structure.Loads.LoadAxis, System.Boolean, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "AreaUniformlyDistributedLoad",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.Loadcase\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Elements.IAreaElement\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.Loads.LoadAxis\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Create.Panel(BH.oM.Geometry.PlanarSurface, BH.oM.Structure.SurfaceProperties.ISurfaceProperty, BH.oM.Geometry.Vector, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "Panel",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.PlanarSurface\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SurfaceProperties.ISurfaceProperty\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Create.Panel(System.Collections.Generic.List<BH.oM.Geometry.ICurve>, BH.oM.Structure.SurfaceProperties.ISurfaceProperty, BH.oM.Geometry.Vector, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "Panel",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SurfaceProperties.ISurfaceProperty\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Create.Panel(BH.oM.Geometry.ICurve, System.Collections.Generic.List<BH.oM.Geometry.ICurve>, BH.oM.Structure.SurfaceProperties.ISurfaceProperty, BH.oM.Geometry.Vector, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Create, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "Panel",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Structure.SurfaceProperties.ISurfaceProperty\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Compute.IntegrateSection(System.Collections.Generic.List<BH.oM.Geometry.ICurve>, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Structure.Compute, Structure_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "IntegrateSection",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\", \"_bhomVersion\" : \"6.1\" }], \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Structure.Query.Position(BH.oM.Structure.Elements.Node)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Analytical.Query, Analytical_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "Geometry",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Analytical.Elements.INode\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Base.Query.IsNumericIntegralType(System.Type)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "IsNumericIntegralType",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      },
+      "BH.Engine.Base.Query.IsNumeric(System.Type)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Base.Query, BHoM_Engine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"6.1\" }",
+        "MethodName": "IsNumeric",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"6.1\" }"
+        ],
+        "_bhomVersion": "6.1"
+      }
+    },
+    "ToOld": {
+      
+    }
+  },
+  "Property": {
+    "ToNew": {
+      "BH.oM.Environment.Elements.Mesh.BounderyZones": "BH.oM.Environment.Elements.Mesh.BoundaryZones"
+    },
+    "ToOld": {
+      "BH.oM.Environment.Elements.Mesh.BoundaryZones": "BH.oM.Environment.Elements.Mesh.BounderyZones"
+    }
+  },
+  "Dataset": {
+    "ToNew": {
+      "Materials\\MaterialsEurope\\Concrete": "Structure\\Materials\\MaterialsEurope\\Concrete",
+      "Materials\\MaterialsEurope\\Rebar": "Structure\\Materials\\MaterialsEurope\\Rebar",
+      "Materials\\MaterialsEurope\\Steel(Grade)": "Structure\\Materials\\MaterialsEurope\\Steel(Grade)",
+      "Materials\\MaterialsEurope\\Steel": "Structure\\Materials\\MaterialsEurope\\Steel",
+      "Materials\\MaterialsUSA\\Concrete": "Structure\\Materials\\MaterialsUSA\\Concrete",
+      "Materials\\MaterialsUSA\\Steel": "Structure\\Materials\\MaterialsUSA\\Steel",
+      "SectionProperties\\EU_SteelSections\\CHS": "Structure\\SectionProperties\\EU_SteelSections\\CHS",
+      "SectionProperties\\EU_SteelSections\\HE+": "Structure\\SectionProperties\\EU_SteelSections\\HE+",
+      "SectionProperties\\EU_SteelSections\\HE": "Structure\\SectionProperties\\EU_SteelSections\\HE",
+      "SectionProperties\\EU_SteelSections\\IPE+": "Structure\\SectionProperties\\EU_SteelSections\\IPE+",
+      "SectionProperties\\EU_SteelSections\\IPE": "Structure\\SectionProperties\\EU_SteelSections\\IPE",
+      "SectionProperties\\EU_SteelSections\\L-eq": "Structure\\SectionProperties\\EU_SteelSections\\L-eq",
+      "SectionProperties\\EU_SteelSections\\L": "Structure\\SectionProperties\\EU_SteelSections\\L",
+      "SectionProperties\\EU_SteelSections\\RHS": "Structure\\SectionProperties\\EU_SteelSections\\RHS",
+      "SectionProperties\\EU_SteelSections\\SHS": "Structure\\SectionProperties\\EU_SteelSections\\SHS",
+      "SectionProperties\\EU_SteelSections\\UPE": "Structure\\SectionProperties\\EU_SteelSections\\UPE",
+      "SectionProperties\\UK_SteelSections\\CHS": "Structure\\SectionProperties\\UK_SteelSections\\CHS",
+      "SectionProperties\\UK_SteelSections\\L": "Structure\\SectionProperties\\UK_SteelSections\\L",
+      "SectionProperties\\UK_SteelSections\\Leq": "Structure\\SectionProperties\\UK_SteelSections\\Leq",
+      "SectionProperties\\UK_SteelSections\\PFC": "Structure\\SectionProperties\\UK_SteelSections\\PFC",
+      "SectionProperties\\UK_SteelSections\\RHS": "Structure\\SectionProperties\\UK_SteelSections\\RHS",
+      "SectionProperties\\UK_SteelSections\\SHS": "Structure\\SectionProperties\\UK_SteelSections\\SHS",
+      "SectionProperties\\UK_SteelSections\\TUB": "Structure\\SectionProperties\\UK_SteelSections\\TUB",
+      "SectionProperties\\UK_SteelSections\\TUC": "Structure\\SectionProperties\\UK_SteelSections\\TUC",
+      "SectionProperties\\UK_SteelSections\\UB": "Structure\\SectionProperties\\UK_SteelSections\\UB",
+      "SectionProperties\\UK_SteelSections\\UBP": "Structure\\SectionProperties\\UK_SteelSections\\UBP",
+      "SectionProperties\\UK_SteelSections\\UC": "Structure\\SectionProperties\\UK_SteelSections\\UC",
+      "SectionProperties\\US_SteelSections\\HP": "Structure\\SectionProperties\\US_SteelSections\\HP",
+      "SectionProperties\\US_SteelSections\\HSS": "Structure\\SectionProperties\\US_SteelSections\\HSS",
+      "SectionProperties\\US_SteelSections\\L": "Structure\\SectionProperties\\US_SteelSections\\L",
+      "SectionProperties\\US_SteelSections\\MT": "Structure\\SectionProperties\\US_SteelSections\\MT",
+      "SectionProperties\\US_SteelSections\\PIPE": "Structure\\SectionProperties\\US_SteelSections\\PIPE",
+      "SectionProperties\\US_SteelSections\\W": "Structure\\SectionProperties\\US_SteelSections\\W",
+      "SectionProperties\\US_SteelSections\\WT": "Structure\\SectionProperties\\US_SteelSections\\WT",
+      "Gradients\\Gradients": "Graphics\\Gradients\\Gradients"
+    },
+    "ToOld": {
+      "Structure\\Materials\\MaterialsEurope\\Concrete": "Materials\\MaterialsEurope\\Concrete",
+      "Structure\\Materials\\MaterialsEurope\\Rebar": "Materials\\MaterialsEurope\\Rebar",
+      "Structure\\Materials\\MaterialsEurope\\Steel(Grade)": "Materials\\MaterialsEurope\\Steel(Grade)",
+      "Structure\\Materials\\MaterialsEurope\\Steel": "Materials\\MaterialsEurope\\Steel",
+      "Structure\\Materials\\MaterialsUSA\\Concrete": "Materials\\MaterialsUSA\\Concrete",
+      "Structure\\Materials\\MaterialsUSA\\Steel": "Materials\\MaterialsUSA\\Steel",
+      "Structure\\SectionProperties\\EU_SteelSections\\CHS": "SectionProperties\\EU_SteelSections\\CHS",
+      "Structure\\SectionProperties\\EU_SteelSections\\HE+": "SectionProperties\\EU_SteelSections\\HE+",
+      "Structure\\SectionProperties\\EU_SteelSections\\HE": "SectionProperties\\EU_SteelSections\\HE",
+      "Structure\\SectionProperties\\EU_SteelSections\\IPE+": "SectionProperties\\EU_SteelSections\\IPE+",
+      "Structure\\SectionProperties\\EU_SteelSections\\IPE": "SectionProperties\\EU_SteelSections\\IPE",
+      "Structure\\SectionProperties\\EU_SteelSections\\L-eq": "SectionProperties\\EU_SteelSections\\L-eq",
+      "Structure\\SectionProperties\\EU_SteelSections\\L": "SectionProperties\\EU_SteelSections\\L",
+      "Structure\\SectionProperties\\EU_SteelSections\\RHS": "SectionProperties\\EU_SteelSections\\RHS",
+      "Structure\\SectionProperties\\EU_SteelSections\\SHS": "SectionProperties\\EU_SteelSections\\SHS",
+      "Structure\\SectionProperties\\EU_SteelSections\\UPE": "SectionProperties\\EU_SteelSections\\UPE",
+      "Structure\\SectionProperties\\UK_SteelSections\\CHS": "SectionProperties\\UK_SteelSections\\CHS",
+      "Structure\\SectionProperties\\UK_SteelSections\\L": "SectionProperties\\UK_SteelSections\\L",
+      "Structure\\SectionProperties\\UK_SteelSections\\Leq": "SectionProperties\\UK_SteelSections\\Leq",
+      "Structure\\SectionProperties\\UK_SteelSections\\PFC": "SectionProperties\\UK_SteelSections\\PFC",
+      "Structure\\SectionProperties\\UK_SteelSections\\RHS": "SectionProperties\\UK_SteelSections\\RHS",
+      "Structure\\SectionProperties\\UK_SteelSections\\SHS": "SectionProperties\\UK_SteelSections\\SHS",
+      "Structure\\SectionProperties\\UK_SteelSections\\TUB": "SectionProperties\\UK_SteelSections\\TUB",
+      "Structure\\SectionProperties\\UK_SteelSections\\TUC": "SectionProperties\\UK_SteelSections\\TUC",
+      "Structure\\SectionProperties\\UK_SteelSections\\UB": "SectionProperties\\UK_SteelSections\\UB",
+      "Structure\\SectionProperties\\UK_SteelSections\\UBP": "SectionProperties\\UK_SteelSections\\UBP",
+      "Structure\\SectionProperties\\UK_SteelSections\\UC": "SectionProperties\\UK_SteelSections\\UC",
+      "Structure\\SectionProperties\\US_SteelSections\\HP": "SectionProperties\\US_SteelSections\\HP",
+      "Structure\\SectionProperties\\US_SteelSections\\HSS": "SectionProperties\\US_SteelSections\\HSS",
+      "Structure\\SectionProperties\\US_SteelSections\\L": "SectionProperties\\US_SteelSections\\L",
+      "Structure\\SectionProperties\\US_SteelSections\\MT": "SectionProperties\\US_SteelSections\\MT",
+      "Structure\\SectionProperties\\US_SteelSections\\PIPE": "SectionProperties\\US_SteelSections\\PIPE",
+      "Structure\\SectionProperties\\US_SteelSections\\W": "SectionProperties\\US_SteelSections\\W",
+      "Structure\\SectionProperties\\US_SteelSections\\WT": "SectionProperties\\US_SteelSections\\WT",
+      "Graphics\\Gradients\\Gradients": "Gradients\\Gradients"
+    },
+    "MessageForDeleted": {
+      
+    }
+  },
+  "MessageForDeleted": {
+    "BH.Engine.Structure.Query.LoadType(BH.oM.Structure.Loads.PointVelocity)": "Old method for enum not used in any part of the code. Purpose to easy type switching which is better solved by dynamic casting.",
+    "BH.Engine.Structure.Query.LoadType(BH.oM.Structure.Loads.PointLoad)": "Old method for enum not used in any part of the code. Purpose to easy type switching which is better solved by dynamic casting.",
+    "BH.Engine.Structure.Query.LoadType(BH.oM.Structure.Loads.PointDisplacement)": "Old method for enum not used in any part of the code. Purpose to easy type switching which is better solved by dynamic casting.",
+    "BH.Engine.Structure.Query.LoadType(BH.oM.Structure.Loads.PointAcceleration)": "Old method for enum not used in any part of the code. Purpose to easy type switching which is better solved by dynamic casting.",
+    "BH.Engine.Structure.Query.LoadType(BH.oM.Structure.Loads.GravityLoad)": "Old method for enum not used in any part of the code. Purpose to easy type switching which is better solved by dynamic casting.",
+    "BH.Engine.Structure.Query.LoadType(BH.oM.Structure.Loads.BarVaryingDistributedLoad)": "Old method for enum not used in any part of the code. Purpose to easy type switching which is better solved by dynamic casting.",
+    "BH.Engine.Structure.Query.LoadType(BH.oM.Structure.Loads.BarUniformlyDistributedLoad)": "Old method for enum not used in any part of the code. Purpose to easy type switching which is better solved by dynamic casting.",
+    "BH.Engine.Structure.Query.LoadType(BH.oM.Structure.Loads.BarUniformTemperatureLoad)": "Old method for enum not used in any part of the code. Purpose to easy type switching which is better solved by dynamic casting.",
+    "BH.Engine.Structure.Query.LoadType(BH.oM.Structure.Loads.BarPrestressLoad)": "Old method for enum not used in any part of the code. Purpose to easy type switching which is better solved by dynamic casting.",
+    "BH.Engine.Structure.Query.LoadType(BH.oM.Structure.Loads.BarPointLoad)": "Old method for enum not used in any part of the code. Purpose to easy type switching which is better solved by dynamic casting.",
+    "BH.Engine.Structure.Query.LoadType(BH.oM.Structure.Loads.AreaUniformlyDistributedLoad)": "Old method for enum not used in any part of the code. Purpose to easy type switching which is better solved by dynamic casting.",
+    "BH.Engine.Structure.Query.LoadType(BH.oM.Structure.Loads.AreaUniformTemperatureLoad)": "Old method for enum not used in any part of the code. Purpose to easy type switching which is better solved by dynamic casting.",
+    "BH.Engine.Structure.Query.CaseType(BH.oM.Structure.Loads.LoadCombination)": "Old method for enum not used in any part of the code. Purpose to easy type switching which is better solved by dynamic casting.",
+    "BH.Engine.Structure.Query.CaseType(BH.oM.Structure.Loads.Loadcase)": "Old method for enum not used in any part of the code. Purpose to easy type switching which is better solved by dynamic casting.",
+    "BH.Engine.Structure.Query.DampingRatio(BH.oM.Physical.Materials.Material)": "Method from prototype stage of material refactoring removed. To access the damping ratio from a Physical material, extract the structural material fragment and access the Damping ratio from it.",
+    "BH.Engine.Structure.Results.Create.MeshResult(BH.oM.Structure.Results.MeshResultSmoothingType, BH.oM.Structure.Results.MeshResultLayer, System.Double, BH.oM.Structure.Results.MeshResultType, BH.oM.Geometry.CoordinateSystem.Cartesian, System.Collections.Generic.IEnumerable<System.Object>, System.Collections.Generic.IEnumerable<System.Object>)": "Filter requests have been disabled from use for pulling forces from analysis models. Please use the MeshResultRequest instead.",
+    "BH.Engine.Structure.Query.EmbodiedCarbon(BH.oM.Structure.Elements.Panel)": "Method removed as part of removal of EmbodiedCarbon from MaterialFragments to avoid conflicts and overlap with LCA_Toolkit.",
+    "BH.Engine.Structure.Query.EmbodiedCarbon(BH.oM.Structure.Elements.Bar)": "Method removed as part of removal of EmbodiedCarbon from MaterialFragments to avoid conflicts and overlap with LCA_Toolkit.",
+    "BH.Engine.Structure.Create.TieReinforcement(System.Double, System.Double, System.Int32)": "Method removed as part of complete refactoring of reinforcement handling in Structure_oM.",
+    "BH.Engine.Structure.Create.LayerReinforcement(System.Double, System.Double, System.Int32, System.Boolean)": "Method removed as part of complete refactoring of reinforcement handling in Structure_oM.",
+    "BH.Engine.Structure.Create.PerimeterReinforcement(System.Double, System.Int32, BH.oM.Structure.SectionProperties.Reinforcement.ReinforcementPattern) ": "Method removed as part of complete refactoring of reinforcement handling in Structure_oM.",
+    "BH.Engine.Structure.Create.Panel(BH.oM.Geometry.ICurve, System.Collections.Generic.List<BH.oM.Structure.Elements.Opening>, BH.oM.Structure.SurfaceProperties.ISurfaceProperty, System.String)": "Method that use a mixture of geometry and objects between edges and openings removed.",
+    "BH.Engine.Structure.Create.Panel(System.Collections.Generic.List<BH.oM.Structure.Elements.Edge>, System.Collections.Generic.List<BH.oM.Geometry.ICurve>, BH.oM.Structure.SurfaceProperties.ISurfaceProperty, System.String)": "Method that use a mixture of geometry and objects between edges and openings removed.",
+    "BH.Engine.MachineLearning.Query.ToolkitName()": "The MachineLearning_Toolkit has been removed from installers and is not currently deployed. If you would like to experiment with the latest MachineLearning_Toolkit capabilities, please compile the toolkit from source. Please reach out to a member of the development team if you would like MachineLearning_Toolkit to be redeployed.",
+    "BH.Engine.MachineLearning.Compute.InstallPythonEnv_ML(System.Boolean)": "The MachineLearning_Toolkit has been removed from installers and is not currently deployed. If you would like to experiment with the latest MachineLearning_Toolkit capabilities, please compile the toolkit from source. Please reach out to a member of the development team if you would like MachineLearning_Toolkit to be redeployed.",
+    "BH.Engine.Adapters.IES.Convert.ToIES(BH.oM.Geometry.Point, BH.oM.IES.Settings.SettingsIES)": "This method has been moved into the adapter to be handled internally and prevent UI clutter of methods. If this method is needed for script work independently of the adapter, please raise an issue at: https://github.com/BHoM/IES_Toolkit",
+    "BH.Engine.Adapters.IES.Convert.ToIES(System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>, BH.oM.IES.Settings.SettingsIES)": "This method has been moved into the adapter to be handled internally and prevent UI clutter of methods. If this method is needed for script work independently of the adapter, please raise an issue at: https://github.com/BHoM/IES_Toolkit",
+    "BH.Engine.Adapters.IES.Convert.ToIES(BH.oM.Environment.Elements.OpeningType, BH.oM.IES.Settings.SettingsIES)": "This method has been moved into the adapter to be handled internally and prevent UI clutter of methods. If this method is needed for script work independently of the adapter, please raise an issue at: https://github.com/BHoM/IES_Toolkit",
+    "BH.Engine.Adapters.IES.Convert.ToIES(BH.oM.Environment.Elements.Opening, BH.oM.Environment.Elements.Panel, BH.oM.IES.Settings.SettingsIES)": "This method has been moved into the adapter to be handled internally and prevent UI clutter of methods. If this method is needed for script work independently of the adapter, please raise an issue at: https://github.com/BHoM/IES_Toolkit",
+    "BH.Engine.Adapters.IES.Convert.ToIES(BH.oM.Environment.Elements.Opening, BH.oM.Environment.Elements.Panel, System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>, BH.oM.IES.Settings.SettingsIES)": "This method has been moved into the adapter to be handled internally and prevent UI clutter of methods. If this method is needed for script work independently of the adapter, please raise an issue at: https://github.com/BHoM/IES_Toolkit",
+    "BH.Engine.Adapters.IES.Convert.FromIES(System.String, BH.oM.IES.Settings.SettingsIES)": "This method has been moved into the adapter to be handled internally and prevent UI clutter of methods. If this method is needed for script work independently of the adapter, please raise an issue at: https://github.com/BHoM/IES_Toolkit",
+    "BH.Engine.Adapters.IES.Convert.FromIES(System.Collections.Generic.List<System.String>, BH.oM.IES.Settings.SettingsIES)": "This method has been moved into the adapter to be handled internally and prevent UI clutter of methods. If this method is needed for script work independently of the adapter, please raise an issue at: https://github.com/BHoM/IES_Toolkit",
+    "BH.Engine.Adapters.IES.Convert.FromIES(System.Collections.Generic.List<System.String>, System.String, BH.oM.IES.Settings.SettingsIES)": "This method has been moved into the adapter to be handled internally and prevent UI clutter of methods. If this method is needed for script work independently of the adapter, please raise an issue at: https://github.com/BHoM/IES_Toolkit",
+    "BH.Engine.Adapters.IES.Convert.FromIESOpeningType(System.String, BH.oM.IES.Settings.SettingsIES)": "This method has been moved into the adapter to be handled internally and prevent UI clutter of methods. If this method is needed for script work independently of the adapter, please raise an issue at: https://github.com/BHoM/IES_Toolkit",
+    "BH.Engine.Adapters.IES.Convert.FromIESShading(System.Collections.Generic.List<System.String>, BH.oM.IES.Settings.SettingsIES, BH.oM.Environment.Elements.PanelType)": "This method has been moved into the adapter to be handled internally and prevent UI clutter of methods. If this method is needed for script work independently of the adapter, please raise an issue at: https://github.com/BHoM/IES_Toolkit",
+    "BH.Engine.Adapters.IES.Convert.ToIESShading(System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>, BH.oM.IES.Settings.SettingsIES)": "This method has been moved into the adapter to be handled internally and prevent UI clutter of methods. If this method is needed for script work independently of the adapter, please raise an issue at: https://github.com/BHoM/IES_Toolkit",
+    "BH.Engine.Adapters.IES.Query.Polyline(BH.oM.Geometry.BoundingBox)": "This method has been moved into the adapter to be handled internally and prevent UI clutter of methods. If this method is needed for script work independently of the adapter, please raise an issue at: https://github.com/BHoM/IES_Toolkit",
+    "BH.Engine.Adapters.IES.Modify.RepairOpening(BH.oM.Environment.Elements.Opening, BH.oM.Environment.Elements.Panel, BH.oM.Environment.Elements.PanelType)": "This method has been moved into the adapter to be handled internally and prevent UI clutter of methods. If this method is needed for script work independently of the adapter, please raise an issue at: https://github.com/BHoM/IES_Toolkit",
+    "BH.Engine.Adapters.IES.Modify.RepairOpening(BH.oM.Environment.Elements.Opening, BH.oM.Environment.Elements.Panel, System.Collections.Generic.List<BH.oM.Environment.Elements.Panel>)": "This method has been moved into the adapter to be handled internally and prevent UI clutter of methods. If this method is needed for script work independently of the adapter, please raise an issue at: https://github.com/BHoM/IES_Toolkit",
+    "BH.Revit.Engine.Utility.Compute.DiffJsonFiles(System.String, System.String, System.Boolean, System.Boolean, System.Boolean)": "Diffing has been upgraded to a new version and moved to a dedicated toolset to be found in the browser under Diffing. Please note that breaking changes have been introduced, therefore it is recommended to use BHoM 6.0 for the maintenance of legacy workflows.",
+    "BH.Revit.Engine.Utility.Compute.PushCategoryToJsonFile(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.Category>, System.String, BH.oM.Adapters.Revit.Enums.Discipline, System.Boolean, System.Boolean, Autodesk.Revit.DB.RevitLinkInstance, System.Boolean)": "Diffing has been upgraded to a new version and moved to a dedicated toolset to be found in the browser under Diffing. Please note that breaking changes have been introduced, therefore it is recommended to use BHoM 6.0 for the maintenance of legacy workflows.",
+    "BH.Revit.Engine.Utility.Compute.PushToJsonFile(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.Element>, System.String, BH.oM.Adapters.Revit.Enums.Discipline, System.Boolean)": "Diffing has been upgraded to a new version and moved to a dedicated toolset to be found in the browser under Diffing. Please note that breaking changes have been introduced, therefore it is recommended to use BHoM 6.0 for the maintenance of legacy workflows.",
+    "BH.Revit.oM.Utility.Logging.DiffJsonsLogItem": "Diffing has been upgraded to a new version and moved to a dedicated toolset to be found in the browser under Diffing. Please note that breaking changes have been introduced, therefore it is recommended to use BHoM 6.0 for the maintenance of legacy workflows.",
+    "BH.Engine.Adapters.Robot.Compute.UpgradeVersion(BH.oM.Adapters.Robot.GeometricalLineLoad)": "Method no longer required as upgrading of class is now handled by central versioning system. If this method was used in a script, it can be bypassed as the upgrade already will have happened.",
+    "BH.Engine.Adapters.Robot.Compute.UpgradeVersion(System.Collections.Generic.List<BH.oM.Adapters.Robot.GeometricalLineLoad>)": "Method no longer required as upgrading of class is now handled by central versioning system. If this method was used in a script, it can be bypassed as the upgrade already will have happened.",
+    "BH.Engine.Adapters.Robot.Compute.UpgradeVersion(BH.oM.Adapters.Robot.ContourLoad)": "Method no longer required as upgrading of class is now handled by central versioning system. If this method was used in a script, it can be bypassed as the upgrade already will have happened.",
+    "BH.Engine.Adapters.Robot.Compute.UpgradeVersion(System.Collections.Generic.List<BH.oM.Adapters.Robot.ContourLoad>)": "Method no longer required as upgrading of class is now handled by central versioning system. If this method was used in a script, it can be bypassed as the upgrade already will have happened."
+  },
+  "MessageForNoUpgrade": {
+    "BH.Engine.Structure.Create.Waffle(System.String, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, System.Double, BH.oM.Structure.SurfaceProperties.PanelType)": "Old incomplete create method replaced with automatic proeprty assignment method and not able to be automatically upgraded due to incompatible parameter names. Please replace component with a default create method.",
+    "BH.Engine.Structure.Create.Ribbed(System.String, System.Double, System.Double, System.Double, System.Double, BH.oM.Structure.SurfaceProperties.PanelDirection, BH.oM.Structure.SurfaceProperties.PanelType)": "Old incomplete create method replaced with automatic proeprty assignment method and not able to be automatically upgraded due to incompatible parameter names. Please replace component with a default create method.",
+    "BH.Engine.Structure.Create.BarRelease(BH.oM.Structure.Constraints.Constraint6DOF, BH.oM.Structure.Constraints.Constraint6DOF, System.String)": "Old incomplete create method replaced with automatic proeprty assignment method and not able to be automatically upgraded due to incompatible parameter names. Please replace component with a default create method.",
+    "BH.Engine.Structure.Create.PanelFreeForm(BH.oM.Geometry.ISurface)": "Old incomplete create method replaced with automatic proeprty assignment method and not able to be automatically upgraded due to incompatible method name. Please replace component with a default create method.",
+    "BH.Engine.Structure.Create.RigidLink(BH.oM.Structure.Elements.Node, System.Collections.Generic.IEnumerable<BH.oM.Structure.Elements.Node>, BH.oM.Structure.Constraints.LinkConstraint, System.String)": "Old incomplete create method replaced with automatic proeprty assignment method and not able to be automatically upgraded due to incompatible parameter names. Please replace component with a default create method.",
+    "BH.Engine.Structure.Create.AreaUniformTemperatureLoad(BH.oM.Structure.Loads.Loadcase, System.Double, BH.oM.Base.BHoMGroup<BH.oM.Structure.Elements.IAreaElement>, BH.oM.Structure.Loads.LoadAxis, System.Boolean, System.String)": "Old incomplete create method replaced with automatic proeprty assignment method and not able to be automatically upgraded due to incompatible parameter names. Please replace component with a default create method.",
+    "BH.Engine.CableNetDesign.Compute.CalculateRadialHorizontalLengths(System.Collections.Generic.List<System.Collections.Generic.List<BH.oM.Geometry.Point>>)": "Helper method for calculation of fixed plan relaxation with no real usecase outside the particular algorithm made private. Please raise an issue in the StructuralEngineering_Toolkit if this method was required for any particular workflow.",
+    "BH.Engine.Structure.Trusses.Create.Truss2DSettings(System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Double, System.Boolean, System.Boolean, BH.oM.Structure.Elements.BeamSpanType)": "Settings for creating Truss2D has been migrated with no explicit Create method. PLease use the default constructor for BH.oM.Structure.Generative.Truss2DInputs instead."
+  }
+}
