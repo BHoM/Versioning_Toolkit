@@ -1,38 +1,381 @@
-﻿{
+{
   "Namespace": {
     "ToNew": {
+      "BH.Engine.Geometry.Offset": "BH.Engine.Geometry.Clipper"
     },
     "ToOld": {
+      "BH.Engine.Geometry.Clipper": "BH.Engine.Geometry.Offset"
     }
   },
   "Type": {
     "ToNew": {
-
+      "BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases": "BH.oM.LifeCycleAssessment.Module",
+      "BH.oM.LifeCycleAssessment.EnvironmentalMetrics": "BH.oM.LifeCycleAssessment.MetricType",
+      "BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalMetric": "BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalMetric",
+      "BH.oM.LifeCycleAssessment.ILifeCycleAssessmentPhaseData": "BH.oM.LifeCycleAssessment.Interfaces.ILifeCycleAssessmentModuleData`1[[System.Collections.Generic.IDictionary`2[[BH.oM.LifeCycleAssessment.Module],[System.Double]]]]"
     },
     "ToOld": {
-
+      "BH.oM.LifeCycleAssessment.Module": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases",
+      "BH.oM.LifeCycleAssessment.MetricType": "BH.oM.LifeCycleAssessment.EnvironmentalMetrics",
+      "BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalMetric": "BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalMetric",
+      "BH.oM.LifeCycleAssessment.Interfaces.ILifeCycleAssessmentModuleData`1[[System.Collections.Generic.IDictionary`2[[BH.oM.LifeCycleAssessment.Module],[System.Double]]]]": "BH.oM.LifeCycleAssessment.ILifeCycleAssessmentPhaseData"
     }
   },
   "Method": {
     "ToNew": {
-
+      "BH.Engine.UI.Compute.OutputAccessor(System.Type, System.Type)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.UI.Compute, UI_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "OutputAccessor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Engine.Security.Query.ViewCone(BH.oM.Security.Elements.CameraDevice)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Security.Query, Security_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "ViewCone",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Security.Elements.CameraDevice\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.Tagging.Query.FeatureGroups(BH.Revit.oM.Tagging.IModelData, BH.Revit.oM.Tagging.ExistingTagsInfo, System.Collections.Generic.List<Autodesk.Revit.DB.ElementId>, BH.Revit.oM.Tagging.Settings.RevitGlobalTagSettings)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Tagging.Query, Revit_Tagging_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "FeatureGroups",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.IModelData\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.ExistingTagsInfo\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.ItemInLinkId\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.Settings.RevitGlobalTagSettings\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.Tagging.Query.CurveHostGroups(BH.Revit.Engine.Tagging.FeatureGroups, System.Collections.Generic.List<Autodesk.Revit.DB.ElementId>, BH.Revit.oM.Tagging.IModelData, System.Collections.Generic.List<BH.Revit.oM.Tagging.ItemInLinkId>, BH.Revit.Engine.Tagging.ContextElementGroups, BH.Revit.oM.Tagging.Settings.RevitGlobalTagSettings)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Tagging.Query, Revit_Tagging_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "CurveHostGroups",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Tagging.FeatureGroups, Revit_Tagging_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.ItemInLinkId\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.IModelData\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.ItemInLinkId\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Tagging.ContextElementGroups, Revit_Tagging_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.Settings.RevitGlobalTagSettings\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.Tagging.Query.TagRotationAngle(Autodesk.Revit.DB.Element, BH.Revit.oM.Tagging.IModelData, BH.oM.Geometry.Vector)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Tagging.Query, Revit_Tagging_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "TagRotationAngle",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.IModelData\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Vector\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.Schematic.Compute.PlaceSymbolsInSpaces(Autodesk.Revit.UI.UIDocument, System.Collections.Generic.List<Autodesk.Revit.DB.Element>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "PlaceSymbolsInSpaces",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.UI.UIDocument, RevitAPIUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.ModelManagement.Compute.ExportToExcel(System.Collections.Generic.List<Autodesk.Revit.DB.ViewSchedule>, System.String, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ModelManagement.Compute, Revit_ModelManagement_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "ExportSchedulesToExcel",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ViewSchedule, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ExportColumnHeaders, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.ModelManagement.FieldDelimiterType\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ExportTextQualifier, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.Lighting.Convert.LuminaireToText(BH.oM.Lighting.Elements.Luminaire)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Lighting.Convert, Revit_Lighting_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "LuminaireToText",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Lighting.Elements.Luminaire\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Lighting.Enums.TextFormat\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.Lighting.Compute.LightingPowerDensity(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.Mechanical.Space>, System.String, System.String, System.String, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Lighting.Compute, Revit_Lighting_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "LightingPowerDensity",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Mechanical.Space, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.Lighting.Compute.LightingFixtureToText(System.Collections.Generic.List<Autodesk.Revit.DB.FamilyInstance>, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Lighting.Compute, Revit_Lighting_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "LightingFixtureToText",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FamilyInstance, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Lighting.Enums.TextFormat\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.Lighting.Compute.CameraViewsToText(System.Collections.Generic.List<Autodesk.Revit.DB.View3D>, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Lighting.Compute, Revit_Lighting_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "CameraViewsTo3dsText",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.View3D, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.Lighting.Compute.LinkedCameraViewsToText(Autodesk.Revit.DB.RevitLinkInstance)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Lighting.Compute, Revit_Lighting_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "LinkedCameraViewsTo3dsText",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.RevitLinkInstance, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.Documentation.Compute.ApplyViewFilters(System.Collections.Generic.List<Autodesk.Revit.DB.ParameterFilterElement>, System.Boolean, System.Collections.Generic.List<Autodesk.Revit.DB.View>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Documentation.Compute, Revit_Documentation_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "ApplyViewFilters",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ParameterFilterElement, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.View, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.UI.Query.Label(Autodesk.Revit.DB.ForgeTypeId, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Query, Revit_Core_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "Label",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ForgeTypeId, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.UI.Query.Label(Autodesk.Revit.DB.ForgeTypeId)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Query, Revit_Core_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "Label",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ForgeTypeId, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.Core.Query.PipeSectionProperty(Autodesk.Revit.DB.Plumbing.Pipe, BH.oM.Adapters.Revit.Settings.RevitSettings)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Query, Revit_Core_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "PipeSectionProperty",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Plumbing.Pipe, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Settings.RevitSettings\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }, { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.UI.Query.UnitFromSpec(Autodesk.Revit.DB.ForgeTypeId, Autodesk.Revit.DB.Document)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Query, Revit_Core_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "UnitFromSpec",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ForgeTypeId, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.TotalMaterialBreakdown(System.Collections.Generic.IEnumerable<BH.oM.LifeCycleAssessment.Results.MaterialResult>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "TotalMaterialBreakdown",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Results.MaterialResult\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.TotalMaterialBreakdown(System.Collections.Generic.IEnumerable<BH.oM.LifeCycleAssessment.Results.IElementResult<BH.oM.LifeCycleAssessment.Results.MaterialResult>>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "TotalMaterialBreakdown",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Results.IElementResult`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Results.MaterialResult\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.CTotal(BH.oM.LifeCycleAssessment.ILifeCycleAssessmentPhaseData)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "CTotal",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Interfaces.ILifeCycleAssessmentModuleData`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IDictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Module\", \"_bhomVersion\" : \"8.2\" }, { \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.BTotal(BH.oM.LifeCycleAssessment.ILifeCycleAssessmentPhaseData)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "BTotal",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Interfaces.ILifeCycleAssessmentModuleData`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IDictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Module\", \"_bhomVersion\" : \"8.2\" }, { \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.ATotal(BH.oM.LifeCycleAssessment.ILifeCycleAssessmentPhaseData)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "ATotal",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Interfaces.ILifeCycleAssessmentModuleData`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IDictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Module\", \"_bhomVersion\" : \"8.2\" }, { \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.Total(BH.oM.LifeCycleAssessment.ILifeCycleAssessmentPhaseData)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "Total",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Interfaces.ILifeCycleAssessmentModuleData`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IDictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Module\", \"_bhomVersion\" : \"8.2\" }, { \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.SumPhaseDataValues(System.Collections.Generic.IReadOnlyList<BH.oM.LifeCycleAssessment.ILifeCycleAssessmentPhaseData>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "SumModuleDataValues",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IReadOnlyList`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Interfaces.ILifeCycleAssessmentModuleData`1\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IDictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Module\", \"_bhomVersion\" : \"8.2\" }, { \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.MaterialEndOfLifeTreatment(BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "MaterialEndOfLifeTreatment",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalFactorsProvider\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.FilterMetrics(System.Collections.Generic.IEnumerable<BH.oM.LifeCycleAssessment.ILifeCycleAssessmentPhaseData>, System.Collections.Generic.List<BH.oM.LifeCycleAssessment.EnvironmentalMetrics>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "FilterIndicators",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Interfaces.ILifeCycleAssessmentIndicator\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MetricType\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.FilteredMetrics(BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration, System.Collections.Generic.List<BH.oM.LifeCycleAssessment.EnvironmentalMetrics>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "FilteredFactors",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MetricType\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.EnvironmentalResults(BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalMetric, System.String, System.String, System.Double, BH.oM.LifeCycleAssessment.Configs.IEvaluationConfig)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "EnvironmentalResults",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalMetric\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Configs.IEvaluationConfig\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.EnvironmentalResults(BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration, System.Double, System.String, System.Collections.Generic.List<BH.oM.LifeCycleAssessment.EnvironmentalMetrics>, BH.oM.LifeCycleAssessment.Configs.IEvaluationConfig)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "EnvironmentalResults",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MetricType\", \"_bhomVersion\" : \"8.2\" }], \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Configs.IEvaluationConfig\", \"_bhomVersion\" : \"8.2\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      }
     },
     "ToOld": {
-
+      
     }
   },
   "Property": {
     "ToNew": {
-
+      
     },
     "ToOld": {
-
+      
+    }
+  },
+  "Dataset": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    },
+    "MessageForDeleted": {
+      
     }
   },
   "MessageForDeleted": {
-
+    "BH.Engine.Versioning.Query.UpgraderVersions()": "This method is not used by the versioning engine anymore and relies on a file system that has been replaced",
+    "BH.Engine.LifeCycleAssessment.Query.TotalFieldQuantity(System.Collections.Generic.List<BH.oM.Dimensional.IElementM>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Engine.LifeCycleAssessment.Query.TotalFieldQuantity(System.Collections.Generic.List<BH.oM.LifeCycleAssessment.Results.IEnvironmentalResult>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Engine.LifeCycleAssessment.Query.QuantityTypes(BH.oM.Dimensional.IElementM)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Engine.LifeCycleAssessment.Query.ElementEpds(BH.oM.Dimensional.IElementM)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Engine.LifeCycleAssessment.Query.ElementEnvironmentalMetrics(BH.oM.Dimensional.IElementM)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Engine.LifeCycleAssessment.Query.IPhaseDataValues(BH.oM.LifeCycleAssessment.ILifeCycleAssessmentPhaseData)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Query.MirroredTransform(Autodesk.Revit.DB.Transform, BH.Revit.oM.ElementRelationships.ElementItem)": "This object has been removed as a part of the major refactor and should not be needed any more.",
+    "BH.Engine.Tagging.Query.Contains(BH.oM.Geometry.Polyline, BH.oM.Geometry.Line, System.Double)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Engine.Tagging.Query.Contains(BH.oM.Geometry.Polyline, BH.oM.Geometry.Polyline, System.Double)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Engine.Tagging.Query.Intersects(BH.oM.Geometry.Polyline, BH.oM.Geometry.Line, System.Double)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it."
   },
   "MessageForNoUpgrade": {
-
+    
   }
 }
