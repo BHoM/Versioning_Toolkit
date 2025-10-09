@@ -22,20 +22,15 @@
 
 
 using BH.Engine.Base;
-using BH.Engine.Serialiser;
 using BH.Engine.Test;
 using BH.oM.Base;
-using BH.oM.Base.Debugging;
 using BH.oM.Test;
 using BH.oM.Test.Results;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using BH.Engine.Library;
 
 namespace BH.Test.Versioning
 {
@@ -48,9 +43,9 @@ namespace BH.Test.Versioning
         public static TestResult FromJsonDatasets(bool testAll = false)
         {
             string testFolder = @"C:\ProgramData\BHoM\Datasets\TestSets\Versioning";
-            List<string> versions = new List<string> { "8.2" };
-            if(testAll)
-                versions.AddRange(new List<string> { "8.1", "8.0", "7.3", "7.2", "7.1", "7.0", "6.3", "6.2", "6.1", "6.0", "5.3", "5.2", "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" });
+            List<string> versions = new List<string> { "8.3" };
+            if (testAll)
+                versions.AddRange(new List<string> { "8.2", "8.1", "8.0", "7.3", "7.2", "7.1", "7.0", "6.3", "6.2", "6.1", "6.0", "5.3", "5.2", "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" });
 
             string exceptions = "Grasshopper|Rhinoceros";
 
@@ -105,7 +100,7 @@ namespace BH.Test.Versioning
             //Test all datasets
             int nbDatasets = 0;
             string datasetsFile = Path.Combine(testFolder, "Datasets.txt");
-            if(File.Exists(datasetsFile))
+            if (File.Exists(datasetsFile))
             {
                 IEnumerable<string> datasets = File.ReadAllLines(datasetsFile);
                 results.AddRange(datasets.Select(x => FromDataset(x)));
@@ -116,7 +111,7 @@ namespace BH.Test.Versioning
             //Test all Adapters
             int nbAdapters = 0;
             string adaptersFile = Path.Combine(testFolder, "Adapters.json");
-            if(File.Exists(adaptersFile))
+            if (File.Exists(adaptersFile))
             {
                 IEnumerable<string> adapters = File.ReadAllLines(adaptersFile);
                 results.AddRange(adapters.Select(x => FromJsonItem(x, false))); //False - not a method, even though is a constructor - but doesn't need the method helpers implemented in the FromJsonItem method
@@ -195,7 +190,7 @@ namespace BH.Test.Versioning
                 Engine.Test.Create.PassResult($"No versioning errors for {dataset} found.");
 
             Engine.Base.Compute.ClearCurrentEvents();
-            var result = BH.Engine.Library.Query.ValidatePath(dataset);
+            string result = BH.Engine.Library.Query.ValidatePath(dataset);
 
             bool failure = BH.Engine.Base.Query.CurrentEvents().Any(x => x.Message.Contains("is not a valid") && x.Message.Contains("no valid upgrade"));
 
