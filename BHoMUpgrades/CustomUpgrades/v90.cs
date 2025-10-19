@@ -33,6 +33,34 @@ namespace BH.Upgraders
         /**** Public Methods                            ****/
         /***************************************************/
 
+        [VersioningTarget("BH.oM.BHoMAnalytics.ToolkitSettings")]
+        [VersioningTarget("BH.oM.Analytics.ToolkitSettings")]
+        public static Dictionary<string, object> UpgradeToolkitSettings(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>();
+            newVersion["_t"] = "BH.oM.BHoMAnalytics.ToolkitSettings";
+            newVersion["Name"] = oldVersion["Name"];
+            newVersion["ServerAddress"] = oldVersion["ServerAddress"];
+            newVersion["DatabaseName"] = oldVersion["DatabaseName"];
+            newVersion["CollectionName"] = oldVersion["CollectionName"];
+            newVersion["InitialisationMethod"] = oldVersion["InitialisationMethod"];
+
+            switch(oldVersion["InitialisationMethod"].ToString())
+            {
+                case "BH.Adapter.BHoMAnalytics.BHoMAnalyticsAdapter.InitialiseAnalytics":
+                    newVersion["InitialisationAssembly"] = "BHoMAnalytics_Adapter";
+                    break;
+                case "BH.Engine.Analytics.Initialise.InitialiseAnalytics":
+                    newVersion["InitialisationAssembly"] = "BuroHappold_BHoMAnalytics_Engine";
+                    break;
+                default:
+                    newVersion["InitialisationAssembly"] = null;
+                    break;
+            }
+
+            return newVersion;
+        }
+
         /***************************************************/
     }
 }
