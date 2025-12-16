@@ -137,7 +137,6 @@ LifeCycleAssessment\WasteRates\ASHRAE Standard Waste Rates
 LifeCycleAssessment\WasteRates\RICS Standard Waste Rates
 MEP\PlumbingFixtureFlow_LEED
 MEP\PlumbingFixtureUsage_LEED
-Planning\Labels\IssueLabels
 Revit\FamilyMaps\BHoM Default FamilyMaps
 Revit\ParameterMaps\BHoM Default ParameterMaps
 Revit\ParameterMaps\BuroHappold Default ParameterMaps
