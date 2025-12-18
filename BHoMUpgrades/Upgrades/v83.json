@@ -1,0 +1,306 @@
+{
+  "Namespace": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    }
+  },
+  "Type": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    }
+  },
+  "Method": {
+    "ToNew": {
+      "BH.Adapter.RFEM6.RFEM6Adapter(System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.RFEM6.RFEM6Adapter, RFEM6_Adapter, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": ".ctor",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Revit.Engine.Tagging.Query.FeatureGroups(BH.Revit.oM.Tagging.IModelData, BH.Revit.oM.Tagging.ExistingTagsInfo, System.Collections.Generic.List<BH.Revit.oM.Tagging.ItemInLinkId>, BH.Revit.oM.Tagging.Settings.RevitGlobalTagSettings)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Tagging.Query, Revit_Tagging_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "FeatureGroups",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.IModelData\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.ItemInLinkId\", \"_bhomVersion\" : \"8.3\" }], \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.Settings.RevitGlobalTagSettings\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Revit.Engine.Tagging.Query.ExistingTypicalTags(BH.Revit.Engine.Tagging.FeatureGroups, BH.Revit.oM.Tagging.ExistingTagsInfo, BH.Revit.oM.Tagging.IModelData)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Tagging.Query, Revit_Tagging_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "ExistingTypicalTags",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Tagging.FeatureGroups, Revit_Tagging_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.IModelData\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Revit.Engine.Tagging.Query.ExistingTags(BH.Revit.oM.Tagging.ExistingTagsInfo, BH.Revit.oM.Tagging.IModelData, System.Collections.Generic.Dictionary<BH.Revit.oM.Tagging.ItemInLinkId, BH.oM.Tagging.ITagHost>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Tagging.Query, Revit_Tagging_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "ExistingTags",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.IModelData\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.ItemInLinkId\", \"_bhomVersion\" : \"8.3\" }, { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Tagging.ITagHost\", \"_bhomVersion\" : \"8.3\" }], \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Revit.Engine.Tagging.Query.CurveProfileDimensions(Autodesk.Revit.DB.Element, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Tagging.Query, Revit_Tagging_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "CurveProfileDimensions",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.IModelData\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Revit.Engine.Tagging.Query.TagContainerCategoriesInView(BH.Revit.oM.Tagging.IModelData)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Tagging.Query, Revit_Tagging_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "TagContainerCategoriesInView",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.IModelData\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.Tagging.Settings.RevitGlobalTagSettings\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Engine.Tagging.Modify.Offset(System.Collections.Generic.List<BH.oM.Geometry.Line>, System.Collections.Generic.List<System.Double>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Tagging.Modify, Tagging_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "OffsetNonUniform",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Line\", \"_bhomVersion\" : \"8.3\" }], \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }], \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Revit.Engine.Schematic.Compute.SchematicSplit(Autodesk.Revit.DB.FilledRegion, System.String, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Schematic.Compute, Revit_Schematic_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "SchematicSplit",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.FilledRegion, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }], \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Revit.Engine.Lighting.Convert.LuminaireFromText(System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Lighting.Convert, Revit_Lighting_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "LuminaireFromText",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Revit.Engine.ElementRelationships.Compute.PlaceElements(System.Collections.Generic.List<BH.Revit.oM.ElementRelationships.ElementPlacementSettings>, System.Boolean, System.Boolean)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ElementRelationships.Compute, Revit_ElementRelationships_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "PlaceElements",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.oM.ElementRelationships.ElementPlacementSettings\", \"_bhomVersion\" : \"8.3\" }], \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Revit.Engine.ElementRelationships.Compute.ShowElementRelationshipsWindow(Autodesk.Revit.UI.UIDocument, BH.Revit.oM.ElementRelationships.RelationshipSettings)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.ElementRelationships.Compute, Revit_ElementRelationships_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "ShowElementRelationshipsWindow",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.UI.UIDocument, RevitAPIUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.ElementRelationships.ElementRelationshipAdapter, ElementRelationships_Adapter, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.ElementRelationships.RelationshipSettings\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.ElementRelationships.RelationshipCollection\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Revit.Engine.Core.Query.ColumnLine(BH.oM.Physical.Elements.Column)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Query, Revit_Core_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "VerticalElementLocation",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Physical.Elements.IFramingElement\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Settings.RevitSettings\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Engine.LifeCycleAssessment.Query.IResultingModuleValues(BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalMetric, System.Double, BH.oM.LifeCycleAssessment.Configs.IEvaluationConfig, System.Object)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.LifeCycleAssessment.Query, LifeCycleAssessment_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "IResultingModuleValues",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.IEnvironmentalMetric\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Configs.IEvaluationConfig\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.Module\", \"_bhomVersion\" : \"8.3\" }, { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.LifeCycleAssessment.MaterialFragments.PrecomputedModuleValues\", \"_bhomVersion\" : \"8.3\" }], \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Engine.Geometry.Query.DerivativeAtParameter(BH.oM.Geometry.NurbsSurface, System.Double, System.Double, System.Int32, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "DerivativeAtParameter",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.NurbsSurface\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Engine.Geometry.Query.DerivativeAtParameter(BH.oM.Geometry.NurbsCurve, System.Double, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "DerivativeAtParameter",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.NurbsCurve\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Engine.Geometry.Query.MeshIntersection(BH.oM.Geometry.Plane, BH.oM.Geometry.Mesh, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "MeshIntersections",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Plane\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Mesh\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Engine.Geometry.Query.PointAtParameter(BH.oM.Geometry.NurbsSurface, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "PointAtParameter",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.NurbsSurface\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Engine.Geometry.Query.PointAtParameter(BH.oM.Geometry.NurbsCurve, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Geometry.Query, Geometry_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "PointAtParameter",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.NurbsCurve\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      },
+      "BH.Engine.Geometry.Clipper.Compute.Offset(BH.oM.Geometry.Polyline, System.Double, System.Double)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Clipper.Compute, Clipper_Engine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.3\" }",
+        "MethodName": "Offset",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Plane\", \"_bhomVersion\" : \"8.3\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.3\" }"
+        ],
+        "_bhomVersion": "8.3"
+      }
+    },
+    "ToOld": {
+      
+    }
+  },
+  "Property": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    }
+  },
+  "Dataset": {
+    "ToNew": {
+      
+    },
+    "ToOld": {
+      
+    },
+    "MessageForDeleted": {
+      
+    }
+  },
+  "MessageForDeleted": {
+    "BH.Engine.UI.Compute.BHoMVersion()": "This method was incorrectly made public. Use `BH.Engine.Base.Query.BHoMVersion` instead.",
+    "BH.Revit.Engine.ElementRelationships.Compute.CheckInteraction(BH.Revit.oM.ElementRelationships.OneToOneInteraction, System.Collections.Generic.List<BH.Revit.oM.ElementRelationships.MappingTypeSet<BH.Revit.oM.ElementRelationships.IMappingType>>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Compute.ICheckMapping(BH.Revit.oM.ElementRelationships.IMapping, BH.Revit.oM.ElementRelationships.IMappingType, BH.Revit.oM.ElementRelationships.ElementItem, BH.Revit.oM.ElementRelationships.ElementItem, System.String&)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Compute.IExecuteMapping(BH.Revit.oM.ElementRelationships.IMapping, BH.Revit.oM.ElementRelationships.IMappingType, BH.Revit.oM.ElementRelationships.ElementItem, BH.Revit.oM.ElementRelationships.ElementItem, System.String&)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Compute.IExecuteInteraction(BH.Revit.oM.ElementRelationships.IInteraction, System.Collections.Generic.List<BH.Revit.oM.ElementRelationships.MappingTypeSet<BH.Revit.oM.ElementRelationships.IMappingType>>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Compute.UpdateTargetElementsAndShowResult(System.Collections.Generic.IEnumerable<BH.Revit.oM.ElementRelationships.IInteraction>, System.Collections.Generic.List<BH.Revit.oM.ElementRelationships.MappingTypeSet<BH.Revit.oM.ElementRelationships.IMappingType>>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Compute.IUpdateTargetElement(BH.Revit.oM.ElementRelationships.IInteraction, System.Collections.Generic.List<BH.Revit.oM.ElementRelationships.MappingTypeSet<BH.Revit.oM.ElementRelationships.IMappingType>>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Compute.CheckElement(Autodesk.Revit.DB.Element)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Create.OneToOneRelationship(Autodesk.Revit.DB.Element, Autodesk.Revit.DB.Element)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Create.IOneToOneMapping(BH.Revit.oM.ElementRelationships.IMappingType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Create.OneToOneMappingSet(BH.Revit.oM.ElementRelationships.MappingTypeSet<BH.Revit.oM.ElementRelationships.IMappingType>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Modify.Add(BH.Revit.oM.ElementRelationships.MappingSet<BH.Revit.oM.ElementRelationships.IMapping>, BH.Revit.oM.ElementRelationships.IMapping)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Modify.Add(BH.Revit.oM.ElementRelationships.MappingTypeSet<BH.Revit.oM.ElementRelationships.IMappingType>, BH.Revit.oM.ElementRelationships.IMappingType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Modify.SetTranslation(BH.Revit.oM.ElementRelationships.TranslationMapping, BH.oM.Geometry.Vector)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Modify.SetTranslation(BH.Revit.oM.ElementRelationships.MappingSet<BH.Revit.oM.ElementRelationships.IOneToOneMapping>, BH.oM.Geometry.Vector)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Modify.ISetValue(BH.oM.Verification.Conditions.IValueSource, Autodesk.Revit.DB.Element, System.Object)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Query.AreMappingValuesEqual(Autodesk.Revit.DB.Element, Autodesk.Revit.DB.Element, BH.Revit.oM.ElementRelationships.ElementValueMappingPair, System.Boolean)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Query.IElementSpecificValueSource(BH.oM.Verification.Conditions.IValueSource, Autodesk.Revit.DB.Element)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Query.ElementSpecificValueSource(BH.oM.Verification.Conditions.PropertyValueSource, Autodesk.Revit.DB.Element)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Query.ElementSpecificValueSource(BH.oM.Adapters.Revit.Parameters.ParameterValueSource, Autodesk.Revit.DB.Element)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Query.IGetSourceElement(Autodesk.Revit.DB.Element, BH.oM.Verification.Conditions.IValueSource)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Query.GetSourceElement(Autodesk.Revit.DB.Element, BH.oM.Verification.Conditions.PropertyValueSource)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Query.GetSourceElement(Autodesk.Revit.DB.Element, BH.oM.Adapters.Revit.Parameters.ParameterValueSource)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Query.GetType(BH.Revit.oM.ElementRelationships.IMapping, System.Collections.Generic.List<BH.Revit.oM.ElementRelationships.IMappingType>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Query.GetType(BH.Revit.oM.ElementRelationships.MappingSet<BH.Revit.oM.ElementRelationships.IOneToOneMapping>, System.Collections.Generic.List<BH.Revit.oM.ElementRelationships.MappingTypeSet<BH.Revit.oM.ElementRelationships.IMappingType>>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Query.IGetValue(BH.oM.Verification.Conditions.IValueSource, Autodesk.Revit.DB.Element)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.Engine.ElementRelationships.Query.IMappingPair(BH.Revit.oM.ElementRelationships.IMappingType)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.IInteraction": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.OneToOneInteraction": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.ElementValueMapping": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.ILocation": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.PointLocation": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.OneToOneMappingType": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.IOneToOneMappingType": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.ElementValueMappingPair": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.IMappingPair": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.TranslationMapping": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.ElementLocationMappingPair": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.MappingTypeSet<BH.Revit.oM.ElementRelationships.IMappingType>": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.MappingSet<BH.Revit.oM.ElementRelationships.IMapping>": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.ManyToOneRelationship": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.OneToOneRelationship": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Revit.oM.ElementRelationships.IMappingType": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
+    "BH.Engine.Tagging.Modify.AddScores(System.Collections.Generic.List<System.Collections.Generic.List<BH.oM.Tagging.ProvisionalTag>>, System.Collections.Generic.List<BH.oM.Tagging.ProvisionalTag>)": "This object has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it."
+  },
+  "MessageForNoUpgrade": {
+    
+  }
+}
