@@ -1,6 +1,6 @@
 /*
  * This file is part of the Buildings and Habitats object Model (BHoM)
- * Copyright (c) 2015 - 2025, the respective contributors. All rights reserved.
+ * Copyright (c) 2015 - 2026, the respective contributors. All rights reserved.
  *
  * Each contributor holds copyright over their respective contributions.
  * The project versioning (Git) records all such contribution source information.
@@ -43,9 +43,9 @@ namespace BH.Test.Versioning
         public static TestResult FromJsonDatasets(bool testAll = false)
         {
             string testFolder = @"C:\ProgramData\BHoM\Datasets\TestSets\Versioning";
-            List<string> versions = new List<string> { "8.3" };
+            List<string> versions = new List<string> { "9.0" };
             if (testAll)
-                versions.AddRange(new List<string> { "8.2", "8.1", "8.0", "7.3", "7.2", "7.1", "7.0", "6.3", "6.2", "6.1", "6.0", "5.3", "5.2", "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" });
+                versions.AddRange(new List<string> { "8.3", "8.2", "8.1", "8.0", "7.3", "7.2", "7.1", "7.0", "6.3", "6.2", "6.1", "6.0", "5.3", "5.2", "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" });
 
             string exceptions = "Grasshopper|Rhinoceros";
 
@@ -211,3 +211,4 @@ namespace BH.Test.Versioning
         /*************************************/
     }
 }
+
