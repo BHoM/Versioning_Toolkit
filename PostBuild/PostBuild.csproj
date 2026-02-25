@@ -10,6 +10,7 @@
     <Copyright>Copyright © https://github.com/BHoM</Copyright>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <FileVersion>9.1.0.0</FileVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="mkdir &quot;$(ProgramData)\BHoM\Developer\Versioning&quot;&#xD;&#xA;xcopy /Y /I /E &quot;$(TargetDir)PostBuild.exe&quot; C:\ProgramData\BHoM\Developer\Versioning&#xD;&#xA;xcopy /Y /I /E &quot;$(TargetDir)*.dll&quot; C:\ProgramData\BHoM\Developer\Versioning" />
