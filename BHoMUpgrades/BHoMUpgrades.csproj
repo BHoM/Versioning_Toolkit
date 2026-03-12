@@ -18,7 +18,10 @@
     <PackageReference Include="MongoDB.Bson" Version="2.18.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PostBuild\PostBuild.csproj" />
+    <ProjectReference Include="..\PostBuild\PostBuild.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <SkipGetTargetFrameworkProperties>true</SkipGetTargetFrameworkProperties>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
