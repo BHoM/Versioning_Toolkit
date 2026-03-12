@@ -21,6 +21,7 @@
  */
 
 using BH.oM.Versioning;
+using System.Collections.Generic;
 
 namespace BH.Upgraders
 {
@@ -30,6 +31,46 @@ namespace BH.Upgraders
         /***************************************************/
         /**** Public Methods                            ****/
         /***************************************************/
+
+        [VersioningTarget("BH.oM.Adapters.ElementRelationships.Persistence.LocationRelationship")]
+        public static Dictionary<string, object> UpgradePersistenceLocationRelationship(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>();
+            newVersion["_t"] = "BH.oM.Adapters.ElementRelationships.Persistence.LocationRelationship";
+
+            Dictionary<string, object> relativeTransform = new Dictionary<string, object>();
+            relativeTransform["_t"] = "BH.oM.ElementRelationships.RelativeTransform";
+            relativeTransform["Transform"] = oldVersion["ExpectedTransform"];
+
+            newVersion["ExpectedTransform"] = relativeTransform;
+            newVersion["BHoM_Guid"] = oldVersion["BHoM_Guid"];
+            newVersion["Link"] = oldVersion["Link"];
+            newVersion["MappingGuid"] = oldVersion["MappingGuid"];
+            newVersion["LastUpdated"] = oldVersion["LastUpdated"];
+            newVersion["LastUpdatedBy"] = oldVersion["LastUpdatedBy"];
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        [VersioningTarget("BH.oM.ElementRelationships.LocationRelationship")]
+        public static Dictionary<string, object> UpgradeLocationRelationship(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>();
+            newVersion["_t"] = "BH.oM.ElementRelationships.LocationRelationship";
+
+            Dictionary<string, object> relativeTransform = new Dictionary<string, object>();
+            relativeTransform["_t"] = "BH.oM.ElementRelationships.RelativeTransform";
+            relativeTransform["Transform"] = oldVersion["ExpectedTransform"];
+
+            newVersion["ExpectedTransform"] = relativeTransform;
+            newVersion["BHoM_Guid"] = oldVersion["BHoM_Guid"];
+            newVersion["Link"] = oldVersion["Link"];
+            newVersion["Mapping"] = oldVersion["Mapping"];
+
+            return newVersion;
+        }
 
         /***************************************************/
     }
