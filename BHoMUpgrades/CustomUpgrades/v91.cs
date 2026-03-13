@@ -36,7 +36,7 @@ namespace BH.Upgraders
         public static Dictionary<string, object> UpgradePersistenceLocationRelationship(Dictionary<string, object> oldVersion)
         {
             Dictionary<string, object> newVersion = new Dictionary<string, object>();
-            newVersion["_t"] = "BH.oM.Adapters.ElementRelationships.Persistence.LocationRelationship";
+            newVersion["_t"] = "BH.oM.Adapters.ElementRelationships.Persistence.LocationRelationship, ElementRelationships_Adapter";
 
             Dictionary<string, object> relativeTransform = new Dictionary<string, object>();
             relativeTransform["_t"] = "BH.oM.ElementRelationships.RelativeTransform";
