@@ -1,6 +1,6 @@
 /*
  * This file is part of the Buildings and Habitats object Model (BHoM)
- * Copyright (c) 2015 - 2025, the respective contributors. All rights reserved.
+ * Copyright (c) 2015 - 2026, the respective contributors. All rights reserved.
  *
  * Each contributor holds copyright over their respective contributions.
  * The project versioning (Git) records all such contribution source information.
@@ -43,14 +43,29 @@ namespace BH.Test.Versioning
         public static TestResult FromJsonDatasets(bool testAll = false)
         {
             string testFolder = @"C:\ProgramData\BHoM\Datasets\TestSets\Versioning";
-            List<string> versions = new List<string> { "8.3" };
+            List<string> versions = new List<string> { "9.0" };
             if (testAll)
-                versions.AddRange(new List<string> { "8.2", "8.1", "8.0", "7.3", "7.2", "7.1", "7.0", "6.3", "6.2", "6.1", "6.0", "5.3", "5.2", "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" });
+                versions.AddRange(new List<string> { "8.3", "8.2", "8.1", "8.0", "7.3", "7.2", "7.1", "7.0", "6.3", "6.2", "6.1", "6.0", "5.3", "5.2", "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" });
 
             string exceptions = "Grasshopper|Rhinoceros";
 
+            string failureDumpDir = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
+            Directory.CreateDirectory(failureDumpDir);
+            if (versions.Count == 1)
+                Console.WriteLine($"Failures are dumped in {failureDumpDir} directory.");
+            else
+                Console.WriteLine($"Multiple versions are being tested, failures per each are dumped in a correspondent subfolder of {failureDumpDir} directory.");
+
             // Test all the BHoM versions available
-            List<TestResult> results = versions.Select(v => Path.Combine(testFolder, v)).Select(x => FromJsonDataset(x, exceptions)).ToList();
+            List<TestResult> results = new List<TestResult>();
+            foreach (string version in versions)
+            {
+                string dumpDir = failureDumpDir;
+                if (!string.IsNullOrWhiteSpace(dumpDir) && versions.Count > 1)
+                    dumpDir = Path.Combine(dumpDir, version);
+
+                results.Add(FromJsonDataset(Path.Combine(testFolder, version), exceptions, failureDumpDir));
+            }
 
             // Generate the result message
             int errorCount = results.Where(x => x.Status == TestStatus.Error).Count();
@@ -70,53 +85,113 @@ namespace BH.Test.Versioning
 
         /*************************************/
 
-        public static TestResult FromJsonDataset(string testFolder, string exceptions = "")
+        public static TestResult FromJsonDataset(string testFolder, string exceptions = "", string failureDumpDir = null)
         {
             Engine.Base.Compute.LoadAllAssemblies();
             List<TestResult> results = new List<TestResult>();
 
             // Test all objects
+            List<string> failingObjects = new List<string>();
             int nbObjects = 0;
             string objectFile = Path.Combine(testFolder, "Objects.json");
             if (File.Exists(objectFile))
             {
-                IEnumerable<string> json = File.ReadAllLines(objectFile).Where(x => !string.IsNullOrWhiteSpace(x) && (exceptions.Length == 0 || !Regex.IsMatch(x, exceptions)));
-                results.AddRange(json.Select(x => FromJsonItem(x, false)));
+                IEnumerable<string> jsons = File.ReadAllLines(objectFile).Where(x => !string.IsNullOrWhiteSpace(x) && (exceptions.Length == 0 || !Regex.IsMatch(x, exceptions)));
+                foreach (string json in jsons)
+                {
+                    TestResult result = FromJsonItem(json, false);
+                    if (result.Status == TestStatus.Error)
+                        failingObjects.Add(json);
 
-                nbObjects = json.Count();
+                    results.Add(result);
+                }
+
+                nbObjects = jsons.Count();
             }
 
             // Test all methods
+            List<string> failingMethods = new List<string>();
             int nbMethods = 0;
             string methodFile = Path.Combine(testFolder, "Methods.json");
             if (File.Exists(methodFile))
             {
-                IEnumerable<string> json = File.ReadAllLines(methodFile).Where(x => !string.IsNullOrWhiteSpace(x) && (exceptions.Length == 0 || !Regex.IsMatch(x, exceptions)));
-                results.AddRange(json.Select(x => FromJsonItem(x, true)));
+                IEnumerable<string> jsons = File.ReadAllLines(methodFile).Where(x => !string.IsNullOrWhiteSpace(x) && (exceptions.Length == 0 || !Regex.IsMatch(x, exceptions)));
+                foreach (string json in jsons)
+                {
+                    TestResult result = FromJsonItem(json, true);
+                    if (result.Status == TestStatus.Error)
+                        failingMethods.Add(json);
 
-                nbMethods = json.Count();
+                    results.Add(result);
+                }
+
+                nbMethods = jsons.Count();
             }
 
             //Test all datasets
+            List<string> failingDatasets = new List<string>();
             int nbDatasets = 0;
             string datasetsFile = Path.Combine(testFolder, "Datasets.txt");
             if (File.Exists(datasetsFile))
             {
                 IEnumerable<string> datasets = File.ReadAllLines(datasetsFile);
-                results.AddRange(datasets.Select(x => FromDataset(x)));
+                foreach (string dataset in datasets)
+                {
+                    TestResult result = FromDataset(dataset);
+                    if (result.Status == TestStatus.Error)
+                        failingDatasets.Add(dataset);
+
+                    results.Add(result);
+                }
 
                 nbDatasets = datasets.Count();
             }
 
             //Test all Adapters
+            List<string> failingAdapters = new List<string>();
             int nbAdapters = 0;
             string adaptersFile = Path.Combine(testFolder, "Adapters.json");
             if (File.Exists(adaptersFile))
             {
                 IEnumerable<string> adapters = File.ReadAllLines(adaptersFile);
-                results.AddRange(adapters.Select(x => FromJsonItem(x, false))); //False - not a method, even though is a constructor - but doesn't need the method helpers implemented in the FromJsonItem method
+                foreach (string adapter in adapters)
+                {
+                    TestResult result = FromJsonItem(adapter, false);
+                    if (result.Status == TestStatus.Error)
+                        failingAdapters.Add(adapter);
+
+                    results.Add(result);
+                }
 
                 nbAdapters = adapters.Count();
+            }
+
+            // Dump failures
+            if (!string.IsNullOrWhiteSpace(failureDumpDir))
+            {
+                List<(string, List<string>)> failures = new List<(string, List<string>)>
+                {
+                    ("Objects", failingObjects),
+                    ("Methods", failingMethods),
+                    ("Datasets", failingDatasets),
+                    ("Adapters", failingAdapters)
+                }.Where(x => x.Item2.Count != 0).ToList();
+
+                if (failures.Count != 0)
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(failureDumpDir);
+                        foreach ((string, List<string>) failure in failures)
+                        {
+                            File.WriteAllLines(Path.Combine(failureDumpDir, $"{failure.Item1}.txt"), failure.Item2);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Failed to dump failures to {failureDumpDir} because of the following error:\n{ex.Message}");
+                    }
+                }
             }
 
             // Returns a summary result 
@@ -211,3 +286,4 @@ namespace BH.Test.Versioning
         /*************************************/
     }
 }
+
