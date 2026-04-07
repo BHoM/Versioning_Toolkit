@@ -7,9 +7,9 @@
     <AssemblyTitle>Versioning_Test</AssemblyTitle>
     <Description>https://github.com/BHoM/Versioning_Toolkit</Description>
     <Product>Versioning_Test</Product>
-    <Copyright>Copyright © https://github.com/BHoM</Copyright>
+    <Copyright>Copyright ï¿½ https://github.com/BHoM</Copyright>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
-    <FileVersion>9.1.0.0</FileVersion>
+    <FileVersion>9.2.0.0</FileVersion>
   </PropertyGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot;  &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y&#xD;&#xA;xcopy &quot;$(ProjectDir)Datasets&quot; &quot;C:\ProgramData\BHoM\Datasets\TestSets\Versioning&quot; /E /H /C /I /R /Y" />
