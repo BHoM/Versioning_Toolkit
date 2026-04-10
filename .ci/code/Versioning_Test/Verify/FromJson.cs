@@ -42,8 +42,6 @@ namespace BH.Test.Versioning
 
         public static TestResult FromJsonDatasets(bool testAll = false)
         {
-            string regexFilter = $"^Revit_.*_202.$";
-            BH.Engine.Base.Compute.LoadAllAssemblies("", regexFilter);
             string testFolder = @"C:\ProgramData\BHoM\Datasets\TestSets\Versioning";
             List<string> versions = new List<string> { "9.1" };
             if (testAll)
