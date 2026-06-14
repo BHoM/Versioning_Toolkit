@@ -23,6 +23,7 @@
 using BH.oM.Versioning;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 namespace BH.Upgraders
 {
@@ -32,6 +33,30 @@ namespace BH.Upgraders
         /***************************************************/
         /**** Public Methods                            ****/
         /***************************************************/
+
+        [VersioningTarget("BH.oM.UI.SearchSettings")]
+        public static Dictionary<string, object> UpgradeSearchSettings(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>();
+            newVersion["_t"] = "BH.oM.UI.SearchSettings";
+
+            if (oldVersion.ContainsKey("BHoM_Guid"))
+                newVersion["BHoM_Guid"] = oldVersion["BHoM_Guid"];
+
+            List<string> excludedToolkits = new List<string>();
+            IEnumerable<object> toolkits = oldVersion["Toolkits"] as IEnumerable<object>;
+            if (toolkits != null)
+            {
+                foreach (Dictionary<string, object> toolkit in toolkits.OfType<Dictionary<string, object>>())
+                {
+                    if (toolkit.ContainsKey("Include") && (bool)toolkit["Include"] == false && toolkit.ContainsKey("Toolkit"))
+                        excludedToolkits.Add(toolkit["Toolkit"].ToString());
+                }
+            }
+
+            newVersion["ExcludedToolkits"] = excludedToolkits;
+            return newVersion;
+        }
 
         /***************************************************/
     }
