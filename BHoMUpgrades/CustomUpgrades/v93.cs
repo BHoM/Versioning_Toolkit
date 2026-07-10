@@ -33,6 +33,29 @@ namespace BH.Upgraders
         /**** Public Methods                            ****/
         /***************************************************/
 
+        [VersioningTarget("BH.Revit.oM.Tagging.Settings.MEPGlobalTagSettings")]
+        public static Dictionary<string, object> UpgradeMEPGlobalTagSettings(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            object bhomSettingsObject;
+            if (newVersion.TryGetValue("BhomSettings", out bhomSettingsObject))
+            {
+                Dictionary<string, object> bhomSettings = bhomSettingsObject as Dictionary<string, object>;
+                object useExclusionZones;
+                if (bhomSettings != null && bhomSettings.TryGetValue("UseExclusionZones", out useExclusionZones))
+                {
+                    newVersion["UseExclusionZones"] = useExclusionZones;
+                    bhomSettings.Remove("UseExclusionZones");
+                }
+            }
+
+            return newVersion;
+        }
+
         /***************************************************/
     }
 }
