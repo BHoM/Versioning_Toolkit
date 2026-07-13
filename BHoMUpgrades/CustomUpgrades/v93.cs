@@ -57,5 +57,38 @@ namespace BH.Upgraders
         }
 
         /***************************************************/
+
+        [VersioningTarget("BH.oM.Tagging.Settings.PointTagSettings")]
+        [VersioningTarget("BH.oM.Tagging.Settings.CurveTagSettings")]
+        [VersioningTarget("BH.oM.Tagging.Settings.AreaTagSettings")]
+        public static Dictionary<string, object> UpgradeBaseTagSettings(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            object baseSettingsObject;
+            if (newVersion.TryGetValue("BaseSettings", out baseSettingsObject))
+            {
+                Dictionary<string, object> baseSettings = baseSettingsObject as Dictionary<string, object>;
+                if (baseSettings != null)
+                {
+                    foreach (KeyValuePair<string, object> kvp in baseSettings)
+                    {
+                        if (kvp.Key == "_t")
+                            continue;
+
+                        newVersion[kvp.Key] = kvp.Value;
+                    }
+                }
+
+                newVersion.Remove("BaseSettings");
+            }
+
+            return newVersion;
+        }
+
+        /***************************************************/
     }
 }
