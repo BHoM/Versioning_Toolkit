@@ -58,10 +58,92 @@ namespace BH.Upgraders
 
         /***************************************************/
 
+        [VersioningTarget("BH.Revit.oM.Tagging.Settings.RevitPointTagSettings")]
+        [VersioningTarget("BH.Revit.oM.Tagging.Settings.RevitCurveTagSettings")]
+        [VersioningTarget("BH.Revit.oM.Tagging.Settings.RevitAreaTagSettings")]
+        [VersioningTarget("BH.Revit.oM.Tagging.Settings.MEPPointTagSettings")]
+        [VersioningTarget("BH.Revit.oM.Tagging.Settings.MEPCurveTagSettings")]
+        [VersioningTarget("BH.Revit.oM.Tagging.Settings.MEPAreaTagSettings")]
+        [VersioningTarget("BH.Revit.oM.Tagging.Settings.StructurePointTagSettings")]
+        [VersioningTarget("BH.Revit.oM.Tagging.Settings.StructureCurveTagSettings")]
+        [VersioningTarget("BH.Revit.oM.Tagging.Settings.StructureAreaTagSettings")]
+        public static Dictionary<string, object> UpgradeRevitTagSettingsTagObscured(Dictionary<string, object> oldVersion)
+        {
+            //TagObscuredDisciplineElements moved from the nested BhomSettings (BH.oM.Tagging.Settings.BaseTagSettings)
+            //up to this Revit-side settings object (BH.Revit.oM.Tagging.Settings.BaseRevitTagSettings), since it is
+            //only ever consumed by Revit-specific tagging logic.
+            return HoistFromBhomSettings(oldVersion, "TagObscuredDisciplineElements");
+        }
+
+        /***************************************************/
+
         [VersioningTarget("BH.oM.Tagging.Settings.PointTagSettings")]
+        public static Dictionary<string, object> UpgradePointTagSettings(Dictionary<string, object> oldVersion)
+        {
+            return FlattenBaseSettings(oldVersion);
+        }
+
+        /***************************************************/
+
         [VersioningTarget("BH.oM.Tagging.Settings.CurveTagSettings")]
+        public static Dictionary<string, object> UpgradeCurveTagSettings(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = FlattenBaseSettings(oldVersion);
+            if (newVersion == null)
+                return null;
+
+            //KeepTagPlacementPointOnHost moved from BaseTagSettings to PointTagSettings and AreaTagSettings only.
+            //It was never used by CurveTagSettings, so it is dropped rather than carried over.
+            newVersion.Remove("KeepTagPlacementPointOnHost");
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
         [VersioningTarget("BH.oM.Tagging.Settings.AreaTagSettings")]
-        public static Dictionary<string, object> UpgradeBaseTagSettings(Dictionary<string, object> oldVersion)
+        public static Dictionary<string, object> UpgradeAreaTagSettings(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = FlattenBaseSettings(oldVersion);
+            if (newVersion == null)
+                return null;
+
+            //RiserLeaderAngle moved from BaseTagSettings to PointTagSettings and CurveTagSettings only.
+            //It was never used by AreaTagSettings, so it is dropped rather than carried over.
+            newVersion.Remove("RiserLeaderAngle");
+
+            return newVersion;
+        }
+
+        /***************************************************/
+        /**** Private Methods                           ****/
+        /***************************************************/
+
+        private static Dictionary<string, object> HoistFromBhomSettings(Dictionary<string, object> oldVersion, string propertyName)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            object bhomSettingsObject;
+            if (newVersion.TryGetValue("BhomSettings", out bhomSettingsObject))
+            {
+                Dictionary<string, object> bhomSettings = bhomSettingsObject as Dictionary<string, object>;
+                object propertyValue;
+                if (bhomSettings != null && bhomSettings.TryGetValue(propertyName, out propertyValue))
+                {
+                    newVersion[propertyName] = propertyValue;
+                    bhomSettings.Remove(propertyName);
+                }
+            }
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        private static Dictionary<string, object> FlattenBaseSettings(Dictionary<string, object> oldVersion)
         {
             if (oldVersion == null)
                 return null;
