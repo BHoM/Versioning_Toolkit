@@ -58,29 +58,22 @@ namespace BH.Upgraders
 
         /***************************************************/
 
-        [VersioningTarget("BH.Revit.oM.Tagging.Settings.RevitPointTagSettings")]
-        [VersioningTarget("BH.Revit.oM.Tagging.Settings.RevitCurveTagSettings")]
-        [VersioningTarget("BH.Revit.oM.Tagging.Settings.RevitAreaTagSettings")]
-        [VersioningTarget("BH.Revit.oM.Tagging.Settings.MEPPointTagSettings")]
-        [VersioningTarget("BH.Revit.oM.Tagging.Settings.MEPCurveTagSettings")]
-        [VersioningTarget("BH.Revit.oM.Tagging.Settings.MEPAreaTagSettings")]
-        [VersioningTarget("BH.Revit.oM.Tagging.Settings.StructurePointTagSettings")]
-        [VersioningTarget("BH.Revit.oM.Tagging.Settings.StructureCurveTagSettings")]
-        [VersioningTarget("BH.Revit.oM.Tagging.Settings.StructureAreaTagSettings")]
-        public static Dictionary<string, object> UpgradeRevitTagSettingsTagObscured(Dictionary<string, object> oldVersion)
-        {
-            //TagObscuredDisciplineElements moved from the nested BhomSettings (BH.oM.Tagging.Settings.BaseTagSettings)
-            //up to this Revit-side settings object (BH.Revit.oM.Tagging.Settings.BaseRevitTagSettings), since it is
-            //only ever consumed by Revit-specific tagging logic.
-            return HoistFromBhomSettings(oldVersion, "TagObscuredDisciplineElements");
-        }
-
-        /***************************************************/
-
         [VersioningTarget("BH.oM.Tagging.Settings.PointTagSettings")]
         public static Dictionary<string, object> UpgradePointTagSettings(Dictionary<string, object> oldVersion)
         {
-            return FlattenBaseSettings(oldVersion);
+            Dictionary<string, object> newVersion = FlattenBaseSettings(oldVersion);
+            if (newVersion == null)
+                return null;
+
+            //TagObscuredDisciplineElements moved out of BaseTagSettings entirely, onto the Revit-side
+            //BaseRevitTagSettings (BH.Revit.oM.Tagging.Settings), which is not reachable from this custom
+            //upgrader (it only ever runs for the nested BhomSettings object, never the outer Revit wrapper -
+            //the property does not exist at that outer level in old data, so its own upgrade never triggers).
+            //There is no way to carry the old value across that boundary through this API, so it is dropped;
+            //it resets to the default on import of pre-9.3 settings, same as GlobalTagSettings.UseExclusionZones.
+            newVersion.Remove("TagObscuredDisciplineElements");
+
+            return newVersion;
         }
 
         /***************************************************/
@@ -95,6 +88,9 @@ namespace BH.Upgraders
             //KeepTagPlacementPointOnHost moved from BaseTagSettings to PointTagSettings and AreaTagSettings only.
             //It was never used by CurveTagSettings, so it is dropped rather than carried over.
             newVersion.Remove("KeepTagPlacementPointOnHost");
+
+            //See UpgradePointTagSettings for why TagObscuredDisciplineElements is dropped here too.
+            newVersion.Remove("TagObscuredDisciplineElements");
 
             return newVersion;
         }
@@ -112,35 +108,14 @@ namespace BH.Upgraders
             //It was never used by AreaTagSettings, so it is dropped rather than carried over.
             newVersion.Remove("RiserLeaderAngle");
 
+            //See UpgradePointTagSettings for why TagObscuredDisciplineElements is dropped here too.
+            newVersion.Remove("TagObscuredDisciplineElements");
+
             return newVersion;
         }
 
         /***************************************************/
         /**** Private Methods                           ****/
-        /***************************************************/
-
-        private static Dictionary<string, object> HoistFromBhomSettings(Dictionary<string, object> oldVersion, string propertyName)
-        {
-            if (oldVersion == null)
-                return null;
-
-            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
-
-            object bhomSettingsObject;
-            if (newVersion.TryGetValue("BhomSettings", out bhomSettingsObject))
-            {
-                Dictionary<string, object> bhomSettings = bhomSettingsObject as Dictionary<string, object>;
-                object propertyValue;
-                if (bhomSettings != null && bhomSettings.TryGetValue(propertyName, out propertyValue))
-                {
-                    newVersion[propertyName] = propertyValue;
-                    bhomSettings.Remove(propertyName);
-                }
-            }
-
-            return newVersion;
-        }
-
         /***************************************************/
 
         private static Dictionary<string, object> FlattenBaseSettings(Dictionary<string, object> oldVersion)
