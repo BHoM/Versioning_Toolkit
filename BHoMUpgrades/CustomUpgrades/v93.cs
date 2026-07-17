@@ -22,7 +22,6 @@
 
 using BH.oM.Versioning;
 using System.Collections.Generic;
-using System;
 
 namespace BH.Upgraders
 {
@@ -65,12 +64,15 @@ namespace BH.Upgraders
             if (newVersion == null)
                 return null;
 
-            //TagObscuredDisciplineElements moved out of BaseTagSettings entirely, onto the Revit-side
-            //BaseRevitTagSettings (BH.Revit.oM.Tagging.Settings), which is not reachable from this custom
-            //upgrader (it only ever runs for the nested BhomSettings object, never the outer Revit wrapper -
-            //the property does not exist at that outer level in old data, so its own upgrade never triggers).
-            //There is no way to carry the old value across that boundary through this API, so it is dropped;
-            //it resets to the default on import of pre-9.3 settings, same as GlobalTagSettings.UseExclusionZones.
+            //RiserLeaderAngle renamed to OrthogonalLeaderAngle on PointTagSettings.
+            object riserLeaderAngle;
+            if (newVersion.TryGetValue("RiserLeaderAngle", out riserLeaderAngle))
+            {
+                newVersion["OrthogonalLeaderAngle"] = riserLeaderAngle;
+                newVersion.Remove("RiserLeaderAngle");
+            }
+
+            //TagObscuredDisciplineElements moved out of BaseTagSettings entirely, onto the Revit-side BaseRevitTagSettings
             newVersion.Remove("TagObscuredDisciplineElements");
 
             return newVersion;
