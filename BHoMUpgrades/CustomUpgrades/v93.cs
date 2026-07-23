@@ -29,7 +29,7 @@ namespace BH.Upgraders
     public static class v93
     {
         /***************************************************/
-        /**** Public Methods                            ****/
+        /****              Public Methods               ****/
         /***************************************************/
 
         [VersioningTarget("BH.Revit.oM.Tagging.Settings.MEPGlobalTagSettings")]
@@ -40,12 +40,11 @@ namespace BH.Upgraders
 
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
 
-            object bhomSettingsObject;
-            if (newVersion.TryGetValue("BhomSettings", out bhomSettingsObject))
+            if (newVersion.TryGetValue("BhomSettings", out object bhomSettingsObject))
             {
                 Dictionary<string, object> bhomSettings = bhomSettingsObject as Dictionary<string, object>;
-                object useExclusionZones;
-                if (bhomSettings != null && bhomSettings.TryGetValue("UseExclusionZones", out useExclusionZones))
+
+                if (bhomSettings != null && bhomSettings.TryGetValue("UseExclusionZones", out object useExclusionZones))
                 {
                     newVersion["UseExclusionZones"] = useExclusionZones;
                     bhomSettings.Remove("UseExclusionZones");
@@ -65,8 +64,7 @@ namespace BH.Upgraders
                 return null;
 
             //RiserLeaderAngle renamed to OrthogonalLeaderAngle on PointTagSettings.
-            object riserLeaderAngle;
-            if (newVersion.TryGetValue("RiserLeaderAngle", out riserLeaderAngle))
+            if (newVersion.TryGetValue("RiserLeaderAngle", out object riserLeaderAngle))
             {
                 newVersion["OrthogonalLeaderAngle"] = riserLeaderAngle;
                 newVersion.Remove("RiserLeaderAngle");
@@ -117,7 +115,7 @@ namespace BH.Upgraders
         }
 
         /***************************************************/
-        /**** Private Methods                           ****/
+        /****             Private Methods               ****/
         /***************************************************/
 
         private static Dictionary<string, object> FlattenBaseSettings(Dictionary<string, object> oldVersion)
@@ -127,8 +125,7 @@ namespace BH.Upgraders
 
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
 
-            object baseSettingsObject;
-            if (newVersion.TryGetValue("BaseSettings", out baseSettingsObject))
+            if (newVersion.TryGetValue("BaseSettings", out object baseSettingsObject))
             {
                 Dictionary<string, object> baseSettings = baseSettingsObject as Dictionary<string, object>;
                 if (baseSettings != null)
