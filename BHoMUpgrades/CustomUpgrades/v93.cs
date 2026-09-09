@@ -21,6 +21,7 @@
  */
 
 using BH.oM.Versioning;
+using System;
 using System.Collections.Generic;
 
 namespace BH.Upgraders
@@ -110,6 +111,62 @@ namespace BH.Upgraders
 
             //See UpgradePointTagSettings for why TagObscuredDisciplineElements is dropped here too.
             newVersion.Remove("TagObscuredDisciplineElements");
+
+            return newVersion;
+        }
+
+        /***************************************************/
+
+        [VersioningTarget("BH.Revit.oM.ElementRelationships.PlacementSettings")]
+        public static Dictionary<string, object> UpgradePlacementSettings(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (newVersion.ContainsKey("PlacementCollections"))
+            {
+                newVersion.Remove("ElementPlacementSettings");
+                return newVersion;
+            }
+
+            if (!newVersion.TryGetValue("ElementPlacementSettings", out object oldPlacementsObject))
+                return newVersion;
+
+            List<object> placements = new List<object>();
+            IEnumerable<object> oldPlacements = oldPlacementsObject as IEnumerable<object>;
+            if (oldPlacements != null)
+            {
+                foreach (object item in oldPlacements)
+                {
+                    if (item is Dictionary<string, object> placementDict)
+                    {
+                        if (placementDict.TryGetValue("_t", out object type) &&
+                            type?.ToString() == "BH.Revit.oM.ElementRelationships.ElementPlacementSettings")
+                        {
+                            placementDict["_t"] = "BH.Revit.oM.ElementRelationships.ElementPlacement";
+                        }
+
+                        placements.Add(placementDict);
+                    }
+                    else
+                    {
+                        placements.Add(item);
+                    }
+                }
+            }
+
+            Dictionary<string, object> defaultCollection = new Dictionary<string, object>
+            {
+                { "_t", "BH.Revit.oM.ElementRelationships.PlacementCollection" },
+                { "BHoM_Guid", Guid.NewGuid() },
+                { "Name", "Default Collection" },
+                { "Placements", placements }
+            };
+
+            newVersion["PlacementCollections"] = new List<object> { defaultCollection };
+            newVersion.Remove("ElementPlacementSettings");
 
             return newVersion;
         }
