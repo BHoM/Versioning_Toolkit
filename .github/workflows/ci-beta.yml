@@ -70,7 +70,15 @@ jobs:
         uses: BHoM/CI_Toolkit/.github/actions/ci-compliance@develop
         with:
           check_type: dataset
-          patterns: ':(icase)*datasets*.json'
+          # Two shapes match this selector but are not BH.oM.Data.Library.Dataset
+          # documents: Versioning_Test/Datasets is JSON Lines of oM objects, and
+          # Versioning_<digits>.json are versioning upgrade maps, wherever they live.
+          # :(glob) keeps the second a filename match at any depth; without it both '*'
+          # cross '/' and it would also swallow real datasets under any Versioning_*
+          # directory. This pathspec is duplicated in CI_Toolkit's two ci-beta templates
+          # and every onboarded repo's copy with nothing propagating a change, so mirror
+          # any edit there. BHoM/internal-tickets#36 (shapes), #43 (selector anchoring).
+          patterns: ':(icase)*datasets*.json :(exclude,icase)*Versioning_Test/Datasets/* :(exclude,glob,icase)**/Versioning_[0-9]*.json'
           app_id: ${{ secrets.BHOM_APP_ID }}
           private_key: ${{ secrets.BHOM_APP_PRIVATE_KEY }}
 
