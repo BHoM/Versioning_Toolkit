@@ -245,14 +245,61 @@ namespace BH.Test.Versioning
 
             if (message == "")
                 return Engine.Test.Create.PassResult(description);
-            else
-                return new TestResult
-                {
-                    Description = description,
-                    Status = TestStatus.Error,
-                    Message = message,
-                    Information = Engine.Base.Query.CurrentEvents().Select(x => x.ToEventMessage()).ToList<ITestInformation>()
-                };
+
+            List<ITestInformation> information = Engine.Base.Query.CurrentEvents().Select(x => x.ToEventMessage()).ToList<ITestInformation>();
+
+            ITestInformation provenance = ProvenanceEvent(json, isMethod);
+            if (provenance != null)
+                information.Add(provenance);
+
+            return new TestResult
+            {
+                Description = description,
+                Status = TestStatus.Error,
+                Message = message,
+                Information = information
+            };
+        }
+
+        /*************************************/
+
+        // Surfaces the dataset record's declaring assembly so the checker does not have to guess
+        // it from the namespace. An object record carries only a type name, namespaces are shared
+        // across repositories, and no rule over the name separates the owners at any precision.
+        // The `_asm` field records the assembly that declared the type when the dataset was
+        // captured, and this is the only way it can reach the checker: the checker reads this
+        // TestResult and never the dataset file.
+        //
+        // THE WORDING IS A CONTRACT with CI_Toolkit's VersioningRunner, which parses it in
+        // ParseObjectEventAssembly. Rewording it does not break anything visibly, it silently
+        // turns provenance back off and returns every object finding to the namespace guess.
+        //
+        // Read from the raw json rather than the deserialised object because the serialiser skips
+        // every field whose name starts with an underscore, and because this runs on the failure
+        // path, where there is often no object to ask.
+        private static ITestInformation ProvenanceEvent(string json, bool isMethod)
+        {
+            // A method record's declaring assembly already reaches the checker through the Method
+            // event, and `_asm` is prohibited on Methods.json. A method record's top-level type is
+            // System.Reflection.MethodBase, so emitting this for one would state something untrue.
+            if (isMethod)
+                return null;
+
+            string declaringAssembly = Helpers.TopLevelFieldFromJson(json, "_asm");
+            if (string.IsNullOrWhiteSpace(declaringAssembly))
+                return null;
+
+            string declaringType = Helpers.TopLevelFieldFromJson(json, "_t");
+            if (string.IsNullOrWhiteSpace(declaringType))
+                return null;
+
+            return new EventMessage
+            {
+                // Not a failure, so the least severe status available. Note that this does not
+                // hide it from Test_Engine's FullMessage, which defaults to minSeverity Pass.
+                Status = TestStatus.Pass,
+                Message = $"Object {declaringType} declared in \"{declaringType}, {declaringAssembly}\""
+            };
         }
 
         /*************************************/
