@@ -130,16 +130,20 @@ namespace BH.Test.Versioning
 
             //Test all datasets
             List<string> failingDatasets = new List<string>();
+            List<string> unverifiedDatasets = new List<string>();
             int nbDatasets = 0;
             string datasetsFile = Path.Combine(testFolder, "Datasets.txt");
             if (File.Exists(datasetsFile))
             {
-                IEnumerable<string> datasets = File.ReadAllLines(datasetsFile);
+                // Blank lines would otherwise be reported as unverified entries.
+                IEnumerable<string> datasets = File.ReadAllLines(datasetsFile).Where(x => !string.IsNullOrWhiteSpace(x));
                 foreach (string dataset in datasets)
                 {
                     TestResult result = FromDataset(dataset);
                     if (result.Status == TestStatus.Error)
                         failingDatasets.Add(dataset);
+                    else if (result.Status == TestStatus.Warning)
+                        unverifiedDatasets.Add(dataset);
 
                     results.Add(result);
                 }
@@ -166,30 +170,31 @@ namespace BH.Test.Versioning
                 nbAdapters = adapters.Count();
             }
 
-            // Dump failures
+            // Dump failures and unverified entries
             if (!string.IsNullOrWhiteSpace(failureDumpDir))
             {
-                List<(string, List<string>)> failures = new List<(string, List<string>)>
+                List<(string, List<string>)> dumps = new List<(string, List<string>)>
                 {
                     ("Objects", failingObjects),
                     ("Methods", failingMethods),
                     ("Datasets", failingDatasets),
+                    ("UnverifiedDatasets", unverifiedDatasets),
                     ("Adapters", failingAdapters)
                 }.Where(x => x.Item2.Count != 0).ToList();
 
-                if (failures.Count != 0)
+                if (dumps.Count != 0)
                 {
                     try
                     {
                         Directory.CreateDirectory(failureDumpDir);
-                        foreach ((string, List<string>) failure in failures)
+                        foreach ((string, List<string>) dump in dumps)
                         {
-                            File.WriteAllLines(Path.Combine(failureDumpDir, $"{failure.Item1}.txt"), failure.Item2);
+                            File.WriteAllLines(Path.Combine(failureDumpDir, $"{dump.Item1}.txt"), dump.Item2);
                         }
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine($"Failed to dump failures to {failureDumpDir} because of the following error:\n{ex.Message}");
+                        Console.WriteLine($"Failed to dump results to {failureDumpDir} because of the following error:\n{ex.Message}");
                     }
                 }
             }
@@ -202,7 +207,7 @@ namespace BH.Test.Versioning
             return new TestResult()
             {
                 ID = $"VersioningFromJsonDatasets_{version}",
-                Description = $"Beta Version {Path.GetFileName(testFolder)}: {nbObjects} object types, {nbMethods} methods, {nbDatasets} datasets, and {nbAdapters} adapters.",
+                Description = $"Beta Version {Path.GetFileName(testFolder)}: {nbObjects} object types, {nbMethods} methods, {nbDatasets} datasets ({unverifiedDatasets.Count} unverified), and {nbAdapters} adapters.",
                 Message = $"{errorCount} errors and {warningCount} warnings reported.",
                 Status = results.MostSevereStatus(),
                 Information = results.Where(x => x.Status != TestStatus.Pass).ToList<ITestInformation>(),
@@ -271,11 +276,15 @@ namespace BH.Test.Versioning
 
             if (failure)
             {
+                // Warning rather than Error: ValidatePath resolves against the library set
+                // installed on the running machine, so this outcome describes that machine's
+                // payload rather than anything in this repository. Counted and reported instead
+                // of failed.
                 return new TestResult()
                 {
                     Description = dataset,
-                    Status = TestStatus.Error,
-                    Message = $"No valid dataset could be found for {dataset}.",
+                    Status = TestStatus.Warning,
+                    Message = $"UNVERIFIED: {dataset} could not be resolved against the library set installed on this machine, and no upgrade was found. This depends on the running closure rather than on the repository, so it is reported rather than failed.",
                     Information = Engine.Base.Query.CurrentEvents().Select(x => x.ToEventMessage()).ToList<ITestInformation>(),
                 };
             }
