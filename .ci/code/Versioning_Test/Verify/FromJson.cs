@@ -42,7 +42,7 @@ namespace BH.Test.Versioning
 
         public static TestResult FromJsonDatasets(bool testAll = false)
         {
-            string testFolder = @"C:\ProgramData\BHoM\Datasets\TestSets\Versioning";
+            string testFolder = m_TestSetRoot;
             List<string> versions = new List<string> { "9.2" };
             if (testAll)
                 versions.AddRange(new List<string> { "9.1", "9.0", "8.3", "8.2", "8.1", "8.0", "7.3", "7.2", "7.1", "7.0", "6.3", "6.2", "6.1", "6.0", "5.3", "5.2", "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" });
@@ -131,6 +131,8 @@ namespace BH.Test.Versioning
             //Test all datasets
             List<string> failingDatasets = new List<string>();
             int nbDatasets = 0;
+            bool exemptionsUnreadable = false;
+            string datasetsVersion = Path.GetFileName(testFolder);
             string datasetsFile = Path.Combine(testFolder, "Datasets.txt");
             if (File.Exists(datasetsFile))
             {
@@ -145,6 +147,39 @@ namespace BH.Test.Versioning
                 }
 
                 nbDatasets = datasets.Count();
+            }
+            else
+            {
+                switch (DatasetsFileExemption(datasetsVersion))
+                {
+                    case Exemption.Declared:
+                        // A named exception, declared once beside the version folders. Recorded as
+                        // a pass with the reason visible, so the exemption is not silent.
+                        results.Add(Engine.Test.Create.PassResult($"Version {datasetsVersion} is a declared exception to the Datasets.txt requirement. See BHoM/internal-tickets#36."));
+                        break;
+
+                    case Exemption.ListUnavailable:
+                        // The list reaches this method through the PostBuild copy into
+                        // ProgramData. If it did not arrive, "not delivered" and "not exempt" are
+                        // the same observation, and erroring would fail every repository at once
+                        // on a version that is exempt. Passed instead, and noted on the
+                        // description below, which is the only channel a passing result has.
+                        exemptionsUnreadable = true;
+                        break;
+
+                    default:
+                        // Present and does not name this version, so the capture dropped the file.
+                        // This previously fell through silently and contributed zero datasets.
+                        results.Add(new TestResult()
+                        {
+                            ID = $"VersioningDatasetsFileMissing_{datasetsVersion}",
+                            Description = datasetsFile,
+                            Status = TestStatus.Error,
+                            Message = $"Datasets.txt is missing for version {datasetsVersion}. Every version's capture must emit it; if this version is a deliberate exception, add it to DatasetsTxtExceptions.txt with a reason. See BHoM/internal-tickets#36.",
+                            UTCTime = DateTime.UtcNow,
+                        });
+                        break;
+                }
             }
 
             //Test all Adapters
@@ -202,13 +237,56 @@ namespace BH.Test.Versioning
             return new TestResult()
             {
                 ID = $"VersioningFromJsonDatasets_{version}",
-                Description = $"Beta Version {Path.GetFileName(testFolder)}: {nbObjects} object types, {nbMethods} methods, {nbDatasets} datasets, and {nbAdapters} adapters.",
+                Description = $"Beta Version {Path.GetFileName(testFolder)}: {nbObjects} object types, {nbMethods} methods, {nbDatasets} datasets, and {nbAdapters} adapters."
+                    + (exemptionsUnreadable ? $" NOTE: DatasetsTxtExceptions.txt was not found, so the Datasets.txt requirement could not be evaluated for {datasetsVersion}." : ""),
                 Message = $"{errorCount} errors and {warningCount} warnings reported.",
                 Status = results.MostSevereStatus(),
                 Information = results.Where(x => x.Status != TestStatus.Pass).ToList<ITestInformation>(),
                 UTCTime = DateTime.UtcNow,
             };
         }
+
+        /*************************************/
+
+        // Three answers, not two: a boolean would collapse "the list did not arrive" into "this
+        // version is not exempt", which are different facts with different owners.
+        private enum Exemption
+        {
+            // The list is present and names this version.
+            Declared,
+            // The list is present and does not name this version. A real finding.
+            NotDeclared,
+            // The list is not there to be read. A fact about this machine.
+            ListUnavailable,
+        }
+
+        private static Exemption DatasetsFileExemption(string version)
+        {
+            string exceptionsFile = Path.Combine(m_TestSetRoot, "DatasetsTxtExceptions.txt");
+            if (!File.Exists(exceptionsFile))
+                return Exemption.ListUnavailable;
+
+            string[] lines;
+            try
+            {
+                lines = File.ReadAllLines(exceptionsFile);
+            }
+            catch
+            {
+                // Unreadable is the same fact as absent: the list could not be consulted.
+                return Exemption.ListUnavailable;
+            }
+
+            bool listed = lines.Select(x => x.Split('#')[0].Trim())
+                               .Any(x => x.Length != 0 && x == version);
+
+            return listed ? Exemption.Declared : Exemption.NotDeclared;
+        }
+
+        /*************************************/
+
+        // Where the staged copy of the test sets lives.
+        private static readonly string m_TestSetRoot = @"C:\ProgramData\BHoM\Datasets\TestSets\Versioning";
 
         /*************************************/
 

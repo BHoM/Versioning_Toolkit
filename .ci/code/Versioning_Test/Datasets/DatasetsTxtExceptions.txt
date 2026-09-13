@@ -1,0 +1,23 @@
+# Versions permitted to lack Datasets.txt. One version per line; everything after a # is a comment.
+#
+# This is the single declaration of the exemption. FromJson.cs reads it from
+# %ProgramData%\BHoM\Datasets\TestSets\Versioning, where Versioning_Test.csproj:15 stages it, and
+# the dataset guard reads it from the repository checkout. One source, so the two cannot drift.
+#
+# Adding a line needs a stated reason in the same commit. The list should shrink, never grow: from
+# 9.3 onward every capture emits the file from a live LibraryNames query.
+#
+# What CI does with a change to this file, measured rather than assumed:
+#
+#   - A pull request that changes ONLY files under Datasets/ gets no versioning run at all.
+#     ci-versioning selects *.cs, *.csproj and *.sln, so a dataset-only change self-skips and the
+#     job reports success having examined nothing. Observed on run 34376932773.
+#   - If the same pull request also touches a .cs file, the check runs AND it reads this branch's
+#     copy. resolve-dependencies clones Versioning_Toolkit into bhom-deps at the pull request's own
+#     head ref when that ref exists on this repository, which for a same-repo pull request it does
+#     by definition. Observed on run 33619426914.
+#   - A fork pull request falls back to develop, so a fork would not see its own change here. That
+#     path has never run on this repository and is untested.
+#
+# See BHoM/internal-tickets#33 and #44.
+9.2  # The 9.2 capture did not emit it. Not reconstructed: a synthesised file would pass the check and mean nothing. See BHoM/internal-tickets#36.
