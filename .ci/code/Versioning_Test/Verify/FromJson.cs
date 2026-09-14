@@ -245,14 +245,53 @@ namespace BH.Test.Versioning
 
             if (message == "")
                 return Engine.Test.Create.PassResult(description);
-            else
-                return new TestResult
-                {
-                    Description = description,
-                    Status = TestStatus.Error,
-                    Message = message,
-                    Information = Engine.Base.Query.CurrentEvents().Select(x => x.ToEventMessage()).ToList<ITestInformation>()
-                };
+
+            List<ITestInformation> information = Engine.Base.Query.CurrentEvents().Select(x => x.ToEventMessage()).ToList<ITestInformation>();
+
+            ITestInformation provenance = ProvenanceEvent(json, isMethod);
+            if (provenance != null)
+                information.Add(provenance);
+
+            return new TestResult
+            {
+                Description = description,
+                Status = TestStatus.Error,
+                Message = message,
+                Information = information
+            };
+        }
+
+        /*************************************/
+
+        // Surfaces the record's declaring assembly for the checker, which reads this TestResult
+        // and never the dataset file. The wording is a contract with CI_Toolkit's VersioningRunner:
+        //
+        //     Object <FullTypeName> declared in "<AssemblyName>"
+        //
+        // The quoted part holds the assembly alone because a closed generic type name contains
+        // commas, so a comma-delimited form cannot represent one.
+        private static ITestInformation ProvenanceEvent(string json, bool isMethod)
+        {
+            // A method record already carries its declaring assembly, and its top-level type is
+            // System.Reflection.MethodBase, so emitting this for one would state something untrue.
+            if (isMethod)
+                return null;
+
+            string declaringAssembly = Helpers.TopLevelFieldFromJson(json, "_asm");
+            if (string.IsNullOrWhiteSpace(declaringAssembly))
+                return null;
+
+            string declaringType = Helpers.TopLevelFieldFromJson(json, "_t");
+            if (string.IsNullOrWhiteSpace(declaringType))
+                return null;
+
+            return new EventMessage
+            {
+                // Not a failure. Note this does not hide it from FullMessage, which defaults to
+                // minSeverity Pass.
+                Status = TestStatus.Pass,
+                Message = $"Object {declaringType} declared in \"{declaringAssembly}\""
+            };
         }
 
         /*************************************/
