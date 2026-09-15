@@ -181,7 +181,10 @@ namespace BH.Upgraders
             if (!newVersion.ContainsKey("Identifier"))
             {
                 newVersion.Add("Identifier", oldVersion["Name"]);
+                newVersion["Name"] = "";
             }
+
+            return newVersion;
         }
 
         /***************************************************/
