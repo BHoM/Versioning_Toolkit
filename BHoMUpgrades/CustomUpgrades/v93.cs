@@ -172,6 +172,19 @@ namespace BH.Upgraders
         }
 
         /***************************************************/
+
+        [VersioningTarget("BH.oM.LadybugTools.SimulationResult")]
+        public static Dictionary<string, object> UpgradeSimulationResult(Dictionary<string, object> oldVersion)
+        {
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            if (!newVersion.ContainsKey("Identifier"))
+            {
+                newVersion.Add("Identifier", oldVersion["Name"]);
+            }
+        }
+
+        /***************************************************/
         /****             Private Methods               ****/
         /***************************************************/
 
@@ -203,5 +216,6 @@ namespace BH.Upgraders
         }
 
         /***************************************************/
+
     }
 }
