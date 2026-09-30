@@ -70,7 +70,13 @@ jobs:
         uses: BHoM/CI_Toolkit/.github/actions/ci-compliance@develop
         with:
           check_type: dataset
-          patterns: ':(icase)*datasets*.json'
+          # Versioning_Test/Datasets matches this selector but holds JSON Lines of oM
+          # objects rather than BH.oM.Data.Library.Dataset documents, so every file in
+          # it fails. The exclusion is here because the directory is specific to this
+          # repository. Versioning_<digits>.json upgrade maps fail the same way but are
+          # a file type any versioning repository can hold, so that rule belongs in the
+          # runner and not in each repository's pathspec.
+          patterns: ':(icase)*datasets*.json :(exclude,icase)*Versioning_Test/Datasets/*'
           app_id: ${{ secrets.BHOM_APP_ID }}
           private_key: ${{ secrets.BHOM_APP_PRIVATE_KEY }}
 
