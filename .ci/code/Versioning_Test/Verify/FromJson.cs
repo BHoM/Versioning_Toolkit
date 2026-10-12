@@ -265,22 +265,59 @@ namespace BH.Test.Versioning
                 Engine.Test.Create.PassResult($"No versioning errors for {dataset} found.");
 
             Engine.Base.Compute.ClearCurrentEvents();
-            string result = BH.Engine.Library.Query.ValidatePath(dataset);
+            BH.Engine.Library.Query.ValidatePath(dataset);
 
-            bool failure = BH.Engine.Base.Query.CurrentEvents().Any(x => x.Message.Contains("is not a valid") && x.Message.Contains("no valid upgrade"));
+            // The verdict is read from the same three sources ValidatePath itself consults, never
+            // from the text of the events it raises. A declared removal and a genuine failure both
+            // raise an Error, and these were previously told apart by matching two substrings of
+            // one message. That made the result depend on wording in two directions: a removal
+            // message that happened to contain those substrings would fail a deliberate removal,
+            // and a reworded failure message would let every broken dataset pass. Neither wording
+            // is asserted anywhere. Do not reintroduce a message test here.
+            List<string> installed = BH.Engine.Library.Query.LibraryNames();
+            string chased = ChaseDatasetUpgrades(dataset);
 
-            if (failure)
-            {
-                return new TestResult()
-                {
-                    Description = dataset,
-                    Status = TestStatus.Error,
-                    Message = $"No valid dataset could be found for {dataset}.",
-                    Information = Engine.Base.Query.CurrentEvents().Select(x => x.ToEventMessage()).ToList<ITestInformation>(),
-                };
-            }
-            else
+            if (installed.Contains(dataset))
                 return Engine.Test.Create.PassResult($"No versioning errors for {dataset} found.");
+
+            if (!string.IsNullOrWhiteSpace(chased) && installed.Contains(chased))
+                return Engine.Test.Create.PassResult($"{dataset} was upgraded to {chased}.");
+
+            // The chased name is looked up as well as the original because a dataset can be renamed
+            // and the new name deleted later. ValidatePath returns the original name on this path
+            // rather than the chased one, so its return value cannot stand in for the walk.
+            Dictionary<string, string> removed = BH.Engine.Versioning.Query.DatasetToMessageForDeleted();
+            string removalMessage;
+            if (removed.TryGetValue(dataset, out removalMessage)
+                || (!string.IsNullOrWhiteSpace(chased) && removed.TryGetValue(chased, out removalMessage)))
+                return Engine.Test.Create.PassResult($"{dataset} was intentionally removed: {removalMessage}");
+
+            return new TestResult()
+            {
+                Description = dataset,
+                Status = TestStatus.Error,
+                Message = $"No valid dataset could be found for {dataset}.",
+                Information = Engine.Base.Query.CurrentEvents().Select(x => x.ToEventMessage()).ToList<ITestInformation>(),
+            };
+        }
+
+        /*************************************/
+        /**** Private Methods             ****/
+        /*************************************/
+
+        // Follows the dataset rename chain to its end, matching the walk ValidatePath performs.
+        // The visited set bounds a cycle in the upgrade map, which would otherwise spin here.
+        private static string ChaseDatasetUpgrades(string dataset)
+        {
+            Dictionary<string, string> upgrades = BH.Engine.Versioning.Query.DatasetToNewPaths();
+
+            string current = dataset;
+            HashSet<string> seen = new HashSet<string> { current };
+            string next;
+            while (upgrades.TryGetValue(current, out next) && seen.Add(next))
+                current = next;
+
+            return current;
         }
 
         /*************************************/
