@@ -120,7 +120,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot;  &quot;C:\ProgramData\BHoM\Upgrades\BHoMUpgrades\&quot; /Y&#xD;&#xA;xcopy /Y /I /S /E &quot;$(TargetDir)Upgrades&quot; &quot;C:\ProgramData\BHoM\Upgrades\BHoMUpgrades\Upgrades&quot;&#xD;&#xA;call &quot;$(SolutionDir)PostBuild\Build\PostBuild.exe&quot; ..\..\ &quot;C:\ProgramData\BHoM\Upgrades\BHoMUpgrades\Upgrades\v93.json&quot;&#xD;&#xA;" />
+    <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot;  &quot;C:\ProgramData\BHoM\Upgrades\BHoMUpgrades\&quot; /Y&#xD;&#xA;xcopy /Y /I /S /E &quot;$(TargetDir)Upgrades&quot; &quot;C:\ProgramData\BHoM\Upgrades\BHoMUpgrades\Upgrades&quot;&#xD;&#xA;call &quot;$(SolutionDir)PostBuild\Build\PostBuild.exe&quot; ..\..\ &quot;C:\ProgramData\BHoM\Upgrades\BHoMUpgrades\Upgrades\v100.json&quot;&#xD;&#xA;" />
   </Target>
 
 </Project>
