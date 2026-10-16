@@ -50,22 +50,29 @@ namespace BH.Upgraders
             if (oldVersion.ContainsKey("CustomData"))
                 newVersion["CustomData"] = oldVersion["CustomData"];
 
+            if (oldVersion.ContainsKey("Fragments"))
+                newVersion["Fragments"] = oldVersion["Fragments"];
+
             Dictionary<string, object> buttonLayout = new Dictionary<string, object>();
             buttonLayout["_t"] = "BH.Revit.oM.UI.ButtonLayout";
             buttonLayout["Tabs"] = new List<Dictionary<string, object>>();
 
             if (oldVersion.ContainsKey("PinnedItems"))
             {
-                List<Dictionary<string, object>> pinnedItems = oldVersion["PinnedItems"] as List<Dictionary<string, object>>;
+                object[] pinnedItems = oldVersion["PinnedItems"] as object[];
                 if (pinnedItems != null)
                 {
                     Dictionary<string, Dictionary<string, List<Dictionary<string, object>>>> tabPanelMapping = new Dictionary<string, Dictionary<string, List<Dictionary<string, object>>>>();
-                    foreach (Dictionary<string, object> item in pinnedItems)
+                    foreach (object obj in pinnedItems)
                     {
+                        Dictionary<string, object> item = obj as Dictionary<string, object>;
+                        if (item == null)
+                            continue;
+
                         if (!item.ContainsKey("_t"))
                             continue;
 
-                        if (item["_t"] != "BH.Revit.oM.UI.PinnedItemInfo")
+                        if (item["_t"] as string != "BH.Revit.oM.UI.PinnedItemInfo")
                             continue;
 
                         if (!item.ContainsKey("PanelName") || !item.ContainsKey("TabName"))
@@ -83,7 +90,19 @@ namespace BH.Upgraders
                         if (!tabPanelMapping[tabName].ContainsKey(panelName))
                             tabPanelMapping[tabName][panelName] = new List<Dictionary<string, object>>();
 
-                        tabPanelMapping[tabName][panelName].Add(item);
+                        Dictionary<string, object> newItem = new Dictionary<string, object>(item);
+                        newItem["_t"] = "BH.Revit.oM.UI.PinnedButton";
+
+                        if (newItem.ContainsKey("BHoM_Guid"))
+                            newItem.Remove("BHoM_Guid");
+
+                        if (newItem.ContainsKey("CustomData"))
+                            newItem.Remove("CustomData");
+
+                        if (newItem.ContainsKey("Fragments"))
+                            newItem.Remove("Fragments");
+
+                        tabPanelMapping[tabName][panelName].Add(newItem);
                     }
 
                     foreach (KeyValuePair<string, Dictionary<string, List<Dictionary<string, object>>>> tab in tabPanelMapping)
