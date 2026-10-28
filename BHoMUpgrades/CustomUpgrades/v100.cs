@@ -21,8 +21,6 @@
  */
 
 using BH.oM.Versioning;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace BH.Upgraders
@@ -31,204 +29,104 @@ namespace BH.Upgraders
     public static class v100
     {
         /***************************************************/
-        /****              Public Methods               ****/
+        /**** Public Methods                            ****/
         /***************************************************/
 
-        [VersioningTarget("BH.Revit.oM.Schematic.EquipmentAssemblyItem")]
-        public static Dictionary<string, object> UpgradeEquipmentAssemblyItem(Dictionary<string, object> oldVersion)
+        [VersioningTarget("BH.Revit.oM.UI.UIManagementSettings")]
+        public static Dictionary<string, object> UpgradeUIManagementSettings(Dictionary<string, object> oldVersion)
         {
             if (oldVersion == null)
                 return null;
 
-            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
-            if (!newVersion.TryGetValue("RevitCategoryId", out object rawCategory))
-                return newVersion;
+            Dictionary<string, object> newVersion = new Dictionary<string, object>();
+            newVersion["_t"] = "BH.Revit.oM.UI.ButtonLayoutSettings";
 
-            newVersion.Remove("RevitCategoryId");
-            if (!TryGetInt64(rawCategory, out long categoryId) || categoryId == 0)
-                return newVersion;
+            if (oldVersion.ContainsKey("Name"))
+                newVersion["Name"] = oldVersion["Name"];
 
-            Dictionary<string, object> filter = null;
-            if (newVersion.TryGetValue("ElementsFilter", out object filterObject))
-                filter = filterObject as Dictionary<string, object>;
+            if (oldVersion.ContainsKey("BHoM_Guid"))
+                newVersion["BHoM_Guid"] = oldVersion["BHoM_Guid"];
 
-            if (filter == null)
+            if (oldVersion.ContainsKey("CustomData"))
+                newVersion["CustomData"] = oldVersion["CustomData"];
+
+            if (oldVersion.ContainsKey("Fragments"))
+                newVersion["Fragments"] = oldVersion["Fragments"];
+
+            Dictionary<string, object> buttonLayout = new Dictionary<string, object>();
+            buttonLayout["_t"] = "BH.Revit.oM.UI.ButtonLayout";
+            buttonLayout["Tabs"] = new List<Dictionary<string, object>>();
+
+            if (oldVersion.ContainsKey("PinnedItems"))
             {
-                newVersion["ElementsFilter"] = new Dictionary<string, object>
+                object[] pinnedItems = oldVersion["PinnedItems"] as object[];
+                if (pinnedItems != null)
                 {
-                    { "_t", "BH.Revit.oM.UI.Filtering.ElementFilterSelection" },
-                    { "DocumentSelection", new Dictionary<string, object> { { "_t", "BH.Revit.oM.UI.Filtering.AllDocumentsSelection" } } },
-                    { "CategoryIds", new List<long> { categoryId } },
-                    { "ParameterFilters", EmptyParameterFilter() },
-                    { "IsParameterFilteringEnabled", false }
-                };
-                return newVersion;
-            }
+                    Dictionary<string, Dictionary<string, List<Dictionary<string, object>>>> tabPanelMapping = new Dictionary<string, Dictionary<string, List<Dictionary<string, object>>>>();
+                    foreach (object obj in pinnedItems)
+                    {
+                        Dictionary<string, object> item = obj as Dictionary<string, object>;
+                        if (item == null)
+                            continue;
 
-            if (!filter.TryGetValue("CategoryIds", out object categories) || !HasItems(categories))
-                filter["CategoryIds"] = new List<long> { categoryId };
+                        if (!item.ContainsKey("_t"))
+                            continue;
 
-            if (!filter.ContainsKey("ParameterFilters") || filter["ParameterFilters"] == null)
-                filter["ParameterFilters"] = EmptyParameterFilter();
+                        if (item["_t"] as string != "BH.Revit.oM.UI.PinnedItemInfo")
+                            continue;
 
-            return newVersion;
-        }
+                        if (!item.ContainsKey("PanelName") || !item.ContainsKey("TabName"))
+                            continue;
 
-        /***************************************************/
+                        string tabName = item["TabName"] as string;
+                        string panelName = item["PanelName"] as string;
 
-        [VersioningTarget("BH.Revit.oM.UI.Filtering.ElementFilterSelection")]
-        public static Dictionary<string, object> UpgradeElementFilterSelection(Dictionary<string, object> oldVersion)
-        {
-            if (oldVersion == null)
-                return null;
+                        if (string.IsNullOrWhiteSpace(tabName) || string.IsNullOrWhiteSpace(panelName))
+                            continue;
 
-            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
-            if (!newVersion.TryGetValue("DocumentIds", out object documentIds))
-                return newVersion;
+                        if (!tabPanelMapping.ContainsKey(tabName))
+                            tabPanelMapping[tabName] = new Dictionary<string, List<Dictionary<string, object>>>();
 
-            newVersion.Remove("DocumentIds");
-            if (!newVersion.ContainsKey("DocumentSelection"))
-                newVersion["DocumentSelection"] = ToDocumentSelection(documentIds);
+                        if (!tabPanelMapping[tabName].ContainsKey(panelName))
+                            tabPanelMapping[tabName][panelName] = new List<Dictionary<string, object>>();
 
-            return newVersion;
-        }
+                        Dictionary<string, object> newItem = new Dictionary<string, object>(item);
+                        newItem["_t"] = "BH.Revit.oM.UI.PinnedButton";
 
-        /***************************************************/
+                        if (newItem.ContainsKey("BHoM_Guid"))
+                            newItem.Remove("BHoM_Guid");
 
-        [VersioningTarget("BH.Revit.oM.Schematic.ParameterMapItem")]
-        public static Dictionary<string, object> UpgradeParameterMapItem(Dictionary<string, object> oldVersion)
-        {
-            if (oldVersion == null)
-                return null;
+                        if (newItem.ContainsKey("CustomData"))
+                            newItem.Remove("CustomData");
 
-            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
-            UpgradeParameterSource(newVersion, "ParameterIn3D");
-            UpgradeParameterSource(newVersion, "ParameterIn2D");
-            return newVersion;
-        }
+                        if (newItem.ContainsKey("Fragments"))
+                            newItem.Remove("Fragments");
 
-        /***************************************************/
-        /****              Private Methods              ****/
-        /***************************************************/
+                        tabPanelMapping[tabName][panelName].Add(newItem);
+                    }
 
-        private static void UpgradeParameterSource(Dictionary<string, object> item, string property)
-        {
-            if (!item.TryGetValue(property, out object value) || !(value is string name))
-                return;
-
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                item.Remove(property);
-                return;
-            }
-
-            item[property] = new Dictionary<string, object>
-            {
-                { "_t", "BH.oM.Adapters.Revit.Parameters.ParameterValueSource" },
-                { "ParameterName", name }
-            };
-        }
-
-        /***************************************************/
-
-        private static Dictionary<string, object> ToDocumentSelection(object documentIds)
-        {
-            List<long> ids = new List<long>();
-            if (documentIds is IEnumerable items && !(documentIds is string))
-            {
-                foreach (object item in items)
-                {
-                    if (TryGetInt64(item, out long id))
-                        ids.Add(id);
+                    foreach (KeyValuePair<string, Dictionary<string, List<Dictionary<string, object>>>> tab in tabPanelMapping)
+                    {
+                        Dictionary<string, object> tabDict = new Dictionary<string, object>();
+                        tabDict["_t"] = "BH.Revit.oM.UI.TabLayout";
+                        tabDict["Name"] = tab.Key;
+                        tabDict["Panels"] = new List<Dictionary<string, object>>();
+                        foreach (KeyValuePair<string, List<Dictionary<string, object>>> panel in tab.Value)
+                        {
+                            Dictionary<string, object> panelDict = new Dictionary<string, object>();
+                            panelDict["_t"] = "BH.Revit.oM.UI.Panel";
+                            panelDict["Name"] = panel.Key;
+                            panelDict["Items"] = panel.Value;
+                            (tabDict["Panels"] as List<Dictionary<string, object>>).Add(panelDict);
+                        }
+                        (buttonLayout["Tabs"] as List<Dictionary<string, object>>).Add(tabDict);
+                    }
                 }
             }
 
-            if (ids.Count == 1 && ids[0] == -1)
-                return new Dictionary<string, object> { { "_t", "BH.Revit.oM.UI.Filtering.HostDocumentSelection" } };
+            newVersion["Layout"] = buttonLayout;
 
-            bool host = false;
-            List<long> links = new List<long>();
-            foreach (long id in ids)
-            {
-                if (id == -1)
-                    host = true;
-                else
-                    links.Add(id);
-            }
-            if (!host && links.Count > 0)
-            {
-                return new Dictionary<string, object>
-                {
-                    { "_t", "BH.Revit.oM.UI.Filtering.LinkDocumentSelection" },
-                    { "Links", links }
-                };
-            }
-
-            return new Dictionary<string, object>
-            {
-                { "_t", "BH.Revit.oM.UI.Filtering.HostAndLinkDocumentSelection" },
-                { "Host", host },
-                { "Links", links }
-            };
-        }
-
-        /***************************************************/
-
-        private static Dictionary<string, object> EmptyParameterFilter()
-        {
-            return new Dictionary<string, object>
-            {
-                { "_t", "BH.oM.Verification.Conditions.LogicalAndCondition" },
-                { "Conditions", new List<object>() }
-            };
-        }
-
-        /***************************************************/
-
-        private static bool TryGetInt64(object value, out long number)
-        {
-            switch (value)
-            {
-                case int intValue:
-                    number = intValue;
-                    return true;
-                case long longValue:
-                    number = longValue;
-                    return true;
-                case double doubleValue:
-                    number = (long)doubleValue;
-                    return true;
-                case string text when long.TryParse(text, out long parsed):
-                    number = parsed;
-                    return true;
-                default:
-                    try
-                    {
-                        number = Convert.ToInt64(value);
-                        return true;
-                    }
-                    catch
-                    {
-                        number = 0;
-                        return false;
-                    }
-            }
-        }
-
-        /***************************************************/
-
-        private static bool HasItems(object value)
-        {
-            if (value is string || !(value is IEnumerable items))
-                return false;
-
-            foreach (object item in items)
-            {
-                if (item != null)
-                    return true;
-            }
-
-            return false;
+            return newVersion;
         }
 
         /***************************************************/
