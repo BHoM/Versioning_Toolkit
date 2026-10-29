@@ -1204,6 +1204,113 @@
           "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"9.0\" }"
         ],
         "_bhomVersion": "9.0"
+      },
+      "BH.Revit.Engine.Core.Query.ElementIdsByElementType(Autodesk.Revit.DB.Document, System.Int32, System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.ElementId>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Query, Revit_Core_Engine_2022, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+        "MethodName": "ElementIdsByElementType",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ElementId, RevitAPI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }], \"_bhomVersion\" : \"9.0\" }"
+        ],
+        "_bhomVersion": "9.0"
+      },
+      "BH.Revit.Engine.Core.Query.ElementIdsByViewSpecific(Autodesk.Revit.DB.Document, System.Int32, System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.ElementId>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Query, Revit_Core_Engine_2022, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+        "MethodName": "ElementIdsByViewSpecific",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ElementId, RevitAPI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }], \"_bhomVersion\" : \"9.0\" }"
+        ],
+        "_bhomVersion": "9.0"
+      },
+      "BH.Revit.Engine.Core.Query.ElementIdsByVisibleInView(Autodesk.Revit.DB.Document, System.Int32, System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.ElementId>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Query, Revit_Core_Engine_2022, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+        "MethodName": "ElementIdsByVisibleInView",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ElementId, RevitAPI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }], \"_bhomVersion\" : \"9.0\" }"
+        ],
+        "_bhomVersion": "9.0"
+      },
+      "BH.Revit.Engine.Core.Query.ElementIdsOfFamilyTypes(Autodesk.Revit.DB.Document, System.Int32, System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.ElementId>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Query, Revit_Core_Engine_2022, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+        "MethodName": "ElementIdsOfFamilyTypes",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ElementId, RevitAPI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }], \"_bhomVersion\" : \"9.0\" }"
+        ],
+        "_bhomVersion": "9.0"
+      },
+      "BH.Revit.Engine.Core.Query.ElementIdsOfMemberElements(Autodesk.Revit.DB.Document, System.Int32, System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.ElementId>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Query, Revit_Core_Engine_2022, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+        "MethodName": "ElementIdsOfMemberElements",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ElementId, RevitAPI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }], \"_bhomVersion\" : \"9.0\" }"
+        ],
+        "_bhomVersion": "9.0"
+      },
+      "BH.Revit.Engine.Core.Query.ElementIdsOfViews(Autodesk.Revit.DB.Document, System.Int32, System.Collections.Generic.IEnumerable<Autodesk.Revit.DB.ElementId>)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Query, Revit_Core_Engine_2022, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+        "MethodName": "ElementIdsOfViews",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.ElementId, RevitAPI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }], \"_bhomVersion\" : \"9.0\" }"
+        ],
+        "_bhomVersion": "9.0"
+      },
+      "BH.Revit.Engine.Core.Query.ParameterName(Autodesk.Revit.DB.Document, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Query, Revit_Core_Engine_2022, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+        "MethodName": "ParameterName",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Document, RevitAPI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"9.0\" }"
+        ],
+        "_bhomVersion": "9.0"
+      },
+      "BH.Revit.Engine.Tagging.Modify.AddIdFragment(BH.oM.Tagging.TagHost, Autodesk.Revit.DB.Element, System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Tagging.Modify, Revit_Tagging_Engine_2022, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+        "MethodName": "AddIdFragment",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Tagging.TagHost\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Element, RevitAPI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"9.0\" }"
+        ],
+        "_bhomVersion": "9.0"
+      },
+      "BH.Engine.Adapters.Revit.Modify.SetHost(BH.oM.Base.IBHoMObject, System.Int32, System.String)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Engine.Adapters.Revit.Modify, Revit_Engine, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+        "MethodName": "SetHost",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"9.0\" }",
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"9.0\" }"
+        ],
+        "_bhomVersion": "9.0"
+      },
+      "BH.Revit.Engine.Diffing.Query.Geometry2dReference(System.Int32)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Diffing.Query, Revit_Diffing_Engine_2022, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"9.0\" }",
+        "MethodName": "Geometry2dReference",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"9.0\" }"
+        ],
+        "_bhomVersion": "9.0"
       }
     },
     "ToOld": {
