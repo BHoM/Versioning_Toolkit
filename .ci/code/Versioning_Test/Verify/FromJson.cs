@@ -30,6 +30,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text.RegularExpressions;
 
 namespace BH.Test.Versioning
@@ -43,19 +44,29 @@ namespace BH.Test.Versioning
         public static TestResult FromJsonDatasets(bool testAll = false)
         {
             string testFolder = @"C:\ProgramData\BHoM\Datasets\TestSets\Versioning";
+            string failureDumpDir = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
+
+            return FromJsonDatasets(testAll, testFolder, failureDumpDir);
+        }
+
+        /*************************************/
+
+        public static TestResult FromJsonDatasets(bool testAll, string testFolder, string failureDumpDir)
+        {
             List<string> versions = new List<string> { "9.3" };
             if (testAll)
                 versions.AddRange(new List<string> { "9.2", "9.1", "9.0", "8.3", "8.2", "8.1", "8.0", "7.3", "7.2", "7.1", "7.0", "6.3", "6.2", "6.1", "6.0", "5.3", "5.2", "5.1", "5.0", "4.3", "4.2", "4.1", "4.0", "3.3" });
 
             string exceptions = "Grasshopper|Rhinoceros";
 
-            string failureDumpDir = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
-            Directory.CreateDirectory(failureDumpDir);
-            if (versions.Count == 1)
-                Console.WriteLine($"Failures are dumped in {failureDumpDir} directory.");
-            else
-                Console.WriteLine($"Multiple versions are being tested, failures per each are dumped in a correspondent subfolder of {failureDumpDir} directory.");
-
+            if (!string.IsNullOrWhiteSpace(failureDumpDir))
+            {
+                Directory.CreateDirectory(failureDumpDir);
+                if (versions.Count == 1)
+                    Console.WriteLine($"Failures are dumped in {failureDumpDir} directory.");
+                else
+                    Console.WriteLine($"Multiple versions are being tested, failures per each are dumped in a correspondent subfolder of {failureDumpDir} directory.");
+            }
             // Test all the BHoM versions available
             List<TestResult> results = new List<TestResult>();
             foreach (string version in versions)
@@ -64,7 +75,7 @@ namespace BH.Test.Versioning
                 if (!string.IsNullOrWhiteSpace(dumpDir) && versions.Count > 1)
                     dumpDir = Path.Combine(dumpDir, version);
 
-                results.Add(FromJsonDataset(Path.Combine(testFolder, version), exceptions, failureDumpDir));
+                results.Add(FromJsonDataset(Path.Combine(testFolder, version), exceptions, dumpDir));
             }
 
             // Generate the result message
@@ -184,7 +195,7 @@ namespace BH.Test.Versioning
                         Directory.CreateDirectory(failureDumpDir);
                         foreach ((string, List<string>) failure in failures)
                         {
-                            File.WriteAllLines(Path.Combine(failureDumpDir, $"{failure.Item1}.txt"), failure.Item2);
+                            File.WriteAllLines(Path.Combine(failureDumpDir, $"{failure.Item1}.json"), failure.Item2);
                         }
                     }
                     catch (Exception ex)
