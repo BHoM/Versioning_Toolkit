@@ -1,10 +1,10 @@
 {
   "Namespace": {
     "ToNew": {
-      "BH.oM.Structure.SectionProperties.Reinforcement": "BH.oM.Structure.Reinforcement"
+
     },
     "ToOld": {
-      
+
     }
   },
   "Type": {
@@ -19,7 +19,11 @@
       "BH.oM.Adapters.Revit.Parameters.ElementTypeParameterLink": "BH.oM.Adapters.Revit.Mapping.ElementTypeParameterLink",
       "BH.oM.Adapters.Revit.Parameters.IParameterLink": "BH.oM.Adapters.Revit.Mapping.IParameterLink",
       "BH.oM.Adapters.Revit.Parameters.ParameterMap": "BH.oM.Adapters.Revit.Mapping.ParameterMap",
-      "BH.oM.Revit.Parameters": "BH.oM.Adapters.Revit.Parameters"
+      "BH.oM.Revit.Parameters": "BH.oM.Adapters.Revit.Parameters",
+      "BH.oM.Structure.SectionProperties.Reinforcement.BarRebarIntent": "BH.oM.Structure.Reinforcement.BarRebarIntent",
+      "BH.oM.Structure.SectionProperties.Reinforcement.IBarReinforcement": "BH.oM.Structure.Reinforcement.IBarReinforcement",
+      "BH.oM.Structure.SectionProperties.Reinforcement.LongitudinalReinforcement": "BH.oM.Structure.Reinforcement.LongitudinalReinforcement",
+      "BH.oM.Structure.SectionProperties.Reinforcement.TransverseReinforcement": "BH.oM.Structure.Reinforcement.TransverseReinforcement"
     },
     "ToOld": {
       "BH.oM.CFD.Harpoon.HarpoonRunMode": "BH.oM.CFD.Enums.HarpoonRunMode",
@@ -32,7 +36,11 @@
       "BH.oM.Adapters.Revit.Mapping.ElementTypeParameterLink": "BH.oM.Adapters.Revit.Parameters.ElementTypeParameterLink",
       "BH.oM.Adapters.Revit.Mapping.IParameterLink": "BH.oM.Adapters.Revit.Parameters.IParameterLink",
       "BH.oM.Adapters.Revit.Mapping.ParameterMap": "BH.oM.Adapters.Revit.Parameters.ParameterMap",
-      "BH.oM.Adapters.Revit.Parameters": "BH.oM.Revit.Parameters"
+      "BH.oM.Adapters.Revit.Parameters": "BH.oM.Revit.Parameters",
+      "BH.oM.Structure.Reinforcement.BarRebarIntent": "BH.oM.Structure.SectionProperties.Reinforcement.BarRebarIntent",
+      "BH.oM.Structure.Reinforcement.IBarReinforcement": "BH.oM.Structure.SectionProperties.Reinforcement.IBarReinforcement",
+      "BH.oM.Structure.Reinforcement.LongitudinalReinforcement": "BH.oM.Structure.SectionProperties.Reinforcement.LongitudinalReinforcement",
+      "BH.oM.Structure.Reinforcement.TransverseReinforcement": "BH.oM.Structure.SectionProperties.Reinforcement.TransverseReinforcement"
     }
   },
   "Method": {
