@@ -1369,7 +1369,8 @@
     "BH.Revit.Engine.ElementRelationships.Convert.ConvertToNewSettings(BH.oM.Base.BHoMObject)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
     "BH.Revit.Engine.ElementRelationships.Compute.MergeSettings(System.Collections.Generic.List<System.String>)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
     "BH.Revit.Engine.Schematic.Compute.UnlinkConnectedSymbols(Autodesk.Revit.DB.Element, System.Boolean)": "This method has been removed as a part of the legacy code cleanup. Please contact the developers if you still need it.",
-    "BH.Revit.Engine.Structure.Compute.CopyGenericModelsFromLink(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.Element>, System.String, System.String, System.Boolean)": "This method has been removed and should not be needed any more."
+    "BH.Revit.Engine.Structure.Compute.CopyGenericModelsFromLink(Autodesk.Revit.DB.Document, System.Collections.Generic.List<Autodesk.Revit.DB.Element>, System.String, System.String, System.Boolean)": "This method has been removed and should not be needed any more.",
+    "BH.Revit.Engine.Core.Query.GetDataType(Autodesk.Revit.DB.Definition)": "This method has been removed together with the support for Revit 2021, for which it was a compatibility shim. From Revit 2022 onwards, the same functionality is provided natively by Definition.GetDataType()."
   },
   "MessageForNoUpgrade": {
     
