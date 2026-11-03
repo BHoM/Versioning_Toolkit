@@ -1353,7 +1353,7 @@
       
     },
     "MessageForDeleted": {
-      
+      "Planning\\Labels\\IssueLabels": "Dataset was moved to the repository next to the code it relates to, and is no longer part of the installers."
     }
   },
   "MessageForDeleted": {
