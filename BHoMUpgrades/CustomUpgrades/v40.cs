@@ -290,6 +290,41 @@ namespace BH.Upgraders
 
         /***************************************************/
 
+        [VersioningTarget("BH.oM.MEP.Elements.CableTray")]
+        [VersioningTarget("BH.oM.MEP.Elements.Duct")]
+        [VersioningTarget("BH.oM.MEP.Elements.Pipe")]
+        [VersioningTarget("BH.oM.MEP.Elements.WireSegment")]
+        public static Dictionary<string, object> UpgradeMEPNodeHolder(Dictionary<string, object> element)
+        {
+            if (element == null)
+                return null;
+
+            // Replace the nodes by their position here rather than letting UpgradeMEPNode handle them on their own,
+            // as the BHoM properties of the node would then be copied over to the point it is upgraded to.
+            // This custom upgrader replaces the type and property renames defined in v40.json for those types.
+            Dictionary<string, object> newElement = new Dictionary<string, object>(element);
+            newElement["_t"] = newElement["_t"].ToString().Replace("BH.oM.MEP.Elements", "BH.oM.MEP.System");
+
+            ReplaceNodeByPoint(newElement, "StartNode", "StartPoint");
+            ReplaceNodeByPoint(newElement, "EndNode", "EndPoint");
+
+            return newElement;
+        }
+
+        /***************************************************/
+
+        private static void ReplaceNodeByPoint(Dictionary<string, object> element, string nodeProperty, string pointProperty)
+        {
+            if (!element.ContainsKey(nodeProperty))
+                return;
+
+            Dictionary<string, object> node = element[nodeProperty] as Dictionary<string, object>;
+            element.Remove(nodeProperty);
+            element[pointProperty] = UpgradeMEPNode(node);
+        }
+
+        /***************************************************/
+
         [VersioningTarget("BH.oM.Diffing.DiffConfig")]
         public static Dictionary<string, object> UpgradeDiffConfig(Dictionary<string, object> config)
         {
