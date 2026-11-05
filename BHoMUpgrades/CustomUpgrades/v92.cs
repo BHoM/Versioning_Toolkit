@@ -59,5 +59,25 @@ namespace BH.Upgraders
         }
 
         /***************************************************/
+
+        [VersioningTarget("BH.oM.Tagging.AreaContextElement")]
+        [VersioningTarget("BH.oM.Tagging.CurveContextElement")]
+        [VersioningTarget("BH.oM.Tagging.OrthoContextElement")]
+        [VersioningTarget("BH.oM.Tagging.PointContextElement")]
+        public static Dictionary<string, object> UpgradeContextElement(Dictionary<string, object> oldVersion)
+        {
+            if (oldVersion == null)
+                return null;
+
+            Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
+
+            // VisibleCutPolylines became a required constructor parameter once the context elements were made immutable
+            if (!newVersion.ContainsKey("VisibleCutPolylines"))
+                newVersion["VisibleCutPolylines"] = new List<object>();
+
+            return newVersion;
+        }
+
+        /***************************************************/
     }
 }

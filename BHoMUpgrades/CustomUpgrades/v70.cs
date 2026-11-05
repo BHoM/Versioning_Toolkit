@@ -66,6 +66,9 @@ namespace BH.Upgraders
         [VersioningTarget("BH.oM.LadybugTools.ILadybugToolsMaterial")]
         public static Dictionary<string, object> UpgradeILadybugToolsMaterial(Dictionary<string, object> oldVersion)
         {
+            if (oldVersion == null)
+                return null;
+
             Dictionary<string, object> newVersion = new Dictionary<string, object>(oldVersion);
 
             if (oldVersion.ContainsKey("_t"))
@@ -107,9 +110,10 @@ namespace BH.Upgraders
                 "MeanRadiantTemperature",
             };
 
+            // Results cannot be upgraded. Set them to null rather than removing them as they are required by the immutable constructor
             foreach (string key in keys)
             {
-                newVersion.Remove(key);
+                newVersion[key] = null;
             }
 
             return newVersion;
@@ -137,9 +141,10 @@ namespace BH.Upgraders
                 "UnshadedMeanRadiantTemperature"
             };
 
+            // Results cannot be upgraded. Set them to null rather than removing them as they are required by the immutable constructor
             foreach (string key in keys)
             {
-                newVersion.Remove(key);
+                newVersion[key] = null;
             }
 
             if (oldVersion.ContainsKey("GroundMaterial"))

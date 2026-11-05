@@ -261,6 +261,3 @@ TestSets\Structure\RigidLink\01 - Simple Single Secondary Node Links
 TestSets\Structure\RigidLink\02 - Complex Single Secondary Node Links
 TestSets\Structure\RigidLink\03 - Simple Multi Secondary Node Links
 TestSets\Structure\RigidLink\04 - Complex Multi Secondary Node Links
-TestSets\Versioning\9.3\Adapters
-TestSets\Versioning\9.3\Methods
-TestSets\Versioning\9.3\Objects

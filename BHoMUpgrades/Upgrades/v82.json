@@ -337,6 +337,24 @@
           "{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"_bhomVersion\" : \"8.2\" }"
         ],
         "_bhomVersion": "8.2"
+      },
+      "BH.Engine.Verification.Query.HasValue(Autodesk.Revit.DB.Parameter)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.Core.Query, Revit_Core_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "HasValue",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"Autodesk.Revit.DB.Parameter, RevitAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
+      },
+      "BH.Revit.Engine.UI.Query.IsValid(BH.oM.Adapters.Revit.Parameters.ParameterValueSource)": {
+        "_t": "System.Reflection.MethodBase",
+        "TypeName": "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.Revit.Engine.UI.Query, Revit_UI_Engine_2021, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null\", \"_bhomVersion\" : \"8.2\" }",
+        "MethodName": "IsValidName",
+        "Parameters": [
+          "{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Parameters.ParameterValueSource\", \"_bhomVersion\" : \"8.2\" }"
+        ],
+        "_bhomVersion": "8.2"
       }
     },
     "ToOld": {
